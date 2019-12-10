@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>conference | Academic</title>
+    <link>/tags/conference/</link>
+      <atom:link href="/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+    <description>conference</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 24 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>conference</title>
+      <link>/tags/conference/</link>
+    </image>
+    
+    <item>
+      <title>“Demystifying Data Science” remote notes</title>
+      <link>/post/demystifying-data-science-remote-notes/</link>
+      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
+      <guid>/post/demystifying-data-science-remote-notes/</guid>
+      <description>
+
+
+&lt;p&gt;To carry on our momentum from a few weeks ago from our &lt;a href=&#34;http://research.libd.org/rstatsclub/2018/07/13/libd-rstats-club-remote-user-2018-notes&#34;&gt;useR!2018 remote notes blog post&lt;/a&gt;, this time we will be summarizing the &lt;a href=&#34;https://www.thisismetis.com/demystifying-data-science&#34;&gt;Demystifying Data Sience 2018&lt;/a&gt; conference for which you can register for free. We are just following &lt;a href=&#34;https://twitter.com/drob&#34;&gt;David Robinson’s&lt;/a&gt; advice to blog all the time!&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;So what should you blog about? &lt;a href=&#34;https://twitter.com/drob?ref_src=twsrc%5Etfw&#34;&gt;@drob&lt;/a&gt; says no matter what stage you&amp;#39;re at in your career, you have a lot to share. Analyze a data set; analyze data from your work; analyze data from current events, &amp;amp; more. Also, take him up on his awesome offer featured below! &lt;a href=&#34;https://twitter.com/hashtag/DemystifyDS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DemystifyDS&lt;/a&gt; &lt;a href=&#34;https://t.co/RJOpNGJy7f&#34;&gt;pic.twitter.com/RJOpNGJy7f&lt;/a&gt;&lt;/p&gt;&amp;mdash; Metis (@thisismetis) &lt;a href=&#34;https://twitter.com/thisismetis/status/1021767760949469185?ref_src=twsrc%5Etfw&#34;&gt;July 24, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;conference-overview&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Conference overview&lt;/h3&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://LieberInstitute.github.io/rstatsclub/post/2018-10-24-demystifying-data-science-remote-notes_files/2018-10-20%2018.40.37.jpg&#34; width=&#34;600&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;We got interested in this conference&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; thanks to tweets like these ones that highlight that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;data scientists are young!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Data scientists are young! Most have 0-5 yrs experience. This is Important to consider when writing job descriptions. Doesn&amp;#39;t make a ton of sense to focus on finding someone with 15 years of experience in certain areas – they likely don&amp;#39;t exist. - Naomi Keller, &lt;a href=&#34;https://twitter.com/hashtag/DemystifyDS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DemystifyDS&lt;/a&gt; &lt;a href=&#34;https://t.co/iqhLzFIdLd&#34;&gt;pic.twitter.com/iqhLzFIdLd&lt;/a&gt;&lt;/p&gt;&amp;mdash; Metis (@thisismetis) &lt;a href=&#34;https://twitter.com/thisismetis/status/1022197581361889280?ref_src=twsrc%5Etfw&#34;&gt;July 25, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+&lt;li&gt;specialists are more in demand!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;In the past 6-9 months, says Noami Keller, &amp;quot;specialists have become more and more the norm&amp;quot; in terms of who&amp;#39;s getting hired. As data science/analytics has matured, the need for the all-knowing &amp;quot;unicorn&amp;quot; has shifted. Specialists are now in demand. &lt;a href=&#34;https://twitter.com/hashtag/DemystifyDS?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#DemystifyDS&lt;/a&gt;&lt;/p&gt;&amp;mdash; Metis (@thisismetis) &lt;a href=&#34;https://twitter.com/thisismetis/status/1022198588368150529?ref_src=twsrc%5Etfw&#34;&gt;July 25, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Hopefully you find these tweets interesting as well. We can find more about the conference on Twitter using the &lt;a href=&#34;https://twitter.com/search?q=%23DemystifyDS&amp;amp;src=typd&#34;&gt;DemystifyDS&lt;/a&gt; hashtag which also covers previous conferences. We see that the official event account &lt;a href=&#34;https://twitter.com/thisismetis&#34;&gt;thisismetis&lt;/a&gt; really went all out with branded summary tweets! You can find recordings of all the talks and there were many interesting titles. So we decided to spend 2 sessions and watched 4 full talks.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/NGMFq5MQcOI&#34;&gt;Navigating the Maze of the Data Science Job Hunt&lt;/a&gt; by &lt;a href=&#34;https://www.linkedin.com/in/markmeloon/&#34;&gt;Mark Meloon&lt;/a&gt;, Data Scientist, ServiceNow.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/M_dc-XzApGA&#34;&gt;How to Get a Foothold in the Field of Data Science&lt;/a&gt; by &lt;a href=&#34;https://www.linkedin.com/in/brohrer/&#34;&gt;Brandon Rohrer&lt;/a&gt;, Data Scientist, Facebook.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/KI-1GA5Zotc&#34;&gt;Data Visualization: How to Overcome Common Challenges&lt;/a&gt; by &lt;a href=&#34;https://www.linkedin.com/in/kate-strachnyi-data/&#34;&gt;Kate Strachnyi&lt;/a&gt;, Manager and Data Visualization Specialist, Deloitte.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/nF315csYx3U&#34;&gt;The Art of &amp;amp; Science of Creating a Actionable Data Story&lt;/a&gt; by &lt;a href=&#34;https://www.linkedin.com/in/micoyuk/&#34;&gt;Mico Yuk&lt;/a&gt;, Chief Executive Officer, BI-Brainz Group | Author, Data Visualization for Dummies &amp;amp; More.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;talks-summaries&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Talks summaries&lt;/h3&gt;
+&lt;div id=&#34;mark-meloon-markmeloon&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Mark Meloon &lt;a href=&#34;https://twitter.com/MarkMeloon&#34;&gt;&lt;code&gt;MarkMeloon&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;In the &lt;a href=&#34;https://youtu.be/NGMFq5MQcOI&#34;&gt;first talk&lt;/a&gt;, by &lt;a href=&#34;https://www.linkedin.com/in/markmeloon/&#34;&gt;Mark Meloon&lt;/a&gt;, we learned about the power of &lt;a href=&#34;https://www.linkedin.com/&#34;&gt;LinkedIn&lt;/a&gt; for networking and finding your next job. He suggested posting regularly on LinkedIn as your feed will show up more on others’, allowing you to connect with more people. If you write something about content described by someone you especially admire or hope to work for, you are more likely to catch their attention. It’s best to not ask people directly for a job, but to contact them first to discuss their work or to ask for advice. He also suggested adding key data analysis techniques to your profile. He suggested that describing the techniques with specificity would be best, instead of using more vague terms.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;brandon-rohrer-_brohrer_&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Brandon Rohrer &lt;a href=&#34;https://twitter.com/_brohrer_&#34;&gt;&lt;code&gt;_brohrer_&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;In the &lt;a href=&#34;https://youtu.be/M_dc-XzApGA&#34;&gt;second talk&lt;/a&gt;, by &lt;a href=&#34;https://www.linkedin.com/in/brohrer/&#34;&gt;Brandon Rohrer&lt;/a&gt;, we learned about the different data science careers that are possible.&lt;/p&gt;
+&lt;p&gt;The major fields are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data Analysis - statistics and interpretation&lt;/li&gt;
+&lt;li&gt;Data Modeling - machine learning, prediction&lt;/li&gt;
+&lt;li&gt;Data Engineering - automation, databases, programming&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The major roles/archetypes are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Generalist - decent at all three fields&lt;/li&gt;
+&lt;li&gt;Detective - master of analysis&lt;/li&gt;
+&lt;li&gt;Oracle - master of modeling&lt;/li&gt;
+&lt;li&gt;Maker - master of engineering&lt;/li&gt;
+&lt;li&gt;Unicorn - master of all!!!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;He ended by mentioning that job postings using the term “data science” often vary widely, and he recommends ignoring the posted job titles and de-emphasizing the specific tools listed, and instead focus on the &lt;em&gt;skills&lt;/em&gt; that are being asked for to get a real sense of the job and how you would perform.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;kate-strachnyi-storybydata&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Kate Strachnyi &lt;a href=&#34;https://twitter.com/StorybyData&#34;&gt;&lt;code&gt;StorybyData&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;In the &lt;a href=&#34;https://youtu.be/KI-1GA5Zotc&#34;&gt;third talk&lt;/a&gt; by &lt;a href=&#34;https://www.linkedin.com/in/kate-strachnyi-data/&#34;&gt;Kate Strachnyi&lt;/a&gt; we learned about how to overcome challenges in data visualization. She described data visualizations as “Information Maps” that should ideally be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Informative&lt;/li&gt;
+&lt;li&gt;Efficient&lt;/li&gt;
+&lt;li&gt;Appealing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Common issues were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wrong chart choice - some charts will be much more effective&lt;/li&gt;
+&lt;li&gt;Improper use of color - use to tell a story in a useful way - not just to be decorative&lt;/li&gt;
+&lt;li&gt;Information overload - don’t try to do too much at once - loses impact&lt;/li&gt;
+&lt;li&gt;Clutter - leave out the nonessential&lt;/li&gt;
+&lt;li&gt;Not speaking the same language - know your audience (jargon/lingo)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;She also noted that we should be careful about color schemes. She suggested that there are websites to check how your figures would appear to others with colorblindness.&lt;/p&gt;
+&lt;p&gt;She mostly uses tableau in her work and suggested that it makes a nice free option for data visualization.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mico-yuk-micoyuk&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;Mico Yuk &lt;a href=&#34;https://twitter.com/micoyuk&#34;&gt;&lt;code&gt;micoyuk&lt;/code&gt;&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;In the &lt;a href=&#34;https://youtu.be/nF315csYx3U&#34;&gt;fourth and last talk&lt;/a&gt; by &lt;a href=&#34;https://www.linkedin.com/in/micoyuk/&#34;&gt;Mico Yuk&lt;/a&gt; we learned about storyboards and remembering that our data analyses are always to try to tell story about the data. She pointed out that the human mind is wired visually, that we retain about 80% of what we see, 20% of what we read, and 10% of what we hear. She suggested that we create &lt;a href=&#34;https://en.wikipedia.org/wiki/SMART_criteria&#34;&gt;SMART goals&lt;/a&gt; (she credits Peter Drucker) to make sure that our work is driven efficiently in the correct direction. She suggested that communicating our work in a SMART goal-based framework based would concisely and clearly communicate the purpose and results of work.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;our-impressions&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Our impressions&lt;/h3&gt;
+&lt;p&gt;Given our diversity of impressions we thought it would be more useful to share our impressions. Without further ado, here they are.&lt;/p&gt;
+&lt;div id=&#34;p1&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;P1&lt;/h4&gt;
+&lt;p&gt;I found &lt;a href=&#34;https://www.linkedin.com/in/markmeloon/&#34;&gt;Mark Meloon&lt;/a&gt;’s talk very useful. I have actually started posting more regularly on my own LinkedIn account and it has indeed captured more attention from others. In fact, I have even received emails from companies interested in hiring someone with my expertise. &lt;a href=&#34;https://www.linkedin.com/in/brohrer/&#34;&gt;Brandon Rohrer&lt;/a&gt; clarified some trends that I had noticed about data science. I identify with the “Detective” role and I see that while I may aspire at times (unsuccessfully) to be a “Generalist - or someday a Unicorn”, my experience as a Detective is very worthwhile as well. I love data visualization and I loved &lt;a href=&#34;https://www.linkedin.com/in/kate-strachnyi-data/&#34;&gt;Kate Strachnyi&lt;/a&gt;’s talk. I found her tips to be very clear reminders for how to continue with my own visualizations. The talk by &lt;a href=&#34;https://www.linkedin.com/in/micoyuk/&#34;&gt;Mico Yuk&lt;/a&gt; was a good reminder to keep overall goals in mind as you work and to regularly take a step back and assess if your work is really proceeding in the direction and at the rate that you planned.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;p2&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;P2&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/markmeloon/&#34;&gt;Mark Meloon’s&lt;/a&gt; talk emphasized the use of LinkedIn for networking and job hunting. He interviews job candidates for his company so his viewpoint was a direct reflection of someone who uses the website to find and/or assess job applicants. I liked that he gave both good and bad examples of actual profiles and messages he’s seen on LinkedIn. He also noted that, to get a foot in the door of a job posting, you don’t need to directly know the hiring manager, but reaching out to anyone you know in the company, even if it’s a second- or third-level connection (i.e. friend of a friend), is better than nothing, as long as you do it right. I do wish he had spoken about other social media platforms, such as Twitter, and how they compare to LinkedIn for networking.&lt;/p&gt;
+&lt;p&gt;I found the breakdown of skills and job types by &lt;a href=&#34;https://www.linkedin.com/in/brohrer/&#34;&gt;Brandon Rohrer&lt;/a&gt; to be really instructive. It made me reflect on my own interests and skills in a broken down way, and I think it will help to have this framework for both future job hunts and interviews. I particularly like that he emphasized it’s okay/normal to not be great at &lt;em&gt;everything&lt;/em&gt; related to data science - it’s a broad field - and that people with a narrower set of expertise are still needed and valuable for specific jobs. His talk also gave me some ideas of skills I may be able to work on and add to my portfolio to round out my skill-set. I would recommend this talk to anyone in the data science or analysis fields that is looking for clarity or definition in their current job or career path!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;p3&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;P3&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/kate-strachnyi-data/&#34;&gt;Kate Strachnyi&lt;/a&gt;’s talk was a great reminder of the importance of keeping your audience in mind when presenting information and making sure that visualizations are not just accurate but also easily understood. Her list of common issues was a helpful summary of guidelines I’ve heard before, and I appreciated the examples she used. In particular, I think I often run into the challenge of “information overload” when I present informally to others – I need to remember that it’s not enough for the information to be there, it also needs to be arranged in way that lets people understand it quickly.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/micoyuk/&#34;&gt;Mico Yuk&lt;/a&gt;’s talk was probably more applicable to someone working in a corporate field rather than an academic one, but the main idea of framing data as a story and keeping the goal in mind was still relevant to me. Some of the suggestions, like asking the “right questions” of your user, could easily be reworked for research (even if the user is just be me). I haven’t worked with a storyboard before, but it would be interesting to see if that approach could also apply to planning out analyses for a research paper – the goal might be the question we’re asking, KPI the metrics we’re using to answer that question, trends the conclusions we can draw, and actions the next direction of analysis. The translation from business to academic research probably needs some tweaking, but I might try this approach on a future project to help with organization and keeping the bigger story in mind.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;p4&#34; class=&#34;section level4&#34;&gt;
+&lt;h4&gt;P4&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/markmeloon/&#34;&gt;Mark Meloon&lt;/a&gt;’s talk reminded me that many use &lt;a href=&#34;https://www.linkedin.com/&#34;&gt;LinkedIn&lt;/a&gt; for networking which hasn’t been that common in my experience in academia. This is something I would need to keep in mind for advising students in the future that are either unsure of staying in academia or want to go to industry. I do brush up my profile once in a while, and parts of Mark’s advice applies also to CVs (writing them and sending them via email): basically, be genuine and respectful of others.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/brohrer/&#34;&gt;Brandon Rohrer&lt;/a&gt; verbalized distinctions in data science roles that I had either heard of before or had some intuition behind them, but hadn’t actually spent the time to see them as clearly defined as Brandon did. I was also quite curious of everyone’s reaction to his talk and how each of us labelled ourselves. For example, maybe &lt;em&gt;X&lt;/em&gt; thought &lt;em&gt;Z&lt;/em&gt; was a &lt;em&gt;unicorn&lt;/em&gt;, but &lt;em&gt;Z&lt;/em&gt; perceived themselves as a &lt;em&gt;beginner&lt;/em&gt;. In my case, I think that it’s probably too ambitious to get to the unicorn level. I’m simply aiming to get to (or am at) a level where I can understand most of the terms and conversations, but then go back and research a bit more if I need to as preparation for a follow up meeting. I guess that I’m a generalist.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/kate-strachnyi-data/&#34;&gt;Kate Strachnyi&lt;/a&gt;’s key points are I guess topics that I’ve heard before and loosely follow. I think that her audience is different from mine as she seems to create visualizations that are used in many company presentations. I’m frequently under pressure to get a simple version of a plot done where we can see the trend in the data and only work on polishing a few selected plots that get highlighted in a research paper. Though I guess that I could/should spend a bit more time thinking about the plot design and colors before I make the next one. For that, I would like to learn more about the &lt;code&gt;paletteer&lt;/code&gt; R package:&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;ICYMI, 🎨 With more palettes than a tweet could possibly contain…&lt;br&gt;&amp;quot;paletteer: Collection of most color palettes in a single R 📦&amp;quot; 👨‍🎨 &lt;a href=&#34;https://twitter.com/Emil_Hvitfeldt?ref_src=twsrc%5Etfw&#34;&gt;@Emil_Hvitfeldt&lt;/a&gt; &lt;a href=&#34;https://t.co/7kKSyohQN4&#34;&gt;https://t.co/7kKSyohQN4&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://t.co/zibFhW03EU&#34;&gt;pic.twitter.com/zibFhW03EU&lt;/a&gt;&lt;/p&gt;&amp;mdash; Mara Averick (@dataandme) &lt;a href=&#34;https://twitter.com/dataandme/status/1021828886160654336?ref_src=twsrc%5Etfw&#34;&gt;July 24, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/micoyuk/&#34;&gt;Mico Yuk&lt;/a&gt; talked about SMART goals. Hmm… I don’t remember what that stood for, so I clearly would need to re-watch her talk. After skimming through it again I guess that I can only say that it was hard for me to relate to her talk because I haven’t been in a project that involved all planning steps that she talked about. While it wasn’t for me, it might be useful to you, so give it a try!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;wrapping-up&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Wrapping up&lt;/h3&gt;
+&lt;p&gt;Thanks for getting this far. We are curious to hear what where your own impressions in these and other talks from the &lt;a href=&#34;https://www.thisismetis.com/demystifying-data-science&#34;&gt;Demystifying Data Sience 2018&lt;/a&gt;: they have &lt;a href=&#34;https://www.youtube.com/channel/UCpbU53RP134D9qy9GzKBAXA/videos&#34;&gt;28 recorded talks&lt;/a&gt; in total! We also hope that you enjoyed reading about our different perspectives.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;p&gt;We are grateful to everyone that tweeted about the conference and shared their materials online! We are also happy that &lt;em&gt;Metis&lt;/em&gt; got interested in our summary blog post:&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;We would love to see a copy of the blog upon completion. Send me a note at grace@thisismetis.com - thanks!&lt;/p&gt;&amp;mdash; Metis (@thisismetis) &lt;a href=&#34;https://twitter.com/thisismetis/status/1022196313499295745?ref_src=twsrc%5Etfw&#34;&gt;July 25, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/r-lib/sessioninfo#readme&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; G. Csárdi, R. core, H. Wickham, W. Chang, et al. &lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;. R package version 1.1.0.9000. 2018. URL: &lt;a href=&#34;https://github.com/r-lib/sessioninfo#readme&#34;&gt;https://github.com/r-lib/sessioninfo#readme&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                                      
+##  version  R version 3.5.1 Patched (2018-10-14 r75439)
+##  os       macOS High Sierra 10.13.6                  
+##  system   x86_64, darwin15.6.0                       
+##  ui       X11                                        
+##  language (EN)                                       
+##  collate  en_US.UTF-8                                
+##  ctype    en_US.UTF-8                                
+##  tz       America/New_York                           
+##  date     2018-10-24                                 
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version    date       lib source                            
+##  assertthat      0.2.0      2017-04-11 [1] CRAN (R 3.5.0)                    
+##  backports       1.1.2      2017-12-13 [1] CRAN (R 3.5.0)                    
+##  bibtex          0.4.2      2017-06-30 [1] CRAN (R 3.5.0)                    
+##  BiocStyle     * 2.8.2      2018-05-30 [1] Bioconductor                      
+##  blogdown        0.8        2018-07-15 [1] CRAN (R 3.5.0)                    
+##  bookdown        0.7        2018-02-18 [1] CRAN (R 3.5.0)                    
+##  cli             1.0.1      2018-09-25 [1] CRAN (R 3.5.0)                    
+##  colorout      * 1.2-0      2018-05-03 [1] Github (jalvesaq/colorout@c42088d)
+##  crayon          1.3.4      2017-09-16 [1] CRAN (R 3.5.0)                    
+##  digest          0.6.18     2018-10-10 [1] CRAN (R 3.5.0)                    
+##  evaluate        0.12       2018-10-09 [1] CRAN (R 3.5.0)                    
+##  htmltools       0.3.6      2017-04-28 [1] CRAN (R 3.5.0)                    
+##  httr            1.3.1      2017-08-20 [1] CRAN (R 3.5.0)                    
+##  jsonlite        1.5        2017-06-01 [1] CRAN (R 3.5.0)                    
+##  knitcitations * 1.0.8      2017-07-04 [1] CRAN (R 3.5.0)                    
+##  knitr           1.20       2018-02-20 [1] CRAN (R 3.5.0)                    
+##  lubridate       1.7.4      2018-04-11 [1] CRAN (R 3.5.0)                    
+##  magrittr        1.5        2014-11-22 [1] CRAN (R 3.5.0)                    
+##  plyr            1.8.4      2016-06-08 [1] CRAN (R 3.5.0)                    
+##  R6              2.3.0      2018-10-04 [1] CRAN (R 3.5.0)                    
+##  Rcpp            0.12.19    2018-10-01 [1] CRAN (R 3.5.1)                    
+##  RefManageR      1.2.0      2018-04-25 [1] CRAN (R 3.5.0)                    
+##  rmarkdown       1.10       2018-06-11 [1] CRAN (R 3.5.0)                    
+##  rprojroot       1.3-2      2018-01-03 [1] CRAN (R 3.5.0)                    
+##  sessioninfo   * 1.1.0.9000 2018-10-02 [1] Github (r-lib/sessioninfo@4f91fad)
+##  stringi         1.2.4      2018-07-20 [1] CRAN (R 3.5.0)                    
+##  stringr         1.3.1      2018-05-10 [1] CRAN (R 3.5.0)                    
+##  withr           2.1.2      2018-03-15 [1] CRAN (R 3.5.0)                    
+##  xfun            0.3        2018-07-06 [1] CRAN (R 3.5.0)                    
+##  xml2            1.2.0      2018-01-24 [1] CRAN (R 3.5.0)                    
+##  yaml            2.2.0      2018-07-25 [1] CRAN (R 3.5.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.5/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;This conference covered a large spectrum of data science topics, hence the picture for the post!&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>LIBD rstats club remote useR!2018 notes</title>
+      <link>/post/libd-rstats-club-remote-user-2018-notes/</link>
+      <pubDate>Fri, 13 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/post/libd-rstats-club-remote-user-2018-notes/</guid>
+      <description>
+
+
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://LieberInstitute.github.io/rstatsclub/post/2018-07-13-libd-rstats-club-remote-user-2018-notes_files/Screen%20Shot%202018-07-13%20at%2011.51.37%20AM.png&#34; width=&#34;600&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;For our July 13th 2018 LIBD rstats club meeting we decided to check as much as we could the &lt;a href=&#34;https://user2018.r-project.org/&#34;&gt;useR!2018&lt;/a&gt; conference. Here’s what we were able to figure out about it in about an hour. Hopefully our quick notes will help other &lt;a href=&#34;https://twitter.com/search?q=%23rstats&#34;&gt;rstats&lt;/a&gt; enthusiasts, users and developers get a glimpse of the conference. Although there’s bound to me more videos and material about the conference coming out in the following days.&lt;/p&gt;
+&lt;div id=&#34;main-links&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Main links:&lt;/h3&gt;
+&lt;p&gt;First of all search all the Twitter history for tweets related to the conference by checking the &lt;a href=&#34;https://twitter.com/search?q=%23user2018&#34;&gt;user2018&lt;/a&gt; hashtag.&lt;/p&gt;
+&lt;p&gt;Next, check the videos of the talks. There are more videos there than we can check right now but we hope to come back sometime later and check more talks.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;All of the &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; presentations (unless specifically requested not), including tutorials are being recorded. These will be available at some point after the meeting, we think at this channel &lt;a href=&#34;https://t.co/lq6E2XnXP9&#34;&gt;https://t.co/lq6E2XnXP9&lt;/a&gt;&lt;br&gt;&lt;br&gt;Live streaming is a challenge, hope to attempt one keynote.&lt;/p&gt;&amp;mdash; useR!2018 (@useR2018_conf) &lt;a href=&#34;https://twitter.com/useR2018_conf/status/1016816371533938688?ref_src=twsrc%5Etfw&#34;&gt;July 10, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;talks&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Talks&lt;/h3&gt;
+&lt;p&gt;From checking Twitter, we can say that there lots of great talks and tutorials. Here are some of the main ones we found in this hour.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/rdpeng&#34;&gt;Roger Peng&lt;/a&gt; talking about &lt;em&gt;Teaching R to New Users&lt;/em&gt; got lots of attention. Here are some tweets about it:&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;.&lt;a href=&#34;https://twitter.com/rdpeng?ref_src=twsrc%5Etfw&#34;&gt;@rdpeng&lt;/a&gt; doing a better job of describing the &lt;a href=&#34;https://twitter.com/hashtag/tidyverse?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#tidyverse&lt;/a&gt; design philosophy than I ever have! &lt;a href=&#34;https://t.co/o3KunXe6qq&#34;&gt;https://t.co/o3KunXe6qq&lt;/a&gt;&lt;/p&gt;&amp;mdash; Hadley Wickham (@hadleywickham) &lt;a href=&#34;https://twitter.com/hadleywickham/status/1017553911782076416?ref_src=twsrc%5Etfw&#34;&gt;July 12, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+ &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Last day of &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; kicking off with &lt;a href=&#34;https://twitter.com/rdpeng?ref_src=twsrc%5Etfw&#34;&gt;@rdpeng&lt;/a&gt; &amp;quot;Teaching R to new users&amp;quot; &lt;a href=&#34;https://t.co/yIJfiU7s8I&#34;&gt;pic.twitter.com/yIJfiU7s8I&lt;/a&gt;&lt;/p&gt;&amp;mdash; Luke Zappia (@_lazappi_) &lt;a href=&#34;https://twitter.com/_lazappi_/status/1017559295355846657?ref_src=twsrc%5Etfw&#34;&gt;July 13, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+ &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Here is the narrative from my &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; keynote &lt;a href=&#34;https://t.co/SbrlShNaDL&#34;&gt;https://t.co/SbrlShNaDL&lt;/a&gt;&lt;/p&gt;&amp;mdash; Roger D. Peng (@rdpeng) &lt;a href=&#34;https://twitter.com/rdpeng/status/1017608009789259778?ref_src=twsrc%5Etfw&#34;&gt;July 13, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+ &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Roger Peng’s &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; keynote this morning resonates with me, as another long time user/developer/instructor. Useful, opinionated take on where we are now in &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; and how we got here. &lt;a href=&#34;https://twitter.com/rdpeng?ref_src=twsrc%5Etfw&#34;&gt;@rdpeng&lt;/a&gt; &lt;a href=&#34;https://t.co/bOLSoaFupd&#34;&gt;https://t.co/bOLSoaFupd&lt;/a&gt; &lt;a href=&#34;https://t.co/ejc9yFYGVA&#34;&gt;pic.twitter.com/ejc9yFYGVA&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jenny Bryan (@JennyBryan) &lt;a href=&#34;https://twitter.com/JennyBryan/status/1017579549435912194?ref_src=twsrc%5Etfw&#34;&gt;July 13, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/JennyBryan&#34;&gt;Jenny Bryan&lt;/a&gt; talked about &lt;em&gt;Code Smells and Feels&lt;/em&gt; which was one of the major highlights. We wish we could have been there. Here are some tweets about it:&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Code Smells and Feels&lt;br&gt;^^ my keynote talk at &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt;&lt;br&gt;Materials at: &lt;a href=&#34;https://t.co/e7dZRMZuSL&#34;&gt;https://t.co/e7dZRMZuSL&lt;/a&gt;&lt;br&gt;It was a great honour to speak and the Brisbane crew upheld the fine tradition of fun and informative useR! meetings 🎉 &lt;a href=&#34;https://t.co/2XkJ64NgsM&#34;&gt;pic.twitter.com/2XkJ64NgsM&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jenny Bryan (@JennyBryan) &lt;a href=&#34;https://twitter.com/JennyBryan/status/1017697356479729665?ref_src=twsrc%5Etfw&#34;&gt;July 13, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+ &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;A really nice keynote to close &lt;a href=&#34;https://twitter.com/hashtag/user2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#user2018&lt;/a&gt; “Code smells and feels” &lt;a href=&#34;https://twitter.com/JennyBryan?ref_src=twsrc%5Etfw&#34;&gt;@JennyBryan&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;&lt;a href=&#34;https://t.co/3pzXUhE9xh&#34;&gt;https://t.co/3pzXUhE9xh&lt;/a&gt; &lt;a href=&#34;https://t.co/BCDcMPKfXj&#34;&gt;pic.twitter.com/BCDcMPKfXj&lt;/a&gt;&lt;/p&gt;&amp;mdash; Mickaël CANOUIL (@mickaelcanouil) &lt;a href=&#34;https://twitter.com/mickaelcanouil/status/1017772842371317761?ref_src=twsrc%5Etfw&#34;&gt;July 13, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+&lt;p&gt;Check out her presentation materials on &lt;a href=&#34;https://github.com/jennybc/code-smells-and-feels&#34;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The talk was centered around the idea of writing good code. Using senses such as smell and feel as an extended metaphor, Bryan explains that coding is a sense that is developed through experience. Taking a very supportive tone, she provides pro-tips to writing efficient and effective code, such as writing simple conditions and functions instead of relying on complex function and “Tip #1: Do not comment and uncomment sections of code to alter behavior.”&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/thomasp85&#34;&gt;Thomas Lin Pedersen&lt;/a&gt; talked about the &lt;code&gt;gganimate&lt;/code&gt; package which seems to have included gifs in the talk.&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;First keynote for the second day of &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt;. &lt;a href=&#34;https://twitter.com/thomasp85?ref_src=twsrc%5Etfw&#34;&gt;@thomasp85&lt;/a&gt; &amp;quot;The Grammar of Animation&amp;quot; &lt;a href=&#34;https://twitter.com/hashtag/sketchnotes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#sketchnotes&lt;/a&gt; &lt;a href=&#34;https://t.co/tvNjvbr4ag&#34;&gt;pic.twitter.com/tvNjvbr4ag&lt;/a&gt;&lt;/p&gt;&amp;mdash; Luke Zappia (@_lazappi_) &lt;a href=&#34;https://twitter.com/_lazappi_/status/1017198068360347648?ref_src=twsrc%5Etfw&#34;&gt;July 12, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+ &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;😬 I said I wasn&amp;#39;t gonna gif it, but I also don&amp;#39;t want you to miss it…&lt;br&gt;&amp;quot;The Grammar of Animation&amp;quot; 👨‍🎨 &lt;a href=&#34;https://twitter.com/thomasp85?ref_src=twsrc%5Etfw&#34;&gt;@thomasp85&lt;/a&gt; &lt;a href=&#34;https://t.co/t2HYRTtHwO&#34;&gt;https://t.co/t2HYRTtHwO&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/gganimate?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#gganimate&lt;/a&gt; &lt;a href=&#34;https://t.co/YOyuNn5p1g&#34;&gt;pic.twitter.com/YOyuNn5p1g&lt;/a&gt;&lt;/p&gt;&amp;mdash; Mara Averick (@dataandme) &lt;a href=&#34;https://twitter.com/dataandme/status/1017393683379949568?ref_src=twsrc%5Etfw&#34;&gt;July 12, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/StephdeSilva&#34;&gt;Steph de Silva&lt;/a&gt; started the useR!2018 keynotes with her &lt;em&gt;Beyond syntax, towards culture&lt;/em&gt; talk which covered different R communities and how we all interact.&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Kicking off the &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; talks with @StephdeSilva&amp;#39;s keynote &amp;quot;Beyond syntax, towards culture&amp;quot; &lt;a href=&#34;https://twitter.com/hashtag/sketchnotes?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#sketchnotes&lt;/a&gt; &lt;a href=&#34;https://t.co/vgBsfOIFJU&#34;&gt;pic.twitter.com/vgBsfOIFJU&lt;/a&gt;&lt;/p&gt;&amp;mdash; Luke Zappia (@_lazappi_) &lt;a href=&#34;https://twitter.com/_lazappi_/status/1016904394103668736?ref_src=twsrc%5Etfw&#34;&gt;July 11, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+ &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Late to the party, I was a little busy: my slides for my talk &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt;&lt;a href=&#34;https://t.co/OzqcSTEx2v&#34;&gt;https://t.co/OzqcSTEx2v&lt;/a&gt; &lt;a href=&#34;https://t.co/RNnCm6K2ym&#34;&gt;pic.twitter.com/RNnCm6K2ym&lt;/a&gt;&lt;/p&gt;&amp;mdash; Steph Stammel (@StephStammel) &lt;a href=&#34;https://twitter.com/StephStammel/status/1017757332254515201?ref_src=twsrc%5Etfw&#34;&gt;July 13, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+&lt;p&gt;The slides and video for the &lt;code&gt;workflowr&lt;/code&gt; talk by &lt;a href=&#34;https://twitter.com/jdblischak&#34;&gt;John Blischak&lt;/a&gt; are already online too which got the big thumbs up by &lt;a href=&#34;https://twitter.com/PeteHaitch&#34;&gt;Peter Hickey&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Here are the slides for my &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; presentation on my &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; package &lt;a href=&#34;https://twitter.com/hashtag/workflowr?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#workflowr&lt;/a&gt; for reproducible research &lt;a href=&#34;https://t.co/O2yZ7RemN6&#34;&gt;https://t.co/O2yZ7RemN6&lt;/a&gt;&lt;/p&gt;&amp;mdash; John Blischak (@jdblischak) &lt;a href=&#34;https://twitter.com/jdblischak/status/1016912611529510913?ref_src=twsrc%5Etfw&#34;&gt;July 11, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+ &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;I feel like &lt;a href=&#34;https://twitter.com/jdblischak?ref_src=twsrc%5Etfw&#34;&gt;@jdblischak&lt;/a&gt; has read my mind with workflowr. It&amp;#39;s like my current workflow but, like, actually good and reproducible! Will be especially great for collaborative and consulting type projects &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; &lt;a href=&#34;https://t.co/tZtqyH3sc2&#34;&gt;https://t.co/tZtqyH3sc2&lt;/a&gt;&lt;/p&gt;&amp;mdash; Peter Hickey (@PeteHaitch) &lt;a href=&#34;https://twitter.com/PeteHaitch/status/1016920426792943616?ref_src=twsrc%5Etfw&#34;&gt;July 11, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+&lt;p&gt;If you are starting out with the tidyverse, this tutorial about &lt;em&gt;Wrangling with the Tidyverse&lt;/em&gt; by &lt;a href=&#34;https://twitter.com/drsimonj&#34;&gt;Simon Jackson&lt;/a&gt; seems interesting!&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Great to meet everyone today who attended my &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; tutorial, &amp;quot;Wrangling with the Tidyverse!&amp;quot;&lt;br&gt;&lt;br&gt;Missed out or forgot anything? Get all the material at &lt;a href=&#34;https://t.co/YfYZBlkwMs&#34;&gt;https://t.co/YfYZBlkwMs&lt;/a&gt;&lt;br&gt;&lt;br&gt;Special thanks to &lt;a href=&#34;https://twitter.com/Rhydwyn?ref_src=twsrc%5Etfw&#34;&gt;@Rhydwyn&lt;/a&gt; &lt;a href=&#34;https://twitter.com/orchid00?ref_src=twsrc%5Etfw&#34;&gt;@orchid00&lt;/a&gt; and @SayaniGupta5 for their support too &lt;a href=&#34;https://t.co/5MnXLSQxq9&#34;&gt;pic.twitter.com/5MnXLSQxq9&lt;/a&gt;&lt;/p&gt;&amp;mdash; Simon Jackson (@drsimonj) &lt;a href=&#34;https://twitter.com/drsimonj/status/1016592786865287169?ref_src=twsrc%5Etfw&#34;&gt;July 10, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Did anyone else think about the Diablo game with the &lt;code&gt;deckard&lt;/code&gt; package? This new package by &lt;a href=&#34;https://twitter.com/VergeLabsAI&#34;&gt;Verge Labs&lt;/a&gt; could be very useful when working with large datasets.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Introducing deckard for large scale visualisations in &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;! If you want to hear more about it come catch us present this Thursday at 4:30 at &lt;a href=&#34;https://twitter.com/hashtag/user2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#user2018&lt;/a&gt;. &lt;a href=&#34;https://t.co/sIcd3ztqVl&#34;&gt;https://t.co/sIcd3ztqVl&lt;/a&gt; &lt;a href=&#34;https://t.co/ggu0N7JMWH&#34;&gt;pic.twitter.com/ggu0N7JMWH&lt;/a&gt;&lt;/p&gt;&amp;mdash; Verge Labs (@VergeLabsAI) &lt;a href=&#34;https://twitter.com/VergeLabsAI/status/1016793618051301376?ref_src=twsrc%5Etfw&#34;&gt;July 10, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/jimhester_&#34;&gt;Jim Hester&lt;/a&gt;’s talk about the &lt;code&gt;glue&lt;/code&gt; package was highly recommended by Jenny Bryan. And more likely than not, you are using R packages that Jim has helped in some way or the other.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Slides for my talk at &lt;a href=&#34;https://t.co/7JO8G1nQup&#34;&gt;https://t.co/7JO8G1nQup&lt;/a&gt;&lt;/p&gt;&amp;mdash; Jim Hester (@jimhester_) &lt;a href=&#34;https://twitter.com/jimhester_/status/1017226381082558464?ref_src=twsrc%5Etfw&#34;&gt;July 12, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/tslumley&#34;&gt;Thomas Lumley&lt;/a&gt; talked about &lt;code&gt;fasteR&lt;/code&gt;: ways to speed up R code; check the video of his talk at &lt;a href=&#34;https://www.youtube.com/watch?v=P2MDIzflp9k&#34;&gt;YouTube&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://imgs.xkcd.com/comics/is_it_worth_the_time.png&#34; width=&#34;600&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;Major takehomes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you repeat a task frequently, it is worth taking the time to optimize it for speed. (See xkcd cartoon!)&lt;/li&gt;
+&lt;li&gt;Packages are available to measure how “efficient” your code is, in time and/or memory. Options: &lt;code&gt;microbenchmark()&lt;/code&gt;, &lt;code&gt;Rprof()&lt;/code&gt;, &lt;code&gt;system.time()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Reasons your code may be slower than necessary:
+&lt;ul&gt;
+&lt;li&gt;Dataframes are slower than matrices, data.tables, tbls, and lists&lt;/li&gt;
+&lt;li&gt;Vectorize your code whenever possible&lt;/li&gt;
+&lt;li&gt;Preallocate for the size of your objects, rather than “growing” your objects.&lt;/li&gt;
+&lt;li&gt;Linear algebra / matrix algebra functions can be much faster than alternatives because they are coded in C. E.g. for a large matrix, &lt;code&gt;crossprod(scale(x))&lt;/code&gt; &lt;em&gt;if you know there is no missing data or NAs&lt;/em&gt; is many times faster than &lt;code&gt;cor(x)&lt;/code&gt;. If you know the linear algebra, use matrix operations when possible.&lt;/li&gt;
+&lt;li&gt;Packages exist for modeling large data. Example: &lt;code&gt;biglm&lt;/code&gt; for linear models.&lt;/li&gt;
+&lt;li&gt;Thomas Lumley is a Rosalind Franklin fan :)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;miscellaneous&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Miscellaneous&lt;/h3&gt;
+&lt;p&gt;They made an awesome hex wall with the hex stickers from packages represented at useR!2018. It’s awesome!&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;The &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/hexwall?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#hexwall&lt;/a&gt; has been revealed! Read about how it was created in &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; on this blog post: &lt;a href=&#34;https://t.co/krYYOQ3N84&#34;&gt;https://t.co/krYYOQ3N84&lt;/a&gt;&lt;br&gt;&lt;br&gt;A huge thanks to everyone who has submitted stickers and provided feedback. I hope you enjoy the end result as much as I have had creating it! 🎉 &lt;a href=&#34;https://t.co/GnG9m2cZme&#34;&gt;pic.twitter.com/GnG9m2cZme&lt;/a&gt;&lt;/p&gt;&amp;mdash; Mitchell O&amp;#39;Hara-Wild (@mitchoharawild) &lt;a href=&#34;https://twitter.com/mitchoharawild/status/1016867974597074944?ref_src=twsrc%5Etfw&#34;&gt;July 11, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+ &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Controversial choice of wearing a &lt;a href=&#34;https://twitter.com/hashtag/python?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#python&lt;/a&gt; in front of an &lt;a href=&#34;https://twitter.com/hashtag/hexwall?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#hexwall&lt;/a&gt; of &lt;a href=&#34;https://twitter.com/hashtag/R?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#R&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/packages?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#packages&lt;/a&gt; but hey, we&amp;#39;re all friends! &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; &lt;a href=&#34;https://t.co/rSG1EsH4Wi&#34;&gt;pic.twitter.com/rSG1EsH4Wi&lt;/a&gt;&lt;/p&gt;&amp;mdash; Anna Quaglieri (@annaquagli) &lt;a href=&#34;https://twitter.com/annaquagli/status/1016920889101709312?ref_src=twsrc%5Etfw&#34;&gt;July 11, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+&lt;p&gt;Here’s a blog post summarizing the conference from someone that was there if you want to check it out.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Last blog post for &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt;. What a great week. Thank you to everyone who contributed. &lt;a href=&#34;https://t.co/VA55cZz0VZ&#34;&gt;https://t.co/VA55cZz0VZ&lt;/a&gt;&lt;/p&gt;&amp;mdash; David Neuzerling (@mdneuzerling) &lt;a href=&#34;https://twitter.com/mdneuzerling/status/1017666723015581696?ref_src=twsrc%5Etfw&#34;&gt;July 13, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;It’s awesome to see the &lt;a href=&#34;https://twitter.com/RLadiesGlobal&#34;&gt;RLadies&lt;/a&gt; community thriving! A few of us didn’t know about &lt;a href=&#34;https://r-posts.com/introducing-r-ladies-remote-chapter/&#34;&gt;RLadies Remote&lt;/a&gt; which everyone can join.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Here are amazing &lt;a href=&#34;https://twitter.com/hashtag/RLadies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#RLadies&lt;/a&gt; from around the world having dinner after an excellent day at &lt;a href=&#34;https://twitter.com/useR2018_conf?ref_src=twsrc%5Etfw&#34;&gt;@useR2018_conf&lt;/a&gt; &lt;a href=&#34;https://twitter.com/RLadiesGlobal?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesGlobal&lt;/a&gt; &lt;a href=&#34;https://twitter.com/RLadiesBrisbane?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesBrisbane&lt;/a&gt; &lt;a href=&#34;https://twitter.com/RLadiesSydney?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesSydney&lt;/a&gt; &lt;a href=&#34;https://twitter.com/RLadiesIstanbul?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesIstanbul&lt;/a&gt; &lt;a href=&#34;https://twitter.com/RLadiesIzmir?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesIzmir&lt;/a&gt; &lt;a href=&#34;https://twitter.com/RLadiesAKL?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesAKL&lt;/a&gt; &lt;a href=&#34;https://twitter.com/RLadiesDC?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesDC&lt;/a&gt; &lt;a href=&#34;https://twitter.com/RLadiesRemote?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesRemote&lt;/a&gt; &lt;a href=&#34;https://twitter.com/RLadiesMVD?ref_src=twsrc%5Etfw&#34;&gt;@RLadiesMVD&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rladies?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rladies&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstat?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstat&lt;/a&gt; &lt;a href=&#34;https://t.co/aZoSuAU0Gi&#34;&gt;pic.twitter.com/aZoSuAU0Gi&lt;/a&gt;&lt;/p&gt;&amp;mdash; R-Ladies Melbourne (@RLadiesMelb) &lt;a href=&#34;https://twitter.com/RLadiesMelb/status/1016604921154584576?ref_src=twsrc%5Etfw&#34;&gt;July 10, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;These are some awesome socks!&lt;/p&gt;
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Packed my own hex socks for &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; &lt;a href=&#34;https://t.co/UxPcBp8CGh&#34;&gt;pic.twitter.com/UxPcBp8CGh&lt;/a&gt;&lt;/p&gt;&amp;mdash; Ben Harrap (@BHarrap) &lt;a href=&#34;https://twitter.com/BHarrap/status/1017237977599078400?ref_src=twsrc%5Etfw&#34;&gt;July 12, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+ &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Sock party &lt;a href=&#34;https://twitter.com/hashtag/useR2018?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#useR2018&lt;/a&gt; (trying again with proper spelling) &lt;a href=&#34;https://t.co/gI6zcbTzDW&#34;&gt;pic.twitter.com/gI6zcbTzDW&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dianne Cook (@visnut) &lt;a href=&#34;https://twitter.com/visnut/status/1016443338331807744?ref_src=twsrc%5Etfw&#34;&gt;July 9, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;/p&gt;
+&lt;p&gt;And who doesn’t love this image of &lt;a href=&#34;https://twitter.com/hadleywickham&#34;&gt;Hadley Wickham&lt;/a&gt; being mobbed by deers? He even meme-fied it himself on this tweet.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;People often ask why dplyr &amp;amp; tibble don&amp;#39;t support row names. I&amp;#39;ve (finally) written up my reasons at &lt;a href=&#34;https://t.co/UmZjaSk7UX&#34;&gt;https://t.co/UmZjaSk7UX&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; (photo credit: &lt;a href=&#34;https://twitter.com/hspter?ref_src=twsrc%5Etfw&#34;&gt;@hspter&lt;/a&gt;) &lt;a href=&#34;https://t.co/IVbaVmKhYp&#34;&gt;pic.twitter.com/IVbaVmKhYp&lt;/a&gt;&lt;/p&gt;&amp;mdash; Hadley Wickham (@hadleywickham) &lt;a href=&#34;https://twitter.com/hadleywickham/status/1017562721456275456?ref_src=twsrc%5Etfw&#34;&gt;July 13, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;useR!2019 is already lined up, &lt;a href=&#34;http://www.user2019.fr/&#34;&gt;check it out&lt;/a&gt;. It’ll be in Toulouse, France! Follow them on Twitter at &lt;a href=&#34;https://twitter.com/UseR2019_Conf&#34; class=&#34;uri&#34;&gt;https://twitter.com/UseR2019_Conf&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;p&gt;We are greatful to everyone that tweeted about the conference and shared their materials online!&lt;/p&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;devtools&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Wickham_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; H. Wickham, J. Hester and W. Chang. &lt;em&gt;devtools: Tools to Make Developing R Packages Easier&lt;/em&gt;. R package version 1.13.6. 2018. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;https://CRAN.R-project.org/package=devtools&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## Session info ----------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.5.1 (2018-07-02)
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2018-07-13&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
+##  backports       1.1.2   2017-12-13 cran (@1.1.2)                     
+##  base          * 3.5.1   2018-07-05 local                             
+##  bibtex          0.4.2   2017-06-30 CRAN (R 3.5.0)                    
+##  BiocStyle     * 2.8.2   2018-05-30 Bioconductor                      
+##  blogdown        0.7     2018-07-07 CRAN (R 3.5.0)                    
+##  bookdown        0.7     2018-02-18 CRAN (R 3.5.0)                    
+##  colorout      * 1.2-0   2018-05-03 Github (jalvesaq/colorout@c42088d)
+##  compiler        3.5.1   2018-07-05 local                             
+##  datasets      * 3.5.1   2018-07-05 local                             
+##  devtools      * 1.13.6  2018-06-27 cran (@1.13.6)                    
+##  digest          0.6.15  2018-01-28 CRAN (R 3.5.0)                    
+##  evaluate        0.10.1  2017-06-24 cran (@0.10.1)                    
+##  graphics      * 3.5.1   2018-07-05 local                             
+##  grDevices     * 3.5.1   2018-07-05 local                             
+##  htmltools       0.3.6   2017-04-28 cran (@0.3.6)                     
+##  httr            1.3.1   2017-08-20 CRAN (R 3.5.0)                    
+##  jsonlite        1.5     2017-06-01 CRAN (R 3.5.0)                    
+##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.5.0)                    
+##  knitr           1.20    2018-02-20 cran (@1.20)                      
+##  lubridate       1.7.4   2018-04-11 CRAN (R 3.5.0)                    
+##  magrittr        1.5     2014-11-22 cran (@1.5)                       
+##  memoise         1.1.0   2017-04-21 CRAN (R 3.5.0)                    
+##  methods       * 3.5.1   2018-07-05 local                             
+##  plyr            1.8.4   2016-06-08 cran (@1.8.4)                     
+##  R6              2.2.2   2017-06-17 CRAN (R 3.5.0)                    
+##  Rcpp            0.12.17 2018-05-18 cran (@0.12.17)                   
+##  RefManageR      1.2.0   2018-04-25 CRAN (R 3.5.0)                    
+##  rmarkdown       1.10    2018-06-11 CRAN (R 3.5.0)                    
+##  rprojroot       1.3-2   2018-01-03 cran (@1.3-2)                     
+##  stats         * 3.5.1   2018-07-05 local                             
+##  stringi         1.2.3   2018-06-12 CRAN (R 3.5.0)                    
+##  stringr         1.3.1   2018-05-10 CRAN (R 3.5.0)                    
+##  tools           3.5.1   2018-07-05 local                             
+##  utils         * 3.5.1   2018-07-05 local                             
+##  withr           2.1.2   2018-03-15 CRAN (R 3.5.0)                    
+##  xfun            0.3     2018-07-06 CRAN (R 3.5.0)                    
+##  xml2            1.2.0   2018-01-24 CRAN (R 3.5.0)                    
+##  yaml            2.1.19  2018-05-01 CRAN (R 3.5.0)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

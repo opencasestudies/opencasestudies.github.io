@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Welcome to the LIBD rstats club!
+A few months ago Carrie Wright and Leonardo Collado-Torres started an R &#43; Journal club where we have been meeting every other week to talk about R packages and discuss journal articles in our field. Some examples of what we covered are tidyverse (Wickham, 2017), BiocStyle (Oleś, Morgan, and Huber, 2017) and rmarkdown (Allaire, Xie, McPherson, Luraschi, et al., 2018) presentations. We are now taking the R portion of the club to the next level.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/postocs/welcome-to-the-libd-rstats-club/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.a3cda781a9b24f26fefd34a53547835b.css">
+
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/postocs/welcome-to-the-libd-rstats-club/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Academic">
+  <meta property="og:url" content="/postocs/welcome-to-the-libd-rstats-club/">
+  <meta property="og:title" content="Welcome to the LIBD rstats club! | Academic">
+  <meta property="og:description" content="Welcome to the LIBD rstats club!
+A few months ago Carrie Wright and Leonardo Collado-Torres started an R &#43; Journal club where we have been meeting every other week to talk about R packages and discuss journal articles in our field. Some examples of what we covered are tidyverse (Wickham, 2017), BiocStyle (Oleś, Morgan, and Huber, 2017) and rmarkdown (Allaire, Xie, McPherson, Luraschi, et al., 2018) presentations. We are now taking the R portion of the club to the next level."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-03-09T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-03-09T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Welcome to the LIBD rstats club! | Academic</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Academic</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Welcome to the LIBD rstats club!</h1>
+
+  
+
+  
+    
+
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 9, 2018
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/rstats/">rstats</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/postocs/welcome-to-the-libd-rstats-club/&amp;text=Welcome%20to%20the%20LIBD%20rstats%20club!" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/postocs/welcome-to-the-libd-rstats-club/&amp;t=Welcome%20to%20the%20LIBD%20rstats%20club!" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Welcome%20to%20the%20LIBD%20rstats%20club!&amp;body=/postocs/welcome-to-the-libd-rstats-club/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/postocs/welcome-to-the-libd-rstats-club/&amp;title=Welcome%20to%20the%20LIBD%20rstats%20club!" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Welcome%20to%20the%20LIBD%20rstats%20club!%20/postocs/welcome-to-the-libd-rstats-club/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/postocs/welcome-to-the-libd-rstats-club/&amp;title=Welcome%20to%20the%20LIBD%20rstats%20club!" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<p>Welcome to the <strong>LIBD rstats club</strong>!</p>
+<p>A few months ago <a href="https://www.libd.org/team/Carrie-Wright/">Carrie Wright</a> and <a href="https://www.libd.org/team/Leonardo-Collado-Torres/">Leonardo Collado-Torres</a> started an <em>R + Journal</em> club where we have been meeting every other week to talk about <a href="https://cran.r-project.org/">R</a> packages and discuss journal articles in our field. Some examples of what we covered are <em><a href="https://CRAN.R-project.org/package=tidyverse">tidyverse</a></em> <a id='cite-Wickham_2017'></a>(<a href='https://CRAN.R-project.org/package=tidyverse'>Wickham, 2017</a>), <em><a href="http://bioconductor.org/packages/BiocStyle">BiocStyle</a></em> <a id='cite-Oles_2017'></a>(<a href='https://github.com/Bioconductor/BiocStyle'>Oleś, Morgan, and Huber, 2017</a>) and <em><a href="https://CRAN.R-project.org/package=rmarkdown">rmarkdown</a></em> <a id='cite-Allaire_2018'></a>(<a href='https://CRAN.R-project.org/package=rmarkdown'>Allaire, Xie, McPherson, Luraschi, et al., 2018</a>) presentations. We are now taking the R portion of the club to the next level.</p>
+<p>Like we say in the about section, we are researchers at <a href="https://www.libd.org/">LIBD</a> that frequently use <a href="https://cran.r-project.org/">R</a> and other tools. The <a href="https://twitter.com/search?q=%23rstats">R community</a> has been <a href="https://stackoverflow.blog/2017/10/10/impressive-growth-r/">growing a lot in recent years</a> and it’s not easy to keep ourselves updated on all the recent developments. We also work in a dynamic environment where new people join LIBD frequently as students, post-docs and staff.</p>
+<p>In the <strong>LIBD rstats club</strong> we plan to write blog posts about R packages we are interested in or are just learning how to use, <em>how to do</em> guides, and occasionally our <a href="http://github.com/LieberInstitute">own open-source software</a>. For our <em>how to do</em> guides, the idea is that if two people asks us how to do <span class="math inline">\(X\)</span>, then it’s probably a good time to write a blog post. Similar to <a href="https://twitter.com/drob">David Robinson</a>’s advice:</p>
+<blockquote class="twitter-tweet" data-lang="en">
+<p lang="en" dir="ltr">
+When you’ve written the same code 3 times, write a function<br><br>When you’ve given the same in-person advice 3 times, write a blog post
+</p>
+— David Robinson (<span class="citation">@drob</span>) <a href="https://twitter.com/drob/status/928447584712253440?ref_src=twsrc%5Etfw">November 9, 2017</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>We are doing this to help each other at <a href="https://www.libd.org/">LIBD</a>, to help future new colleagues and students, and the community at large. We also hope to receive feedback from the community (that complies with our <a href="http://LieberInstitute.github.io/rstatsclub/#coc">code of conduct</a>) that will be beneficial to everyone reading the posts. Maybe you know of an alternative way to do the same task we describe.</p>
+<p>Thank you for tuning in! Follow us via <a href="http://feeds.feedburner.com/LIBDrstatsclub">RSS</a> (allows email subscriptions) or <a href="https://twitter.com/LIBDrstats">Twitter</a>.</p>
+<p>Founding members: <a href="https://www.libd.org/team/Leonardo-Collado-Torres/">Leonardo Collado-Torres</a>, <a href="https://www.libd.org/team/Carrie-Wright/">Carrie Wright</a> and <a href="https://www.libd.org/team/emily-e-burke/">Emily E. Burke</a>.</p>
+<p>PS This is not a course or boot camp site to get started using R, for that there are other resources available.</p>
+<div id="details" class="section level3">
+<h3>Details</h3>
+<p>Anyone at LIBD is welcome to participate and contribute blog posts: we will add you to the <a href="http://LieberInstitute.github.io/rstatsclub/#members">members</a> section. Just remember that your blog posts have to comply with the confidentiality agreement we signed. We also welcome anonymous posts, though signing them <em>can</em> be <a href="http://varianceexplained.org/r/start-blog/">useful for exposure and CV building</a>, although not necessary.</p>
+</div>
+<div id="acknowledgements" class="section level3">
+<h3>Acknowledgements</h3>
+<p>This blog post was made possible thanks to:</p>
+<ul>
+<li><em><a href="http://bioconductor.org/packages/BiocStyle">BiocStyle</a></em> (<a href='https://github.com/Bioconductor/BiocStyle'>Oleś, Morgan, and Huber, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> <a id='cite-Xie_2017'></a>(<a href='https://github.com/rstudio/blogdown'>Xie, Hill, and Thomas, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=devtools">devtools</a></em> <a id='cite-Wickham_2018'></a>(<a href='https://CRAN.R-project.org/package=devtools'>Wickham, Hester, and Chang, 2018</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=knitcitations">knitcitations</a></em> <a id='cite-Boettiger_2017'></a>(<a href='https://CRAN.R-project.org/package=knitcitations'>Boettiger, 2017</a>)</li>
+</ul>
+</div>
+<div id="references" class="section level3">
+<h3>References</h3>
+<p>
+<a id='bib-Allaire_2018'></a><a href="#cite-Allaire_2018">[1]</a><cite> J. Allaire, Y. Xie, J. McPherson, J. Luraschi, et al. <em>rmarkdown: Dynamic Documents for R</em>. R package version 1.9. 2018. URL: <a href="https://CRAN.R-project.org/package=rmarkdown">https://CRAN.R-project.org/package=rmarkdown</a>.</cite>
+</p>
+<p>
+<a id='bib-Boettiger_2017'></a><a href="#cite-Boettiger_2017">[2]</a><cite> C. Boettiger. <em>knitcitations: Citations for ‘Knitr’ Markdown Files</em>. R package version 1.0.8. 2017. URL: <a href="https://CRAN.R-project.org/package=knitcitations">https://CRAN.R-project.org/package=knitcitations</a>.</cite>
+</p>
+<p>
+<a id='bib-Oles_2017'></a><a href="#cite-Oles_2017">[3]</a><cite> A. Oleś, M. Morgan and W. Huber. <em>BiocStyle: Standard styles for vignettes and other Bioconductor documents</em>. R package version 2.6.1. 2017. URL: <a href="https://github.com/Bioconductor/BiocStyle">https://github.com/Bioconductor/BiocStyle</a>.</cite>
+</p>
+<p>
+<a id='bib-Wickham_2017'></a><a href="#cite-Wickham_2017">[4]</a><cite> H. Wickham. <em>tidyverse: Easily Install and Load the ‘Tidyverse’</em>. R package version 1.2.1. 2017. URL: <a href="https://CRAN.R-project.org/package=tidyverse">https://CRAN.R-project.org/package=tidyverse</a>.</cite>
+</p>
+<p>
+<a id='bib-Wickham_2018'></a><a href="#cite-Wickham_2018">[5]</a><cite> H. Wickham, J. Hester and W. Chang. <em>devtools: Tools to Make Developing R Packages Easier</em>. R package version 1.13.5. 2018. URL: <a href="https://CRAN.R-project.org/package=devtools">https://CRAN.R-project.org/package=devtools</a>.</cite>
+</p>
+<p>
+<a id='bib-Xie_2017'></a><a href="#cite-Xie_2017">[6]</a><cite> Y. Xie, A. P. Hill and A. Thomas. <em>blogdown: Creating Websites with R Markdown</em>. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: <a href="https://github.com/rstudio/blogdown">https://github.com/rstudio/blogdown</a>.</cite>
+</p>
+</div>
+<div id="reproducibility" class="section level3">
+<h3>Reproducibility</h3>
+<pre><code>## Session info ----------------------------------------------------------------------------------------------------------</code></pre>
+<pre><code>##  setting  value                       
+##  version  R version 3.4.3 (2017-11-30)
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2018-03-08</code></pre>
+<pre><code>## Packages --------------------------------------------------------------------------------------------------------------</code></pre>
+<pre><code>##  package       * version date       source                            
+##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    
+##  base          * 3.4.3   2017-12-07 local                             
+##  bibtex          0.4.2   2017-06-30 CRAN (R 3.4.1)                    
+##  BiocStyle     * 2.6.1   2017-11-30 Bioconductor                      
+##  blogdown        0.5.9   2018-03-08 Github (rstudio/blogdown@dc1f41c) 
+##  bookdown        0.7     2018-02-18 cran (@0.7)                       
+##  colorout      * 1.2-0   2018-02-19 Github (jalvesaq/colorout@2f01173)
+##  compiler        3.4.3   2017-12-07 local                             
+##  datasets      * 3.4.3   2017-12-07 local                             
+##  devtools      * 1.13.5  2018-02-18 CRAN (R 3.4.3)                    
+##  digest          0.6.15  2018-01-28 CRAN (R 3.4.3)                    
+##  evaluate        0.10.1  2017-06-24 CRAN (R 3.4.1)                    
+##  graphics      * 3.4.3   2017-12-07 local                             
+##  grDevices     * 3.4.3   2017-12-07 local                             
+##  htmltools       0.3.6   2017-04-28 CRAN (R 3.4.0)                    
+##  httr            1.3.1   2017-08-20 CRAN (R 3.4.1)                    
+##  jsonlite        1.5     2017-06-01 CRAN (R 3.4.0)                    
+##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.4.1)                    
+##  knitr           1.20    2018-02-20 cran (@1.20)                      
+##  lubridate       1.7.3   2018-02-27 CRAN (R 3.4.3)                    
+##  magrittr        1.5     2014-11-22 CRAN (R 3.4.0)                    
+##  memoise         1.1.0   2017-04-21 CRAN (R 3.4.0)                    
+##  methods       * 3.4.3   2017-12-07 local                             
+##  plyr            1.8.4   2016-06-08 CRAN (R 3.4.0)                    
+##  R6              2.2.2   2017-06-17 CRAN (R 3.4.0)                    
+##  Rcpp            0.12.15 2018-01-20 CRAN (R 3.4.3)                    
+##  RefManageR      0.14.20 2017-08-17 CRAN (R 3.4.1)                    
+##  rmarkdown       1.9     2018-03-01 cran (@1.9)                       
+##  rprojroot       1.3-2   2018-01-03 CRAN (R 3.4.3)                    
+##  stats         * 3.4.3   2017-12-07 local                             
+##  stringi         1.1.6   2017-11-17 CRAN (R 3.4.2)                    
+##  stringr         1.3.0   2018-02-19 cran (@1.3.0)                     
+##  tools           3.4.3   2017-12-07 local                             
+##  utils         * 3.4.3   2017-12-07 local                             
+##  withr           2.1.1   2017-12-19 CRAN (R 3.4.3)                    
+##  xfun            0.1     2018-01-22 CRAN (R 3.4.3)                    
+##  xml2            1.2.0   2018-01-24 CRAN (R 3.4.3)                    
+##  yaml            2.1.17  2018-02-27 cran (@2.1.17)</code></pre>
+</div>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/blog/">blog</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hue3d688a4e74633c5efe0e3936ac23c1e_53872_250x250_fill_lanczos_center_2.png" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/"></a></h5>
+      <h6 class="card-subtitle">Continuous rstats learning</h6>
+      <p class="card-text">We are researchers at the @LieberInstitute, blogging about R packages, how-to guides &amp; occasionally our own open-source software (opinions r our own) #rstats</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a href="mailto:lcolladotor@gmail.com" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="http://LieberInstitute.github.io/rstatsclub/" target="_blank" rel="noopener">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://twitter.com/LIBDrstats" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://github.com/LieberInstitute" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/postocs/contributing-to-the-libd-rstats-club/">Contributing to the LIBD rstats club</a></li>
+          
+          <li><a href="/postocs/test-post-for-checking-website/">Test post for checking website</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.0bf1e3db85cbb232372ed31d6f10dc70.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

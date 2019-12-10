@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="In this blog post Leonardo Collado-Torres explains how to contribute posts to the LIBD rstats club. While some parameters are specific to this blog, you could also use this for creating your own community blog.
+Install necessary tools We first need to get the appropriate tools installed in our computer.
+1. R Lets start by installing the latest version of R. At the time of writing this post, that would be R 3.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/postocs/contributing-to-the-libd-rstats-club/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.a3cda781a9b24f26fefd34a53547835b.css">
+
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/postocs/contributing-to-the-libd-rstats-club/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Academic">
+  <meta property="og:url" content="/postocs/contributing-to-the-libd-rstats-club/">
+  <meta property="og:title" content="Contributing to the LIBD rstats club | Academic">
+  <meta property="og:description" content="In this blog post Leonardo Collado-Torres explains how to contribute posts to the LIBD rstats club. While some parameters are specific to this blog, you could also use this for creating your own community blog.
+Install necessary tools We first need to get the appropriate tools installed in our computer.
+1. R Lets start by installing the latest version of R. At the time of writing this post, that would be R 3."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-03-09T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-03-09T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Contributing to the LIBD rstats club | Academic</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Academic</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Contributing to the LIBD rstats club</h1>
+
+  
+
+  
+    
+
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 9, 2018
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/rstats/">rstats</a>, <a href="/categories/setup/">setup</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/postocs/contributing-to-the-libd-rstats-club/&amp;text=Contributing%20to%20the%20LIBD%20rstats%20club" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/postocs/contributing-to-the-libd-rstats-club/&amp;t=Contributing%20to%20the%20LIBD%20rstats%20club" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Contributing%20to%20the%20LIBD%20rstats%20club&amp;body=/postocs/contributing-to-the-libd-rstats-club/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/postocs/contributing-to-the-libd-rstats-club/&amp;title=Contributing%20to%20the%20LIBD%20rstats%20club" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Contributing%20to%20the%20LIBD%20rstats%20club%20/postocs/contributing-to-the-libd-rstats-club/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/postocs/contributing-to-the-libd-rstats-club/&amp;title=Contributing%20to%20the%20LIBD%20rstats%20club" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<p>In this blog post <a href="https://www.libd.org/team/Leonardo-Collado-Torres/">Leonardo Collado-Torres</a> explains how to contribute posts to the <strong>LIBD rstats club</strong>. While some parameters are specific to this blog, you could also use this for creating your own community blog.</p>
+<div id="install-necessary-tools" class="section level3">
+<h3>Install necessary tools</h3>
+<p>We first need to get the appropriate tools installed in our computer.</p>
+<div id="r" class="section level4">
+<h4>1. R</h4>
+<p>Lets start by installing the latest version of <a href="https://cran.r-project.org/">R</a>. At the time of writing this post, that would be R 3.4.3 but in reality this should work with any R 3.4.x version. It might even work with earlier versions, but it’d be a bummer to find out that we have an R version problem later on.</p>
+</div>
+<div id="rstudio" class="section level4">
+<h4>2. RStudio</h4>
+<p>Once we have an up to date R version, lets install <a href="https://www.rstudio.com/products/rstudio/download/">RStudio</a>. By using the latest version we will have access to <em>RStudio addin</em> menus, which will make our life much easier. Since we will be using RStudio quite a bit, it’s best to work from your laptop/computer than any server or cluster where you might not have the flexibility to install/update RStudio and R.</p>
+</div>
+<div id="blogdown" class="section level4">
+<h4>3. <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em></h4>
+<p>We next need to install the main package that we will be using for creating our blog posts, that is <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> <a id='cite-Xie_2017'></a>(<a href='https://github.com/rstudio/blogdown'>Xie, Hill, and Thomas, 2017</a>). At the time of writing this post, the version that we need to use is only available in the development branch. So we need to install <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> via <em><a href="https://CRAN.R-project.org/package=devtools">devtools</a></em> <a id='cite-Wickham_2018'></a>(<a href='https://CRAN.R-project.org/package=devtools'>Wickham, Hester, and Chang, 2018</a>).</p>
+<pre class="r"><code>## If needed install devtools first:
+install.packages(&#39;devtools&#39;)
+
+## Install development version
+devtools::install_github(&#39;rstudio/blogdown&#39;)
+
+## If you are reading this in the fiture, you might only need
+install.packages(&#39;blogdown&#39;)</code></pre>
+<p>At some point we might need two other extra packages that <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> uses. It will show you a message when that happens, so you can install them when you need them or you could go ahead and get them anyway.</p>
+<pre class="r"><code>install.packages(c(&#39;later&#39;, &#39;processx&#39;))</code></pre>
+</div>
+<div id="hugo" class="section level4">
+<h4>4. <code>hugo</code></h4>
+<p>We are almost there! <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> uses <a href="https://gohugo.io/">hugo</a> which they claim is <em>the world’s fastest framework for building websites</em>. <code>hugo</code> is a bit complicated, but it makes maintaining a complicated website such as a blog super easy. Basically, we will be working in the <code>rstatsclubsource</code> directory and <code>hugo</code> will create the final version we can share around in the directory <code>rstatsclubsource/public</code>.</p>
+<p>Ok, lets go head and install it with</p>
+<pre class="r"><code>blogdown::install_hugo()</code></pre>
+</div>
+<div id="git" class="section level4">
+<h4>5. <code>git</code></h4>
+<p>To get the files and interact with other <strong>LIBD rstats club</strong> members you will need to use <code>git</code>, which you can install following <a href="http://happygitwithr.com/install-git.html">these instructions</a> from the <a href="http://happygitwithr.com/">happygitwithr</a> website. A note for Windows users: <a href="https://gitforwindows.org/">get git for windows</a> because it includes <code>git bash</code> and will enable you to run some commands that we will need later on. Even more advanced for Windows users, when installing <code>git bash</code> choose the <em>use git and optional Unix tools from the Windows Command Prompt</em> as described <a href="https://github.com/rstudio/rstudio/issues/2224#issuecomment-368260312">in detail here</a>.</p>
+<p>Also get a <a href="https://github.com/">GitHub</a> account if you don’t have one already. Optionally <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">set up ssh keys</a> for password-less login, though it’s not needed.</p>
+</div>
+</div>
+<div id="access-blog-source-files" class="section level3">
+<h3>Access blog source files</h3>
+<p>The file structure of our blog involves a total of 3 GitHub repositories that are related to each other as shown below. However, you will only need to interact with one of them.</p>
+<pre><code>rstatsclubsource
+    ## From https://github.com/LieberInstitute/rstatsclubsource
+    content/
+        post/
+        ...
+    static/
+        post/
+        img/
+        ...
+    themes/
+        hugo-academic/
+        ## From https://github.com/gcushen/hugo-academic
+        ## linked as a git submodule
+    public/
+        ## https://github.com/LieberInstitute/rstatsclub
+        ## Hosts the files that make up the website
+        ## http://LieberInstitute.github.io/rstatsclub/</code></pre>
+<p>The main directory for the blog is <code>rstatsclubsource</code> and you can access it at <a href="https://github.com/LieberInstitute/rstatsclubsource">github.com/LieberInstitute/rstatsclubsource</a> if you are a member of the <strong>LIBD rstats club</strong> and have logged in to your GitHub account. This directory contains many files that <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> understands and that you don’t really need to change. The main sub-directory that you will be interacting with is <code>rstatsclubsource/content/post</code> where your new post files will get saved by <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em>. If you insert images, <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> will automatically create the directory <code>rstatsclubsource/static/post/2018-03-09_postTitle_files</code> (<a href="https://github.com/LieberInstitute/rstatsclubsource/tree/master/static/post/2018-03-06-test-post-for-checking-website_files">example</a>), but don’t worry about it.</p>
+<p>Ok, lets get the files. Open your terminal or <code>git bash</code> (Windows) and navigate to the directory where you will store your copy of the source files.</p>
+<pre class="bash"><code>## Works in Mac and Windows (with git bash)
+cd ~/Desktop
+
+## Windows example command if you have more than 1 disk
+cd /f/Desktop</code></pre>
+<p>Next clone <a href="https://github.com/LieberInstitute/rstatsclubsource">github.com/LieberInstitute/rstatsclubsource</a>. Here we use https since that doesn’t require extra setup, but cloning by ssh also works.</p>
+<pre class="bash"><code>git clone https://github.com/LieberInstitute/rstatsclubsource.git</code></pre>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/Screen Shot 2018-03-08 at 8.47.18 PM.png" alt="clone source repo" width="500"/></p>
+<p>After a successful clone, we should have created the directory <code>~/Desktop/rstatsclubsource</code>. Lets change to this new directory.</p>
+<pre class="bash"><code>cd rstatsclubsource</code></pre>
+<p>Our cloning process also created a placeholder for our hugo theme (<a href="https://github.com/gcushen/hugo-academic">hugo-academic</a>) but it’s contents are empty.</p>
+<pre><code>$ ls -lh themes/hugo-academic/
+total 0</code></pre>
+<p>Lets fill them up by running the following git command.</p>
+<pre class="bash"><code>git submodule update --init --recursive</code></pre>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/Screen Shot 2018-03-08 at 9.05.56 PM.png" alt="git submodule" width="500"/></p>
+<p>If we now check the contents of the <code>themes/hugo-academic</code> directory we should see several files now (here’s a screenshot from Windows using <code>git bash</code>).</p>
+<pre class="bash"><code>ls -lh themes/hugo-academic</code></pre>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/theme files.PNG" alt="windows theme files" width="500"/></p>
+</div>
+<div id="preview-website" class="section level3">
+<h3>Preview website</h3>
+<p>Our setup is now complete! We can now start writing blog posts using <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em>. Open the <code>~/Desktop/rstatsclubsource/rstatsclubsource.Rproj</code> file, which should open a new RStudio window automatically. Find the <em>Addins</em> menu on the top of your window, and select the <code>Serve Site</code> option in the drop-down menu.</p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/Screen Shot 2018-03-08 at 9.35.34 PM.png" alt="serve site" width="500"/></p>
+<p>This addin will create a local version of the website you can preview in the RStudio Viewer pane.</p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/Screen Shot 2018-03-08 at 9.19.02 PM.png" alt="RStudio viewer pane" width="500"/></p>
+<p>If you click in the <em>show in new window</em> symbol as shown below</p>
+<div class="figure">
+<img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/Screen%20Shot%202018-03-08%20at%209.20.28%20PM.png" />
+
+</div>
+<p>you then can preview the website in your main browser:</p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/Screen Shot 2018-03-08 at 9.21.44 PM.png" alt="preview browser" width="500"/></p>
+<p>This will be super useful when you are writing a new blog post because any changes you make will automatically refresh the local preview version after a second of two (only after you save the file you are editing). Sometimes you might have to manually refresh your browser (like when you make too many updates in a row). The preview website works as long as you have the <em>Serve Site</em> addin running on the background.</p>
+<div id="all-our-files" class="section level4">
+<h4>All our files</h4>
+<p>By running <em>Serve Site</em> <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> actually populated automatically our <code>rstatsclubsource/public</code> directory. So our full list of files look somewhat like this:</p>
+<pre><code>## Found about tree from
+## https://stackoverflow.com/questions/3455625/linux-command-to-print-directory-structure-in-the-form-of-a-tree
+## Intall in a Mac with homebrew:
+## brew install tree
+$ tree -d rstatsclubsource
+.
+├── archetypes
+├── content
+│   ├── home
+│   └── post
+├── data
+│   ├── fonts
+│   └── themes
+├── layouts
+│   └── partials
+├── public
+│   ├── 2018
+│   │   └── 03
+│   │       ├── 06
+│   │       │   └── test-post-for-checking-website
+│   │       └── 09
+│   │           └── welcome-to-the-libd-rstats-club
+│   ├── categories
+│   │   ├── page
+│   │   │   └── 1
+│   │   ├── rstats
+│   │   │   └── page
+│   │   │       └── 1
+│   │   └── setup
+│   │       └── page
+│   │           └── 1
+│   ├── home
+│   ├── img
+│   ├── js
+│   ├── post
+│   │   ├── 2018-03-06-test-post-for-checking-website_files
+│   │   │   └── figure-html
+│   │   └── page
+│   │       └── 1
+│   ├── publication_types
+│   │   └── page
+│   │       └── 1
+│   └── tags
+│       ├── blog
+│       │   └── page
+│       │       └── 1
+│       └── page
+│           └── 1
+├── static
+│   ├── img
+│   └── post
+│       └── 2018-03-06-test-post-for-checking-website_files
+│           └── figure-html
+└── themes
+    └── hugo-academic
+        ├── archetypes
+        ├── data
+        ├── exampleSite
+        ├── i18n
+        ├── images
+        ├── layouts
+        └── static</code></pre>
+<p>Some of the structure looks redundant right? Well, that’s because <code>hugo</code> and <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> tried to keep everything super organized and re-use some of the file structure for the final version of the website (the one inside <code>rstatsclubsource/public</code>).</p>
+</div>
+</div>
+<div id="write-a-blog-post" class="section level3">
+<h3>Write a blog post</h3>
+<p>We now have a working full preview version of the website in our computer. It’s finally time to write a blog post. The good thing is that we don’t need to do all the setup steps again!</p>
+<div id="update-if-necessary" class="section level4">
+<h4>Update if necessary</h4>
+<p>If you paused midway for a few days, it’s likely that your files are not the latest ones. So please <code>git pull</code> the latest files from <a href="https://github.com/LieberInstitute/rstatsclubsource">github.com/LieberInstitute/rstatsclubsource</a>.</p>
+<pre class="bash"><code>cd ~/Desktop/rstatsclubsource
+git pull</code></pre>
+</div>
+<div id="start-a-blog-post" class="section level4">
+<h4>Start a blog post</h4>
+<p>To start a new blog post, use the <em>New Post</em> <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> addin.</p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/Screen Shot 2018-03-08 at 9.18.21 PM.png" alt="new post" width="500"/></p>
+<p>This will open up a window where you can specify the blog post title. The title will automatically fill out the <em>slug</em> which is used in the final URL of the post. It also lets you choose a date, when is when the blog post will be made publicly visible.</p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/Screen Shot 2018-03-08 at 6.41.49 PM.png" alt="New post addin" width="500"/></p>
+</div>
+<div id="author-and-extension" class="section level4">
+<h4>Author and extension</h4>
+<p>Lets start by entering the author information (leave blank if you want it to be anonymous) and selecting the post format. We highly recommend you use the <code>.Rmd</code> format for your blog posts, even to the point that you should just make it our default option. To do so you have to edit/create an <code>.Rprofile</code> file in your computer at your home directory, that is <code>~/.Rprofile</code>. Then use these options (with how you prefer the author information to be).</p>
+<pre class="r"><code># https://bookdown.org/yihui/blogdown/global-options.html
+options(blogdown.author = &#39;L. Collado-Torres&#39;)
+options(blogdown.ext = &#39;.Rmd&#39;)</code></pre>
+<p>The next time you write a blog post, <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> will know what options you prefer.</p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/Screen Shot 2018-03-08 at 6.42.04 PM.png" alt="Author and extension" width="500"/></p>
+</div>
+<div id="use-a-blog-template" class="section level4">
+<h4>Use a blog template</h4>
+<p>Next lets choose the blog archetype (template) that for posts, that is <code>post</code> under <code>Archetype</code>.</p>
+<div class="figure">
+<img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/Screen%20Shot%202018-03-08%20at%206.42.23%20PM.png" />
+
+</div>
+<p>The reasons why a blog template is useful are described in full detail <a href="http://lcolladotor.github.io/2018/03/08/blogdown-archetype-template/#.WqH1WJPwY0o">in this blog post by L. Collado-Torres</a>. The quick version is that it will pre-populate your new blog post with helpful information and reminders on how to do <span class="math inline">\(X\)</span> or <span class="math inline">\(Y\)</span>. For example, how to <a href="http://lcolladotor.github.io/2018/03/07/blogdown-insert-image-addin/#.WqH1bJPwY0o">insert external images</a>, how to control the figure height and width for images generated by R, how to cite packages, and including the R reproducibility information by default.</p>
+</div>
+<div id="use-appropriate-post-categories" class="section level4">
+<h4>Use appropriate post categories</h4>
+<p>Most of our blog posts will likely be about R. For those blog posts, select the <code>rstats</code> category as shown below.</p>
+<div class="figure">
+<img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/Screen%20Shot%202018-03-08%20at%206.42.33%20PM.png" />
+
+</div>
+<p>If your blog post covers a topic that might be useful to new LIBD members use the <code>setup</code> category. If it involves using the JHPCE cluster, use <code>jhpce</code> as a category, etc. The <em>New Post</em> <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> addin lets you see which categories and tags have been used before to classify posts. In general, we should aim to have a handful of categories while having as many tags as necessary. These will be useful for filtering our blog posts.</p>
+</div>
+<div id="hit-done-well-check-before" class="section level4">
+<h4>Hit done! (well check before)</h4>
+<p>We are now basically set to start our new blog post. Just double check:</p>
+<ul>
+<li>the categories,</li>
+<li>that the format is <code>.Rmd</code>,</li>
+<li>that the archetype is <code>post</code>,</li>
+<li>post title,</li>
+<li>post date,</li>
+<li>post author.</li>
+</ul>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-09-contributing-to-the-libd-rstats-club_files/Screen Shot 2018-03-08 at 6.42.53 PM.png" alt="" width="500"/></p>
+<p>Aaaaand hit <strong>done</strong>!</p>
+</div>
+</div>
+<div id="edit-your-blog-post" class="section level3">
+<h3>Edit your blog post</h3>
+<p>You can now write your blog post using the <a href="https://rmarkdown.rstudio.com/lesson-2.html">R Markdown syntax</a>. Note that you won’t be using the <code>knit</code> button from RStudio since the <em>Serve Site</em> <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> addin should be doing all the work for you and updating your local website preview.</p>
+<p>When writing your blog post keep in mind our <a href="http://research.libd.org/rstatsclub/#coc">Code of Conduct</a> and that your our blog posts have to comply with the confidentiality agreement we signed at LIBD.</p>
+</div>
+<div id="share-your-blog-post" class="section level3">
+<h3>Share your blog post</h3>
+<p>Once you are happy with the final version of your blog post and have used the spell check from RStudio, add your blog post files to <a href="https://github.com/LieberInstitute/rstatsclubsource">github.com/LieberInstitute/rstatsclubsource</a>. First, remember to <code>git pull</code> in case that there are new files in the repository that you don’t have. Next check which files you modified by running <code>git status</code></p>
+<pre class="bash"><code>cd ~/Desktop/rstatsclubsource
+git status</code></pre>
+<p>Typically, you should see that you have untracked files under <code>rstatsclubsource/content/post</code> and maybe <code>rstatsclubsource/static/post/</code>. If so, add them to the github repository with the following sequence of commands.</p>
+<pre class="bash"><code>git add content/post/*
+git add static/post/*
+git commit -m &quot;Short description of your new blog post&quot;
+git push</code></pre>
+<p>You could also do this with a git GUI such as the git tools in RStudio, <a href="https://www.sourcetreeapp.com/">SourceTree</a> (works for both Mac and Windows), the <code>gitk</code> command, etc.</p>
+<p>After a quick review we will update the files at <a href="https://github.com/LieberInstitute/rstatsclub">github.com/LieberInstitute/rstatsclub</a> and deploy the changes to GitHub.</p>
+<p>Good luck with your first of many <em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> posts!!!</p>
+<p><img src="https://media.giphy.com/media/3ornk7TgUdhjhTYgta/giphy.gif"/></p>
+<p><a href="https://giphy.com/reactions/featured/good-luck">Source</a></p>
+</div>
+<div id="details" class="section level3">
+<h3>Details</h3>
+<p>We are keeping both <a href="https://github.com/LieberInstitute/rstatsclubsource">github.com/LieberInstitute/rstatsclubsource</a> and <a href="https://github.com/LieberInstitute/rstatsclub">github.com/LieberInstitute/rstatsclub</a> as private repositories to enable contributors to write posts anonymously.</p>
+<p>The default license for our blog posts is (CC) BY-NC-SA 4.0 which you can read more about <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">here</a>. If you write a blog post under a different license, please make it clear. Also please attribute the sources of the material you use.</p>
+</div>
+<div id="further-reading" class="section level3">
+<h3>Further reading</h3>
+<p>If you want to learn even more, check the <a href="https://bookdown.org/yihui/blogdown/">blogdown book</a> and the <a href="https://github.com/gcushen/hugo-academic">hugo-academic theme</a>. Maybe you can help with <a href="https://github.com/gcushen/hugo-academic/issues/467">this currently unresolved issue</a>.</p>
+<p>If you want to check a public version equivalent to the one described here, check:</p>
+<ul>
+<li><a href="https://github.com/lcolladotor/hugoblog">github.com/lcolladotor/hugoblog</a> which is the equivalent of <a href="https://github.com/LieberInstitute/rstatsclubsource">github.com/LieberInstitute/rstatsclubsource</a></li>
+<li><a href="https://github.com/lcolladotor/lcolladotor.github.com">github.com/lcolladotor/lcolladotor.github.com</a> which is the equivalent of <a href="https://github.com/LieberInstitute/rstatsclub">github.com/LieberInstitute/rstatsclub</a></li>
+</ul>
+<pre><code>hugoblog
+    ## From https://github.com/lcolladotor/hugoblog
+    content/
+        post/
+        ...
+    static/
+        post/
+        img/
+        ...
+    themes/
+        hugo-academic/
+        ## From https://github.com/gcushen/hugo-academic
+        ## linked as a git submodule
+    public/
+        ## https://github.com/lcolladotor/lcolladotor.github.com
+        ## Hosts the files that make up the website
+        ## http://lcolladotor.github.io/</code></pre>
+</div>
+<div id="acknowledgements" class="section level3">
+<h3>Acknowledgements</h3>
+<p>This blog post was made possible thanks to:</p>
+<ul>
+<li><em><a href="http://bioconductor.org/packages/BiocStyle">BiocStyle</a></em> <a id='cite-Oles_2017'></a>(<a href='https://github.com/Bioconductor/BiocStyle'>Oleś, Morgan, and Huber, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> (<a href='https://github.com/rstudio/blogdown'>Xie, Hill, and Thomas, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=devtools">devtools</a></em> (<a href='https://CRAN.R-project.org/package=devtools'>Wickham, Hester, and Chang, 2018</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=knitcitations">knitcitations</a></em> <a id='cite-Boettiger_2017'></a>(<a href='https://CRAN.R-project.org/package=knitcitations'>Boettiger, 2017</a>)</li>
+</ul>
+</div>
+<div id="references" class="section level3">
+<h3>References</h3>
+<p>
+<a id='bib-Boettiger_2017'></a><a href="#cite-Boettiger_2017">[1]</a><cite> C. Boettiger. <em>knitcitations: Citations for ‘Knitr’ Markdown Files</em>. R package version 1.0.8. 2017. URL: <a href="https://CRAN.R-project.org/package=knitcitations">https://CRAN.R-project.org/package=knitcitations</a>.</cite>
+</p>
+<p>
+<a id='bib-Oles_2017'></a><a href="#cite-Oles_2017">[2]</a><cite> A. Oleś, M. Morgan and W. Huber. <em>BiocStyle: Standard styles for vignettes and other Bioconductor documents</em>. R package version 2.6.1. 2017. URL: <a href="https://github.com/Bioconductor/BiocStyle">https://github.com/Bioconductor/BiocStyle</a>.</cite>
+</p>
+<p>
+<a id='bib-Wickham_2018'></a><a href="#cite-Wickham_2018">[3]</a><cite> H. Wickham, J. Hester and W. Chang. <em>devtools: Tools to Make Developing R Packages Easier</em>. R package version 1.13.5. 2018. URL: <a href="https://CRAN.R-project.org/package=devtools">https://CRAN.R-project.org/package=devtools</a>.</cite>
+</p>
+<p>
+<a id='bib-Xie_2017'></a><a href="#cite-Xie_2017">[4]</a><cite> Y. Xie, A. P. Hill and A. Thomas. <em>blogdown: Creating Websites with R Markdown</em>. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: <a href="https://github.com/rstudio/blogdown">https://github.com/rstudio/blogdown</a>.</cite>
+</p>
+</div>
+<div id="reproducibility" class="section level3">
+<h3>Reproducibility</h3>
+<pre><code>## Session info ----------------------------------------------------------------------------------------------------------</code></pre>
+<pre><code>##  setting  value                       
+##  version  R version 3.4.3 (2017-11-30)
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2018-03-10</code></pre>
+<pre><code>## Packages --------------------------------------------------------------------------------------------------------------</code></pre>
+<pre><code>##  package       * version date       source                            
+##  backports       1.1.2   2017-12-13 CRAN (R 3.4.3)                    
+##  base          * 3.4.3   2017-12-07 local                             
+##  bibtex          0.4.2   2017-06-30 CRAN (R 3.4.1)                    
+##  BiocStyle     * 2.6.1   2017-11-30 Bioconductor                      
+##  blogdown        0.5.9   2018-03-08 Github (rstudio/blogdown@dc1f41c) 
+##  bookdown        0.7     2018-02-18 cran (@0.7)                       
+##  colorout      * 1.2-0   2018-02-19 Github (jalvesaq/colorout@2f01173)
+##  compiler        3.4.3   2017-12-07 local                             
+##  datasets      * 3.4.3   2017-12-07 local                             
+##  devtools      * 1.13.5  2018-02-18 CRAN (R 3.4.3)                    
+##  digest          0.6.15  2018-01-28 CRAN (R 3.4.3)                    
+##  evaluate        0.10.1  2017-06-24 CRAN (R 3.4.1)                    
+##  graphics      * 3.4.3   2017-12-07 local                             
+##  grDevices     * 3.4.3   2017-12-07 local                             
+##  htmltools       0.3.6   2017-04-28 CRAN (R 3.4.0)                    
+##  httr            1.3.1   2017-08-20 CRAN (R 3.4.1)                    
+##  jsonlite        1.5     2017-06-01 CRAN (R 3.4.0)                    
+##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.4.1)                    
+##  knitr           1.20    2018-02-20 cran (@1.20)                      
+##  lubridate       1.7.3   2018-02-27 CRAN (R 3.4.3)                    
+##  magrittr        1.5     2014-11-22 CRAN (R 3.4.0)                    
+##  memoise         1.1.0   2017-04-21 CRAN (R 3.4.0)                    
+##  methods       * 3.4.3   2017-12-07 local                             
+##  plyr            1.8.4   2016-06-08 CRAN (R 3.4.0)                    
+##  R6              2.2.2   2017-06-17 CRAN (R 3.4.0)                    
+##  Rcpp            0.12.15 2018-01-20 CRAN (R 3.4.3)                    
+##  RefManageR      0.14.20 2017-08-17 CRAN (R 3.4.1)                    
+##  rmarkdown       1.9     2018-03-01 cran (@1.9)                       
+##  rprojroot       1.3-2   2018-01-03 CRAN (R 3.4.3)                    
+##  stats         * 3.4.3   2017-12-07 local                             
+##  stringi         1.1.6   2017-11-17 CRAN (R 3.4.2)                    
+##  stringr         1.3.0   2018-02-19 cran (@1.3.0)                     
+##  tools           3.4.3   2017-12-07 local                             
+##  utils         * 3.4.3   2017-12-07 local                             
+##  withr           2.1.1   2017-12-19 CRAN (R 3.4.3)                    
+##  xfun            0.1     2018-01-22 CRAN (R 3.4.3)                    
+##  xml2            1.2.0   2018-01-24 CRAN (R 3.4.3)                    
+##  yaml            2.1.17  2018-02-27 cran (@2.1.17)</code></pre>
+</div>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/blog/">blog</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hue3d688a4e74633c5efe0e3936ac23c1e_53872_250x250_fill_lanczos_center_2.png" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/"></a></h5>
+      <h6 class="card-subtitle">Continuous rstats learning</h6>
+      <p class="card-text">We are researchers at the @LieberInstitute, blogging about R packages, how-to guides &amp; occasionally our own open-source software (opinions r our own) #rstats</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a href="mailto:lcolladotor@gmail.com" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="http://LieberInstitute.github.io/rstatsclub/" target="_blank" rel="noopener">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://twitter.com/LIBDrstats" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://github.com/LieberInstitute" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/postocs/welcome-to-the-libd-rstats-club/">Welcome to the LIBD rstats club!</a></li>
+          
+          <li><a href="/postocs/test-post-for-checking-website/">Test post for checking website</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.0bf1e3db85cbb232372ed31d6f10dc70.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

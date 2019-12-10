@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="For our club meeting today we were going to summarize the Demystifying Data Science conference but we forgot that the videos are not released yet.
+Oops, we&#39;ll have to postpone our blog post. We didn&#39;t read the fine print that talk recordings will be available sometime next week. Sorry about that!
+&mdash; LIBD rstats club (@LIBDrstats) July 27, 2018  So we adjusted plans and decided to continue our work on the UpSetR (Gehlenborg, 2016) package by Nils Gehlenborg.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/hacking-our-way-through-upsetr/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.a3cda781a9b24f26fefd34a53547835b.css">
+
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/hacking-our-way-through-upsetr/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Academic">
+  <meta property="og:url" content="/post/hacking-our-way-through-upsetr/">
+  <meta property="og:title" content="Hacking our way through UpSetR | Academic">
+  <meta property="og:description" content="For our club meeting today we were going to summarize the Demystifying Data Science conference but we forgot that the videos are not released yet.
+Oops, we&#39;ll have to postpone our blog post. We didn&#39;t read the fine print that talk recordings will be available sometime next week. Sorry about that!
+&mdash; LIBD rstats club (@LIBDrstats) July 27, 2018  So we adjusted plans and decided to continue our work on the UpSetR (Gehlenborg, 2016) package by Nils Gehlenborg."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-07-27T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-07-27T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/hacking-our-way-through-upsetr/"
+  },
+  "headline": "Hacking our way through UpSetR",
+  
+  "datePublished": "2018-07-27T00:00:00Z",
+  "dateModified": "2018-07-27T00:00:00Z",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Academic",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/img/icon-512.png"
+    }
+  },
+  "description": "For our club meeting today we were going to summarize the Demystifying Data Science conference but we forgot that the videos are not released yet.\nOops, we\u0026#39;ll have to postpone our blog post. We didn\u0026#39;t read the fine print that talk recordings will be available sometime next week. Sorry about that!\n\u0026mdash; LIBD rstats club (@LIBDrstats) July 27, 2018  So we adjusted plans and decided to continue our work on the UpSetR (Gehlenborg, 2016) package by Nils Gehlenborg."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Hacking our way through UpSetR | Academic</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Academic</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Hacking our way through UpSetR</h1>
+
+  
+
+  
+    
+
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jul 27, 2018
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    14 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/rstats/">rstats</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/hacking-our-way-through-upsetr/&amp;text=Hacking%20our%20way%20through%20UpSetR" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/hacking-our-way-through-upsetr/&amp;t=Hacking%20our%20way%20through%20UpSetR" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Hacking%20our%20way%20through%20UpSetR&amp;body=/post/hacking-our-way-through-upsetr/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/hacking-our-way-through-upsetr/&amp;title=Hacking%20our%20way%20through%20UpSetR" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Hacking%20our%20way%20through%20UpSetR%20/post/hacking-our-way-through-upsetr/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/hacking-our-way-through-upsetr/&amp;title=Hacking%20our%20way%20through%20UpSetR" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<p>For our club meeting today we were going to summarize the <a href="https://www.thisismetis.com/demystifying-data-science">Demystifying Data Science</a> conference but we forgot that the videos are not released yet.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Oops, we&#39;ll have to postpone our blog post. We didn&#39;t read the fine print that talk recordings will be available sometime next week. Sorry about that!</p>&mdash; LIBD rstats club (@LIBDrstats) <a href="https://twitter.com/LIBDrstats/status/1022862435869450240?ref_src=twsrc%5Etfw">July 27, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>So we adjusted plans and decided to continue our work on the <em><a href="https://CRAN.R-project.org/package=UpSetR">UpSetR</a></em> <a id='cite-Gehlenborg_2016'></a>(<a href='http://github.com/hms-dbmi/UpSetR'>Gehlenborg, 2016</a>) package by <a href="https://twitter.com/ngehlenborg">Nils Gehlenborg</a>.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Yesterday we discussed various options for visualizing large numbers of overlapping groups. We explored uses of the <a href="https://twitter.com/hashtag/venneuler?src=hash&amp;ref_src=twsrc%5Etfw">#venneuler</a> package from Lee Wilkinson and Simon Urbanek and the <a href="https://twitter.com/hashtag/UpSetR?src=hash&amp;ref_src=twsrc%5Etfw">#UpSetR</a> package from Jake Conway, Alexander Lex, and <a href="https://twitter.com/ngehlenborg?ref_src=twsrc%5Etfw">@ngehlenborg</a>. <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/k55YfihmiP">pic.twitter.com/k55YfihmiP</a></p>&mdash; LIBD rstats club (@LIBDrstats) <a href="https://twitter.com/LIBDrstats/status/1007992479159812101?ref_src=twsrc%5Etfw">June 16, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div id="what-you-can-currently-do" class="section level3">
+<h3>What you can currently do</h3>
+<p>First, let’s install the version we used for this post:</p>
+<pre class="r"><code>devtools::install_github(&#39;hms-dbmi/UpSetR@fe2812c&#39;)</code></pre>
+<p>Our ultimate goal is to submit a pull request that enables <code>UpSetR</code> users to specify a color by row for the dots instead of the actual rows. We had already identified an example that we could work with.</p>
+<pre class="r"><code>library(&#39;UpSetR&#39;)
+movies &lt;- read.csv( system.file(&quot;extdata&quot;, &quot;movies.csv&quot;, package = &quot;UpSetR&quot;), 
+                    header=T, sep=&quot;;&quot; )
+
+require(ggplot2); require(plyr); require(gridExtra); require(grid);</code></pre>
+<pre><code>## Loading required package: ggplot2</code></pre>
+<pre><code>## Loading required package: plyr</code></pre>
+<pre><code>## Loading required package: gridExtra</code></pre>
+<pre><code>## Loading required package: grid</code></pre>
+<pre class="r"><code>upset(movies, 
+      sets = c(&quot;Action&quot;, &quot;Comedy&quot;, &quot;Drama&quot;), 
+      order.by=&quot;degree&quot;, matrix.color=&quot;blue&quot;, point.size=5,
+      sets.bar.color=c(&quot;maroon&quot;,&quot;blue&quot;,&quot;orange&quot;))</code></pre>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-07-27-hacking-our-way-through-upsetr_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>We also explored the <a href="https://cran.rstudio.com/web/packages/UpSetR/vignettes/set.metadata.plots.html">set metadata vignette</a> that includes examples such as the following one.</p>
+<pre class="r"><code>set.seed(20180727)
+
+## Create the metadata object first
+sets &lt;- names(movies[3:19])
+avgRottenTomatoesScore &lt;- round(runif(17, min = 0, max = 90))
+metadata &lt;- as.data.frame(cbind(sets, avgRottenTomatoesScore))
+names(metadata) &lt;- c(&quot;sets&quot;, &quot;avgRottenTomatoesScore&quot;)
+metadata$avgRottenTomatoesScore &lt;- as.numeric(as.character(metadata$avgRottenTomatoesScore))
+Cities &lt;- sample(c(&quot;Boston&quot;, &quot;NYC&quot;, &quot;LA&quot;), 17, replace = T)
+metadata &lt;- cbind(metadata, Cities)
+metadata$Cities &lt;- as.character(metadata$Cities)
+metadata[which(metadata$sets %in% c(&quot;Drama&quot;, &quot;Comedy&quot;, &quot;Action&quot;, &quot;Thriller&quot;, 
+    &quot;Romance&quot;)), ]</code></pre>
+<pre><code>##        sets avgRottenTomatoesScore Cities
+## 1    Action                     68 Boston
+## 4    Comedy                     40    NYC
+## 7     Drama                     48     LA
+## 13  Romance                     77 Boston
+## 15 Thriller                     19    NYC</code></pre>
+<pre class="r"><code>accepted &lt;- round(runif(17, min = 0, max = 1))
+metadata &lt;- cbind(metadata, accepted)
+metadata[which(metadata$sets %in% c(&quot;Drama&quot;, &quot;Comedy&quot;, &quot;Action&quot;, &quot;Thriller&quot;, 
+    &quot;Romance&quot;)), ]</code></pre>
+<pre><code>##        sets avgRottenTomatoesScore Cities accepted
+## 1    Action                     68 Boston        0
+## 4    Comedy                     40    NYC        1
+## 7     Drama                     48     LA        0
+## 13  Romance                     77 Boston        1
+## 15 Thriller                     19    NYC        0</code></pre>
+<pre class="r"><code>## Now make the plot
+upset(movies, set.metadata = list(data = metadata, plots = list(list(type = &quot;hist&quot;, 
+    column = &quot;avgRottenTomatoesScore&quot;, assign = 20), list(type = &quot;matrix_rows&quot;, 
+    column = &quot;Cities&quot;, colors = c(Boston = &quot;green&quot;, NYC = &quot;navy&quot;, LA = &quot;purple&quot;), 
+    alpha = 0.5))))</code></pre>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-07-27-hacking-our-way-through-upsetr_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="hacking-our-way" class="section level3">
+<h3>Hacking our way</h3>
+<p>Using the <code>metadata</code> looked complicated to us and hopefully not necessary for what we are trying to accomplish. That is, we really wanted to change the colors of the circles in each row, not the rows themselves. So we found the GitHub repo with <a href="https://github.com/hms-dbmi/UpSetR">the code</a>, plugged a laptop to a TV and started exploring as a group. We went the rabbit hole to see how the <code>matrix.color</code> argument got used. To actually hack our way through, we downloaded the latest version of the code using <code>git</code>.</p>
+<pre><code>git clone git@github.com:hms-dbmi/UpSetR.git
+cd UpSetR</code></pre>
+<p>Next, we created the objects that match the default arguments of <code>upset()</code> by finding and replacing commas by semi-colons. Well, not all of the commas. Also, for inputs that specified a vector (mostly 2 options), we chose the first one to match the default R behavior. This way we could execute them and have them in our session.</p>
+<pre class="r"><code>## Default upset() arguments
+nsets = 5; nintersects = 40; sets = NULL; keep.order = F; set.metadata = NULL; intersections = NULL;
+matrix.color = &quot;gray23&quot;; main.bar.color = &quot;gray23&quot;; mainbar.y.label = &quot;Intersection Size&quot;; mainbar.y.max = NULL;
+sets.bar.color = &quot;gray23&quot;; sets.x.label = &quot;Set Size&quot;; point.size = 2.2; line.size = 0.7;
+mb.ratio = c(0.70,0.30); expression = NULL; att.pos = NULL; att.color = main.bar.color; order.by = &#39;freq&#39;;
+decreasing = T; show.numbers = &quot;yes&quot;; number.angles = 0; group.by = &quot;degree&quot;;cutoff = NULL;
+queries = NULL; query.legend = &quot;none&quot;; shade.color = &quot;gray88&quot;; shade.alpha = 0.25; matrix.dot.alpha =0.5;
+empty.intersections = NULL; color.pal = 1; boxplot.summary = NULL; attribute.plots = NULL; scale.intersections = &quot;identity&quot;;
+scale.sets = &quot;identity&quot;; text.scale = 1; set_size.angles = 0 ; set_size.show = FALSE </code></pre>
+<p>Next, we did the same (commas to semicolons) for the inputs of the first example.</p>
+<pre class="r"><code>## Initial inputs on the first example
+movies &lt;- read.csv( system.file(&quot;extdata&quot;, &quot;movies.csv&quot;, package = &quot;UpSetR&quot;), 
+                    header=T, sep=&quot;;&quot; )
+
+## comma -&gt; semicolon
+data = movies; sets = c(&quot;Action&quot;, &quot;Comedy&quot;, &quot;Drama&quot;); 
+      order.by=&quot;degree&quot;; matrix.color=&quot;blue&quot;; point.size=5;
+      sets.bar.color=c(&quot;maroon&quot;,&quot;blue&quot;,&quot;orange&quot;)</code></pre>
+<p>Now we were ready to start modifying some of the internal <em><a href="https://CRAN.R-project.org/package=UpSetR">UpSetR</a></em> (<a href='http://github.com/hms-dbmi/UpSetR'>Gehlenborg, 2016</a>) code.</p>
+</div>
+<div id="hacking-internals" class="section level3">
+<h3>Hacking internals</h3>
+<p>The function <code>upset()</code> is pretty long and uses many un-exported functions from the package itself. In order to test thing quickly we added <code>UpSetR:::</code> calls before the un-exported functions. Here’s our modified version where we added a piece of code to modify the <code>Matrix_layout</code> object and add some colors.</p>
+<pre class="r"><code>## Piece of code we introduced
+for(i in 1:3) {
+      j &lt;- which(Matrix_layout$y == i &amp; Matrix_layout$value == 1)
+      if(length(j) &gt; 0) Matrix_layout$color[j] &lt;- c(&quot;maroon&quot;,&quot;blue&quot;,&quot;orange&quot;)[i]
+  }</code></pre>
+<p>Ok, here’s the full modified <code>upset()</code> function.</p>
+<pre class="r"><code>## Modified internal upset() code
+
+startend &lt;- UpSetR:::FindStartEnd(data)
+  first.col &lt;- startend[1]
+  last.col &lt;- startend[2]
+
+  if(color.pal == 1){
+    palette &lt;- c(&quot;#1F77B4&quot;, &quot;#FF7F0E&quot;, &quot;#2CA02C&quot;, &quot;#D62728&quot;, &quot;#9467BD&quot;, &quot;#8C564B&quot;, &quot;#E377C2&quot;,
+                 &quot;#7F7F7F&quot;, &quot;#BCBD22&quot;, &quot;#17BECF&quot;)
+  } else{
+    palette &lt;- c(&quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;, &quot;#F0E442&quot;, &quot;#0072B2&quot;, &quot;#D55E00&quot;,
+                 &quot;#CC79A7&quot;)
+  }
+
+  if(is.null(intersections) == F){
+    Set_names &lt;- unique((unlist(intersections)))
+    Sets_to_remove &lt;- UpSetR:::Remove(data, first.col, last.col, Set_names)
+    New_data &lt;- UpSetR:::Wanted(data, Sets_to_remove)
+    Num_of_set &lt;- UpSetR:::Number_of_sets(Set_names)
+    if(keep.order == F){
+      Set_names &lt;- UpSetR:::order_sets(New_data, Set_names)
+    }
+    All_Freqs &lt;- UpSetR:::specific_intersections(data, first.col, last.col, intersections, order.by, group.by, decreasing,
+                                        cutoff, main.bar.color, Set_names)
+  } else if(is.null(intersections) == T){
+    Set_names &lt;- sets
+    if(is.null(Set_names) == T || length(Set_names) == 0 ){
+      Set_names &lt;- UpSetR:::FindMostFreq(data, first.col, last.col, nsets)
+    }
+    Sets_to_remove &lt;- UpSetR:::Remove(data, first.col, last.col, Set_names)
+    New_data &lt;- UpSetR:::Wanted(data, Sets_to_remove)
+    Num_of_set &lt;- UpSetR:::Number_of_sets(Set_names)
+    if(keep.order == F){
+    Set_names &lt;- UpSetR:::order_sets(New_data, Set_names)
+    }
+    All_Freqs &lt;- UpSetR:::Counter(New_data, Num_of_set, first.col, Set_names, nintersects, main.bar.color,
+                         order.by, group.by, cutoff, empty.intersections, decreasing)
+  }
+  Matrix_setup &lt;- UpSetR:::Create_matrix(All_Freqs)
+  labels &lt;- UpSetR:::Make_labels(Matrix_setup)
+  #Chose NA to represent NULL case as result of NA being inserted when at least one contained both x and y
+  #i.e. if one custom plot had both x and y, and others had only x, the y&#39;s for the other plots were NA
+  #if I decided to make the NULL case (all x and no y, or vice versa), there would have been alot more if/else statements
+  #NA can be indexed so that we still get the non NA y aesthetics on correct plot. NULL cant be indexed.
+  att.x &lt;- c(); att.y &lt;- c();
+  if(is.null(attribute.plots) == F){
+    for(i in seq_along(attribute.plots$plots)){
+      if(length(attribute.plots$plots[[i]]$x) != 0){
+        att.x[i] &lt;- attribute.plots$plots[[i]]$x
+      }
+      else if(length(attribute.plots$plots[[i]]$x) == 0){
+        att.x[i] &lt;- NA
+      }
+      if(length(attribute.plots$plots[[i]]$y) != 0){
+        att.y[i] &lt;- attribute.plots$plots[[i]]$y
+      }
+      else if(length(attribute.plots$plots[[i]]$y) == 0){
+        att.y[i] &lt;- NA
+      }
+    }
+  }
+
+  BoxPlots &lt;- NULL
+  if(is.null(boxplot.summary) == F){
+    BoxData &lt;- UpSetR:::IntersectionBoxPlot(All_Freqs, New_data, first.col, Set_names)
+    BoxPlots &lt;- list()
+    for(i in seq_along(boxplot.summary)){
+      BoxPlots[[i]] &lt;- UpSetR:::BoxPlotsPlot(BoxData, boxplot.summary[i], att.color)
+    }
+  }
+
+  customAttDat &lt;- NULL
+  customQBar &lt;- NULL
+  Intersection &lt;- NULL
+  Element &lt;- NULL
+  legend &lt;- NULL
+  EBar_data &lt;- NULL
+  if(is.null(queries) == F){
+    custom.queries &lt;- UpSetR:::SeperateQueries(queries, 2, palette)
+    customDat &lt;- UpSetR:::customQueries(New_data, custom.queries, Set_names)
+    legend &lt;- UpSetR:::GuideGenerator(queries, palette)
+    legend &lt;- UpSetR:::Make_legend(legend)
+    if(is.null(att.x) == F &amp;&amp; is.null(customDat) == F){
+      customAttDat &lt;- UpSetR:::CustomAttData(customDat, Set_names)
+    }
+    customQBar &lt;- UpSetR:::customQueriesBar(customDat, Set_names, All_Freqs, custom.queries)
+  }
+  if(is.null(queries) == F){
+    Intersection &lt;- UpSetR:::SeperateQueries(queries, 1, palette)
+    Matrix_col &lt;- UpSetR:::intersects(QuerieInterData, Intersection, New_data, first.col, Num_of_set,
+                             All_Freqs, expression, Set_names, palette)
+    Element &lt;- UpSetR:::SeperateQueries(queries, 1, palette)
+    EBar_data &lt;-UpSetR:::ElemBarDat(Element, New_data, first.col, expression, Set_names,palette, All_Freqs)
+  } else{
+    Matrix_col &lt;- NULL
+  }
+  
+  Matrix_layout &lt;- UpSetR:::Create_layout(Matrix_setup, matrix.color, Matrix_col, matrix.dot.alpha)</code></pre>
+<p>As a little pause in <code>upset()</code>, let’s check what actually <code>Matrix_layout</code> looks.</p>
+<pre class="r"><code>Matrix_layout</code></pre>
+<pre><code>##    y x value  color alpha Intersection
+## 1  1 1     1   blue   1.0         1yes
+## 2  2 1     1   blue   1.0         1yes
+## 3  3 1     1   blue   1.0         1yes
+## 4  1 2     0 gray83   0.5          4No
+## 5  2 2     1   blue   1.0         2yes
+## 6  3 2     1   blue   1.0         2yes
+## 7  1 3     1   blue   1.0         3yes
+## 8  2 3     0 gray83   0.5          8No
+## 9  3 3     1   blue   1.0         3yes
+## 10 1 4     1   blue   1.0         4yes
+## 11 2 4     1   blue   1.0         4yes
+## 12 3 4     0 gray83   0.5         12No
+## 13 1 5     0 gray83   0.5         13No
+## 14 2 5     0 gray83   0.5         14No
+## 15 3 5     1   blue   1.0         5yes
+## 16 1 6     0 gray83   0.5         16No
+## 17 2 6     1   blue   1.0         6yes
+## 18 3 6     0 gray83   0.5         18No
+## 19 1 7     1   blue   1.0         7yes
+## 20 2 7     0 gray83   0.5         20No
+## 21 3 7     0 gray83   0.5         21No</code></pre>
+<p>We figured out that we had to change the colors only the rows with <code>value = 1</code> and that <code>y</code> was the row grouping variable.</p>
+<pre class="r"><code>## our modification
+  for(i in 1:3) {
+      j &lt;- which(Matrix_layout$y == i &amp; Matrix_layout$value == 1)
+      if(length(j) &gt; 0) Matrix_layout$color[j] &lt;- c(&quot;maroon&quot;,&quot;blue&quot;,&quot;orange&quot;)[i]
+  }</code></pre>
+<p>Here’s our modified <code>Matrix_layout</code>:</p>
+<pre class="r"><code>Matrix_layout</code></pre>
+<pre><code>##    y x value  color alpha Intersection
+## 1  1 1     1 maroon   1.0         1yes
+## 2  2 1     1   blue   1.0         1yes
+## 3  3 1     1 orange   1.0         1yes
+## 4  1 2     0 gray83   0.5          4No
+## 5  2 2     1   blue   1.0         2yes
+## 6  3 2     1 orange   1.0         2yes
+## 7  1 3     1 maroon   1.0         3yes
+## 8  2 3     0 gray83   0.5          8No
+## 9  3 3     1 orange   1.0         3yes
+## 10 1 4     1 maroon   1.0         4yes
+## 11 2 4     1   blue   1.0         4yes
+## 12 3 4     0 gray83   0.5         12No
+## 13 1 5     0 gray83   0.5         13No
+## 14 2 5     0 gray83   0.5         14No
+## 15 3 5     1 orange   1.0         5yes
+## 16 1 6     0 gray83   0.5         16No
+## 17 2 6     1   blue   1.0         6yes
+## 18 3 6     0 gray83   0.5         18No
+## 19 1 7     1 maroon   1.0         7yes
+## 20 2 7     0 gray83   0.5         20No
+## 21 3 7     0 gray83   0.5         21No</code></pre>
+<p>Ok, let’s continue with the rest of <code>upset()</code>.</p>
+<pre class="r"><code>## continuing with upset()
+  
+  Set_sizes &lt;- UpSetR:::FindSetFreqs(New_data, first.col, Num_of_set, Set_names, keep.order)
+  Bar_Q &lt;- NULL
+  if(is.null(queries) == F){
+    Bar_Q &lt;- UpSetR:::intersects(QuerieInterBar, Intersection, New_data, first.col, Num_of_set, All_Freqs, expression, Set_names, palette)
+  }
+  QInter_att_data &lt;- NULL
+  QElem_att_data &lt;- NULL
+  if((is.null(queries) == F) &amp; (is.null(att.x) == F)){
+    QInter_att_data &lt;- UpSetR:::intersects(QuerieInterAtt, Intersection, New_data, first.col, Num_of_set, att.x, att.y,
+                                  expression, Set_names, palette)
+    QElem_att_data &lt;- UpSetR:::elements(QuerieElemAtt, Element, New_data, first.col, expression, Set_names, att.x, att.y,
+                               palette)
+  }
+  AllQueryData &lt;- UpSetR:::combineQueriesData(QInter_att_data, QElem_att_data, customAttDat, att.x, att.y)
+
+  ShadingData &lt;- NULL
+
+  if(is.null(set.metadata) == F){
+    ShadingData &lt;- get_shade_groups(set.metadata, Set_names, Matrix_layout, shade.alpha)
+    output &lt;- Make_set_metadata_plot(set.metadata, Set_names)
+    set.metadata.plots &lt;- output[[1]]
+    set.metadata &lt;- output[[2]]
+
+    if(is.null(ShadingData) == FALSE){
+    shade.alpha &lt;- unique(ShadingData$alpha)
+    }
+  } else {
+    set.metadata.plots &lt;- NULL
+  }
+  if(is.null(ShadingData) == TRUE){
+  ShadingData &lt;- UpSetR:::MakeShading(Matrix_layout, shade.color)
+  }
+  Main_bar &lt;- suppressMessages(UpSetR:::Make_main_bar(All_Freqs, Bar_Q, show.numbers, mb.ratio, customQBar, number.angles, EBar_data, mainbar.y.label,
+                            mainbar.y.max, scale.intersections, text.scale, attribute.plots))
+  Matrix &lt;- UpSetR:::Make_matrix_plot(Matrix_layout, Set_sizes, All_Freqs, point.size, line.size,
+                             text.scale, labels, ShadingData, shade.alpha)
+  Sizes &lt;- UpSetR:::Make_size_plot(Set_sizes, sets.bar.color, mb.ratio, sets.x.label, scale.sets, text.scale, set_size.angles,set_size.show)
+
+  # Make_base_plot(Main_bar, Matrix, Sizes, labels, mb.ratio, att.x, att.y, New_data,
+  #                expression, att.pos, first.col, att.color, AllQueryData, attribute.plots,
+  #                legend, query.legend, BoxPlots, Set_names, set.metadata, set.metadata.plots)
+
+  structure(class = &quot;upset&quot;,
+    .Data=list(
+      Main_bar = Main_bar,
+      Matrix = Matrix,
+      Sizes = Sizes,
+      labels = labels,
+      mb.ratio = mb.ratio,
+      att.x = att.x,
+      att.y = att.y,
+      New_data = New_data,
+      expression = expression,
+      att.pos = att.pos,
+      first.col = first.col,
+      att.color = att.color,
+      AllQueryData = AllQueryData,
+      attribute.plots = attribute.plots,
+      legend = legend,
+      query.legend = query.legend,
+      BoxPlots = BoxPlots,
+      Set_names = Set_names,
+      set.metadata = set.metadata,
+      set.metadata.plots = set.metadata.plots)
+  )</code></pre>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-07-27-hacking-our-way-through-upsetr_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="line-colors" class="section level3">
+<h3>Line colors</h3>
+<p>Ok, that’s great but we have a problem with the lines. The color is no longer black, so we went deeper into the rabbit hole and found that the internal <code>Make_matrix_plot()</code> function is where the lines are made. We made some edits but got a plot where the lines were on top of the circles as shown in this screenshot.</p>
+<div class="figure">
+<img src="http://LieberInstitute.github.io/rstatsclub/post/2018-07-27-hacking-our-way-through-upsetr_files/Screen%20Shot%202018-07-27%20at%2012.17.58%20PM.png" width="500" />
+
+</div>
+<p>Our club session was out of time, so we decided to continue our project another day and ask for help on twitter. And yay, we got help super fast!</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thank you and <a href="https://twitter.com/thatdnaguy?ref_src=twsrc%5Etfw">@thatdnaguy</a>, that did it! <a href="https://t.co/tzQvhKFXgR">pic.twitter.com/tzQvhKFXgR</a></p>&mdash; LIBD rstats club (@LIBDrstats) <a href="https://twitter.com/LIBDrstats/status/1022903971416088577?ref_src=twsrc%5Etfw">July 27, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>So here’s our modified version of <code>Make_matrix_plot()</code> that keeps the lines black.</p>
+<pre class="r"><code>Make_matrix_plot &lt;- function(Mat_data,Set_size_data, Main_bar_data, point_size, line_size, text_scale, labels,
+                             shading_data, shade_alpha){
+
+  if(length(text_scale) == 1){
+    name_size_scale &lt;- text_scale
+  }
+  if(length(text_scale) &gt; 1 &amp;&amp; length(text_scale) &lt;= 6){
+    name_size_scale &lt;- text_scale[5]
+  }
+  
+  Mat_data$line_col &lt;- &#39;black&#39;
+
+  Matrix_plot &lt;- (ggplot()
+                  + theme(panel.background = element_rect(fill = &quot;white&quot;),
+                          plot.margin=unit(c(-0.2,0.5,0.5,0.5), &quot;lines&quot;),
+                          axis.text.x = element_blank(),
+                          axis.ticks.x = element_blank(),
+                          axis.ticks.y = element_blank(),
+                          axis.text.y = element_text(colour = &quot;gray0&quot;,
+                                                     size = 7*name_size_scale, hjust = 0.4),
+                          panel.grid.major = element_blank(),
+                          panel.grid.minor = element_blank())
+                  + xlab(NULL) + ylab(&quot;   &quot;)
+                  + scale_y_continuous(breaks = c(1:nrow(Set_size_data)),
+                                       limits = c(0.5,(nrow(Set_size_data) +0.5)),
+                                       labels = labels, expand = c(0,0))
+                  + scale_x_continuous(limits = c(0,(nrow(Main_bar_data)+1 )), expand = c(0,0))
+                  + geom_rect(data = shading_data, aes_string(xmin = &quot;min&quot;, xmax = &quot;max&quot;,
+                                                              ymin = &quot;y_min&quot;, ymax = &quot;y_max&quot;),
+                              fill = shading_data$shade_color, alpha = shade_alpha)
+                  + geom_line(data= Mat_data, aes_string(group = &quot;Intersection&quot;, x=&quot;x&quot;, y=&quot;y&quot;,
+                                                         colour = &quot;line_col&quot;), size = line_size)
+                 + geom_point(data= Mat_data, aes_string(x= &quot;x&quot;, y= &quot;y&quot;), colour = Mat_data$color,
+                     size= point_size, alpha = Mat_data$alpha, shape=16)
+                  + scale_color_identity())
+  Matrix_plot &lt;- ggplot_gtable(ggplot_build(Matrix_plot))
+  return(Matrix_plot)
+}</code></pre>
+<p>Using that modified version we can then run the code again (note that we are not using <code>UpSetR:::</code> before <code>Make_matrix_plot</code>) and get the plot we wanted.</p>
+<pre class="r"><code>Matrix &lt;- Make_matrix_plot(Matrix_layout, Set_sizes, All_Freqs, point.size, line.size,
+                             text.scale, labels, ShadingData, shade.alpha)
+  Sizes &lt;- UpSetR:::Make_size_plot(Set_sizes, sets.bar.color, mb.ratio, sets.x.label, scale.sets, text.scale, set_size.angles,set_size.show)
+
+  # Make_base_plot(Main_bar, Matrix, Sizes, labels, mb.ratio, att.x, att.y, New_data,
+  #                expression, att.pos, first.col, att.color, AllQueryData, attribute.plots,
+  #                legend, query.legend, BoxPlots, Set_names, set.metadata, set.metadata.plots)
+
+  structure(class = &quot;upset&quot;,
+    .Data=list(
+      Main_bar = Main_bar,
+      Matrix = Matrix,
+      Sizes = Sizes,
+      labels = labels,
+      mb.ratio = mb.ratio,
+      att.x = att.x,
+      att.y = att.y,
+      New_data = New_data,
+      expression = expression,
+      att.pos = att.pos,
+      first.col = first.col,
+      att.color = att.color,
+      AllQueryData = AllQueryData,
+      attribute.plots = attribute.plots,
+      legend = legend,
+      query.legend = query.legend,
+      BoxPlots = BoxPlots,
+      Set_names = Set_names,
+      set.metadata = set.metadata,
+      set.metadata.plots = set.metadata.plots)
+  )</code></pre>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-07-27-hacking-our-way-through-upsetr_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>We have quite a bit more to do in order to complete our pull request. We are also curious if you would have used a different approach to hack your way through <em><a href="https://CRAN.R-project.org/package=UpSetR">UpSetR</a></em> (<a href='http://github.com/hms-dbmi/UpSetR'>Gehlenborg, 2016</a>). For example, maybe some functions from <em><a href="https://CRAN.R-project.org/package=devtools">devtools</a></em> <a id='cite-Wickham_2018'></a>(<a href='https://CRAN.R-project.org/package=devtools'>Wickham, Hester, and Chang, 2018</a>) would have enabled to do this equally fast without having to introduce <code>UpSetR:::</code> calls.</p>
+<p>Thanks for reading!</p>
+</div>
+<div id="acknowledgements" class="section level3">
+<h3>Acknowledgements</h3>
+<p>This blog post was made possible thanks to:</p>
+<ul>
+<li><em><a href="http://bioconductor.org/packages/BiocStyle">BiocStyle</a></em> <a id='cite-Oles_2018'></a>(<a href='https://github.com/Bioconductor/BiocStyle'>Oleś, Morgan, and Huber, 2018</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> <a id='cite-Xie_2017'></a>(<a href='https://github.com/rstudio/blogdown'>Xie, Hill, and Thomas, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=devtools">devtools</a></em> (<a href='https://CRAN.R-project.org/package=devtools'>Wickham, Hester, and Chang, 2018</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=knitcitations">knitcitations</a></em> <a id='cite-Boettiger_2017'></a>(<a href='https://CRAN.R-project.org/package=knitcitations'>Boettiger, 2017</a>)</li>
+</ul>
+</div>
+<div id="references" class="section level3">
+<h3>References</h3>
+<p>
+<a id='bib-Boettiger_2017'></a><a href="#cite-Boettiger_2017">[1]</a><cite> C. Boettiger. <em>knitcitations: Citations for ‘Knitr’ Markdown Files</em>. R package version 1.0.8. 2017. URL: <a href="https://CRAN.R-project.org/package=knitcitations">https://CRAN.R-project.org/package=knitcitations</a>.</cite>
+</p>
+<p>
+<a id='bib-Gehlenborg_2016'></a><a href="#cite-Gehlenborg_2016">[2]</a><cite> N. Gehlenborg. <em>UpSetR: A More Scalable Alternative to Venn and Euler Diagrams for Visualizing Intersecting Sets</em>. R package version 1.4.0. 2016. URL: <a href="http://github.com/hms-dbmi/UpSetR">http://github.com/hms-dbmi/UpSetR</a>.</cite>
+</p>
+<p>
+<a id='bib-Oles_2018'></a><a href="#cite-Oles_2018">[3]</a><cite> A. Oleś, M. Morgan and W. Huber. <em>BiocStyle: Standard styles for vignettes and other Bioconductor documents</em>. R package version 2.8.2. 2018. URL: <a href="https://github.com/Bioconductor/BiocStyle">https://github.com/Bioconductor/BiocStyle</a>.</cite>
+</p>
+<p>
+<a id='bib-Wickham_2018'></a><a href="#cite-Wickham_2018">[4]</a><cite> H. Wickham, J. Hester and W. Chang. <em>devtools: Tools to Make Developing R Packages Easier</em>. R package version 1.13.6. 2018. URL: <a href="https://CRAN.R-project.org/package=devtools">https://CRAN.R-project.org/package=devtools</a>.</cite>
+</p>
+<p>
+<a id='bib-Xie_2017'></a><a href="#cite-Xie_2017">[5]</a><cite> Y. Xie, A. P. Hill and A. Thomas. <em>blogdown: Creating Websites with R Markdown</em>. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: <a href="https://github.com/rstudio/blogdown">https://github.com/rstudio/blogdown</a>.</cite>
+</p>
+</div>
+<div id="reproducibility" class="section level3">
+<h3>Reproducibility</h3>
+<pre><code>## Session info ----------------------------------------------------------------------------------------------------------</code></pre>
+<pre><code>##  setting  value                       
+##  version  R version 3.5.1 (2018-07-02)
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2018-07-27</code></pre>
+<pre><code>## Packages --------------------------------------------------------------------------------------------------------------</code></pre>
+<pre><code>##  package       * version date       source                            
+##  assertthat      0.2.0   2017-04-11 cran (@0.2.0)                     
+##  backports       1.1.2   2017-12-13 cran (@1.1.2)                     
+##  base          * 3.5.1   2018-07-05 local                             
+##  bibtex          0.4.2   2017-06-30 CRAN (R 3.5.0)                    
+##  bindr           0.1.1   2018-03-13 cran (@0.1.1)                     
+##  bindrcpp        0.2.2   2018-03-29 cran (@0.2.2)                     
+##  BiocStyle     * 2.8.2   2018-05-30 Bioconductor                      
+##  blogdown        0.8     2018-07-15 CRAN (R 3.5.0)                    
+##  bookdown        0.7     2018-02-18 CRAN (R 3.5.0)                    
+##  colorout      * 1.2-0   2018-05-03 Github (jalvesaq/colorout@c42088d)
+##  colorspace      1.3-2   2016-12-14 cran (@1.3-2)                     
+##  compiler        3.5.1   2018-07-05 local                             
+##  crayon          1.3.4   2017-09-16 cran (@1.3.4)                     
+##  datasets      * 3.5.1   2018-07-05 local                             
+##  devtools      * 1.13.6  2018-06-27 cran (@1.13.6)                    
+##  digest          0.6.15  2018-01-28 CRAN (R 3.5.0)                    
+##  dplyr           0.7.6   2018-06-29 CRAN (R 3.5.1)                    
+##  evaluate        0.11    2018-07-17 CRAN (R 3.5.0)                    
+##  ggplot2       * 3.0.0   2018-07-03 CRAN (R 3.5.0)                    
+##  glue            1.3.0   2018-07-17 CRAN (R 3.5.0)                    
+##  graphics      * 3.5.1   2018-07-05 local                             
+##  grDevices     * 3.5.1   2018-07-05 local                             
+##  grid          * 3.5.1   2018-07-05 local                             
+##  gridExtra     * 2.3     2017-09-09 CRAN (R 3.5.0)                    
+##  gtable          0.2.0   2016-02-26 CRAN (R 3.5.0)                    
+##  htmltools       0.3.6   2017-04-28 cran (@0.3.6)                     
+##  httr            1.3.1   2017-08-20 CRAN (R 3.5.0)                    
+##  jsonlite        1.5     2017-06-01 CRAN (R 3.5.0)                    
+##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.5.0)                    
+##  knitr           1.20    2018-02-20 cran (@1.20)                      
+##  labeling        0.3     2014-08-23 cran (@0.3)                       
+##  lazyeval        0.2.1   2017-10-29 CRAN (R 3.5.0)                    
+##  lubridate       1.7.4   2018-04-11 CRAN (R 3.5.0)                    
+##  magrittr        1.5     2014-11-22 cran (@1.5)                       
+##  memoise         1.1.0   2017-04-21 CRAN (R 3.5.0)                    
+##  methods       * 3.5.1   2018-07-05 local                             
+##  munsell         0.5.0   2018-06-12 CRAN (R 3.5.0)                    
+##  pillar          1.3.0   2018-07-14 CRAN (R 3.5.0)                    
+##  pkgconfig       2.0.1   2017-03-21 cran (@2.0.1)                     
+##  plyr          * 1.8.4   2016-06-08 cran (@1.8.4)                     
+##  purrr           0.2.5   2018-05-29 cran (@0.2.5)                     
+##  R6              2.2.2   2017-06-17 CRAN (R 3.5.0)                    
+##  Rcpp            0.12.18 2018-07-23 CRAN (R 3.5.1)                    
+##  RefManageR      1.2.0   2018-04-25 CRAN (R 3.5.0)                    
+##  rlang           0.2.1   2018-05-30 cran (@0.2.1)                     
+##  rmarkdown       1.10    2018-06-11 CRAN (R 3.5.0)                    
+##  rprojroot       1.3-2   2018-01-03 cran (@1.3-2)                     
+##  scales          0.5.0   2017-08-24 cran (@0.5.0)                     
+##  stats         * 3.5.1   2018-07-05 local                             
+##  stringi         1.2.4   2018-07-20 CRAN (R 3.5.0)                    
+##  stringr         1.3.1   2018-05-10 CRAN (R 3.5.0)                    
+##  tibble          1.4.2   2018-01-22 cran (@1.4.2)                     
+##  tidyselect      0.2.4   2018-02-26 cran (@0.2.4)                     
+##  tools           3.5.1   2018-07-05 local                             
+##  UpSetR        * 1.4.0   2018-07-27 Github (hms-dbmi/UpSetR@fe2812c)  
+##  utils         * 3.5.1   2018-07-05 local                             
+##  withr           2.1.2   2018-03-15 CRAN (R 3.5.0)                    
+##  xfun            0.3     2018-07-06 CRAN (R 3.5.0)                    
+##  xml2            1.2.0   2018-01-24 CRAN (R 3.5.0)                    
+##  yaml            2.1.19  2018-05-01 CRAN (R 3.5.0)</code></pre>
+</div>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/hack/">hack</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hue3d688a4e74633c5efe0e3936ac23c1e_53872_250x250_fill_lanczos_center_2.png" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/"></a></h5>
+      <h6 class="card-subtitle">Continuous rstats learning</h6>
+      <p class="card-text">We are researchers at the @LieberInstitute, blogging about R packages, how-to guides &amp; occasionally our own open-source software (opinions r our own) #rstats</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a href="mailto:lcolladotor@gmail.com" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="http://LieberInstitute.github.io/rstatsclub/" target="_blank" rel="noopener">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://twitter.com/LIBDrstats" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://github.com/LieberInstitute" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.0bf1e3db85cbb232372ed31d6f10dc70.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

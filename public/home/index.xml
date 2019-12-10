@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes | Academic</title>
+    <link>/home/</link>
+      <atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+    <description>Homes</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 23 Jul 2018 00:00:00 -0400</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>Homes</title>
+      <link>/home/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      <guid>/home/about/</guid>
+      <description>
+
+&lt;h1 id=&#34;the-ocs-project&#34;&gt;The OCS project&lt;/h1&gt;
+
+&lt;h2 id=&#34;what-problem-are-we-addressing&#34;&gt;What problem are we addressing?&lt;/h2&gt;
+
+&lt;p&gt;An increase in demand for gateway training in statistics, biostatistics, and data science has led to changes in curriculum, specifically an increase in computing. While this has led to more applied courses, students still struggle with effectively deriving knowledge from data. This is primarily because (i) these courses frequently fail to frame the lectures around a real-world application; (ii) quantitative methods are typically illustrated with an unrealistically clean data set that fits the assumptions of the method in an equally unrealistic way. When students use this approach to solve problems in the real-world, they are unable to identify the most appropriate methodological approach when it is not spoon fed.&lt;/p&gt;
+
+&lt;h2 id=&#34;problems-with-previously-suggested-solutions&#34;&gt;Problems with previously suggested solutions&lt;/h2&gt;
+
+&lt;p&gt;In 1999, &lt;a href=&#34;https://www.stat.berkeley.edu/users/statlabs/&#34; target=&#34;_blank&#34;&gt;Nolan and Speed&lt;/a&gt; argued the solution was to teach courses through in-depth case studies derived from interesting problems, with nontrivial solutions that leave room for different analyses. This innovative framework teaches the student to make important connections between the scientific question, data and statistical concepts that only come from hands-on experience analyzing data. However, these case studies based on realistic challenges, not toy examples, are scarce.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-are-we-proposing-as-a-solution&#34;&gt;What are we proposing as a solution?&lt;/h2&gt;
+
+&lt;p&gt;To address this, we are developing the &lt;code&gt;opencasestudies&lt;/code&gt; educational resource of case studies, which demonstrate illustrative data analyses that can be used in the classroom to teach students how to effectively derive knowledge from data. This approach has successfully been used to &lt;a href=&#34;https://amstat.tandfonline.com/doi/abs/10.1080/00031305.2017.1356747#.XDZCzS3MxTY&#34; target=&#34;_blank&#34;&gt;teach data science&lt;/a&gt; courses at many universities, including:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://jhu-advdatasci.github.io/2018/&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs109.github.io/2014/&#34; target=&#34;_blank&#34;&gt;Harvard University&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://datasciencelabs.github.io/2016/&#34; target=&#34;_blank&#34;&gt;Harvard T.H. Chan School of Public Health&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rdatasciencecases.org&#34; target=&#34;_blank&#34;&gt;University of California at Berkeley&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.tandfonline.com/doi/pdf/10.1080/00031305.2015.1081105&#34; target=&#34;_blank&#34;&gt;Smith College&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/home/casestudies/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/home/casestudies/</guid>
+      <description>
+
+&lt;h1 id=&#34;open-case-studies&#34;&gt;Open Case Studies&lt;/h1&gt;
+
+&lt;h2 id=&#34;available-open-case-studies&#34;&gt;Available Open Case Studies&lt;/h2&gt;
+
+&lt;p&gt;We are actively working on creating case studies and this is
+the current list of available case studies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Exploring health expenditure in the United States:  [&lt;a href=&#34;https://github.com/opencasestudies/ocs-healthexpenditure/blob/master/README.md&#34; target=&#34;_blank&#34;&gt;description and citation&lt;/a&gt;] [&lt;a href=&#34;casestudies/ocs-healthexpenditure.html&#34; target=&#34;_blank&#34;&gt;case study&lt;/a&gt;] [&lt;a href=&#34;https://github.com/opencasestudies/ocs-healthexpenditure&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;] &lt;a href=&#34;https://zenodo.org/badge/latestdoi/151142096&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/151142096.svg&#34; alt=&#34;DOI&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Examine relationship between fatal police shootings and firearm legislation in the United States: [&lt;a href=&#34;https://github.com/opencasestudies/ocs-police-shootings-firearm-legislation/blob/master/README.md&#34; target=&#34;_blank&#34;&gt;description and citation&lt;/a&gt;] [&lt;a href=&#34;casestudies/ocs-police-shootings-firearm-legislation.html&#34; target=&#34;_blank&#34;&gt;case study&lt;/a&gt;] [&lt;a href=&#34;https://github.com/opencasestudies/ocs-police-shootings-firearm-legislation&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;] &lt;a href=&#34;https://zenodo.org/badge/latestdoi/151612152&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/151612152.svg&#34; alt=&#34;DOI&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;use-the-open-case-studies&#34;&gt;Use the Open Case Studies&lt;/h2&gt;
+
+&lt;p&gt;If you use one of the Open Case Studies in the classroom,
+please use the digital object identifier (DOI) for the citation.
+A link to the full citation is provided next to each case study.&lt;/p&gt;
+
+&lt;h2 id=&#34;contribute-to-open-case-studies&#34;&gt;Contribute to Open Case Studies&lt;/h2&gt;
+
+&lt;p&gt;If you would like to contribute a case study to the repository,
+or have suggestions on data sets to use to build a case study around,
+please contact us!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/home/casestudies.rmarkdown/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/home/casestudies.rmarkdown/</guid>
+      <description>
+
+&lt;h1 id=&#34;open-case-studies&#34;&gt;Open Case Studies&lt;/h1&gt;
+
+&lt;h2 id=&#34;available-open-case-studies&#34;&gt;Available Open Case Studies&lt;/h2&gt;
+
+&lt;p&gt;We are actively working on creating case studies and this is
+the current list of available case studies:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Exploring health expenditure in the United States:  [&lt;a href=&#34;https://github.com/opencasestudies/ocs-healthexpenditure/blob/master/README.md&#34; target=&#34;_blank&#34;&gt;description and citation&lt;/a&gt;] [&lt;a href=&#34;casestudies/ocs-healthexpenditure.html&#34; target=&#34;_blank&#34;&gt;case study&lt;/a&gt;] [&lt;a href=&#34;https://github.com/opencasestudies/ocs-healthexpenditure&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;] &lt;a href=&#34;https://zenodo.org/badge/latestdoi/151142096&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/151142096.svg&#34; alt=&#34;DOI&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Examine relationship between fatal police shootings and firearm legislation in the United States: [&lt;a href=&#34;https://github.com/opencasestudies/ocs-police-shootings-firearm-legislation/blob/master/README.md&#34; target=&#34;_blank&#34;&gt;description and citation&lt;/a&gt;] [&lt;a href=&#34;casestudies/ocs-police-shootings-firearm-legislation.html&#34; target=&#34;_blank&#34;&gt;case study&lt;/a&gt;] [&lt;a href=&#34;https://github.com/opencasestudies/ocs-police-shootings-firearm-legislation&#34; target=&#34;_blank&#34;&gt;code&lt;/a&gt;] &lt;a href=&#34;https://zenodo.org/badge/latestdoi/151612152&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://zenodo.org/badge/151612152.svg&#34; alt=&#34;DOI&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;use-the-open-case-studies&#34;&gt;Use the Open Case Studies&lt;/h2&gt;
+
+&lt;p&gt;If you use one of the Open Case Studies in the classroom,
+please use the digital object identifier (DOI) for the citation.
+A link to the full citation is provided next to each case study.&lt;/p&gt;
+
+&lt;h2 id=&#34;contribute-to-open-case-studies&#34;&gt;Contribute to Open Case Studies&lt;/h2&gt;
+
+&lt;p&gt;If you would like to contribute a case study to the repository,
+or have suggestions on data sets to use to build a case study around,
+please contact us!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Recent Blog Posts</title>
+      <link>/home/posts_blog/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/home/posts_blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Team</title>
+      <link>/home/team/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/home/team/</guid>
+      <description>
+
+&lt;h1 id=&#34;meet-our-ocs-team&#34;&gt;Meet our OCS team&lt;/h1&gt;
+
+&lt;h4 id=&#34;stephanie-hicks&#34;&gt;Stephanie Hicks&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/stephanie_hicks.jpg&#34; style=&#34;width:20%&#34;;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.stephaniehicks.com&#34; target=&#34;_blank&#34;&gt;Stephanie&lt;/a&gt; is an
+Assistant Professor at
+&lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;.
+She is a faculty member in the
+&lt;a href=&#34;https://jhudatascience.org&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Data Science Lab&lt;/a&gt; and
+teaches &lt;a href=&#34;https://jhu-advdatasci.github.io/2018/&#34; target=&#34;_blank&#34;&gt;Advanced Data Science&lt;/a&gt;.
+She is also creating a children&amp;rsquo;s book featuring women statisticians
+and data scientists.&lt;/p&gt;
+
+&lt;h3 id=&#34;leah-jager&#34;&gt;Leah Jager&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/leah_jager.jpg&#34; style=&#34;width:20%&#34;;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Leah is an Assistant Scientist in the &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/index.html&#34; target=&#34;_blank&#34;&gt;Biostatistics Department&lt;/a&gt;
+at &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;
+where she teaches biostatistics to undergraduate and masters students
+in Public Health. She has a strong interest in statistics education
+and is currently studying how people interact with data with the goal
+of being able to teach them more effectively.&lt;/p&gt;
+
+&lt;h4 id=&#34;margaret-taub&#34;&gt;Margaret Taub&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/margaret_taub.jpg&#34; style=&#34;width:20%&#34;;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Margaret is an Assistant Scientist in the
+&lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/index.html&#34; target=&#34;_blank&#34;&gt;Biostatistics Department&lt;/a&gt;
+at &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;carrie-wright&#34;&gt;Carrie Wright&lt;/h4&gt;
+
+&lt;h4 id=&#34;research-assistants&#34;&gt;Research Assistants&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Kexin (Sheena) Wang. Sheena is pursing her Master of Science in Engineering degree in &lt;a href=&#34;https://engineering.jhu.edu/ams/&#34; target=&#34;_blank&#34;&gt;Applied Mathematics and Statistics&lt;/a&gt; at &lt;a href=&#34;https://www.jhu.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins University&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Michael Ontiveros. Michael is pursuing masters degree in
+&lt;a href=&#34;https://www.jhsph.edu/departments/epidemiology/index.html&#34; target=&#34;_blank&#34;&gt;Epidemiology&lt;/a&gt; at &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;ocs-alumni&#34;&gt;OCS Alumni&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Alexandra Stephens&lt;/li&gt;
+&lt;li&gt;Hanchao (Ted) Zhang&lt;/li&gt;
+&lt;li&gt;Pei-Lun (Perry) Kuo&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Team</title>
+      <link>/home/team.rmarkdown/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/home/team.rmarkdown/</guid>
+      <description>
+
+&lt;h1 id=&#34;meet-our-ocs-team&#34;&gt;Meet our OCS team&lt;/h1&gt;
+
+&lt;h4 id=&#34;stephanie-hicks&#34;&gt;Stephanie Hicks&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/stephanie_hicks.jpg&#34; style=&#34;width:20%&#34;;/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.stephaniehicks.com&#34; target=&#34;_blank&#34;&gt;Stephanie&lt;/a&gt; is an
+Assistant Professor at
+&lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;.
+She is a faculty member in the
+&lt;a href=&#34;https://jhudatascience.org&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Data Science Lab&lt;/a&gt; and
+teaches &lt;a href=&#34;https://jhu-advdatasci.github.io/2018/&#34; target=&#34;_blank&#34;&gt;Advanced Data Science&lt;/a&gt;.
+She is also creating a children&amp;rsquo;s book featuring women statisticians
+and data scientists.&lt;/p&gt;
+
+&lt;h3 id=&#34;leah-jager&#34;&gt;Leah Jager&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/leah_jager.jpg&#34; style=&#34;width:20%&#34;;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Leah is an Assistant Scientist in the &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/index.html&#34; target=&#34;_blank&#34;&gt;Biostatistics Department&lt;/a&gt;
+at &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;
+where she teaches biostatistics to undergraduate and masters students
+in Public Health. She has a strong interest in statistics education
+and is currently studying how people interact with data with the goal
+of being able to teach them more effectively.&lt;/p&gt;
+
+&lt;h4 id=&#34;margaret-taub&#34;&gt;Margaret Taub&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&#34;/img/margaret_taub.jpg&#34; style=&#34;width:20%&#34;;/&gt;&lt;/p&gt;
+
+&lt;p&gt;Margaret is an Assistant Scientist in the
+&lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/index.html&#34; target=&#34;_blank&#34;&gt;Biostatistics Department&lt;/a&gt;
+at &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&#34;carrie-wright&#34;&gt;Carrie Wright&lt;/h4&gt;
+
+&lt;h4 id=&#34;research-assistants&#34;&gt;Research Assistants&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Kexin (Sheena) Wang. Sheena is pursing her Master of Science in Engineering degree in &lt;a href=&#34;https://engineering.jhu.edu/ams/&#34; target=&#34;_blank&#34;&gt;Applied Mathematics and Statistics&lt;/a&gt; at &lt;a href=&#34;https://www.jhu.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins University&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Michael Ontiveros. Michael is pursuing masters degree in
+&lt;a href=&#34;https://www.jhsph.edu/departments/epidemiology/index.html&#34; target=&#34;_blank&#34;&gt;Epidemiology&lt;/a&gt; at &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;ocs-alumni&#34;&gt;OCS Alumni&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Alexandra Stephens&lt;/li&gt;
+&lt;li&gt;Hanchao (Ted) Zhang&lt;/li&gt;
+&lt;li&gt;Pei-Lun (Perry) Kuo&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      <guid>/home/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>/home/tags/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 -0400</pubDate>
+      <guid>/home/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>/home/search/</link>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 -0400</pubDate>
+      <guid>/home/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/home/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/home/about/</guid>
+      <description>
+
+
+&lt;p&gt;+++
+# About/Biography widget.
+widget = “about”
+active = true
+date = 2016-04-20T00:00:00&lt;/p&gt;
+&lt;div id=&#34;order-that-this-section-will-appear-in.&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Order that this section will appear in.&lt;/h1&gt;
+&lt;p&gt;weight = 1&lt;/p&gt;
+&lt;p&gt;+++&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-ocs-project&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;The OCS project&lt;/h1&gt;
+&lt;div id=&#34;what-problem-are-we-addressing&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What problem are we addressing?&lt;/h2&gt;
+&lt;p&gt;An increase in demand for gateway training in statistics, biostatistics, and data science has led to changes in curriculum, specifically an increase in computing. While this has led to more applied courses, students still struggle with effectively deriving knowledge from data. This is primarily because (i) these courses frequently fail to frame the lectures around a real-world application; (ii) quantitative methods are typically illustrated with an unrealistically clean data set that fits the assumptions of the method in an equally unrealistic way. When students use this approach to solve problems in the real-world, they are unable to identify the most appropriate methodological approach when it is not spoon fed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;problems-with-previously-suggested-solutions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Problems with previously suggested solutions&lt;/h2&gt;
+&lt;p&gt;In 1999, &lt;a href=&#34;https://www.stat.berkeley.edu/users/statlabs/&#34;&gt;Nolan and Speed&lt;/a&gt; argued the solution was to teach courses through in-depth case studies derived from interesting problems, with nontrivial solutions that leave room for different analyses. This innovative framework teaches the student to make important connections between the scientific question, data and statistical concepts that only come from hands-on experience analyzing data. However, these case studies based on realistic challenges, not toy examples, are scarce.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-are-we-proposing-as-a-solution&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;What are we proposing as a solution?&lt;/h2&gt;
+&lt;p&gt;To address this, we are developing the &lt;code&gt;opencasestudies&lt;/code&gt; educational resource of case studies, which demonstrate illustrative data analyses that can be used in the classroom to teach students how to effectively derive knowledge from data. This approach has successfully been used to &lt;a href=&#34;https://amstat.tandfonline.com/doi/abs/10.1080/00031305.2017.1356747#.XDZCzS3MxTY&#34;&gt;teach data science&lt;/a&gt; courses at many universities, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://jhu-advdatasci.github.io/2018/&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs109.github.io/2014/&#34;&gt;Harvard University&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://datasciencelabs.github.io/2016/&#34;&gt;Harvard T.H. Chan School of Public Health&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rdatasciencecases.org&#34;&gt;University of California at Berkeley&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.tandfonline.com/doi/pdf/10.1080/00031305.2015.1081105&#34;&gt;Smith College&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

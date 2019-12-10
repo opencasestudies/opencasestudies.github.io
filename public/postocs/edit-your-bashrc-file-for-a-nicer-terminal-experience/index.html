@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="By L. Collado-Torres.
+If you are working at LIBD or with large data, it’s very likely that it won’t fit in your laptop and that you’ll be using the terminal to interact with a high performance computing cluster (like JHPCE) or server. Some small edits to your bash configuration file can make your terminal experience much more enjoyable and hopefully boost your productivity. The edits described below work for any OS.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/postocs/edit-your-bashrc-file-for-a-nicer-terminal-experience/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.a3cda781a9b24f26fefd34a53547835b.css">
+
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/postocs/edit-your-bashrc-file-for-a-nicer-terminal-experience/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Academic">
+  <meta property="og:url" content="/postocs/edit-your-bashrc-file-for-a-nicer-terminal-experience/">
+  <meta property="og:title" content="Edit your bashrc file for a nicer terminal experience | Academic">
+  <meta property="og:description" content="By L. Collado-Torres.
+If you are working at LIBD or with large data, it’s very likely that it won’t fit in your laptop and that you’ll be using the terminal to interact with a high performance computing cluster (like JHPCE) or server. Some small edits to your bash configuration file can make your terminal experience much more enjoyable and hopefully boost your productivity. The edits described below work for any OS."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-03-11T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-03-11T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Edit your bashrc file for a nicer terminal experience | Academic</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Academic</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Edit your bashrc file for a nicer terminal experience</h1>
+
+  
+
+  
+    
+
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 11, 2018
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/jhpce/">JHPCE</a>, <a href="/categories/setup/">setup</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/postocs/edit-your-bashrc-file-for-a-nicer-terminal-experience/&amp;text=Edit%20your%20bashrc%20file%20for%20a%20nicer%20terminal%20experience" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/postocs/edit-your-bashrc-file-for-a-nicer-terminal-experience/&amp;t=Edit%20your%20bashrc%20file%20for%20a%20nicer%20terminal%20experience" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Edit%20your%20bashrc%20file%20for%20a%20nicer%20terminal%20experience&amp;body=/postocs/edit-your-bashrc-file-for-a-nicer-terminal-experience/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/postocs/edit-your-bashrc-file-for-a-nicer-terminal-experience/&amp;title=Edit%20your%20bashrc%20file%20for%20a%20nicer%20terminal%20experience" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Edit%20your%20bashrc%20file%20for%20a%20nicer%20terminal%20experience%20/postocs/edit-your-bashrc-file-for-a-nicer-terminal-experience/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/postocs/edit-your-bashrc-file-for-a-nicer-terminal-experience/&amp;title=Edit%20your%20bashrc%20file%20for%20a%20nicer%20terminal%20experience" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<p>By <a href="http://lcolladotor.github.io">L. Collado-Torres</a>.</p>
+<p>If you are working at LIBD or with large data, it’s very likely that it won’t fit in your laptop and that you’ll be using the terminal to interact with a high performance computing cluster (like <a href="http://www.jhpce.jhu.edu/">JHPCE</a>) or server. Some small edits to your bash configuration file can make your terminal experience much more enjoyable and hopefully boost your productivity. The edits described below work for any OS. On Windows, I’m assuming that you are using <code>git bash</code> or a similar terminal program.</p>
+<p>The way we can control our terminal appearance and some behavior is through the <code>.bashrc</code> file. That file typically gets read once when loading a new terminal window and that is where we can save some shortcuts we like to use, alter the colors of our terminal, change the behavior of the up and down arrow keys, etc.</p>
+<div id="bashrc-file" class="section level3">
+<h3><code>.bashrc</code> file</h3>
+<p>First, we need to learn where to locate this file. On all OS (Mac, Windows, Linux) machines/servers, the <code>.bashrc</code> file typically lives at <code>~/.bashrc</code>. For my Mac for example that is <code>/home/lcollado/.bashrc</code>. For my Windows machine, that’s <code>/c/Users/Leonardo/.bashrc</code>. Now, the dot before the file makes it a <em>hidden file</em>. <a href="http://lmgtfy.com/?q=show+hidden+files">A quick search can help you</a> find the options for your computer that lets you see these hidden files. From a terminal window, I typically use this bash command to show all the hidden files (that’s from the <code>a</code> option).</p>
+<pre class="bash"><code>## List files in human readable format including hidden files
+ls -lha</code></pre>
+</div>
+<div id="initial-files" class="section level3">
+<h3>Initial files</h3>
+<p>You might have a <code>~/.bashrc</code> and a <code>~/.bash_profile</code> already. If not, lets create simple ones. You can use the <code>touch</code> bash command for make a new file (<code>touch ~/.bashrc</code>), or you could use this R code:</p>
+<pre class="r"><code>file.create(&#39;~/.bashrc&#39;)
+file.create(&#39;~/.bash_profile&#39;)</code></pre>
+<p>Next open them with your text editor (say Notepad++, TextMate 2, RStudio, among others) and paste the following contents.</p>
+<p><code>~/.bash_profile</code> contents</p>
+<pre><code># Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+# In my Mac one I also have this:
+if [ -f ~/.profile ]; then
+        . ~/.profile
+fi</code></pre>
+<p>Minimal <code>~/.bashrc</code> contents</p>
+<pre><code># Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi</code></pre>
+</div>
+<div id="control-your-bash-history" class="section level3">
+<h3>Control your bash history</h3>
+<p>Lets start adding features to our terminal experience by editing the <code>~/.bashrc</code> file. I typically include comments <code>#</code> describing what the code is doing and where I learned how to do <span class="math inline">\(X\)</span>. The first part is controlling your bash history. I want to have a longer history than what is included by default and where duplicates are deleted.</p>
+<pre class="bash"><code># http://www.biostat.jhsph.edu/~afisher/ComputingClub/webfiles/KasperHansenPres/IntermediateUnix.pdf
+# https://unix.stackexchange.com/questions/48713/how-can-i-remove-duplicates-in-my-bash-history-preserving-order
+export HISTCONTROL=ignoreboth:erasedups
+export HISTSIZE=10000
+shopt -s histappend
+shopt -s cmdhist</code></pre>
+</div>
+<div id="change-the-up-and-down-arrows" class="section level3">
+<h3>Change the up and down arrows</h3>
+<p>The next change will save you a lot of time! Plus it goes nicely with the bash history changes we just made. Normally, the up and down arrow let you select previous commands from your bash history (up) or select one of your latest commands (down, after having used up). The following changes make it so that the up arrow searches only commands that start with exactly the letters you had already typed.</p>
+<p>Lets say that you just requested a compute node with <code>qrsh</code> and you have an empty line.</p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-11-edit-your-bashrc-file-for-a-nicer-terminal-experience_files/Screen Shot 2018-03-11 at 7.38.34 PM.png" alt="qrsh" width="500"/></p>
+<p>If you use the <code>up</code> arrow, you can navigate your command history. So far, this is the same as the default <code>up</code> arrow behavior.</p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-11-edit-your-bashrc-file-for-a-nicer-terminal-experience_files/Screen Shot 2018-03-11 at 7.38.48 PM.png" alt="empty up" width="500"/></p>
+<p>Lets say that I want to change directory to one of my recent projects. So I type <code>cd /</code> in the terminal window (without hitting enter).</p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-11-edit-your-bashrc-file-for-a-nicer-terminal-experience_files/Screen Shot 2018-03-11 at 7.39.16 PM.png" alt="empty cd" width="300"/></p>
+<p>Next I use the <code>up</code> arrow, and it only finds for me commands that start with <code>cd /</code>, including this long one.</p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-03-11-edit-your-bashrc-file-for-a-nicer-terminal-experience_files/Screen Shot 2018-03-11 at 7.39.52 PM.png" alt="cd and up" width="500"/></p>
+<p>Did you like this? Well, add the following code to your <code>~/.bashrc</code> file</p>
+<pre class="bash"><code># Auto-complete command from history
+# http://lindesk.com/2009/04/customize-terminal-configuration-setting-bash-cli-power-user/
+export INPUTRC=~/.inputrc</code></pre>
+<p>where <code>~/.inputrc</code> file has the following contents:</p>
+<pre class="bash"><code>#Page up/page down
+&quot;\e[B&quot;: history-search-forward
+&quot;\e[A&quot;: history-search-backward
+
+$include /etc/inputrc</code></pre>
+<p>As an added benefit, the up and down arrows will now have this improved behavior when you run <code>R</code> inside a terminal, although it’s limited to your current R history: actually, I guess that you could change your .Rprofile to load the previous R history.</p>
+</div>
+<div id="interactive-deleting-of-files" class="section level3">
+<h3>Interactive deleting of files</h3>
+<p>In a terminal, you normally delete files with <code>rm</code>, but you can make an alias (shortcut) so that when you are deleting files with <code>rmi</code> you will get asked to confirm whether you want to delete the file or not. This can be useful if you are using some patterns for finding the files that you are trying to delete but want to make sure that the pattern didn’t catch other files you want to keep.</p>
+<pre class="bash"><code># http://superuser.com/questions/384769/alias-rm-rm-i-considered-harmful
+alias rmi=&#39;rm -i&#39;</code></pre>
+</div>
+<div id="change-the-command-prompt" class="section level3">
+<h3>Change the command prompt</h3>
+<p>You can also control the command prompt. That is, the parts that are shown before you start typing in your terminal. I like keeping it short, so it only shows me the parent directory instead of the full path, plus a small version for the time (hh:mm) in a 12 hour clock. This is sometimes useful if I run some commands and later on want to get a quick idea if any of them took a while to run (specially if I was not looking at the terminal).</p>
+<pre class="bash"><code># Change command prompt
+# http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+# http://www.cyberciti.biz/faq/bash-shell-change-the-color-of-my-shell-prompt-under-linux-or-unix/
+# https://bbs.archlinux.org/viewtopic.php?id=48910
+# previous in enigma2: &quot;[\u@\h \W]\$ &quot;
+# previously in mac: &quot;\h:\W \u\$ &quot;
+export PS1=&quot;\[\e[0;33m\]\A \W \$ \[\e[m\]&quot;</code></pre>
+</div>
+<div id="colors" class="section level3">
+<h3>Colors</h3>
+<p>You can change the colors of your terminal. For example, do you want directories to be shown in blue and/or bold font while executable files are shown in red. This goes in hand with the <code>ls --color=auto</code> shortcut to make sure that the colors are used (Mac: you might need <code>brew install coreutils</code> as described <a href="https://superuser.com/questions/183876/how-do-i-get-ls-color-auto-to-work-on-mac-os-x">in this blog post</a>). The following lines of my <code>~/.bashrc</code> file include some old history of the colors and how I use to have other options.</p>
+<pre class="bash"><code># colors
+# http://norbauer.com/notebooks/code/notes/ls-colors-and-terminal-app
+# used BSD pattern ExGxFxDxBxEgEdxbxgxhxd on http://geoff.greer.fm/lscolors/
+# that tool does not specify the colors, which I did by looking manually at
+# http://blog.twistedcode.org/2008/04/lscolors-explained.html
+# and the norbauer.com site previously mentioned
+alias ls=&quot;ls --color=auto&quot;
+#export LS_COLORS=&quot;di=1;34;40:ln=1;36;40:so=1;35;40:pi=1;93;40:ex=1;31;40:bd=1;34;46:cd=1;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43&quot;
+## After switching to RStudio:
+# https://askubuntu.com/questions/466198/how-do-i-change-the-color-for-directories-with-ls-in-the-console
+export LS_COLORS=&quot;di=0;32:ln=0;36:so=0;35:pi=0;93:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;41:sg=0;46:tw=0;47:ow=0;43:fi=0;33&quot;</code></pre>
+<p>Mac extra lines:</p>
+<pre class="bash"><code># Uncomment below for Mac and comment the two previous commands
+#export CLICOLOR=1
+#export LSCOLORS=&quot;ExGxFxDxBxEgEdxbxgxhxd&quot;
+## Actually from https://superuser.com/questions/183876/how-do-i-get-ls-color-auto-to-work-on-mac-os-x
+# brew install coreutils
+# then change the aliast to use gls instead of ls
+# that way I can use the same config file =)
+
+alias ls=&quot;gls --color=auto&quot;</code></pre>
+<p>I use the same <code>LS_COLORS</code> now on my Mac too, but you don’t need to.</p>
+<p><em>UPDATE</em></p>
+<p>We got this note from Mark Miller, admin of <a href="http://www.jhpce.jhu.edu/">JHPCE</a>:</p>
+<blockquote>
+<p>One quick note on your page. You mention setting colors for the ls output, which is great. One thing we (and others) have found is that, for a directory on a Lustre filesystem (/dcl01 or /dcl02), using “ls –colors=auto” or “ls -al” on a directory with lots (thousands+) of files in it can be super slow. With these options, the ls command needs to iterate through each file in the directory, and query the lustre server for each and every file to retrieve information about the file in order to determine what color to display. So, if you’re regularly using directories on Lustre that have lots of files in them, and your “ls” command it taking too long, we recommend using “ls –color=none”. <a href="https://wikis.nyu.edu/display/NYUHPC/Lustre+FAQ" class="uri">https://wikis.nyu.edu/display/NYUHPC/Lustre+FAQ</a> <a href="https://groups.google.com/forum/#!topic/lustre-discuss-list/3afjd4j2Q-g" class="uri">https://groups.google.com/forum/#!topic/lustre-discuss-list/3afjd4j2Q-g</a></p>
+</blockquote>
+</div>
+<div id="shortcuts-for-main-project-directories" class="section level3">
+<h3>Shortcuts for main project directories</h3>
+<p>We’ve seen several aliases (shortcuts) already such as the one for <code>ls --color=auto</code> which is the one I use the most. But I also use aliases for changing to the root directories that I use <em>the</em> most.</p>
+<pre class="bash"><code>alias labold=&quot;cd /dcl01/lieber/ajaffe/lab&quot;
+alias lab=&quot;cd /dcl01/ajaffe/data/lab&quot;</code></pre>
+<p>Actually, we were supposed to just use the new disk here and I should have probably chosen better names to differentiate the two.</p>
+<p>The next terminal window you open after editing the <code>~/.bashrc</code> file will have all your new features enabled.</p>
+<p><img src="https://media.giphy.com/media/10UeedrT5MIfPG/giphy.gif"/></p>
+<p><a href="https://giphy.com/reactions/search/yay">Source</a></p>
+</div>
+<div id="extra" class="section level3">
+<h3>Extra</h3>
+<p>Sometimes you might need to export other environment variables, such as <code>RMATE_PORT</code> described in the <code>rmate</code> setup <a href="http://research.libd.org/rstatsclub/2018/03/11/textmate-setup-mac-only/">post</a>.</p>
+</div>
+<div id="repeat-this-process" class="section level3">
+<h3>Repeat this process</h3>
+<p>You can/should repeat this process for other <code>~/.bashrc</code> files you interact with. In my case, that would be:</p>
+<ul>
+<li><code>~/.bashrc</code> in my Mac laptop</li>
+<li><code>~/.bashrc</code> at my JHPCE home</li>
+<li><code>~/.bashrc</code> in my Windows laptop</li>
+</ul>
+</div>
+<div id="acknowledgements" class="section level3">
+<h3>Acknowledgements</h3>
+<p>This blog post was made possible thanks to:</p>
+<ul>
+<li><em><a href="http://bioconductor.org/packages/BiocStyle">BiocStyle</a></em> <a id='cite-Oles_2018'></a>(<a href='https://github.com/Bioconductor/BiocStyle'>Oleś, Morgan, and Huber, 2018</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> <a id='cite-Xie_2017'></a>(<a href='https://github.com/rstudio/blogdown'>Xie, Hill, and Thomas, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=devtools">devtools</a></em> <a id='cite-Wickham_2018'></a>(<a href='https://CRAN.R-project.org/package=devtools'>Wickham, Hester, and Chang, 2018</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=knitcitations">knitcitations</a></em> <a id='cite-Boettiger_2017'></a>(<a href='https://CRAN.R-project.org/package=knitcitations'>Boettiger, 2017</a>)</li>
+</ul>
+</div>
+<div id="references" class="section level3">
+<h3>References</h3>
+<p>
+<a id='bib-Boettiger_2017'></a><a href="#cite-Boettiger_2017">[1]</a><cite> C. Boettiger. <em>knitcitations: Citations for ‘Knitr’ Markdown Files</em>. R package version 1.0.8. 2017. URL: <a href="https://CRAN.R-project.org/package=knitcitations">https://CRAN.R-project.org/package=knitcitations</a>.</cite>
+</p>
+<p>
+<a id='bib-Oles_2018'></a><a href="#cite-Oles_2018">[2]</a><cite> A. Oleś, M. Morgan and W. Huber. <em>BiocStyle: Standard styles for vignettes and other Bioconductor documents</em>. R package version 2.8.2. 2018. URL: <a href="https://github.com/Bioconductor/BiocStyle">https://github.com/Bioconductor/BiocStyle</a>.</cite>
+</p>
+<p>
+<a id='bib-Wickham_2018'></a><a href="#cite-Wickham_2018">[3]</a><cite> H. Wickham, J. Hester and W. Chang. <em>devtools: Tools to Make Developing R Packages Easier</em>. R package version 1.13.6. 2018. URL: <a href="https://CRAN.R-project.org/package=devtools">https://CRAN.R-project.org/package=devtools</a>.</cite>
+</p>
+<p>
+<a id='bib-Xie_2017'></a><a href="#cite-Xie_2017">[4]</a><cite> Y. Xie, A. P. Hill and A. Thomas. <em>blogdown: Creating Websites with R Markdown</em>. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: <a href="https://github.com/rstudio/blogdown">https://github.com/rstudio/blogdown</a>.</cite>
+</p>
+</div>
+<div id="reproducibility" class="section level3">
+<h3>Reproducibility</h3>
+<pre><code>## Session info ----------------------------------------------------------------------------------------------------------</code></pre>
+<pre><code>##  setting  value                                      
+##  version  R version 3.5.1 Patched (2018-10-14 r75439)
+##  system   x86_64, darwin15.6.0                       
+##  ui       X11                                        
+##  language (EN)                                       
+##  collate  en_US.UTF-8                                
+##  tz       America/New_York                           
+##  date     2018-10-26</code></pre>
+<pre><code>## Packages --------------------------------------------------------------------------------------------------------------</code></pre>
+<pre><code>##  package       * version date       source                            
+##  backports       1.1.2   2017-12-13 cran (@1.1.2)                     
+##  base          * 3.5.1   2018-10-15 local                             
+##  bibtex          0.4.2   2017-06-30 CRAN (R 3.5.0)                    
+##  BiocStyle     * 2.8.2   2018-05-30 Bioconductor                      
+##  blogdown        0.8     2018-07-15 CRAN (R 3.5.0)                    
+##  bookdown        0.7     2018-02-18 CRAN (R 3.5.0)                    
+##  colorout      * 1.2-0   2018-05-03 Github (jalvesaq/colorout@c42088d)
+##  compiler        3.5.1   2018-10-15 local                             
+##  datasets      * 3.5.1   2018-10-15 local                             
+##  devtools      * 1.13.6  2018-06-27 cran (@1.13.6)                    
+##  digest          0.6.18  2018-10-10 CRAN (R 3.5.0)                    
+##  evaluate        0.12    2018-10-09 CRAN (R 3.5.0)                    
+##  graphics      * 3.5.1   2018-10-15 local                             
+##  grDevices     * 3.5.1   2018-10-15 local                             
+##  htmltools       0.3.6   2017-04-28 cran (@0.3.6)                     
+##  httr            1.3.1   2017-08-20 CRAN (R 3.5.0)                    
+##  jsonlite        1.5     2017-06-01 CRAN (R 3.5.0)                    
+##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.5.0)                    
+##  knitr           1.20    2018-02-20 cran (@1.20)                      
+##  lubridate       1.7.4   2018-04-11 CRAN (R 3.5.0)                    
+##  magrittr        1.5     2014-11-22 cran (@1.5)                       
+##  memoise         1.1.0   2017-04-21 CRAN (R 3.5.0)                    
+##  methods       * 3.5.1   2018-10-15 local                             
+##  plyr            1.8.4   2016-06-08 cran (@1.8.4)                     
+##  R6              2.3.0   2018-10-04 CRAN (R 3.5.0)                    
+##  Rcpp            0.12.19 2018-10-01 CRAN (R 3.5.1)                    
+##  RefManageR      1.2.0   2018-04-25 CRAN (R 3.5.0)                    
+##  rmarkdown       1.10    2018-06-11 CRAN (R 3.5.0)                    
+##  rprojroot       1.3-2   2018-01-03 cran (@1.3-2)                     
+##  stats         * 3.5.1   2018-10-15 local                             
+##  stringi         1.2.4   2018-07-20 CRAN (R 3.5.0)                    
+##  stringr         1.3.1   2018-05-10 CRAN (R 3.5.0)                    
+##  tools           3.5.1   2018-10-15 local                             
+##  utils         * 3.5.1   2018-10-15 local                             
+##  withr           2.1.2   2018-03-15 CRAN (R 3.5.0)                    
+##  xfun            0.3     2018-07-06 CRAN (R 3.5.0)                    
+##  xml2            1.2.0   2018-01-24 CRAN (R 3.5.0)                    
+##  yaml            2.2.0   2018-07-25 CRAN (R 3.5.0)</code></pre>
+</div>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/terminal/">terminal</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hue3d688a4e74633c5efe0e3936ac23c1e_53872_250x250_fill_lanczos_center_2.png" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/"></a></h5>
+      <h6 class="card-subtitle">Continuous rstats learning</h6>
+      <p class="card-text">We are researchers at the @LieberInstitute, blogging about R packages, how-to guides &amp; occasionally our own open-source software (opinions r our own) #rstats</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a href="mailto:lcolladotor@gmail.com" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="http://LieberInstitute.github.io/rstatsclub/" target="_blank" rel="noopener">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://twitter.com/LIBDrstats" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://github.com/LieberInstitute" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.0bf1e3db85cbb232372ed31d6f10dc70.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

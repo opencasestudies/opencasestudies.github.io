@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hack | Academic</title>
+    <link>/tags/hack/</link>
+      <atom:link href="/tags/hack/index.xml" rel="self" type="application/rss+xml" />
+    <description>hack</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 27 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>hack</title>
+      <link>/tags/hack/</link>
+    </image>
+    
+    <item>
+      <title>Hacking our way through UpSetR</title>
+      <link>/post/hacking-our-way-through-upsetr/</link>
+      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/post/hacking-our-way-through-upsetr/</guid>
+      <description>
+
+
+&lt;p&gt;For our club meeting today we were going to summarize the &lt;a href=&#34;https://www.thisismetis.com/demystifying-data-science&#34;&gt;Demystifying Data Science&lt;/a&gt; conference but we forgot that the videos are not released yet.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Oops, we&amp;#39;ll have to postpone our blog post. We didn&amp;#39;t read the fine print that talk recordings will be available sometime next week. Sorry about that!&lt;/p&gt;&amp;mdash; LIBD rstats club (@LIBDrstats) &lt;a href=&#34;https://twitter.com/LIBDrstats/status/1022862435869450240?ref_src=twsrc%5Etfw&#34;&gt;July 27, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;So we adjusted plans and decided to continue our work on the &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=UpSetR&#34;&gt;UpSetR&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Gehlenborg_2016&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;http://github.com/hms-dbmi/UpSetR&#39;&gt;Gehlenborg, 2016&lt;/a&gt;) package by &lt;a href=&#34;https://twitter.com/ngehlenborg&#34;&gt;Nils Gehlenborg&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Yesterday we discussed various options for visualizing large numbers of overlapping groups. We explored uses of the &lt;a href=&#34;https://twitter.com/hashtag/venneuler?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#venneuler&lt;/a&gt; package from Lee Wilkinson and Simon Urbanek and the &lt;a href=&#34;https://twitter.com/hashtag/UpSetR?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#UpSetR&lt;/a&gt; package from Jake Conway, Alexander Lex, and &lt;a href=&#34;https://twitter.com/ngehlenborg?ref_src=twsrc%5Etfw&#34;&gt;@ngehlenborg&lt;/a&gt;. &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt; &lt;a href=&#34;https://t.co/k55YfihmiP&#34;&gt;pic.twitter.com/k55YfihmiP&lt;/a&gt;&lt;/p&gt;&amp;mdash; LIBD rstats club (@LIBDrstats) &lt;a href=&#34;https://twitter.com/LIBDrstats/status/1007992479159812101?ref_src=twsrc%5Etfw&#34;&gt;June 16, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;what-you-can-currently-do&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;What you can currently do&lt;/h3&gt;
+&lt;p&gt;First, let’s install the version we used for this post:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;devtools::install_github(&amp;#39;hms-dbmi/UpSetR@fe2812c&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Our ultimate goal is to submit a pull request that enables &lt;code&gt;UpSetR&lt;/code&gt; users to specify a color by row for the dots instead of the actual rows. We had already identified an example that we could work with.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(&amp;#39;UpSetR&amp;#39;)
+movies &amp;lt;- read.csv( system.file(&amp;quot;extdata&amp;quot;, &amp;quot;movies.csv&amp;quot;, package = &amp;quot;UpSetR&amp;quot;), 
+                    header=T, sep=&amp;quot;;&amp;quot; )
+
+require(ggplot2); require(plyr); require(gridExtra); require(grid);&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: ggplot2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: plyr&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: gridExtra&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Loading required package: grid&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;upset(movies, 
+      sets = c(&amp;quot;Action&amp;quot;, &amp;quot;Comedy&amp;quot;, &amp;quot;Drama&amp;quot;), 
+      order.by=&amp;quot;degree&amp;quot;, matrix.color=&amp;quot;blue&amp;quot;, point.size=5,
+      sets.bar.color=c(&amp;quot;maroon&amp;quot;,&amp;quot;blue&amp;quot;,&amp;quot;orange&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;http://LieberInstitute.github.io/rstatsclub/post/2018-07-27-hacking-our-way-through-upsetr_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We also explored the &lt;a href=&#34;https://cran.rstudio.com/web/packages/UpSetR/vignettes/set.metadata.plots.html&#34;&gt;set metadata vignette&lt;/a&gt; that includes examples such as the following one.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;set.seed(20180727)
+
+## Create the metadata object first
+sets &amp;lt;- names(movies[3:19])
+avgRottenTomatoesScore &amp;lt;- round(runif(17, min = 0, max = 90))
+metadata &amp;lt;- as.data.frame(cbind(sets, avgRottenTomatoesScore))
+names(metadata) &amp;lt;- c(&amp;quot;sets&amp;quot;, &amp;quot;avgRottenTomatoesScore&amp;quot;)
+metadata$avgRottenTomatoesScore &amp;lt;- as.numeric(as.character(metadata$avgRottenTomatoesScore))
+Cities &amp;lt;- sample(c(&amp;quot;Boston&amp;quot;, &amp;quot;NYC&amp;quot;, &amp;quot;LA&amp;quot;), 17, replace = T)
+metadata &amp;lt;- cbind(metadata, Cities)
+metadata$Cities &amp;lt;- as.character(metadata$Cities)
+metadata[which(metadata$sets %in% c(&amp;quot;Drama&amp;quot;, &amp;quot;Comedy&amp;quot;, &amp;quot;Action&amp;quot;, &amp;quot;Thriller&amp;quot;, 
+    &amp;quot;Romance&amp;quot;)), ]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        sets avgRottenTomatoesScore Cities
+## 1    Action                     68 Boston
+## 4    Comedy                     40    NYC
+## 7     Drama                     48     LA
+## 13  Romance                     77 Boston
+## 15 Thriller                     19    NYC&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;accepted &amp;lt;- round(runif(17, min = 0, max = 1))
+metadata &amp;lt;- cbind(metadata, accepted)
+metadata[which(metadata$sets %in% c(&amp;quot;Drama&amp;quot;, &amp;quot;Comedy&amp;quot;, &amp;quot;Action&amp;quot;, &amp;quot;Thriller&amp;quot;, 
+    &amp;quot;Romance&amp;quot;)), ]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        sets avgRottenTomatoesScore Cities accepted
+## 1    Action                     68 Boston        0
+## 4    Comedy                     40    NYC        1
+## 7     Drama                     48     LA        0
+## 13  Romance                     77 Boston        1
+## 15 Thriller                     19    NYC        0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Now make the plot
+upset(movies, set.metadata = list(data = metadata, plots = list(list(type = &amp;quot;hist&amp;quot;, 
+    column = &amp;quot;avgRottenTomatoesScore&amp;quot;, assign = 20), list(type = &amp;quot;matrix_rows&amp;quot;, 
+    column = &amp;quot;Cities&amp;quot;, colors = c(Boston = &amp;quot;green&amp;quot;, NYC = &amp;quot;navy&amp;quot;, LA = &amp;quot;purple&amp;quot;), 
+    alpha = 0.5))))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;http://LieberInstitute.github.io/rstatsclub/post/2018-07-27-hacking-our-way-through-upsetr_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hacking-our-way&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Hacking our way&lt;/h3&gt;
+&lt;p&gt;Using the &lt;code&gt;metadata&lt;/code&gt; looked complicated to us and hopefully not necessary for what we are trying to accomplish. That is, we really wanted to change the colors of the circles in each row, not the rows themselves. So we found the GitHub repo with &lt;a href=&#34;https://github.com/hms-dbmi/UpSetR&#34;&gt;the code&lt;/a&gt;, plugged a laptop to a TV and started exploring as a group. We went the rabbit hole to see how the &lt;code&gt;matrix.color&lt;/code&gt; argument got used. To actually hack our way through, we downloaded the latest version of the code using &lt;code&gt;git&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone git@github.com:hms-dbmi/UpSetR.git
+cd UpSetR&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, we created the objects that match the default arguments of &lt;code&gt;upset()&lt;/code&gt; by finding and replacing commas by semi-colons. Well, not all of the commas. Also, for inputs that specified a vector (mostly 2 options), we chose the first one to match the default R behavior. This way we could execute them and have them in our session.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Default upset() arguments
+nsets = 5; nintersects = 40; sets = NULL; keep.order = F; set.metadata = NULL; intersections = NULL;
+matrix.color = &amp;quot;gray23&amp;quot;; main.bar.color = &amp;quot;gray23&amp;quot;; mainbar.y.label = &amp;quot;Intersection Size&amp;quot;; mainbar.y.max = NULL;
+sets.bar.color = &amp;quot;gray23&amp;quot;; sets.x.label = &amp;quot;Set Size&amp;quot;; point.size = 2.2; line.size = 0.7;
+mb.ratio = c(0.70,0.30); expression = NULL; att.pos = NULL; att.color = main.bar.color; order.by = &amp;#39;freq&amp;#39;;
+decreasing = T; show.numbers = &amp;quot;yes&amp;quot;; number.angles = 0; group.by = &amp;quot;degree&amp;quot;;cutoff = NULL;
+queries = NULL; query.legend = &amp;quot;none&amp;quot;; shade.color = &amp;quot;gray88&amp;quot;; shade.alpha = 0.25; matrix.dot.alpha =0.5;
+empty.intersections = NULL; color.pal = 1; boxplot.summary = NULL; attribute.plots = NULL; scale.intersections = &amp;quot;identity&amp;quot;;
+scale.sets = &amp;quot;identity&amp;quot;; text.scale = 1; set_size.angles = 0 ; set_size.show = FALSE &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next, we did the same (commas to semicolons) for the inputs of the first example.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Initial inputs on the first example
+movies &amp;lt;- read.csv( system.file(&amp;quot;extdata&amp;quot;, &amp;quot;movies.csv&amp;quot;, package = &amp;quot;UpSetR&amp;quot;), 
+                    header=T, sep=&amp;quot;;&amp;quot; )
+
+## comma -&amp;gt; semicolon
+data = movies; sets = c(&amp;quot;Action&amp;quot;, &amp;quot;Comedy&amp;quot;, &amp;quot;Drama&amp;quot;); 
+      order.by=&amp;quot;degree&amp;quot;; matrix.color=&amp;quot;blue&amp;quot;; point.size=5;
+      sets.bar.color=c(&amp;quot;maroon&amp;quot;,&amp;quot;blue&amp;quot;,&amp;quot;orange&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we were ready to start modifying some of the internal &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=UpSetR&#34;&gt;UpSetR&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;http://github.com/hms-dbmi/UpSetR&#39;&gt;Gehlenborg, 2016&lt;/a&gt;) code.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hacking-internals&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Hacking internals&lt;/h3&gt;
+&lt;p&gt;The function &lt;code&gt;upset()&lt;/code&gt; is pretty long and uses many un-exported functions from the package itself. In order to test thing quickly we added &lt;code&gt;UpSetR:::&lt;/code&gt; calls before the un-exported functions. Here’s our modified version where we added a piece of code to modify the &lt;code&gt;Matrix_layout&lt;/code&gt; object and add some colors.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Piece of code we introduced
+for(i in 1:3) {
+      j &amp;lt;- which(Matrix_layout$y == i &amp;amp; Matrix_layout$value == 1)
+      if(length(j) &amp;gt; 0) Matrix_layout$color[j] &amp;lt;- c(&amp;quot;maroon&amp;quot;,&amp;quot;blue&amp;quot;,&amp;quot;orange&amp;quot;)[i]
+  }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ok, here’s the full modified &lt;code&gt;upset()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Modified internal upset() code
+
+startend &amp;lt;- UpSetR:::FindStartEnd(data)
+  first.col &amp;lt;- startend[1]
+  last.col &amp;lt;- startend[2]
+
+  if(color.pal == 1){
+    palette &amp;lt;- c(&amp;quot;#1F77B4&amp;quot;, &amp;quot;#FF7F0E&amp;quot;, &amp;quot;#2CA02C&amp;quot;, &amp;quot;#D62728&amp;quot;, &amp;quot;#9467BD&amp;quot;, &amp;quot;#8C564B&amp;quot;, &amp;quot;#E377C2&amp;quot;,
+                 &amp;quot;#7F7F7F&amp;quot;, &amp;quot;#BCBD22&amp;quot;, &amp;quot;#17BECF&amp;quot;)
+  } else{
+    palette &amp;lt;- c(&amp;quot;#E69F00&amp;quot;, &amp;quot;#56B4E9&amp;quot;, &amp;quot;#009E73&amp;quot;, &amp;quot;#F0E442&amp;quot;, &amp;quot;#0072B2&amp;quot;, &amp;quot;#D55E00&amp;quot;,
+                 &amp;quot;#CC79A7&amp;quot;)
+  }
+
+  if(is.null(intersections) == F){
+    Set_names &amp;lt;- unique((unlist(intersections)))
+    Sets_to_remove &amp;lt;- UpSetR:::Remove(data, first.col, last.col, Set_names)
+    New_data &amp;lt;- UpSetR:::Wanted(data, Sets_to_remove)
+    Num_of_set &amp;lt;- UpSetR:::Number_of_sets(Set_names)
+    if(keep.order == F){
+      Set_names &amp;lt;- UpSetR:::order_sets(New_data, Set_names)
+    }
+    All_Freqs &amp;lt;- UpSetR:::specific_intersections(data, first.col, last.col, intersections, order.by, group.by, decreasing,
+                                        cutoff, main.bar.color, Set_names)
+  } else if(is.null(intersections) == T){
+    Set_names &amp;lt;- sets
+    if(is.null(Set_names) == T || length(Set_names) == 0 ){
+      Set_names &amp;lt;- UpSetR:::FindMostFreq(data, first.col, last.col, nsets)
+    }
+    Sets_to_remove &amp;lt;- UpSetR:::Remove(data, first.col, last.col, Set_names)
+    New_data &amp;lt;- UpSetR:::Wanted(data, Sets_to_remove)
+    Num_of_set &amp;lt;- UpSetR:::Number_of_sets(Set_names)
+    if(keep.order == F){
+    Set_names &amp;lt;- UpSetR:::order_sets(New_data, Set_names)
+    }
+    All_Freqs &amp;lt;- UpSetR:::Counter(New_data, Num_of_set, first.col, Set_names, nintersects, main.bar.color,
+                         order.by, group.by, cutoff, empty.intersections, decreasing)
+  }
+  Matrix_setup &amp;lt;- UpSetR:::Create_matrix(All_Freqs)
+  labels &amp;lt;- UpSetR:::Make_labels(Matrix_setup)
+  #Chose NA to represent NULL case as result of NA being inserted when at least one contained both x and y
+  #i.e. if one custom plot had both x and y, and others had only x, the y&amp;#39;s for the other plots were NA
+  #if I decided to make the NULL case (all x and no y, or vice versa), there would have been alot more if/else statements
+  #NA can be indexed so that we still get the non NA y aesthetics on correct plot. NULL cant be indexed.
+  att.x &amp;lt;- c(); att.y &amp;lt;- c();
+  if(is.null(attribute.plots) == F){
+    for(i in seq_along(attribute.plots$plots)){
+      if(length(attribute.plots$plots[[i]]$x) != 0){
+        att.x[i] &amp;lt;- attribute.plots$plots[[i]]$x
+      }
+      else if(length(attribute.plots$plots[[i]]$x) == 0){
+        att.x[i] &amp;lt;- NA
+      }
+      if(length(attribute.plots$plots[[i]]$y) != 0){
+        att.y[i] &amp;lt;- attribute.plots$plots[[i]]$y
+      }
+      else if(length(attribute.plots$plots[[i]]$y) == 0){
+        att.y[i] &amp;lt;- NA
+      }
+    }
+  }
+
+  BoxPlots &amp;lt;- NULL
+  if(is.null(boxplot.summary) == F){
+    BoxData &amp;lt;- UpSetR:::IntersectionBoxPlot(All_Freqs, New_data, first.col, Set_names)
+    BoxPlots &amp;lt;- list()
+    for(i in seq_along(boxplot.summary)){
+      BoxPlots[[i]] &amp;lt;- UpSetR:::BoxPlotsPlot(BoxData, boxplot.summary[i], att.color)
+    }
+  }
+
+  customAttDat &amp;lt;- NULL
+  customQBar &amp;lt;- NULL
+  Intersection &amp;lt;- NULL
+  Element &amp;lt;- NULL
+  legend &amp;lt;- NULL
+  EBar_data &amp;lt;- NULL
+  if(is.null(queries) == F){
+    custom.queries &amp;lt;- UpSetR:::SeperateQueries(queries, 2, palette)
+    customDat &amp;lt;- UpSetR:::customQueries(New_data, custom.queries, Set_names)
+    legend &amp;lt;- UpSetR:::GuideGenerator(queries, palette)
+    legend &amp;lt;- UpSetR:::Make_legend(legend)
+    if(is.null(att.x) == F &amp;amp;&amp;amp; is.null(customDat) == F){
+      customAttDat &amp;lt;- UpSetR:::CustomAttData(customDat, Set_names)
+    }
+    customQBar &amp;lt;- UpSetR:::customQueriesBar(customDat, Set_names, All_Freqs, custom.queries)
+  }
+  if(is.null(queries) == F){
+    Intersection &amp;lt;- UpSetR:::SeperateQueries(queries, 1, palette)
+    Matrix_col &amp;lt;- UpSetR:::intersects(QuerieInterData, Intersection, New_data, first.col, Num_of_set,
+                             All_Freqs, expression, Set_names, palette)
+    Element &amp;lt;- UpSetR:::SeperateQueries(queries, 1, palette)
+    EBar_data &amp;lt;-UpSetR:::ElemBarDat(Element, New_data, first.col, expression, Set_names,palette, All_Freqs)
+  } else{
+    Matrix_col &amp;lt;- NULL
+  }
+  
+  Matrix_layout &amp;lt;- UpSetR:::Create_layout(Matrix_setup, matrix.color, Matrix_col, matrix.dot.alpha)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As a little pause in &lt;code&gt;upset()&lt;/code&gt;, let’s check what actually &lt;code&gt;Matrix_layout&lt;/code&gt; looks.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Matrix_layout&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    y x value  color alpha Intersection
+## 1  1 1     1   blue   1.0         1yes
+## 2  2 1     1   blue   1.0         1yes
+## 3  3 1     1   blue   1.0         1yes
+## 4  1 2     0 gray83   0.5          4No
+## 5  2 2     1   blue   1.0         2yes
+## 6  3 2     1   blue   1.0         2yes
+## 7  1 3     1   blue   1.0         3yes
+## 8  2 3     0 gray83   0.5          8No
+## 9  3 3     1   blue   1.0         3yes
+## 10 1 4     1   blue   1.0         4yes
+## 11 2 4     1   blue   1.0         4yes
+## 12 3 4     0 gray83   0.5         12No
+## 13 1 5     0 gray83   0.5         13No
+## 14 2 5     0 gray83   0.5         14No
+## 15 3 5     1   blue   1.0         5yes
+## 16 1 6     0 gray83   0.5         16No
+## 17 2 6     1   blue   1.0         6yes
+## 18 3 6     0 gray83   0.5         18No
+## 19 1 7     1   blue   1.0         7yes
+## 20 2 7     0 gray83   0.5         20No
+## 21 3 7     0 gray83   0.5         21No&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We figured out that we had to change the colors only the rows with &lt;code&gt;value = 1&lt;/code&gt; and that &lt;code&gt;y&lt;/code&gt; was the row grouping variable.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## our modification
+  for(i in 1:3) {
+      j &amp;lt;- which(Matrix_layout$y == i &amp;amp; Matrix_layout$value == 1)
+      if(length(j) &amp;gt; 0) Matrix_layout$color[j] &amp;lt;- c(&amp;quot;maroon&amp;quot;,&amp;quot;blue&amp;quot;,&amp;quot;orange&amp;quot;)[i]
+  }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here’s our modified &lt;code&gt;Matrix_layout&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Matrix_layout&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    y x value  color alpha Intersection
+## 1  1 1     1 maroon   1.0         1yes
+## 2  2 1     1   blue   1.0         1yes
+## 3  3 1     1 orange   1.0         1yes
+## 4  1 2     0 gray83   0.5          4No
+## 5  2 2     1   blue   1.0         2yes
+## 6  3 2     1 orange   1.0         2yes
+## 7  1 3     1 maroon   1.0         3yes
+## 8  2 3     0 gray83   0.5          8No
+## 9  3 3     1 orange   1.0         3yes
+## 10 1 4     1 maroon   1.0         4yes
+## 11 2 4     1   blue   1.0         4yes
+## 12 3 4     0 gray83   0.5         12No
+## 13 1 5     0 gray83   0.5         13No
+## 14 2 5     0 gray83   0.5         14No
+## 15 3 5     1 orange   1.0         5yes
+## 16 1 6     0 gray83   0.5         16No
+## 17 2 6     1   blue   1.0         6yes
+## 18 3 6     0 gray83   0.5         18No
+## 19 1 7     1 maroon   1.0         7yes
+## 20 2 7     0 gray83   0.5         20No
+## 21 3 7     0 gray83   0.5         21No&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ok, let’s continue with the rest of &lt;code&gt;upset()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## continuing with upset()
+  
+  Set_sizes &amp;lt;- UpSetR:::FindSetFreqs(New_data, first.col, Num_of_set, Set_names, keep.order)
+  Bar_Q &amp;lt;- NULL
+  if(is.null(queries) == F){
+    Bar_Q &amp;lt;- UpSetR:::intersects(QuerieInterBar, Intersection, New_data, first.col, Num_of_set, All_Freqs, expression, Set_names, palette)
+  }
+  QInter_att_data &amp;lt;- NULL
+  QElem_att_data &amp;lt;- NULL
+  if((is.null(queries) == F) &amp;amp; (is.null(att.x) == F)){
+    QInter_att_data &amp;lt;- UpSetR:::intersects(QuerieInterAtt, Intersection, New_data, first.col, Num_of_set, att.x, att.y,
+                                  expression, Set_names, palette)
+    QElem_att_data &amp;lt;- UpSetR:::elements(QuerieElemAtt, Element, New_data, first.col, expression, Set_names, att.x, att.y,
+                               palette)
+  }
+  AllQueryData &amp;lt;- UpSetR:::combineQueriesData(QInter_att_data, QElem_att_data, customAttDat, att.x, att.y)
+
+  ShadingData &amp;lt;- NULL
+
+  if(is.null(set.metadata) == F){
+    ShadingData &amp;lt;- get_shade_groups(set.metadata, Set_names, Matrix_layout, shade.alpha)
+    output &amp;lt;- Make_set_metadata_plot(set.metadata, Set_names)
+    set.metadata.plots &amp;lt;- output[[1]]
+    set.metadata &amp;lt;- output[[2]]
+
+    if(is.null(ShadingData) == FALSE){
+    shade.alpha &amp;lt;- unique(ShadingData$alpha)
+    }
+  } else {
+    set.metadata.plots &amp;lt;- NULL
+  }
+  if(is.null(ShadingData) == TRUE){
+  ShadingData &amp;lt;- UpSetR:::MakeShading(Matrix_layout, shade.color)
+  }
+  Main_bar &amp;lt;- suppressMessages(UpSetR:::Make_main_bar(All_Freqs, Bar_Q, show.numbers, mb.ratio, customQBar, number.angles, EBar_data, mainbar.y.label,
+                            mainbar.y.max, scale.intersections, text.scale, attribute.plots))
+  Matrix &amp;lt;- UpSetR:::Make_matrix_plot(Matrix_layout, Set_sizes, All_Freqs, point.size, line.size,
+                             text.scale, labels, ShadingData, shade.alpha)
+  Sizes &amp;lt;- UpSetR:::Make_size_plot(Set_sizes, sets.bar.color, mb.ratio, sets.x.label, scale.sets, text.scale, set_size.angles,set_size.show)
+
+  # Make_base_plot(Main_bar, Matrix, Sizes, labels, mb.ratio, att.x, att.y, New_data,
+  #                expression, att.pos, first.col, att.color, AllQueryData, attribute.plots,
+  #                legend, query.legend, BoxPlots, Set_names, set.metadata, set.metadata.plots)
+
+  structure(class = &amp;quot;upset&amp;quot;,
+    .Data=list(
+      Main_bar = Main_bar,
+      Matrix = Matrix,
+      Sizes = Sizes,
+      labels = labels,
+      mb.ratio = mb.ratio,
+      att.x = att.x,
+      att.y = att.y,
+      New_data = New_data,
+      expression = expression,
+      att.pos = att.pos,
+      first.col = first.col,
+      att.color = att.color,
+      AllQueryData = AllQueryData,
+      attribute.plots = attribute.plots,
+      legend = legend,
+      query.legend = query.legend,
+      BoxPlots = BoxPlots,
+      Set_names = Set_names,
+      set.metadata = set.metadata,
+      set.metadata.plots = set.metadata.plots)
+  )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;http://LieberInstitute.github.io/rstatsclub/post/2018-07-27-hacking-our-way-through-upsetr_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;line-colors&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Line colors&lt;/h3&gt;
+&lt;p&gt;Ok, that’s great but we have a problem with the lines. The color is no longer black, so we went deeper into the rabbit hole and found that the internal &lt;code&gt;Make_matrix_plot()&lt;/code&gt; function is where the lines are made. We made some edits but got a plot where the lines were on top of the circles as shown in this screenshot.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://LieberInstitute.github.io/rstatsclub/post/2018-07-27-hacking-our-way-through-upsetr_files/Screen%20Shot%202018-07-27%20at%2012.17.58%20PM.png&#34; width=&#34;500&#34; /&gt;
+
+&lt;/div&gt;
+&lt;p&gt;Our club session was out of time, so we decided to continue our project another day and ask for help on twitter. And yay, we got help super fast!&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Thank you and &lt;a href=&#34;https://twitter.com/thatdnaguy?ref_src=twsrc%5Etfw&#34;&gt;@thatdnaguy&lt;/a&gt;, that did it! &lt;a href=&#34;https://t.co/tzQvhKFXgR&#34;&gt;pic.twitter.com/tzQvhKFXgR&lt;/a&gt;&lt;/p&gt;&amp;mdash; LIBD rstats club (@LIBDrstats) &lt;a href=&#34;https://twitter.com/LIBDrstats/status/1022903971416088577?ref_src=twsrc%5Etfw&#34;&gt;July 27, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;So here’s our modified version of &lt;code&gt;Make_matrix_plot()&lt;/code&gt; that keeps the lines black.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Make_matrix_plot &amp;lt;- function(Mat_data,Set_size_data, Main_bar_data, point_size, line_size, text_scale, labels,
+                             shading_data, shade_alpha){
+
+  if(length(text_scale) == 1){
+    name_size_scale &amp;lt;- text_scale
+  }
+  if(length(text_scale) &amp;gt; 1 &amp;amp;&amp;amp; length(text_scale) &amp;lt;= 6){
+    name_size_scale &amp;lt;- text_scale[5]
+  }
+  
+  Mat_data$line_col &amp;lt;- &amp;#39;black&amp;#39;
+
+  Matrix_plot &amp;lt;- (ggplot()
+                  + theme(panel.background = element_rect(fill = &amp;quot;white&amp;quot;),
+                          plot.margin=unit(c(-0.2,0.5,0.5,0.5), &amp;quot;lines&amp;quot;),
+                          axis.text.x = element_blank(),
+                          axis.ticks.x = element_blank(),
+                          axis.ticks.y = element_blank(),
+                          axis.text.y = element_text(colour = &amp;quot;gray0&amp;quot;,
+                                                     size = 7*name_size_scale, hjust = 0.4),
+                          panel.grid.major = element_blank(),
+                          panel.grid.minor = element_blank())
+                  + xlab(NULL) + ylab(&amp;quot;   &amp;quot;)
+                  + scale_y_continuous(breaks = c(1:nrow(Set_size_data)),
+                                       limits = c(0.5,(nrow(Set_size_data) +0.5)),
+                                       labels = labels, expand = c(0,0))
+                  + scale_x_continuous(limits = c(0,(nrow(Main_bar_data)+1 )), expand = c(0,0))
+                  + geom_rect(data = shading_data, aes_string(xmin = &amp;quot;min&amp;quot;, xmax = &amp;quot;max&amp;quot;,
+                                                              ymin = &amp;quot;y_min&amp;quot;, ymax = &amp;quot;y_max&amp;quot;),
+                              fill = shading_data$shade_color, alpha = shade_alpha)
+                  + geom_line(data= Mat_data, aes_string(group = &amp;quot;Intersection&amp;quot;, x=&amp;quot;x&amp;quot;, y=&amp;quot;y&amp;quot;,
+                                                         colour = &amp;quot;line_col&amp;quot;), size = line_size)
+                 + geom_point(data= Mat_data, aes_string(x= &amp;quot;x&amp;quot;, y= &amp;quot;y&amp;quot;), colour = Mat_data$color,
+                     size= point_size, alpha = Mat_data$alpha, shape=16)
+                  + scale_color_identity())
+  Matrix_plot &amp;lt;- ggplot_gtable(ggplot_build(Matrix_plot))
+  return(Matrix_plot)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using that modified version we can then run the code again (note that we are not using &lt;code&gt;UpSetR:::&lt;/code&gt; before &lt;code&gt;Make_matrix_plot&lt;/code&gt;) and get the plot we wanted.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Matrix &amp;lt;- Make_matrix_plot(Matrix_layout, Set_sizes, All_Freqs, point.size, line.size,
+                             text.scale, labels, ShadingData, shade.alpha)
+  Sizes &amp;lt;- UpSetR:::Make_size_plot(Set_sizes, sets.bar.color, mb.ratio, sets.x.label, scale.sets, text.scale, set_size.angles,set_size.show)
+
+  # Make_base_plot(Main_bar, Matrix, Sizes, labels, mb.ratio, att.x, att.y, New_data,
+  #                expression, att.pos, first.col, att.color, AllQueryData, attribute.plots,
+  #                legend, query.legend, BoxPlots, Set_names, set.metadata, set.metadata.plots)
+
+  structure(class = &amp;quot;upset&amp;quot;,
+    .Data=list(
+      Main_bar = Main_bar,
+      Matrix = Matrix,
+      Sizes = Sizes,
+      labels = labels,
+      mb.ratio = mb.ratio,
+      att.x = att.x,
+      att.y = att.y,
+      New_data = New_data,
+      expression = expression,
+      att.pos = att.pos,
+      first.col = first.col,
+      att.color = att.color,
+      AllQueryData = AllQueryData,
+      attribute.plots = attribute.plots,
+      legend = legend,
+      query.legend = query.legend,
+      BoxPlots = BoxPlots,
+      Set_names = Set_names,
+      set.metadata = set.metadata,
+      set.metadata.plots = set.metadata.plots)
+  )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;http://LieberInstitute.github.io/rstatsclub/post/2018-07-27-hacking-our-way-through-upsetr_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We have quite a bit more to do in order to complete our pull request. We are also curious if you would have used a different approach to hack your way through &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=UpSetR&#34;&gt;UpSetR&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;http://github.com/hms-dbmi/UpSetR&#39;&gt;Gehlenborg, 2016&lt;/a&gt;). For example, maybe some functions from &lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;devtools&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Wickham_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2018&lt;/a&gt;) would have enabled to do this equally fast without having to introduce &lt;code&gt;UpSetR:::&lt;/code&gt; calls.&lt;/p&gt;
+&lt;p&gt;Thanks for reading!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;http://bioconductor.org/packages/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;devtools&lt;/a&gt;&lt;/em&gt; (&lt;a href=&#39;https://CRAN.R-project.org/package=devtools&#39;&gt;Wickham, Hester, and Chang, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Gehlenborg_2016&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Gehlenborg_2016&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; N. Gehlenborg. &lt;em&gt;UpSetR: A More Scalable Alternative to Venn and Euler Diagrams for Visualizing Intersecting Sets&lt;/em&gt;. R package version 1.4.0. 2016. URL: &lt;a href=&#34;http://github.com/hms-dbmi/UpSetR&#34;&gt;http://github.com/hms-dbmi/UpSetR&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Oles_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2018&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt; A. Oleś, M. Morgan and W. Huber. &lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;. R package version 2.8.2. 2018. URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Wickham_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Wickham_2018&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt; H. Wickham, J. Hester and W. Chang. &lt;em&gt;devtools: Tools to Make Developing R Packages Easier&lt;/em&gt;. R package version 1.13.6. 2018. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=devtools&#34;&gt;https://CRAN.R-project.org/package=devtools&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[5]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## Session info ----------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  setting  value                       
+##  version  R version 3.5.1 (2018-07-02)
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2018-07-27&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Packages --------------------------------------------------------------------------------------------------------------&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  package       * version date       source                            
+##  assertthat      0.2.0   2017-04-11 cran (@0.2.0)                     
+##  backports       1.1.2   2017-12-13 cran (@1.1.2)                     
+##  base          * 3.5.1   2018-07-05 local                             
+##  bibtex          0.4.2   2017-06-30 CRAN (R 3.5.0)                    
+##  bindr           0.1.1   2018-03-13 cran (@0.1.1)                     
+##  bindrcpp        0.2.2   2018-03-29 cran (@0.2.2)                     
+##  BiocStyle     * 2.8.2   2018-05-30 Bioconductor                      
+##  blogdown        0.8     2018-07-15 CRAN (R 3.5.0)                    
+##  bookdown        0.7     2018-02-18 CRAN (R 3.5.0)                    
+##  colorout      * 1.2-0   2018-05-03 Github (jalvesaq/colorout@c42088d)
+##  colorspace      1.3-2   2016-12-14 cran (@1.3-2)                     
+##  compiler        3.5.1   2018-07-05 local                             
+##  crayon          1.3.4   2017-09-16 cran (@1.3.4)                     
+##  datasets      * 3.5.1   2018-07-05 local                             
+##  devtools      * 1.13.6  2018-06-27 cran (@1.13.6)                    
+##  digest          0.6.15  2018-01-28 CRAN (R 3.5.0)                    
+##  dplyr           0.7.6   2018-06-29 CRAN (R 3.5.1)                    
+##  evaluate        0.11    2018-07-17 CRAN (R 3.5.0)                    
+##  ggplot2       * 3.0.0   2018-07-03 CRAN (R 3.5.0)                    
+##  glue            1.3.0   2018-07-17 CRAN (R 3.5.0)                    
+##  graphics      * 3.5.1   2018-07-05 local                             
+##  grDevices     * 3.5.1   2018-07-05 local                             
+##  grid          * 3.5.1   2018-07-05 local                             
+##  gridExtra     * 2.3     2017-09-09 CRAN (R 3.5.0)                    
+##  gtable          0.2.0   2016-02-26 CRAN (R 3.5.0)                    
+##  htmltools       0.3.6   2017-04-28 cran (@0.3.6)                     
+##  httr            1.3.1   2017-08-20 CRAN (R 3.5.0)                    
+##  jsonlite        1.5     2017-06-01 CRAN (R 3.5.0)                    
+##  knitcitations * 1.0.8   2017-07-04 CRAN (R 3.5.0)                    
+##  knitr           1.20    2018-02-20 cran (@1.20)                      
+##  labeling        0.3     2014-08-23 cran (@0.3)                       
+##  lazyeval        0.2.1   2017-10-29 CRAN (R 3.5.0)                    
+##  lubridate       1.7.4   2018-04-11 CRAN (R 3.5.0)                    
+##  magrittr        1.5     2014-11-22 cran (@1.5)                       
+##  memoise         1.1.0   2017-04-21 CRAN (R 3.5.0)                    
+##  methods       * 3.5.1   2018-07-05 local                             
+##  munsell         0.5.0   2018-06-12 CRAN (R 3.5.0)                    
+##  pillar          1.3.0   2018-07-14 CRAN (R 3.5.0)                    
+##  pkgconfig       2.0.1   2017-03-21 cran (@2.0.1)                     
+##  plyr          * 1.8.4   2016-06-08 cran (@1.8.4)                     
+##  purrr           0.2.5   2018-05-29 cran (@0.2.5)                     
+##  R6              2.2.2   2017-06-17 CRAN (R 3.5.0)                    
+##  Rcpp            0.12.18 2018-07-23 CRAN (R 3.5.1)                    
+##  RefManageR      1.2.0   2018-04-25 CRAN (R 3.5.0)                    
+##  rlang           0.2.1   2018-05-30 cran (@0.2.1)                     
+##  rmarkdown       1.10    2018-06-11 CRAN (R 3.5.0)                    
+##  rprojroot       1.3-2   2018-01-03 cran (@1.3-2)                     
+##  scales          0.5.0   2017-08-24 cran (@0.5.0)                     
+##  stats         * 3.5.1   2018-07-05 local                             
+##  stringi         1.2.4   2018-07-20 CRAN (R 3.5.0)                    
+##  stringr         1.3.1   2018-05-10 CRAN (R 3.5.0)                    
+##  tibble          1.4.2   2018-01-22 cran (@1.4.2)                     
+##  tidyselect      0.2.4   2018-02-26 cran (@0.2.4)                     
+##  tools           3.5.1   2018-07-05 local                             
+##  UpSetR        * 1.4.0   2018-07-27 Github (hms-dbmi/UpSetR@fe2812c)  
+##  utils         * 3.5.1   2018-07-05 local                             
+##  withr           2.1.2   2018-03-15 CRAN (R 3.5.0)                    
+##  xfun            0.3     2018-07-06 CRAN (R 3.5.0)                    
+##  xml2            1.2.0   2018-01-24 CRAN (R 3.5.0)                    
+##  yaml            2.1.19  2018-05-01 CRAN (R 3.5.0)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

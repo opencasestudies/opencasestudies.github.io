@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="By Amy Peterson
+Using Git Git is a version control system that allows you to track changes made to files while working on a project, either independently or in collaboration with others. It provides a way to save many different components of a project in progress, including the source code, but also the figures and data that the code produces. The importance of understanding and using Git lies in its ability to maintain an organized record of a project, also referred to as a repository or repo, as it evolves.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/postocs/git-to-know-git/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.a3cda781a9b24f26fefd34a53547835b.css">
+
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/postocs/git-to-know-git/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Academic">
+  <meta property="og:url" content="/postocs/git-to-know-git/">
+  <meta property="og:title" content="git to know git: an 8 minute introduction | Academic">
+  <meta property="og:description" content="By Amy Peterson
+Using Git Git is a version control system that allows you to track changes made to files while working on a project, either independently or in collaboration with others. It provides a way to save many different components of a project in progress, including the source code, but also the figures and data that the code produces. The importance of understanding and using Git lies in its ability to maintain an organized record of a project, also referred to as a repository or repo, as it evolves."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-04-17T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-04-17T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>git to know git: an 8 minute introduction | Academic</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Academic</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>git to know git: an 8 minute introduction</h1>
+
+  
+
+  
+    
+
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 17, 2018
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/setup/">setup</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/postocs/git-to-know-git/&amp;text=git%20to%20know%20git:%20an%208%20minute%20introduction" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/postocs/git-to-know-git/&amp;t=git%20to%20know%20git:%20an%208%20minute%20introduction" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=git%20to%20know%20git:%20an%208%20minute%20introduction&amp;body=/postocs/git-to-know-git/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/postocs/git-to-know-git/&amp;title=git%20to%20know%20git:%20an%208%20minute%20introduction" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=git%20to%20know%20git:%20an%208%20minute%20introduction%20/postocs/git-to-know-git/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/postocs/git-to-know-git/&amp;title=git%20to%20know%20git:%20an%208%20minute%20introduction" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<p>By <a href="http://amy-peterson.github.io">Amy Peterson</a></p>
+<div id="using-git" class="section level3">
+<h3>Using Git</h3>
+<p>Git is a version control system that allows you to track changes made to files while working on a project, either independently or in collaboration with others. It provides a way to save many different components of a project in progress, including the source code, but also the figures and data that the code produces. The importance of understanding and using Git lies in its ability to maintain an organized record of a project, also referred to as a <strong>repository</strong> or <strong>repo</strong>, as it evolves. While setting up and learning to use Git may seem intimidating, the majority of the work is in the initial setup.</p>
+</div>
+<div id="github" class="section level3">
+<h3>GitHub</h3>
+<p>GitHub is one of the hosting services that provides an interface for using Git, and can be thought of as Dropbox for version control projects. GitHub is one of the ways to store <strong>repositories</strong> using Git, and is an easy way to routinely back-up your work as you make progress on a project. It is also helpful for tracking changes, demonstrating who contributed to which projects, when they contributed, and what their contributions were.</p>
+</div>
+<div id="why-i-use-git" class="section level3">
+<h3>Why I Use Git</h3>
+<p>When I started as an Intern at the <a href="http://www.libd.org">LIBD</a>, I noticed how frequently GitHub was used. As I familiarized myself with some of the projects I would be working on, it became clear how much easier it was to use a system that could document project changes made throughout time in a way that was widely accessible to contributors. Using GitHub also made it easier to re-visit certain scripts or documents to determine what changes were made, when, and why they were needed. Having a detailed history of various project components is an easy way to ensure that contributors have information organized in the same way.</p>
+<p>Beyond working on projects with collaborators, using GitHub is equally rewarding when used for individual projects. Particularly if working on some projects at work on one computer, and needing those updates to be accessible on a different computer at home, GitHub is a quick and easy way to keep a project updated across computers to ensure you are always working on the latest updates.</p>
+</div>
+<div id="terms" class="section level2">
+<h2>Terms</h2>
+<p><strong>commit</strong>: saves changes, either adding a new file to GitHub, or updating the existing version of that file</p>
+<p><strong>issue</strong>: option on GitHub that creates a list of action items for a repository, similar to a to-do list; tasks can be assigned to particular contributors; also possible to commented on and reference particular tasks within a commit message by including # and the issue number</p>
+<p><strong>push</strong>: sends the commits made locally to the repository on GitHub</p>
+<p><strong>pull</strong>: downloads modified or newly added files, so the local directory matches the current repository on GitHub</p>
+</div>
+<div id="public-v.-private-repositories" class="section level2">
+<h2>Public v. Private Repositories</h2>
+<p>Repositories can be public or private. Public repositories are readable to everyone, but permissions are still required to make edits by pushing commits. Private repositories are inaccessible and unreadable without permission, with the repository owner having control to moderate who has access to read, edit, or extend admin access.</p>
+</div>
+<div id="features" class="section level2">
+<h2>Features</h2>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-04-17-git-to-know-git_files/git%20features.png" height="60" /> <strong>Watch</strong>: Provides a way to receive notifications regarding all updates on a particular repository of interest.</p>
+<p><strong>Star</strong>: Marks a specific repository of interest, making it easier to refer back to it later. Differs from <strong>watch</strong> in that you do not receive notifications for repository updates.</p>
+<p><strong>Fork</strong>: Downloads a copy of the current version of the file from GitHub. The downloaded copy exists separately from the repo, and reflects the file as is at the time of the download.</p>
+<div id="initial-set-up" class="section level3">
+<h3>Initial Set-Up</h3>
+<p>Make an account on <a href="https://github.com/join">GitHub</a>.</p>
+</div>
+</div>
+<div id="mac" class="section level2">
+<h2>Mac</h2>
+<p>On newer Macs this should already be set up, but checking is easy!</p>
+<pre class="r"><code>## Open Terminal Application
+which git # determine if Git is installed
+git --version # lists current Git version installed
+
+## If not installed, use the following to install
+git --version
+git config </code></pre>
+</div>
+<div id="windows" class="section level2">
+<h2>Windows</h2>
+<p>Install <a href="https://gitforwindows.org">Git for Windows</a></p>
+</div>
+<div id="after-git-installation" class="section level2">
+<h2>After Git Installation</h2>
+<pre class="r"><code>## Open Terminal (Mac) or Git Bash (Windows)
+## Enter the name and email associated with your GitHub account
+git config --global user.name &quot;Amy Peterson&quot;
+git config --global.email &quot;amy.peterson@jhu.edu&quot;
+git config --global --list # Lists global configuration options </code></pre>
+<div id="setting-up-a-repository" class="section level3">
+<h3>Setting Up a Repository</h3>
+<p>Identify a repository you want to contribute to, or create your own! Repositories can be created on the front page using “Start a project” or by clicking the green “New” button by clicking repositories from your profile page.</p>
+<p>Next, take the following steps</p>
+<pre class="r"><code>## Open Terminal (Mac) or Git Bash (Windows)
+# Change directories so you are in the directory where you want to set up the repository
+get pwd() #gives name of current directory 
+cd /~Desktop #changes current directory to Desktop 
+ls #lists folders you can cd into 
+# On the repository page on GitHub, click the green &quot;Clone or Download&quot;
+git clone git@GitHub.com:SampleLink.git # Paste link from GitHub to download the repository locally</code></pre>
+</div>
+<div id="saving-your-work" class="section level3">
+<h3>Saving Your Work</h3>
+<p>The process of updating GitHub is as follows: <img src="http://LieberInstitute.github.io/rstatsclub/post/2018-04-17-git-to-know-git_files/git%20process.png" height="80" /></p>
+<pre class="r"><code>## Open Terminal (Mac) or Git Bash (Windows)
+git add File1.R # adds file, here File1.R, to GitHub
+git commit -m &quot;Example message&quot; # attaches the message in parentheses to the files being added to GitHub
+git push # save file to GitHub
+
+# Once updates are pushed, other repository members need to do the following
+git pull # updates local directory to reflect the changes made to GitHub</code></pre>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-04-17-git-to-know-git_files/git%20status.png" height="50" /> Useful at any time throughout the process of updating a repository, <code>git status</code> provides information regarding how your local directory differs from the repository on GitHub, and separates those differences into which files have had changes made, and which files are entirely new. In the example below, <strong>File1.R</strong> and <strong>File2.pdf</strong> have been modified from what exists on GitHub, while <strong>File3.R</strong> and <strong>File4.pdf</strong> are <code>untracked</code>, or entirely new to the repository.</p>
+<div class="figure">
+<img src="http://LieberInstitute.github.io/rstatsclub/post/2018-04-17-git-to-know-git_files/git%20status%20result.png" width="500" />
+
+</div>
+</div>
+</div>
+<div id="committing-folders" class="section level2">
+<h2>Committing Folders</h2>
+<p>Folders associated with a project can also be committed to a repository on GitHub. Folders that are currently untracked will be listed in response to <code>git status</code>, and committing a folder to a repository will simultaneously commit all of its contents. This is particularly useful and efficient when creating a repository for an existing project.</p>
+</div>
+<div id="making-multiple-commits" class="section level2">
+<h2>Making Multiple Commits</h2>
+<p>Multiple commits can be made to group files before pushing them to GitHub. Each set of files you have added using <code>git add</code> will be grouped together as a single commit once you type <code>git commit</code> and enter the commit message you want associated with the files. Then, once all the commits you are ready to make are finished, use <code>git push</code> to save the commits to GitHub.</p>
+<div id="starting-a-repository-for-an-existing-project" class="section level3">
+<h3>Starting a Repository for an Existing Project</h3>
+<p>There are only a few differences for setting up a repository for an existing project, compared to the steps previously described.</p>
+<p>Most importantly, after setting up a new repository on GitHub, the next screen will list a number of options. If you are setting up a repository for an existing project, and hoping to commit locally saved files, you will first need to <code>cd</code> into the locally existing project folder. Then use the instructions below that appear under on the GitHub website under the header “create a new repository on the command line”. In the screenshot from the example below, the repository I named is called “test”.</p>
+<div class="figure">
+<img src="http://LieberInstitute.github.io/rstatsclub/post/2018-04-17-git-to-know-git_files/Existing%20Project.png" width="500" />
+
+</div>
+</div>
+</div>
+<div id="git-ignore" class="section level2">
+<h2>Git Ignore</h2>
+<p>Git ignore files are important for both new and old project repositories. They are scripts that specify which file types should be ignored, meaning they will not be included in the list <code>git status</code> provides to inform you of local files that are not currently saved to GitHub. Git ignore is important when creating a repository for an existing project, since there will be some existing local files that you will not want to include in the repository, for example, larger files that are not necessary to upload and include on the repository long-term. With new project repositories, you do not need to start with an extensive git ignore file, but can edit it as the project evolves, since it will become more clear over time which file types you do not want to include in the repository.</p>
+<pre class="r"><code>## Open Terminal (Mac) or Git Bash (Windows)
+touch .gitignore # Creates git ignore file
+# Open the file to edit, then commit the file to your GitHub repository</code></pre>
+<p>An example of a git ignore file is below. As demonstrated, an asterisk can be used to designate entire file types to ignore. For example, adding <code>*.zip</code> would ignore any zip files that are saved locally when using <code>git status</code> to determine the differences between local files and the repository on GitHub. <img src="http://LieberInstitute.github.io/rstatsclub/post/2018-04-17-git-to-know-git_files/git%20ignore.png" width="350" /></p>
+<div id="summary" class="section level3">
+<h3>Summary</h3>
+<p>The general steps for saving files from your local directory to GitHub is</p>
+<p><code>git add -&gt; git commit -&gt; git push</code></p>
+<p>Git pull will be used to download files from GitHub to match what exists on your local directory.</p>
+<p>This project was written as a brief introduction to Git and GitHub, for individuals who are interested in incorporating Git into their work. This post is by no means a comprehensive introduction. For more detailed information regarding GitHub, and using Git, <a href="http://happygitwithr.com">Happy Git and GitHub for the useR</a> is a great resource.</p>
+<p>Hopefully this post was helpful in serving as a brief introduction and a way to become more familiarized with some of the basic concepts behind Git and GitHub. Feel free to leave questions or share your story in the comments!</p>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/git/">git</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hue3d688a4e74633c5efe0e3936ac23c1e_53872_250x250_fill_lanczos_center_2.png" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/"></a></h5>
+      <h6 class="card-subtitle">Continuous rstats learning</h6>
+      <p class="card-text">We are researchers at the @LieberInstitute, blogging about R packages, how-to guides &amp; occasionally our own open-source software (opinions r our own) #rstats</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a href="mailto:lcolladotor@gmail.com" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="http://LieberInstitute.github.io/rstatsclub/" target="_blank" rel="noopener">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://twitter.com/LIBDrstats" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://github.com/LieberInstitute" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.0bf1e3db85cbb232372ed31d6f10dc70.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

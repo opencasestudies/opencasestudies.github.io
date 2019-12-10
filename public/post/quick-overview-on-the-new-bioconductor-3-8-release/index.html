@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Every six months the Bioconductor project releases it’s new version of packages. This allows developers a time window to try out new methods and test them rigorously before releasing them to the community at large. It also means that this is an exciting time 🎉. With every release there are dozens1 of new software packages. Bioconductor version 3.8 was just released on Halloween: October 31st, 2018. Thus, this is the perfect time to browse through their descriptions and find out what’s new that can be of use to your research.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/quick-overview-on-the-new-bioconductor-3-8-release/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.a3cda781a9b24f26fefd34a53547835b.css">
+
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/post/quick-overview-on-the-new-bioconductor-3-8-release/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Academic">
+  <meta property="og:url" content="/post/quick-overview-on-the-new-bioconductor-3-8-release/">
+  <meta property="og:title" content="Quick overview on the new Bioconductor 3.8 release | Academic">
+  <meta property="og:description" content="Every six months the Bioconductor project releases it’s new version of packages. This allows developers a time window to try out new methods and test them rigorously before releasing them to the community at large. It also means that this is an exciting time 🎉. With every release there are dozens1 of new software packages. Bioconductor version 3.8 was just released on Halloween: October 31st, 2018. Thus, this is the perfect time to browse through their descriptions and find out what’s new that can be of use to your research."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-11-02T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-11-02T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/quick-overview-on-the-new-bioconductor-3-8-release/"
+  },
+  "headline": "Quick overview on the new Bioconductor 3.8 release",
+  
+  "datePublished": "2018-11-02T00:00:00Z",
+  "dateModified": "2018-11-02T00:00:00Z",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Academic",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/img/icon-512.png"
+    }
+  },
+  "description": "Every six months the Bioconductor project releases it’s new version of packages. This allows developers a time window to try out new methods and test them rigorously before releasing them to the community at large. It also means that this is an exciting time 🎉. With every release there are dozens1 of new software packages. Bioconductor version 3.8 was just released on Halloween: October 31st, 2018. Thus, this is the perfect time to browse through their descriptions and find out what’s new that can be of use to your research."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Quick overview on the new Bioconductor 3.8 release | Academic</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Academic</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Quick overview on the new Bioconductor 3.8 release</h1>
+
+  
+
+  
+    
+
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Nov 2, 2018
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    10 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/rstats/">rstats</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/quick-overview-on-the-new-bioconductor-3-8-release/&amp;text=Quick%20overview%20on%20the%20new%20Bioconductor%203.8%20release" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/quick-overview-on-the-new-bioconductor-3-8-release/&amp;t=Quick%20overview%20on%20the%20new%20Bioconductor%203.8%20release" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Quick%20overview%20on%20the%20new%20Bioconductor%203.8%20release&amp;body=/post/quick-overview-on-the-new-bioconductor-3-8-release/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/quick-overview-on-the-new-bioconductor-3-8-release/&amp;title=Quick%20overview%20on%20the%20new%20Bioconductor%203.8%20release" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Quick%20overview%20on%20the%20new%20Bioconductor%203.8%20release%20/post/quick-overview-on-the-new-bioconductor-3-8-release/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/quick-overview-on-the-new-bioconductor-3-8-release/&amp;title=Quick%20overview%20on%20the%20new%20Bioconductor%203.8%20release" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<p>Every six months the Bioconductor project releases it’s new version of packages. This allows developers a time window to try out new methods and test them rigorously before releasing them to the community at large. It also means that this is an exciting time 🎉. With every release there are dozens<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> of new software packages. Bioconductor version 3.8 was <a href="https://www.bioconductor.org/news/bioc_3_8_release/">just released</a> on Halloween: October 31st, 2018. Thus, this is the perfect time to browse through their descriptions and find out what’s new that can be of use to your research.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Bioconductor 3.8 *released*: 1649 software pkgs, 360 expt data pkgs, 941 annotation pkgs, and 23 workflows; 95 new software pkgs, updates and improvements to existing pkgs; compatible with R 3.5.0, supported on Linux, Windows, and Mac<a href="https://t.co/QLsoxG7EXw">https://t.co/QLsoxG7EXw</a><a href="https://twitter.com/hashtag/bioconductor?src=hash&amp;ref_src=twsrc%5Etfw">#bioconductor</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a></p>&mdash; Sean Davis (@seandavis12) <a href="https://twitter.com/seandavis12/status/1057725752165232641?ref_src=twsrc%5Etfw">October 31, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>That’s exactly what our post today is about. We looked at the list of new packages as well as updates to find those that we think could be useful for us. That is, packages that we might want to explore further.</p>
+<div class="figure">
+<img src="http://LieberInstitute.github.io/rstatsclub/post/2018-11-02-quick-overview-on-the-new-bioconductor-3-8-release_files/Screen%20Shot%202018-11-02%20at%2010.48.18%20AM.png" width="400" />
+
+</div>
+<div id="affixcan" class="section level3">
+<h3>AffiXcan</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/AffiXcan">AffiXcan</a></em></p>
+<blockquote>
+<p>Impute a GReX (Genetically Regulated Expression) for a set of genes in a sample of individuals, using a method based on the Total Binding Affinity (TBA). Statistical models to impute GReX can be trained with a training dataset where the real total expression values are known.</p>
+</blockquote>
+<p>Looks interesting from the name but the description is too vague.</p>
+</div>
+<div id="biocpkgtools" class="section level3">
+<h3>BiocPkgTools</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/BiocPkgTools">BiocPkgTools</a></em></p>
+<blockquote>
+<p>Bioconductor has a rich ecosystem of metadata around packages, usage, and build status. This package is a simple collection of functions to access that metadata from R. The goal is to expose metadata for data mining and value-added functionality such as package searching, text mining, and analytics on packages.</p>
+</blockquote>
+<p>As Bioconductor developers this package sounds useful. Maybe it can be used to see if any of your packages is broken (errors, warnings) in BioC release or BioC devel.</p>
+</div>
+<div id="brainimager" class="section level3">
+<h3>brainImageR</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/brainImageR">brainImageR</a></em></p>
+<blockquote>
+<p>BrainImageR is a package that provides the user with information of where in the human brain their gene set corresponds to. This is provided both as a continuous variable and as a easily-interpretable image. BrainImageR has additional functionality of identifying approximately when in developmental time that a gene expression dataset corresponds to. Both the spatial gene set enrichment and the developmental time point prediction are assessed in comparison to the Allen Brain Atlas reference data.</p>
+</blockquote>
+<p>Sounds interesting since we work with brain data ourselves. We are curious about where the data comes from!</p>
+</div>
+<div id="buscorrect" class="section level3">
+<h3>BUScorrect</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/BUScorrect">BUScorrect</a></em></p>
+<blockquote>
+<p>High-throughput experimental data are accumulating exponentially in public databases. However, mining valid scientific discoveries from these abundant resources is hampered by technical artifacts and inherent biological heterogeneity. The former are usually termed “batch effects,” and the latter is often modelled by “subtypes.” The R package BUScorrect fits a Bayesian hierarchical model, the Batch-effects-correction-with-Unknown-Subtypes model (BUS), to correct batch effects in the presence of unknown subtypes. BUS is capable of (a) correcting batch effects explicitly, (b) grouping samples that share similar characteristics into subtypes, (c) identifying features that distinguish subtypes, and (d) enjoying a linear-order computation complexity.</p>
+</blockquote>
+<p>Hm… maybe this can be used with data from <em><a href="https://bioconductor.org/packages/3.8/recount">recount</a></em>. We also have to work sometimes with data from multiple labs.</p>
+</div>
+<div id="consensusde" class="section level3">
+<h3>consensusDE</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/consensusDE">consensusDE</a></em></p>
+<blockquote>
+<p>This package allows users to perform DE analysis using multiple algorithms. It seeks consensus from multiple methods. Currently it supports “Voom”, “EdgeR” and “DESeq”, but can be easily extended. It uses RUV-seq (optional) to remove batch effects.</p>
+</blockquote>
+<p>Depending how flexible this new package is, it could be useful for saving time. If it’s not flexible we won’t really use it.</p>
+</div>
+<div id="enhancedvolcano" class="section level3">
+<h3>EnhancedVolcano</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/EnhancedVolcano">EnhancedVolcano</a></em></p>
+<blockquote>
+<p>Volcano plots represent a useful way to visualise the results of differential expression analyses. Here, we present a highly-configurable function that produces publication-ready volcano plots. EnhancedVolcano will attempt to fit as many transcript names in the plot window as possible, thus avoiding ‘clogging’ up the plot with labels that could not otherwise have been read.</p>
+</blockquote>
+<p>Enhanced volcano plots? Cool! We use volcano plots all the time, so they sold us with the name. Plus, who doesn’t want <em>publication ready plots</em>?<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a></p>
+</div>
+<div id="excluster" class="section level3">
+<h3>ExCluster</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/ExCluster">ExCluster</a></em></p>
+<blockquote>
+<p>ExCluster flattens Ensembl and GENCODE GTF files into GFF files, which are used to count reads per non-overlapping exon bin from BAM files. This read counting is done using the function featureCounts from the package Rsubread. Library sizes are normalized across all biological replicates, and ExCluster then compares two different conditions to detect signifcantly differentially spliced genes. This process requires at least two independent biological repliates per condition, and ExCluster accepts only exactly two conditions at a time. ExCluster ultimately produces false discovery rates (FDRs) per gene, which are used to detect significance. Exon log2 fold change (log2FC) means and variances may be plotted for each significantly differentially spliced gene, which helps scientists develop hypothesis and target differential splicing events for RT-qPCR validation in the wet lab.</p>
+</blockquote>
+<p>Hm… this one could be useful for some future work related to <em><a href="https://bioconductor.org/packages/3.8/recount">recount</a></em>. Specially the part about simplifying a GTF file.</p>
+</div>
+<div id="maser" class="section level3">
+<h3>maser</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/maser">maser</a></em></p>
+<blockquote>
+<p>This package provides functionalities for analysis, annotation and visualizaton of alternative splicing events.</p>
+</blockquote>
+<p>Visualization of splicing events is something that can be useful. But the description is too vague and will require more investigation.</p>
+</div>
+<div id="mirsm" class="section level3">
+<h3>miRSM</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/miRSM">miRSM</a></em></p>
+<blockquote>
+<p>The package aims to identify miRNA sponge modules by integrating expression data and miRNA-target binding information. It provides several functions to study miRNA sponge modules, including popular methods for inferring gene modules (candidate miRNA sponge modules), and a function to identify miRNA sponge modules, as well as a function to conduct functional analysis of miRNA sponge modules.</p>
+</blockquote>
+<p><em>I’m still reading the description</em>, hold on! We’ll look into this more!</p>
+</div>
+<div id="outrider" class="section level3">
+<h3>OUTRIDER</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/OUTRIDER">OUTRIDER</a></em></p>
+<blockquote>
+<p>Identification of aberrent gene expression in RNA-seq data. Read count expectations are modeled by an autoencoder to control for confounders in the data. Given these expectations, the RNA-seq read counts are assumed to follow a negative binomial distribution with a gene-specific dispersion. Outliers are then identified as read counts that significantly deviate from this distribution. Further OUTRIDER provides useful plotting function to analyze and visualize the results.</p>
+</blockquote>
+<p>We’d be interested in testing the performance of OUTRIDER in our already analyzed datasets.</p>
+</div>
+<div id="primirtss" class="section level3">
+<h3>primirTSS</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/primirTSS">primirTSS</a></em></p>
+<blockquote>
+<p>A fast, convenient tool to identify the TSSs of miRNAs by integrating the data of H3K4me3 and Pol II as well as combining the conservation level and sequence feature, provided within both command-line and graphical interfaces, which achieves a better performance than the previous non-cell-specific methods on miRNA TSSs.</p>
+</blockquote>
+<p>We don’t have this kind of data (Pol II ChIP-seq) but it looks useful if you do have it.</p>
+</div>
+<div id="timeseriesexperiment" class="section level3">
+<h3>TimeSeriesExperiment</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/TimeSeriesExperiment">TimeSeriesExperiment</a></em></p>
+<blockquote>
+<p>Visualization and analysis toolbox for short time course data which includes dimensionality reduction, clustering, two-sample differential expression testing and gene ranking techniques. The package also provides methods for retrieving enriched pathways.</p>
+</blockquote>
+<p>We have time series data and could maybe try this package out for clustering and pathway analyses. We are not sure why it matters that the time course is <em>short</em>, what does this really mean? Could they mean that the time course is complete (no dropouts) unlike a longitudinal time course project? From the vignette: they are talking about small number of time points: that is, statistical methods for this scenario.</p>
+</div>
+<div id="trna" class="section level3">
+<h3>tRNA</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/tRNA">tRNA</a></em></p>
+<blockquote>
+<p>The tRNA package allows tRNA sequences and structures to be accessed and used for subsetting. In addition, it provides visualization tools to compare feature parameters of multiple tRNA sets and correlate them to additional data. The tRNA package uses GRanges objects as inputs requiring only few additional column data sets.</p>
+</blockquote>
+<p>Wow! tRNAs!? Let’s look into this!</p>
+</div>
+<div id="tximeta" class="section level3">
+<h3>tximeta</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/tximeta">tximeta</a></em></p>
+<blockquote>
+<p>Transcript quantification import from Salmon with automatic population of metadata and transcript ranges. Filtered, combined, or de novo transcriptomes can be linked to the appropriate sources with linkedTxomes and shared for reproducible analyses.</p>
+</blockquote>
+<p>Just look at this great video tweet by Michael Love!</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">.<a href="https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw">@Bioconductor</a> 3.8 is released, which means so is tximeta! this idea came up more than 2 years ago, to auto-populate metadata for Salmon quant directories. the goal is no more guessing for the data you quantified earlier in a project, or from public archive. here&#39;s a demo <a href="https://t.co/6r1yoNcIyj">pic.twitter.com/6r1yoNcIyj</a></p>&mdash; Michael Love (@mikelove) <a href="https://twitter.com/mikelove/status/1057948391261511680?ref_src=twsrc%5Etfw">November 1, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+<div id="ularcirc" class="section level3">
+<h3>Ularcirc</h3>
+<p><em><a href="https://bioconductor.org/packages/3.8/Ularcirc">Ularcirc</a></em></p>
+<blockquote>
+<p>Ularcirc reads in STAR aligned splice junction files and provides visualisation and analysis tools for splicing analysis. Users can assess backsplice junctions and forward canonical junctions.</p>
+</blockquote>
+<p>We are interested in exploring its visualization tools and if they are specific STAR output files or if this package works with a wider set of aligners.</p>
+<p>We also appreciate the name of this package!</p>
+</div>
+<div id="wrapping-up" class="section level3">
+<h3>Wrapping up</h3>
+<p>We liked how many of the new software packages emphasized visualization! The package with the best name was <em><a href="https://bioconductor.org/packages/3.8/COCOA">COCOA</a></em> hehe.</p>
+<p>We hope that you are as excited as we are about trying out the new <a href="https://www.bioconductor.org/news/bioc_3_8_release/">Bioconductor 3.8 packages</a>! If we implement any of these packages into our analysis routine we <em>want</em> to come back and write a blog post about them<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>.</p>
+</div>
+<div id="acknowledgements" class="section level3">
+<h3>Acknowledgements</h3>
+<p>This blog post was made possible thanks to:</p>
+<ul>
+<li><em><a href="https://bioconductor.org/packages/3.8/BiocStyle">BiocStyle</a></em> <a id='cite-Oles_2018'></a>(<a href='https://github.com/Bioconductor/BiocStyle'>Oleś, Morgan, and Huber, 2018</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> <a id='cite-Xie_2017'></a>(<a href='https://github.com/rstudio/blogdown'>Xie, Hill, and Thomas, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=knitcitations">knitcitations</a></em> <a id='cite-Boettiger_2017'></a>(<a href='https://CRAN.R-project.org/package=knitcitations'>Boettiger, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=sessioninfo">sessioninfo</a></em> <a id='cite-Csardi_2018'></a>(<a href='https://github.com/r-lib/sessioninfo#readme'>Csárdi, core, Wickham, Chang, et al., 2018</a>)</li>
+</ul>
+<p>and all the Bioconductor package developers and maintainers!</p>
+</div>
+<div id="references" class="section level3">
+<h3>References</h3>
+<p>
+<a id='bib-Boettiger_2017'></a><a href="#cite-Boettiger_2017">[1]</a><cite> C. Boettiger. <em>knitcitations: Citations for ‘Knitr’ Markdown Files</em>. R package version 1.0.8. 2017. URL: <a href="https://CRAN.R-project.org/package=knitcitations">https://CRAN.R-project.org/package=knitcitations</a>.</cite>
+</p>
+<p>
+<a id='bib-Csardi_2018'></a><a href="#cite-Csardi_2018">[2]</a><cite> G. Csárdi, R. core, H. Wickham, W. Chang, et al. <em>sessioninfo: R Session Information</em>. R package version 1.1.0.9000. 2018. URL: <a href="https://github.com/r-lib/sessioninfo#readme">https://github.com/r-lib/sessioninfo#readme</a>.</cite>
+</p>
+<p>
+<a id='bib-Oles_2018'></a><a href="#cite-Oles_2018">[3]</a><cite> A. Oleś, M. Morgan and W. Huber. <em>BiocStyle: Standard styles for vignettes and other Bioconductor documents</em>. R package version 2.10.0. 2018. URL: <a href="https://github.com/Bioconductor/BiocStyle">https://github.com/Bioconductor/BiocStyle</a>.</cite>
+</p>
+<p>
+<a id='bib-Xie_2017'></a><a href="#cite-Xie_2017">[4]</a><cite> Y. Xie, A. P. Hill and A. Thomas. <em>blogdown: Creating Websites with R Markdown</em>. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: <a href="https://github.com/rstudio/blogdown">https://github.com/rstudio/blogdown</a>.</cite>
+</p>
+</div>
+<div id="reproducibility" class="section level3">
+<h3>Reproducibility</h3>
+<pre><code>## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                                      
+##  version  R version 3.5.1 Patched (2018-10-14 r75439)
+##  os       macOS Mojave 10.14.1                       
+##  system   x86_64, darwin15.6.0                       
+##  ui       X11                                        
+##  language (EN)                                       
+##  collate  en_US.UTF-8                                
+##  ctype    en_US.UTF-8                                
+##  tz       America/New_York                           
+##  date     2018-11-02                                 
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version    date       lib source                            
+##  assertthat      0.2.0      2017-04-11 [1] CRAN (R 3.5.0)                    
+##  backports       1.1.2      2017-12-13 [1] CRAN (R 3.5.0)                    
+##  bibtex          0.4.2      2017-06-30 [1] CRAN (R 3.5.0)                    
+##  BiocManager     1.30.3     2018-10-10 [1] CRAN (R 3.5.0)                    
+##  BiocStyle     * 2.10.0     2018-10-30 [1] Bioconductor                      
+##  blogdown        0.9        2018-10-23 [1] CRAN (R 3.5.0)                    
+##  bookdown        0.7        2018-02-18 [1] CRAN (R 3.5.0)                    
+##  cli             1.0.1      2018-09-25 [1] CRAN (R 3.5.0)                    
+##  colorout      * 1.2-0      2018-05-03 [1] Github (jalvesaq/colorout@c42088d)
+##  crayon          1.3.4      2017-09-16 [1] CRAN (R 3.5.0)                    
+##  digest          0.6.18     2018-10-10 [1] CRAN (R 3.5.0)                    
+##  evaluate        0.12       2018-10-09 [1] CRAN (R 3.5.0)                    
+##  htmltools       0.3.6      2017-04-28 [1] CRAN (R 3.5.0)                    
+##  httr            1.3.1      2017-08-20 [1] CRAN (R 3.5.0)                    
+##  jsonlite        1.5        2017-06-01 [1] CRAN (R 3.5.0)                    
+##  knitcitations * 1.0.8      2017-07-04 [1] CRAN (R 3.5.0)                    
+##  knitr           1.20       2018-02-20 [1] CRAN (R 3.5.0)                    
+##  lubridate       1.7.4      2018-04-11 [1] CRAN (R 3.5.0)                    
+##  magrittr        1.5        2014-11-22 [1] CRAN (R 3.5.0)                    
+##  plyr            1.8.4      2016-06-08 [1] CRAN (R 3.5.0)                    
+##  R6              2.3.0      2018-10-04 [1] CRAN (R 3.5.0)                    
+##  Rcpp            0.12.19    2018-10-01 [1] CRAN (R 3.5.1)                    
+##  RefManageR      1.2.0      2018-04-25 [1] CRAN (R 3.5.0)                    
+##  rmarkdown       1.10       2018-06-11 [1] CRAN (R 3.5.0)                    
+##  rprojroot       1.3-2      2018-01-03 [1] CRAN (R 3.5.0)                    
+##  sessioninfo   * 1.1.0.9000 2018-10-02 [1] Github (r-lib/sessioninfo@4f91fad)
+##  stringi         1.2.4      2018-07-20 [1] CRAN (R 3.5.0)                    
+##  stringr         1.3.1      2018-05-10 [1] CRAN (R 3.5.0)                    
+##  withr           2.1.2      2018-03-15 [1] CRAN (R 3.5.0)                    
+##  xfun            0.4        2018-10-23 [1] CRAN (R 3.5.0)                    
+##  xml2            1.2.0      2018-01-24 [1] CRAN (R 3.5.0)                    
+##  yaml            2.2.0      2018-07-25 [1] CRAN (R 3.5.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.5devel/Resources/library</code></pre>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Soon it’ll be in the hundreds! Wow!<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>We’ll see if that’s true hehe.<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Time permitting :P<a href="#fnref3">↩</a></p></li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/bioconductor/">bioconductor</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hue3d688a4e74633c5efe0e3936ac23c1e_53872_250x250_fill_lanczos_center_2.png" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/"></a></h5>
+      <h6 class="card-subtitle">Continuous rstats learning</h6>
+      <p class="card-text">We are researchers at the @LieberInstitute, blogging about R packages, how-to guides &amp; occasionally our own open-source software (opinions r our own) #rstats</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a href="mailto:lcolladotor@gmail.com" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="http://LieberInstitute.github.io/rstatsclub/" target="_blank" rel="noopener">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://twitter.com/LIBDrstats" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://github.com/LieberInstitute" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.0bf1e3db85cbb232372ed31d6f10dc70.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

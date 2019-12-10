@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academic</title>
+    <link>/</link>
+      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <description>Academic</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 14 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.jpg</url>
+      <title>Academic</title>
+      <link>/</link>
+    </image>
+    
+    <item>
+      <title>OCS</title>
+      <link>/notusing_content_home/dttable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_home/dttable/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;iframe src=&#34;https://liuyanguu.shinyapps.io/bcl_app/&#34; width=&#34;10000&#34; height=&#34;800&amp;quot;&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;Find case studies related to topics or methods:
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/notusing_content_home/DTtable_files/figure-html//widgets/widget_setup.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>ocs</title>
+      <link>/notusing_content_home/shiny_search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_home/shiny_search/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&amp;lt;iframe src=“&lt;a href=&#34;https://liuyanguu.shinyapps.io/bcl_app/&#34; class=&#34;uri&#34;&gt;https://liuyanguu.shinyapps.io/bcl_app/&lt;/a&gt;” scrolling = “no” frameboarder = “no” out.width = “100%” width=10000 height=800&amp;quot;&amp;gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;p&gt;Find case studies related to topics or methods:
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:480px;&#34; class=&#34;widgetframe html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;url&#34;:&#34;/notusing_content_home/Shiny_search_files/figure-html//widgets/widget_setup.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Open Case Studies Search</title>
+      <link>/dt/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/dt/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-r,&#34;&gt;#remotes::install_github(&#39;rstudio/DT&#39;)
+library(DT)
+datatable(iris)
+datatable(head(iris), class = &#39;cell-border stripe&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Data Science Search</title>
+      <link>/notusing_content_project_searches/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project_searches/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistical Methods Search</title>
+      <link>/notusing_content_project_searches/statsprojects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project_searches/statsprojects/</guid>
+      <description>&lt;p&gt;&lt;script&gt;
+  (function() {
+    var cx = &amp;lsquo;006346710622437628329:tdbwt2rsqrs&amp;rsquo;;
+    var gcse = document.createElement(&amp;lsquo;script&amp;rsquo;);
+    gcse.type = &amp;lsquo;text/javascript&amp;rsquo;;
+    gcse.async = true;
+    gcse.src = &amp;lsquo;&lt;a href=&#34;https://cse.google.com/cse.js?cx=&#39;&#34; target=&#34;_blank&#34;&gt;https://cse.google.com/cse.js?cx=&#39;&lt;/a&gt; + cx;
+    var s = document.getElementsByTagName(&amp;lsquo;script&amp;rsquo;)[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+&lt;/script&gt;
+&lt;a href=&#34;gcse:search&#34; target=&#34;_blank&#34;&gt;gcse:search&lt;/a&gt;&lt;a href=&#34;/gcse:search&#34;&gt;/gcse:search&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/modcontact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/modcontact/</guid>
+      <description>
+
+&lt;h2 id=&#34;please-connect&#34;&gt;Please connect!&lt;/h2&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    If you would like to contribute a case study to the repository,
+or have suggestions on data sets to use to build a case study around,
+please contact us!
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;[[social]]
+  icon = &amp;ldquo;envelope&amp;rdquo;
+  icon_pack = &amp;ldquo;fas&amp;rdquo;
+  link = &amp;ldquo;mailto:shicks19@jhu.edu&amp;rdquo;  # For a direct email link, use &amp;ldquo;mailto:test@example.org&amp;rdquo;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Open Case Studies now have DOIs for citations!</title>
+      <link>/post/case-studies-now-have-doi/</link>
+      <pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>/post/case-studies-now-have-doi/</guid>
+      <description>&lt;p&gt;The Open Case Studies team is excited to announce
+that case studies now have digital object identifier
+(DOIs) associated with each case study that can be used
+as a citation. If you use one of the case studies in your
+classroom, we ask that you use the DOI to reference it.&lt;/p&gt;
+
+&lt;p&gt;Thanks!&lt;/p&gt;
+
+&lt;p&gt;The OCS Team&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Firearm Legislation</title>
+      <link>/project/firearmlegislation/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/firearmlegislation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Firearm Legislation copy</title>
+      <link>/notusing_content_project/firearmlegislation-copy/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project/firearmlegislation-copy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Firearm Legislation copy 2</title>
+      <link>/notusing_content_project/firearmlegislation-copy-2/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project/firearmlegislation-copy-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Firearm Legislation copy3</title>
+      <link>/notusing_content_project/firearmlegislation-copy-3/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project/firearmlegislation-copy-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Health Expenditure</title>
+      <link>/project/healthexpenditures/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/healthexpenditures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Health Expenditure copy</title>
+      <link>/notusing_content_project/healthexpenditures-copy/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project/healthexpenditures-copy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Health Expenditure copy 2</title>
+      <link>/notusing_content_project/healthexpenditures-copy-2/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project/healthexpenditures-copy-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Health Expenditure copy 3</title>
+      <link>/notusing_content_project/healthexpenditures-copy-3/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project/healthexpenditures-copy-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hypertension Diet</title>
+      <link>/notusing_content_project/hypertensiondiet/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project/hypertensiondiet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rural and Urban Obesity</title>
+      <link>/notusing_content_project/ruralandurbanobesity/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project/ruralandurbanobesity/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

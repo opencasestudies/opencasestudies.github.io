@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="By Amy Peterson
+Studying genetic differential expression using postmortem human brain tissue requires an understanding of the effect brain tissue degradation has on genetic expression. Particularly when brain tissue degradation confounds1 the differences in gene expression levels between subject groups. This problem of confounding necessitates measures from a control dataset of postmortem tissue from individuals who do not have the outcome of interest. Doing so provides a comparative measure of the impact of tissue degradation on expression that can then be used in a case-control study to examine the impact of the outcome of interest on genetic expression.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/postocs/quality-surrogate-variable-analysis/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.a3cda781a9b24f26fefd34a53547835b.css">
+
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/postocs/quality-surrogate-variable-analysis/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Academic">
+  <meta property="og:url" content="/postocs/quality-surrogate-variable-analysis/">
+  <meta property="og:title" content="Quality Surrogate Variable Analysis  | Academic">
+  <meta property="og:description" content="By Amy Peterson
+Studying genetic differential expression using postmortem human brain tissue requires an understanding of the effect brain tissue degradation has on genetic expression. Particularly when brain tissue degradation confounds1 the differences in gene expression levels between subject groups. This problem of confounding necessitates measures from a control dataset of postmortem tissue from individuals who do not have the outcome of interest. Doing so provides a comparative measure of the impact of tissue degradation on expression that can then be used in a case-control study to examine the impact of the outcome of interest on genetic expression."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-12-11T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-12-11T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Quality Surrogate Variable Analysis  | Academic</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Academic</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Quality Surrogate Variable Analysis </h1>
+
+  
+
+  
+    
+
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 11, 2018
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/research/">research</a>, <a href="/categories/rstats/">rstats</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/postocs/quality-surrogate-variable-analysis/&amp;text=Quality%20Surrogate%20Variable%20Analysis%20" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/postocs/quality-surrogate-variable-analysis/&amp;t=Quality%20Surrogate%20Variable%20Analysis%20" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Quality%20Surrogate%20Variable%20Analysis%20&amp;body=/postocs/quality-surrogate-variable-analysis/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/postocs/quality-surrogate-variable-analysis/&amp;title=Quality%20Surrogate%20Variable%20Analysis%20" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Quality%20Surrogate%20Variable%20Analysis%20%20/postocs/quality-surrogate-variable-analysis/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/postocs/quality-surrogate-variable-analysis/&amp;title=Quality%20Surrogate%20Variable%20Analysis%20" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<p>By <a href="https://amy-peterson.github.io/">Amy Peterson</a></p>
+<p>Studying genetic differential expression using postmortem human brain tissue requires an understanding of the effect brain tissue degradation has on genetic expression. Particularly when brain tissue degradation confounds<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> the differences in gene expression levels between subject groups. This problem of confounding necessitates measures from a control dataset of postmortem tissue from individuals who do not have the outcome of interest. Doing so provides a comparative measure of the impact of tissue degradation on expression that can then be used in a case-control study to examine the impact of the outcome of interest on genetic expression. Incorporating the determinations of tissue degradation in control brains in an algorithm to assess the results of genetic differential expression in brains that have the outcome of interest leads to more accurate results and reduces the number of false positive genes that are incorrectly identified as differentially expressed between cases and controls.</p>
+<div id="sva-background" class="section level3">
+<h3>SVA background</h3>
+<p>RNA-sequencing (RNA-seq) is a high-throughput method for quantifying gene expression levels that requires using high-quality RNA. The effect of RNA quality on detecting genetic differential expression accurately was previously addressed with surrogate variable analysis (SVA), which includes batch effects to address the issue of heterogeneity in expression studies <a id='cite-Leek_2007'></a>(<a href='https://doi.org/10.1371/journal.pgen.0030161'>Leek and Storey, 2007</a>). The problem of confounding requires a more robust approach to identifying genes that are differentially expressed.</p>
+</div>
+<div id="qsva" class="section level3">
+<h3>qSVA</h3>
+<p>The quality surrogate variable analysis (qSVA) algorithmic framework, an extended version of SVA, was developed by Andrew Jaffe and colleagues <a id='cite-Jaffe_2017'></a>(<a href='https://doi.org/10.1073/pnas.1617384114'>Jaffe, Tao, Norris, Kealhofer, et al., 2017</a>) to provide a method for solving the issue of confounding by brain degradation. The qSVA framework reduces the number of false positive genes, since genes may be identified because RNA quality confounding is not controlled for adequately. This conservative approach uses stricter criteria and involves processing methods that are well established, applying expression cutoffs, avoiding potential batch effects, and adjusting for RNA quality degradation confounding using qSVA.</p>
+</div>
+<div id="datasets" class="section level3">
+<h3>Datasets</h3>
+<p>The qSVA algorithm requires the use of two datasets. Here, the dataset of interest is part of BrainSeq, A Human Brain Genomics Consortium, which was initiated with the goal of generating a public database of gene expression in postmortem brain tissue to enhance the understanding of psychiatric disorders through neurogenomic data <a id='cite-bsc2015'></a>(<a href='https://doi.org/10.1016/j.neuron.2015.10.047'>Schubert, O’Donnell, Quan, Wendland, et al., 2015</a>). The other dataset is a control dataset, which can also be referred to as the degradation dataset, since it is the measure of the impact of degradation on gene expression in postmortem tissue for individuals who do not have the outcome of interest. The degradation dataset is a much smaller dataset and helps determine the genomic regions most associated with brain degradation. This addresses the concern of an association between the outcome of interest and genetic expression, and helps better understand metrics that demonstrate RNA quality through experimental approaches. Using these two datasets, and by extending qSVA to more than one brain region, we are able to examine the issue of RNA quality confounding using RNA-seq data from multiple brain regions in a case-control study comparing degradation of tissue in patients with schizophrenia to non-psychiatric controls using BrainSeq consortium data <a id='cite-colladotorres2018'></a>(<a href='https://doi.org/10.1101/426213'>Collado-Torres, Burke, Peterson, Shin, et al., 2018</a>). We focused on the hippocampus (HIPPO) and dorsolateral prefrontal cortex (DLPFC), two brain regions that have been identified as functionally-altered in schizophrenia <a id='cite-Rasetti_2014'></a>(<a href='https://doi.org/10.1001/jamapsychiatry.2013.3911'>Rasetti, Mattay, White, Sambataro, et al., 2014</a>).</p>
+</div>
+<div id="algorithm-and-workflow" class="section level3">
+<h3>Algorithm and Workflow</h3>
+<p>The algorithm has terms that account for measured covariates, including diagnosis, age, sex, mitochondrial rate, rRNA rate, gene assignment rate, RNA integrity number (RIN), ethnicity principal components (PCs)<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>, and the region-specific quality surrogate variables, or qSVs, identified using the degradation dataset.</p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-12-11-quality-surrogate-variable-analysis_files/Picture1.png" width="600" /></p>
+</div>
+<div id="results" class="section level3">
+<h3>Results</h3>
+<p>After using qSVA to adjust for the confounding effect of RNA, differential expression quality (DEqual) plots are used to assess the effectiveness of the statistical correction. These plots compare the differential expression statistics for the degradation data experiments on the y axis to statistics for the outcome from the dataset of interest on the x axis. The plots are shown for the HIPPO samples, looking at the log-fold change in expression per minute, with each point representing a gene. The goal is to assess the correlation between these two datasets, and how the correlation changes after including the quality surrogate variables (qSVs) in the model. There should not be correlation between the degradation dataset and the schizophrenia disorder case-control BrainSeq dataset, labeled as Dx on the axis for diagnosis, since they are independent datasets and the degradation dataset is serving as a control. Model 1 is a naïve model that includes diagnosis only. Model 2 includes diagnosis and measures for RNA-quality and demographic covariates. Model 3 includes all of the terms from the previous models, with the added qSVs. The number of genes identified as differentially expressed are shown in parentheses next to each model, and the number of genes identified as differentially expressed reduces drastically from over 6,000 in model 1, to 63 in model 2, to 48 in model 3.</p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-12-11-quality-surrogate-variable-analysis_files/Picture2.png" width="600" /></p>
+<p><img src="http://LieberInstitute.github.io/rstatsclub/post/2018-12-11-quality-surrogate-variable-analysis_files/Picture3.png" width="600" /></p>
+</div>
+<div id="conclusions" class="section level3">
+<h3>Conclusions</h3>
+<p>Once we are confident that confounding has been removed from the samples of interest, we are able to assess differential expression between cases and controls. Using the 48 genes identified from model 3, we can then perform gene biological process ontology enrichment analysis to determine which genes show enrichment, and to gain clearer insights into which genes are most affected in brain tissue of individuals with schizophrenia. For more information please check the freely available pre-print describing the BrainSeq Phase II project (<a href='https://doi.org/10.1101/426213'>Collado-Torres, Burke, Peterson, Shin, et al., 2018</a>).</p>
+<p><em><a href="https://amy-peterson.github.io/">Amy Peterson</a> extended the qSVA statistical framework to from one to multiple brain regions as part of her <a href="https://www.jhsph.edu/">JHBSPH</a> <a href="https://www.jhsph.edu/academics/degree-programs/master-of-public-health/curriculum/capstone.html">MPH Capstone</a> project that she carried out with <a href="http://aejaffe.com/">Andrew E. Jaffe</a> and <a href="http://lcolladotor.github.io/">Leonardo Collado-Torres</a> at the <a href="https://www.libd.org/">Lieber Institute for Brain Development</a>. The <code>R</code> and <code>bash</code> code Amy Peterson wrote is available online via GitHub at <a href="https://github.com/LieberInstitute/qsva_brain">LieberInstitute/qsva_brain</a>. </em></p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">A few days late, but here&#39;s Amy <a href="https://t.co/A0OSUVD9Nw">https://t.co/A0OSUVD9Nw</a> after successfully presenting her <a href="https://twitter.com/JohnsHopkinsSPH?ref_src=twsrc%5Etfw">@JohnsHopkinsSPH</a> MPH capstone project. It was a great experience for me to mentor her along with <a href="https://twitter.com/AndrewJaffe?ref_src=twsrc%5Etfw">@andrewjaffe</a> at <a href="https://twitter.com/LieberInstitute?ref_src=twsrc%5Etfw">@lieberinstitute</a> I look forward to seeing where her career takes her 🙌🏾 ^^ <a href="https://t.co/hbUiHQOVq3">pic.twitter.com/hbUiHQOVq3</a></p>&mdash; 🇲🇽 Dr. Leonardo Collado-Torres (@fellgernon) <a href="https://twitter.com/fellgernon/status/993683427131092993?ref_src=twsrc%5Etfw">May 8, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+<div id="acknowledgements" class="section level3">
+<h3>Acknowledgements</h3>
+<p>This blog post was made possible thanks to:</p>
+<ul>
+<li><em><a href="https://bioconductor.org/packages/3.8/BiocStyle">BiocStyle</a></em> <a id='cite-Oles_2018'></a>(<a href='https://github.com/Bioconductor/BiocStyle'>Oleś, Morgan, and Huber, 2018</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> <a id='cite-Xie_2017'></a>(<a href='https://github.com/rstudio/blogdown'>Xie, Hill, and Thomas, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=knitcitations">knitcitations</a></em> <a id='cite-Boettiger_2017'></a>(<a href='https://CRAN.R-project.org/package=knitcitations'>Boettiger, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=sessioninfo">sessioninfo</a></em> <a id='cite-Csardi_2018'></a>(<a href='https://CRAN.R-project.org/package=sessioninfo'>Csárdi, core, Wickham, Chang, et al., 2018</a>)</li>
+</ul>
+</div>
+<div id="references" class="section level3">
+<h3>References</h3>
+<p>
+<a id='bib-Boettiger_2017'></a><a href="#cite-Boettiger_2017">[1]</a><cite>
+C. Boettiger.
+<em>knitcitations: Citations for ‘Knitr’ Markdown Files</em>.
+R package version 1.0.8.
+2017.
+URL: <a href="https://CRAN.R-project.org/package=knitcitations">https://CRAN.R-project.org/package=knitcitations</a>.</cite>
+</p>
+<p>
+<a id='bib-colladotorres2018'></a><a href="#cite-colladotorres2018">[2]</a><cite>
+L. Collado-Torres, E. E. Burke, A. Peterson, J. H. Shin, et al.
+“Regional heterogeneity in gene expression, regulation and coherence in hippocampus and dorsolateral prefrontal cortex across development and in schizophrenia”.
+In: <em>bioRxiv</em> (2018).
+DOI: <a href="https://doi.org/10.1101/426213">10.1101/426213</a>.</cite>
+</p>
+<p>
+<a id='bib-Csardi_2018'></a><a href="#cite-Csardi_2018">[3]</a><cite>
+G. Csárdi, R. core, H. Wickham, W. Chang, et al.
+<em>sessioninfo: R Session Information</em>.
+R package version 1.1.1.
+2018.
+URL: <a href="https://CRAN.R-project.org/package=sessioninfo">https://CRAN.R-project.org/package=sessioninfo</a>.</cite>
+</p>
+<p>
+<a id='bib-Jaffe_2017'></a><a href="#cite-Jaffe_2017">[4]</a><cite>
+A. E. Jaffe, R. Tao, A. L. Norris, M. Kealhofer, et al.
+“qSVA framework for RNA quality correction in differential expression analysis”.
+In: <em>Proceedings of the National Academy of Sciences</em> 114.27 (Jun. 2017), pp. 7130–7135.
+DOI: <a href="https://doi.org/10.1073/pnas.1617384114">10.1073/pnas.1617384114</a>.
+URL: <a href="https://doi.org/10.1073/pnas.1617384114">https://doi.org/10.1073/pnas.1617384114</a>.</cite>
+</p>
+<p>
+<a id='bib-Leek_2007'></a><a href="#cite-Leek_2007">[5]</a><cite>
+J. T. Leek and J. D. Storey.
+“Capturing Heterogeneity in Gene Expression Studies by Surrogate Variable Analysis”.
+In: <em>PLoS Genetics</em> 3.9 (2007), p. e161.
+DOI: <a href="https://doi.org/10.1371/journal.pgen.0030161">10.1371/journal.pgen.0030161</a>.
+URL: <a href="https://doi.org/10.1371/journal.pgen.0030161">https://doi.org/10.1371/journal.pgen.0030161</a>.</cite>
+</p>
+<p>
+<a id='bib-Oles_2018'></a><a href="#cite-Oles_2018">[6]</a><cite>
+A. Oleś, M. Morgan and W. Huber.
+<em>BiocStyle: Standard styles for vignettes and other Bioconductor documents</em>.
+R package version 2.10.0.
+2018.
+URL: <a href="https://github.com/Bioconductor/BiocStyle">https://github.com/Bioconductor/BiocStyle</a>.</cite>
+</p>
+<p>
+<a id='bib-Rasetti_2014'></a><a href="#cite-Rasetti_2014">[7]</a><cite>
+R. Rasetti, V. S. Mattay, M. G. White, F. Sambataro, et al.
+“Altered Hippocampal-Parahippocampal Function During Stimulus Encoding”.
+In: <em>JAMA Psychiatry</em> 71.3 (Mar. 2014), p. 236.
+DOI: <a href="https://doi.org/10.1001/jamapsychiatry.2013.3911">10.1001/jamapsychiatry.2013.3911</a>.
+URL: <a href="https://doi.org/10.1001/jamapsychiatry.2013.3911">https://doi.org/10.1001/jamapsychiatry.2013.3911</a>.</cite>
+</p>
+<p>
+<a id='bib-bsc2015'></a><a href="#cite-bsc2015">[8]</a><cite>
+Schubert, O’Donnell, Quan, Wendland, et al.
+“BrainSeq: Neurogenomics to Drive Novel Target Discovery for Neuropsychiatric Disorders”.
+In: <em>Neuron</em> (2015).
+DOI: <a href="https://doi.org/10.1016/j.neuron.2015.10.047">10.1016/j.neuron.2015.10.047</a>.</cite>
+</p>
+<p>
+<a id='bib-Xie_2017'></a><a href="#cite-Xie_2017">[9]</a><cite>
+Y. Xie, A. P. Hill and A. Thomas.
+<em>blogdown: Creating Websites with R Markdown</em>.
+ISBN 978-0815363729.
+Boca Raton, Florida: Chapman and Hall/CRC, 2017.
+URL: <a href="https://github.com/rstudio/blogdown">https://github.com/rstudio/blogdown</a>.</cite>
+</p>
+</div>
+<div id="reproducibility" class="section level3">
+<h3>Reproducibility</h3>
+<pre><code>## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                       
+##  version  R version 3.5.1 (2018-07-02)
+##  os       macOS Mojave 10.14.1        
+##  system   x86_64, darwin15.6.0        
+##  ui       X11                         
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  ctype    en_US.UTF-8                 
+##  tz       America/New_York            
+##  date     2018-12-11                  
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version date       lib source                            
+##  assertthat      0.2.0   2017-04-11 [1] CRAN (R 3.5.0)                    
+##  backports       1.1.2   2017-12-13 [1] CRAN (R 3.5.0)                    
+##  bibtex          0.4.2   2017-06-30 [1] CRAN (R 3.5.0)                    
+##  BiocManager     1.30.4  2018-11-13 [1] CRAN (R 3.5.0)                    
+##  BiocStyle     * 2.10.0  2018-10-30 [1] Bioconductor                      
+##  blogdown        0.9     2018-10-23 [1] CRAN (R 3.5.0)                    
+##  bookdown        0.8     2018-12-03 [1] CRAN (R 3.5.0)                    
+##  cli             1.0.1   2018-09-25 [1] CRAN (R 3.5.0)                    
+##  colorout      * 1.2-0   2018-05-03 [1] Github (jalvesaq/colorout@c42088d)
+##  crayon          1.3.4   2017-09-16 [1] CRAN (R 3.5.0)                    
+##  curl            3.2     2018-03-28 [1] CRAN (R 3.5.0)                    
+##  digest          0.6.18  2018-10-10 [1] CRAN (R 3.5.0)                    
+##  evaluate        0.12    2018-10-09 [1] CRAN (R 3.5.0)                    
+##  htmltools       0.3.6   2017-04-28 [1] CRAN (R 3.5.0)                    
+##  httr            1.3.1   2017-08-20 [1] CRAN (R 3.5.0)                    
+##  jsonlite        1.5     2017-06-01 [1] CRAN (R 3.5.0)                    
+##  knitcitations * 1.0.8   2017-07-04 [1] CRAN (R 3.5.0)                    
+##  knitr           1.20    2018-02-20 [1] CRAN (R 3.5.0)                    
+##  lubridate       1.7.4   2018-04-11 [1] CRAN (R 3.5.0)                    
+##  magrittr        1.5     2014-11-22 [1] CRAN (R 3.5.0)                    
+##  plyr            1.8.4   2016-06-08 [1] CRAN (R 3.5.0)                    
+##  R6              2.3.0   2018-10-04 [1] CRAN (R 3.5.0)                    
+##  Rcpp            1.0.0   2018-11-07 [1] CRAN (R 3.5.0)                    
+##  RefManageR      1.2.0   2018-04-25 [1] CRAN (R 3.5.0)                    
+##  rmarkdown       1.10    2018-06-11 [1] CRAN (R 3.5.0)                    
+##  rprojroot       1.3-2   2018-01-03 [1] CRAN (R 3.5.0)                    
+##  sessioninfo   * 1.1.1   2018-11-05 [1] CRAN (R 3.5.0)                    
+##  stringi         1.2.4   2018-07-20 [1] CRAN (R 3.5.0)                    
+##  stringr         1.3.1   2018-05-10 [1] CRAN (R 3.5.0)                    
+##  withr           2.1.2   2018-03-15 [1] CRAN (R 3.5.0)                    
+##  xfun            0.4     2018-10-23 [1] CRAN (R 3.5.0)                    
+##  xml2            1.2.0   2018-01-24 [1] CRAN (R 3.5.0)                    
+##  yaml            2.2.0   2018-07-25 [1] CRAN (R 3.5.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.5devel/Resources/library</code></pre>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>As defined in <a href="https://en.wikipedia.org/wiki/Confounding">Wikipedia</a>, confounding is: “In statistics, a confounder (also confounding variable, confounding factor or lurking variable) is a variable that influences both the dependent variable and independent variable causing a spurious association. Confounding is a causal concept, and as such, cannot be described in terms of correlations or associations.”<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>These are PCs computed on the genotype information from the individuals in this study. We use them to adjust for ethnicity in a more rigorous form than a categorical <em>race</em> variable would be able to do.<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/statistics/">statistics</a>
+  
+  <a class="badge badge-light" href="/tags/mph/">mph</a>
+  
+  <a class="badge badge-light" href="/tags/qsva/">qsva</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hue3d688a4e74633c5efe0e3936ac23c1e_53872_250x250_fill_lanczos_center_2.png" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/"></a></h5>
+      <h6 class="card-subtitle">Continuous rstats learning</h6>
+      <p class="card-text">We are researchers at the @LieberInstitute, blogging about R packages, how-to guides &amp; occasionally our own open-source software (opinions r our own) #rstats</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a href="mailto:lcolladotor@gmail.com" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="http://LieberInstitute.github.io/rstatsclub/" target="_blank" rel="noopener">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://twitter.com/LIBDrstats" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://github.com/LieberInstitute" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.0bf1e3db85cbb232372ed31d6f10dc70.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statprojects | Academic</title>
+    <link>/statproject/</link>
+      <atom:link href="/statproject/index.xml" rel="self" type="application/rss+xml" />
+    <description>Statprojects</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.jpg</url>
+      <title>Statprojects</title>
+      <link>/statproject/</link>
+    </image>
+    
+    <item>
+      <title>Firearm Legislation</title>
+      <link>/statproject/firearmlegislation/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/statproject/firearmlegislation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Health Expenditure</title>
+      <link>/statproject/healthexpenditures/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/statproject/healthexpenditures/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

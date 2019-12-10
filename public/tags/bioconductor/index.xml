@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bioconductor | Academic</title>
+    <link>/tags/bioconductor/</link>
+      <atom:link href="/tags/bioconductor/index.xml" rel="self" type="application/rss+xml" />
+    <description>bioconductor</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 02 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-192.png</url>
+      <title>bioconductor</title>
+      <link>/tags/bioconductor/</link>
+    </image>
+    
+    <item>
+      <title>Quick overview on the new Bioconductor 3.8 release</title>
+      <link>/post/quick-overview-on-the-new-bioconductor-3-8-release/</link>
+      <pubDate>Fri, 02 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>/post/quick-overview-on-the-new-bioconductor-3-8-release/</guid>
+      <description>
+
+
+&lt;p&gt;Every six months the Bioconductor project releases it’s new version of packages. This allows developers a time window to try out new methods and test them rigorously before releasing them to the community at large. It also means that this is an exciting time 🎉. With every release there are dozens&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt; of new software packages. Bioconductor version 3.8 was &lt;a href=&#34;https://www.bioconductor.org/news/bioc_3_8_release/&#34;&gt;just released&lt;/a&gt; on Halloween: October 31st, 2018. Thus, this is the perfect time to browse through their descriptions and find out what’s new that can be of use to your research.&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Bioconductor 3.8 *released*: 1649 software pkgs, 360 expt data pkgs, 941 annotation pkgs, and 23 workflows; 95 new software pkgs, updates and improvements to existing pkgs; compatible with R 3.5.0, supported on Linux, Windows, and Mac&lt;a href=&#34;https://t.co/QLsoxG7EXw&#34;&gt;https://t.co/QLsoxG7EXw&lt;/a&gt;&lt;a href=&#34;https://twitter.com/hashtag/bioconductor?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#bioconductor&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/rstats?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#rstats&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sean Davis (@seandavis12) &lt;a href=&#34;https://twitter.com/seandavis12/status/1057725752165232641?ref_src=twsrc%5Etfw&#34;&gt;October 31, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;That’s exactly what our post today is about. We looked at the list of new packages as well as updates to find those that we think could be useful for us. That is, packages that we might want to explore further.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;http://LieberInstitute.github.io/rstatsclub/post/2018-11-02-quick-overview-on-the-new-bioconductor-3-8-release_files/Screen%20Shot%202018-11-02%20at%2010.48.18%20AM.png&#34; width=&#34;400&#34; /&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;affixcan&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;AffiXcan&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/AffiXcan&#34;&gt;AffiXcan&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Impute a GReX (Genetically Regulated Expression) for a set of genes in a sample of individuals, using a method based on the Total Binding Affinity (TBA). Statistical models to impute GReX can be trained with a training dataset where the real total expression values are known.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Looks interesting from the name but the description is too vague.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;biocpkgtools&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;BiocPkgTools&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/BiocPkgTools&#34;&gt;BiocPkgTools&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Bioconductor has a rich ecosystem of metadata around packages, usage, and build status. This package is a simple collection of functions to access that metadata from R. The goal is to expose metadata for data mining and value-added functionality such as package searching, text mining, and analytics on packages.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;As Bioconductor developers this package sounds useful. Maybe it can be used to see if any of your packages is broken (errors, warnings) in BioC release or BioC devel.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;brainimager&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;brainImageR&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/brainImageR&#34;&gt;brainImageR&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;BrainImageR is a package that provides the user with information of where in the human brain their gene set corresponds to. This is provided both as a continuous variable and as a easily-interpretable image. BrainImageR has additional functionality of identifying approximately when in developmental time that a gene expression dataset corresponds to. Both the spatial gene set enrichment and the developmental time point prediction are assessed in comparison to the Allen Brain Atlas reference data.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Sounds interesting since we work with brain data ourselves. We are curious about where the data comes from!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;buscorrect&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;BUScorrect&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/BUScorrect&#34;&gt;BUScorrect&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;High-throughput experimental data are accumulating exponentially in public databases. However, mining valid scientific discoveries from these abundant resources is hampered by technical artifacts and inherent biological heterogeneity. The former are usually termed “batch effects,” and the latter is often modelled by “subtypes.” The R package BUScorrect fits a Bayesian hierarchical model, the Batch-effects-correction-with-Unknown-Subtypes model (BUS), to correct batch effects in the presence of unknown subtypes. BUS is capable of (a) correcting batch effects explicitly, (b) grouping samples that share similar characteristics into subtypes, (c) identifying features that distinguish subtypes, and (d) enjoying a linear-order computation complexity.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Hm… maybe this can be used with data from &lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/recount&#34;&gt;recount&lt;/a&gt;&lt;/em&gt;. We also have to work sometimes with data from multiple labs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;consensusde&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;consensusDE&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/consensusDE&#34;&gt;consensusDE&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This package allows users to perform DE analysis using multiple algorithms. It seeks consensus from multiple methods. Currently it supports “Voom”, “EdgeR” and “DESeq”, but can be easily extended. It uses RUV-seq (optional) to remove batch effects.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Depending how flexible this new package is, it could be useful for saving time. If it’s not flexible we won’t really use it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;enhancedvolcano&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;EnhancedVolcano&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/EnhancedVolcano&#34;&gt;EnhancedVolcano&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Volcano plots represent a useful way to visualise the results of differential expression analyses. Here, we present a highly-configurable function that produces publication-ready volcano plots. EnhancedVolcano will attempt to fit as many transcript names in the plot window as possible, thus avoiding ‘clogging’ up the plot with labels that could not otherwise have been read.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Enhanced volcano plots? Cool! We use volcano plots all the time, so they sold us with the name. Plus, who doesn’t want &lt;em&gt;publication ready plots&lt;/em&gt;?&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;excluster&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;ExCluster&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/ExCluster&#34;&gt;ExCluster&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ExCluster flattens Ensembl and GENCODE GTF files into GFF files, which are used to count reads per non-overlapping exon bin from BAM files. This read counting is done using the function featureCounts from the package Rsubread. Library sizes are normalized across all biological replicates, and ExCluster then compares two different conditions to detect signifcantly differentially spliced genes. This process requires at least two independent biological repliates per condition, and ExCluster accepts only exactly two conditions at a time. ExCluster ultimately produces false discovery rates (FDRs) per gene, which are used to detect significance. Exon log2 fold change (log2FC) means and variances may be plotted for each significantly differentially spliced gene, which helps scientists develop hypothesis and target differential splicing events for RT-qPCR validation in the wet lab.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Hm… this one could be useful for some future work related to &lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/recount&#34;&gt;recount&lt;/a&gt;&lt;/em&gt;. Specially the part about simplifying a GTF file.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;maser&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;maser&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/maser&#34;&gt;maser&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This package provides functionalities for analysis, annotation and visualizaton of alternative splicing events.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Visualization of splicing events is something that can be useful. But the description is too vague and will require more investigation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mirsm&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;miRSM&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/miRSM&#34;&gt;miRSM&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The package aims to identify miRNA sponge modules by integrating expression data and miRNA-target binding information. It provides several functions to study miRNA sponge modules, including popular methods for inferring gene modules (candidate miRNA sponge modules), and a function to identify miRNA sponge modules, as well as a function to conduct functional analysis of miRNA sponge modules.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;I’m still reading the description&lt;/em&gt;, hold on! We’ll look into this more!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outrider&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;OUTRIDER&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/OUTRIDER&#34;&gt;OUTRIDER&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Identification of aberrent gene expression in RNA-seq data. Read count expectations are modeled by an autoencoder to control for confounders in the data. Given these expectations, the RNA-seq read counts are assumed to follow a negative binomial distribution with a gene-specific dispersion. Outliers are then identified as read counts that significantly deviate from this distribution. Further OUTRIDER provides useful plotting function to analyze and visualize the results.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We’d be interested in testing the performance of OUTRIDER in our already analyzed datasets.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;primirtss&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;primirTSS&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/primirTSS&#34;&gt;primirTSS&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A fast, convenient tool to identify the TSSs of miRNAs by integrating the data of H3K4me3 and Pol II as well as combining the conservation level and sequence feature, provided within both command-line and graphical interfaces, which achieves a better performance than the previous non-cell-specific methods on miRNA TSSs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We don’t have this kind of data (Pol II ChIP-seq) but it looks useful if you do have it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;timeseriesexperiment&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;TimeSeriesExperiment&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/TimeSeriesExperiment&#34;&gt;TimeSeriesExperiment&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Visualization and analysis toolbox for short time course data which includes dimensionality reduction, clustering, two-sample differential expression testing and gene ranking techniques. The package also provides methods for retrieving enriched pathways.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We have time series data and could maybe try this package out for clustering and pathway analyses. We are not sure why it matters that the time course is &lt;em&gt;short&lt;/em&gt;, what does this really mean? Could they mean that the time course is complete (no dropouts) unlike a longitudinal time course project? From the vignette: they are talking about small number of time points: that is, statistical methods for this scenario.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;trna&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;tRNA&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/tRNA&#34;&gt;tRNA&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The tRNA package allows tRNA sequences and structures to be accessed and used for subsetting. In addition, it provides visualization tools to compare feature parameters of multiple tRNA sets and correlate them to additional data. The tRNA package uses GRanges objects as inputs requiring only few additional column data sets.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Wow! tRNAs!? Let’s look into this!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tximeta&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;tximeta&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/tximeta&#34;&gt;tximeta&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Transcript quantification import from Salmon with automatic population of metadata and transcript ranges. Filtered, combined, or de novo transcriptomes can be linked to the appropriate sources with linkedTxomes and shared for reproducible analyses.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Just look at this great video tweet by Michael Love!&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;.&lt;a href=&#34;https://twitter.com/Bioconductor?ref_src=twsrc%5Etfw&#34;&gt;@Bioconductor&lt;/a&gt; 3.8 is released, which means so is tximeta! this idea came up more than 2 years ago, to auto-populate metadata for Salmon quant directories. the goal is no more guessing for the data you quantified earlier in a project, or from public archive. here&amp;#39;s a demo &lt;a href=&#34;https://t.co/6r1yoNcIyj&#34;&gt;pic.twitter.com/6r1yoNcIyj&lt;/a&gt;&lt;/p&gt;&amp;mdash; Michael Love (@mikelove) &lt;a href=&#34;https://twitter.com/mikelove/status/1057948391261511680?ref_src=twsrc%5Etfw&#34;&gt;November 1, 2018&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+&lt;/div&gt;
+&lt;div id=&#34;ularcirc&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Ularcirc&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/Ularcirc&#34;&gt;Ularcirc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ularcirc reads in STAR aligned splice junction files and provides visualisation and analysis tools for splicing analysis. Users can assess backsplice junctions and forward canonical junctions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We are interested in exploring its visualization tools and if they are specific STAR output files or if this package works with a wider set of aligners.&lt;/p&gt;
+&lt;p&gt;We also appreciate the name of this package!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;wrapping-up&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Wrapping up&lt;/h3&gt;
+&lt;p&gt;We liked how many of the new software packages emphasized visualization! The package with the best name was &lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/COCOA&#34;&gt;COCOA&lt;/a&gt;&lt;/em&gt; hehe.&lt;/p&gt;
+&lt;p&gt;We hope that you are as excited as we are about trying out the new &lt;a href=&#34;https://www.bioconductor.org/news/bioc_3_8_release/&#34;&gt;Bioconductor 3.8 packages&lt;/a&gt;! If we implement any of these packages into our analysis routine we &lt;em&gt;want&lt;/em&gt; to come back and write a blog post about them&lt;a href=&#34;#fn3&#34; class=&#34;footnoteRef&#34; id=&#34;fnref3&#34;&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;acknowledgements&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Acknowledgements&lt;/h3&gt;
+&lt;p&gt;This blog post was made possible thanks to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://bioconductor.org/packages/3.8/BiocStyle&#34;&gt;BiocStyle&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Oles_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/Bioconductor/BiocStyle&#39;&gt;Oleś, Morgan, and Huber, 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=blogdown&#34;&gt;blogdown&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Xie_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/rstudio/blogdown&#39;&gt;Xie, Hill, and Thomas, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;knitcitations&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Boettiger_2017&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://CRAN.R-project.org/package=knitcitations&#39;&gt;Boettiger, 2017&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href=&#34;https://CRAN.R-project.org/package=sessioninfo&#34;&gt;sessioninfo&lt;/a&gt;&lt;/em&gt; &lt;a id=&#39;cite-Csardi_2018&#39;&gt;&lt;/a&gt;(&lt;a href=&#39;https://github.com/r-lib/sessioninfo#readme&#39;&gt;Csárdi, core, Wickham, Chang, et al., 2018&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and all the Bioconductor package developers and maintainers!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Boettiger_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Boettiger_2017&#34;&gt;[1]&lt;/a&gt;&lt;cite&gt; C. Boettiger. &lt;em&gt;knitcitations: Citations for ‘Knitr’ Markdown Files&lt;/em&gt;. R package version 1.0.8. 2017. URL: &lt;a href=&#34;https://CRAN.R-project.org/package=knitcitations&#34;&gt;https://CRAN.R-project.org/package=knitcitations&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Csardi_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Csardi_2018&#34;&gt;[2]&lt;/a&gt;&lt;cite&gt; G. Csárdi, R. core, H. Wickham, W. Chang, et al. &lt;em&gt;sessioninfo: R Session Information&lt;/em&gt;. R package version 1.1.0.9000. 2018. URL: &lt;a href=&#34;https://github.com/r-lib/sessioninfo#readme&#34;&gt;https://github.com/r-lib/sessioninfo#readme&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Oles_2018&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Oles_2018&#34;&gt;[3]&lt;/a&gt;&lt;cite&gt; A. Oleś, M. Morgan and W. Huber. &lt;em&gt;BiocStyle: Standard styles for vignettes and other Bioconductor documents&lt;/em&gt;. R package version 2.10.0. 2018. URL: &lt;a href=&#34;https://github.com/Bioconductor/BiocStyle&#34;&gt;https://github.com/Bioconductor/BiocStyle&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a id=&#39;bib-Xie_2017&#39;&gt;&lt;/a&gt;&lt;a href=&#34;#cite-Xie_2017&#34;&gt;[4]&lt;/a&gt;&lt;cite&gt; Y. Xie, A. P. Hill and A. Thomas. &lt;em&gt;blogdown: Creating Websites with R Markdown&lt;/em&gt;. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: &lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;https://github.com/rstudio/blogdown&lt;/a&gt;.&lt;/cite&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducibility&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Reproducibility&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                                      
+##  version  R version 3.5.1 Patched (2018-10-14 r75439)
+##  os       macOS Mojave 10.14.1                       
+##  system   x86_64, darwin15.6.0                       
+##  ui       X11                                        
+##  language (EN)                                       
+##  collate  en_US.UTF-8                                
+##  ctype    en_US.UTF-8                                
+##  tz       America/New_York                           
+##  date     2018-11-02                                 
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version    date       lib source                            
+##  assertthat      0.2.0      2017-04-11 [1] CRAN (R 3.5.0)                    
+##  backports       1.1.2      2017-12-13 [1] CRAN (R 3.5.0)                    
+##  bibtex          0.4.2      2017-06-30 [1] CRAN (R 3.5.0)                    
+##  BiocManager     1.30.3     2018-10-10 [1] CRAN (R 3.5.0)                    
+##  BiocStyle     * 2.10.0     2018-10-30 [1] Bioconductor                      
+##  blogdown        0.9        2018-10-23 [1] CRAN (R 3.5.0)                    
+##  bookdown        0.7        2018-02-18 [1] CRAN (R 3.5.0)                    
+##  cli             1.0.1      2018-09-25 [1] CRAN (R 3.5.0)                    
+##  colorout      * 1.2-0      2018-05-03 [1] Github (jalvesaq/colorout@c42088d)
+##  crayon          1.3.4      2017-09-16 [1] CRAN (R 3.5.0)                    
+##  digest          0.6.18     2018-10-10 [1] CRAN (R 3.5.0)                    
+##  evaluate        0.12       2018-10-09 [1] CRAN (R 3.5.0)                    
+##  htmltools       0.3.6      2017-04-28 [1] CRAN (R 3.5.0)                    
+##  httr            1.3.1      2017-08-20 [1] CRAN (R 3.5.0)                    
+##  jsonlite        1.5        2017-06-01 [1] CRAN (R 3.5.0)                    
+##  knitcitations * 1.0.8      2017-07-04 [1] CRAN (R 3.5.0)                    
+##  knitr           1.20       2018-02-20 [1] CRAN (R 3.5.0)                    
+##  lubridate       1.7.4      2018-04-11 [1] CRAN (R 3.5.0)                    
+##  magrittr        1.5        2014-11-22 [1] CRAN (R 3.5.0)                    
+##  plyr            1.8.4      2016-06-08 [1] CRAN (R 3.5.0)                    
+##  R6              2.3.0      2018-10-04 [1] CRAN (R 3.5.0)                    
+##  Rcpp            0.12.19    2018-10-01 [1] CRAN (R 3.5.1)                    
+##  RefManageR      1.2.0      2018-04-25 [1] CRAN (R 3.5.0)                    
+##  rmarkdown       1.10       2018-06-11 [1] CRAN (R 3.5.0)                    
+##  rprojroot       1.3-2      2018-01-03 [1] CRAN (R 3.5.0)                    
+##  sessioninfo   * 1.1.0.9000 2018-10-02 [1] Github (r-lib/sessioninfo@4f91fad)
+##  stringi         1.2.4      2018-07-20 [1] CRAN (R 3.5.0)                    
+##  stringr         1.3.1      2018-05-10 [1] CRAN (R 3.5.0)                    
+##  withr           2.1.2      2018-03-15 [1] CRAN (R 3.5.0)                    
+##  xfun            0.4        2018-10-23 [1] CRAN (R 3.5.0)                    
+##  xml2            1.2.0      2018-01-24 [1] CRAN (R 3.5.0)                    
+##  yaml            2.2.0      2018-07-25 [1] CRAN (R 3.5.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.5devel/Resources/library&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;Soon it’ll be in the hundreds! Wow!&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;We’ll see if that’s true hehe.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn3&#34;&gt;&lt;p&gt;Time permitting :P&lt;a href=&#34;#fnref3&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

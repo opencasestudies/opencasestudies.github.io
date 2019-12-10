@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tidyverse Introduction | Academic</title>
+    <link>/tags/tidyverse-introduction/</link>
+      <atom:link href="/tags/tidyverse-introduction/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tidyverse Introduction</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/logo.jpg</url>
+      <title>Tidyverse Introduction</title>
+      <link>/tags/tidyverse-introduction/</link>
+    </image>
+    
+    <item>
+      <title>Health Expenditure</title>
+      <link>/project/healthexpenditures/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/healthexpenditures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Health Expenditure copy</title>
+      <link>/notusing_content_project/healthexpenditures-copy/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project/healthexpenditures-copy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Health Expenditure copy 2</title>
+      <link>/notusing_content_project/healthexpenditures-copy-2/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project/healthexpenditures-copy-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Health Expenditure copy 3</title>
+      <link>/notusing_content_project/healthexpenditures-copy-3/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/notusing_content_project/healthexpenditures-copy-3/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

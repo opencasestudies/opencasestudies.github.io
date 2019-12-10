@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="To carry on our momentum from a few weeks ago from our useR!2018 remote notes blog post, this time we will be summarizing the Demystifying Data Sience 2018 conference for which you can register for free. We are just following David Robinson’s advice to blog all the time!
+So what should you blog about? @drob says no matter what stage you&#39;re at in your career, you have a lot to share.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/postocs/demystifying-data-science-remote-notes/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.a3cda781a9b24f26fefd34a53547835b.css">
+
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/postocs/demystifying-data-science-remote-notes/">
+
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Academic">
+  <meta property="og:url" content="/postocs/demystifying-data-science-remote-notes/">
+  <meta property="og:title" content="“Demystifying Data Science” remote notes | Academic">
+  <meta property="og:description" content="To carry on our momentum from a few weeks ago from our useR!2018 remote notes blog post, this time we will be summarizing the Demystifying Data Sience 2018 conference for which you can register for free. We are just following David Robinson’s advice to blog all the time!
+So what should you blog about? @drob says no matter what stage you&#39;re at in your career, you have a lot to share."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2018-10-24T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2018-10-24T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>“Demystifying Data Science” remote notes | Academic</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Academic</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>“Demystifying Data Science” remote notes</h1>
+
+  
+
+  
+    
+
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Oct 24, 2018
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/rstats/">rstats</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/postocs/demystifying-data-science-remote-notes/&amp;text=%e2%80%9cDemystifying%20Data%20Science%e2%80%9d%20remote%20notes" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/postocs/demystifying-data-science-remote-notes/&amp;t=%e2%80%9cDemystifying%20Data%20Science%e2%80%9d%20remote%20notes" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=%e2%80%9cDemystifying%20Data%20Science%e2%80%9d%20remote%20notes&amp;body=/postocs/demystifying-data-science-remote-notes/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/postocs/demystifying-data-science-remote-notes/&amp;title=%e2%80%9cDemystifying%20Data%20Science%e2%80%9d%20remote%20notes" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=%e2%80%9cDemystifying%20Data%20Science%e2%80%9d%20remote%20notes%20/postocs/demystifying-data-science-remote-notes/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/postocs/demystifying-data-science-remote-notes/&amp;title=%e2%80%9cDemystifying%20Data%20Science%e2%80%9d%20remote%20notes" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+
+<p>To carry on our momentum from a few weeks ago from our <a href="http://research.libd.org/rstatsclub/2018/07/13/libd-rstats-club-remote-user-2018-notes">useR!2018 remote notes blog post</a>, this time we will be summarizing the <a href="https://www.thisismetis.com/demystifying-data-science">Demystifying Data Sience 2018</a> conference for which you can register for free. We are just following <a href="https://twitter.com/drob">David Robinson’s</a> advice to blog all the time!</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">So what should you blog about? <a href="https://twitter.com/drob?ref_src=twsrc%5Etfw">@drob</a> says no matter what stage you&#39;re at in your career, you have a lot to share. Analyze a data set; analyze data from your work; analyze data from current events, &amp; more. Also, take him up on his awesome offer featured below! <a href="https://twitter.com/hashtag/DemystifyDS?src=hash&amp;ref_src=twsrc%5Etfw">#DemystifyDS</a> <a href="https://t.co/RJOpNGJy7f">pic.twitter.com/RJOpNGJy7f</a></p>&mdash; Metis (@thisismetis) <a href="https://twitter.com/thisismetis/status/1021767760949469185?ref_src=twsrc%5Etfw">July 24, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div id="conference-overview" class="section level3">
+<h3>Conference overview</h3>
+<div class="figure">
+<img src="http://LieberInstitute.github.io/rstatsclub/post/2018-10-24-demystifying-data-science-remote-notes_files/2018-10-20%2018.40.37.jpg" width="600" />
+
+</div>
+<p>We got interested in this conference<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> thanks to tweets like these ones that highlight that:</p>
+<ul>
+<li>data scientists are young!</li>
+</ul>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Data scientists are young! Most have 0-5 yrs experience. This is Important to consider when writing job descriptions. Doesn&#39;t make a ton of sense to focus on finding someone with 15 years of experience in certain areas – they likely don&#39;t exist. - Naomi Keller, <a href="https://twitter.com/hashtag/DemystifyDS?src=hash&amp;ref_src=twsrc%5Etfw">#DemystifyDS</a> <a href="https://t.co/iqhLzFIdLd">pic.twitter.com/iqhLzFIdLd</a></p>&mdash; Metis (@thisismetis) <a href="https://twitter.com/thisismetis/status/1022197581361889280?ref_src=twsrc%5Etfw">July 25, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<ul>
+<li>specialists are more in demand!</li>
+</ul>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">In the past 6-9 months, says Noami Keller, &quot;specialists have become more and more the norm&quot; in terms of who&#39;s getting hired. As data science/analytics has matured, the need for the all-knowing &quot;unicorn&quot; has shifted. Specialists are now in demand. <a href="https://twitter.com/hashtag/DemystifyDS?src=hash&amp;ref_src=twsrc%5Etfw">#DemystifyDS</a></p>&mdash; Metis (@thisismetis) <a href="https://twitter.com/thisismetis/status/1022198588368150529?ref_src=twsrc%5Etfw">July 25, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>Hopefully you find these tweets interesting as well. We can find more about the conference on Twitter using the <a href="https://twitter.com/search?q=%23DemystifyDS&amp;src=typd">DemystifyDS</a> hashtag which also covers previous conferences. We see that the official event account <a href="https://twitter.com/thisismetis">thisismetis</a> really went all out with branded summary tweets! You can find recordings of all the talks and there were many interesting titles. So we decided to spend 2 sessions and watched 4 full talks.</p>
+<ul>
+<li><a href="https://youtu.be/NGMFq5MQcOI">Navigating the Maze of the Data Science Job Hunt</a> by <a href="https://www.linkedin.com/in/markmeloon/">Mark Meloon</a>, Data Scientist, ServiceNow.</li>
+<li><a href="https://youtu.be/M_dc-XzApGA">How to Get a Foothold in the Field of Data Science</a> by <a href="https://www.linkedin.com/in/brohrer/">Brandon Rohrer</a>, Data Scientist, Facebook.</li>
+<li><a href="https://youtu.be/KI-1GA5Zotc">Data Visualization: How to Overcome Common Challenges</a> by <a href="https://www.linkedin.com/in/kate-strachnyi-data/">Kate Strachnyi</a>, Manager and Data Visualization Specialist, Deloitte.</li>
+<li><a href="https://youtu.be/nF315csYx3U">The Art of &amp; Science of Creating a Actionable Data Story</a> by <a href="https://www.linkedin.com/in/micoyuk/">Mico Yuk</a>, Chief Executive Officer, BI-Brainz Group | Author, Data Visualization for Dummies &amp; More.</li>
+</ul>
+</div>
+<div id="talks-summaries" class="section level3">
+<h3>Talks summaries</h3>
+<div id="mark-meloon-markmeloon" class="section level4">
+<h4>Mark Meloon <a href="https://twitter.com/MarkMeloon"><code>MarkMeloon</code></a></h4>
+<p>In the <a href="https://youtu.be/NGMFq5MQcOI">first talk</a>, by <a href="https://www.linkedin.com/in/markmeloon/">Mark Meloon</a>, we learned about the power of <a href="https://www.linkedin.com/">LinkedIn</a> for networking and finding your next job. He suggested posting regularly on LinkedIn as your feed will show up more on others’, allowing you to connect with more people. If you write something about content described by someone you especially admire or hope to work for, you are more likely to catch their attention. It’s best to not ask people directly for a job, but to contact them first to discuss their work or to ask for advice. He also suggested adding key data analysis techniques to your profile. He suggested that describing the techniques with specificity would be best, instead of using more vague terms.</p>
+</div>
+<div id="brandon-rohrer-_brohrer_" class="section level4">
+<h4>Brandon Rohrer <a href="https://twitter.com/_brohrer_"><code>_brohrer_</code></a></h4>
+<p>In the <a href="https://youtu.be/M_dc-XzApGA">second talk</a>, by <a href="https://www.linkedin.com/in/brohrer/">Brandon Rohrer</a>, we learned about the different data science careers that are possible.</p>
+<p>The major fields are:</p>
+<ul>
+<li>Data Analysis - statistics and interpretation</li>
+<li>Data Modeling - machine learning, prediction</li>
+<li>Data Engineering - automation, databases, programming</li>
+</ul>
+<p>The major roles/archetypes are:</p>
+<ul>
+<li>Generalist - decent at all three fields</li>
+<li>Detective - master of analysis</li>
+<li>Oracle - master of modeling</li>
+<li>Maker - master of engineering</li>
+<li>Unicorn - master of all!!!</li>
+</ul>
+<p>He ended by mentioning that job postings using the term “data science” often vary widely, and he recommends ignoring the posted job titles and de-emphasizing the specific tools listed, and instead focus on the <em>skills</em> that are being asked for to get a real sense of the job and how you would perform.</p>
+</div>
+<div id="kate-strachnyi-storybydata" class="section level4">
+<h4>Kate Strachnyi <a href="https://twitter.com/StorybyData"><code>StorybyData</code></a></h4>
+<p>In the <a href="https://youtu.be/KI-1GA5Zotc">third talk</a> by <a href="https://www.linkedin.com/in/kate-strachnyi-data/">Kate Strachnyi</a> we learned about how to overcome challenges in data visualization. She described data visualizations as “Information Maps” that should ideally be:</p>
+<ul>
+<li>Informative</li>
+<li>Efficient</li>
+<li>Appealing</li>
+</ul>
+<p>Common issues were:</p>
+<ul>
+<li>Wrong chart choice - some charts will be much more effective</li>
+<li>Improper use of color - use to tell a story in a useful way - not just to be decorative</li>
+<li>Information overload - don’t try to do too much at once - loses impact</li>
+<li>Clutter - leave out the nonessential</li>
+<li>Not speaking the same language - know your audience (jargon/lingo)</li>
+</ul>
+<p>She also noted that we should be careful about color schemes. She suggested that there are websites to check how your figures would appear to others with colorblindness.</p>
+<p>She mostly uses tableau in her work and suggested that it makes a nice free option for data visualization.</p>
+</div>
+<div id="mico-yuk-micoyuk" class="section level4">
+<h4>Mico Yuk <a href="https://twitter.com/micoyuk"><code>micoyuk</code></a></h4>
+<p>In the <a href="https://youtu.be/nF315csYx3U">fourth and last talk</a> by <a href="https://www.linkedin.com/in/micoyuk/">Mico Yuk</a> we learned about storyboards and remembering that our data analyses are always to try to tell story about the data. She pointed out that the human mind is wired visually, that we retain about 80% of what we see, 20% of what we read, and 10% of what we hear. She suggested that we create <a href="https://en.wikipedia.org/wiki/SMART_criteria">SMART goals</a> (she credits Peter Drucker) to make sure that our work is driven efficiently in the correct direction. She suggested that communicating our work in a SMART goal-based framework based would concisely and clearly communicate the purpose and results of work.</p>
+</div>
+</div>
+<div id="our-impressions" class="section level3">
+<h3>Our impressions</h3>
+<p>Given our diversity of impressions we thought it would be more useful to share our impressions. Without further ado, here they are.</p>
+<div id="p1" class="section level4">
+<h4>P1</h4>
+<p>I found <a href="https://www.linkedin.com/in/markmeloon/">Mark Meloon</a>’s talk very useful. I have actually started posting more regularly on my own LinkedIn account and it has indeed captured more attention from others. In fact, I have even received emails from companies interested in hiring someone with my expertise. <a href="https://www.linkedin.com/in/brohrer/">Brandon Rohrer</a> clarified some trends that I had noticed about data science. I identify with the “Detective” role and I see that while I may aspire at times (unsuccessfully) to be a “Generalist - or someday a Unicorn”, my experience as a Detective is very worthwhile as well. I love data visualization and I loved <a href="https://www.linkedin.com/in/kate-strachnyi-data/">Kate Strachnyi</a>’s talk. I found her tips to be very clear reminders for how to continue with my own visualizations. The talk by <a href="https://www.linkedin.com/in/micoyuk/">Mico Yuk</a> was a good reminder to keep overall goals in mind as you work and to regularly take a step back and assess if your work is really proceeding in the direction and at the rate that you planned.</p>
+</div>
+<div id="p2" class="section level4">
+<h4>P2</h4>
+<p><a href="https://www.linkedin.com/in/markmeloon/">Mark Meloon’s</a> talk emphasized the use of LinkedIn for networking and job hunting. He interviews job candidates for his company so his viewpoint was a direct reflection of someone who uses the website to find and/or assess job applicants. I liked that he gave both good and bad examples of actual profiles and messages he’s seen on LinkedIn. He also noted that, to get a foot in the door of a job posting, you don’t need to directly know the hiring manager, but reaching out to anyone you know in the company, even if it’s a second- or third-level connection (i.e. friend of a friend), is better than nothing, as long as you do it right. I do wish he had spoken about other social media platforms, such as Twitter, and how they compare to LinkedIn for networking.</p>
+<p>I found the breakdown of skills and job types by <a href="https://www.linkedin.com/in/brohrer/">Brandon Rohrer</a> to be really instructive. It made me reflect on my own interests and skills in a broken down way, and I think it will help to have this framework for both future job hunts and interviews. I particularly like that he emphasized it’s okay/normal to not be great at <em>everything</em> related to data science - it’s a broad field - and that people with a narrower set of expertise are still needed and valuable for specific jobs. His talk also gave me some ideas of skills I may be able to work on and add to my portfolio to round out my skill-set. I would recommend this talk to anyone in the data science or analysis fields that is looking for clarity or definition in their current job or career path!</p>
+</div>
+<div id="p3" class="section level4">
+<h4>P3</h4>
+<p><a href="https://www.linkedin.com/in/kate-strachnyi-data/">Kate Strachnyi</a>’s talk was a great reminder of the importance of keeping your audience in mind when presenting information and making sure that visualizations are not just accurate but also easily understood. Her list of common issues was a helpful summary of guidelines I’ve heard before, and I appreciated the examples she used. In particular, I think I often run into the challenge of “information overload” when I present informally to others – I need to remember that it’s not enough for the information to be there, it also needs to be arranged in way that lets people understand it quickly.</p>
+<p><a href="https://www.linkedin.com/in/micoyuk/">Mico Yuk</a>’s talk was probably more applicable to someone working in a corporate field rather than an academic one, but the main idea of framing data as a story and keeping the goal in mind was still relevant to me. Some of the suggestions, like asking the “right questions” of your user, could easily be reworked for research (even if the user is just be me). I haven’t worked with a storyboard before, but it would be interesting to see if that approach could also apply to planning out analyses for a research paper – the goal might be the question we’re asking, KPI the metrics we’re using to answer that question, trends the conclusions we can draw, and actions the next direction of analysis. The translation from business to academic research probably needs some tweaking, but I might try this approach on a future project to help with organization and keeping the bigger story in mind.</p>
+</div>
+<div id="p4" class="section level4">
+<h4>P4</h4>
+<p><a href="https://www.linkedin.com/in/markmeloon/">Mark Meloon</a>’s talk reminded me that many use <a href="https://www.linkedin.com/">LinkedIn</a> for networking which hasn’t been that common in my experience in academia. This is something I would need to keep in mind for advising students in the future that are either unsure of staying in academia or want to go to industry. I do brush up my profile once in a while, and parts of Mark’s advice applies also to CVs (writing them and sending them via email): basically, be genuine and respectful of others.</p>
+<p><a href="https://www.linkedin.com/in/brohrer/">Brandon Rohrer</a> verbalized distinctions in data science roles that I had either heard of before or had some intuition behind them, but hadn’t actually spent the time to see them as clearly defined as Brandon did. I was also quite curious of everyone’s reaction to his talk and how each of us labelled ourselves. For example, maybe <em>X</em> thought <em>Z</em> was a <em>unicorn</em>, but <em>Z</em> perceived themselves as a <em>beginner</em>. In my case, I think that it’s probably too ambitious to get to the unicorn level. I’m simply aiming to get to (or am at) a level where I can understand most of the terms and conversations, but then go back and research a bit more if I need to as preparation for a follow up meeting. I guess that I’m a generalist.</p>
+<p><a href="https://www.linkedin.com/in/kate-strachnyi-data/">Kate Strachnyi</a>’s key points are I guess topics that I’ve heard before and loosely follow. I think that her audience is different from mine as she seems to create visualizations that are used in many company presentations. I’m frequently under pressure to get a simple version of a plot done where we can see the trend in the data and only work on polishing a few selected plots that get highlighted in a research paper. Though I guess that I could/should spend a bit more time thinking about the plot design and colors before I make the next one. For that, I would like to learn more about the <code>paletteer</code> R package:</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">ICYMI, 🎨 With more palettes than a tweet could possibly contain…<br>&quot;paletteer: Collection of most color palettes in a single R 📦&quot; 👨‍🎨 <a href="https://twitter.com/Emil_Hvitfeldt?ref_src=twsrc%5Etfw">@Emil_Hvitfeldt</a> <a href="https://t.co/7kKSyohQN4">https://t.co/7kKSyohQN4</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/zibFhW03EU">pic.twitter.com/zibFhW03EU</a></p>&mdash; Mara Averick (@dataandme) <a href="https://twitter.com/dataandme/status/1021828886160654336?ref_src=twsrc%5Etfw">July 24, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p><a href="https://www.linkedin.com/in/micoyuk/">Mico Yuk</a> talked about SMART goals. Hmm… I don’t remember what that stood for, so I clearly would need to re-watch her talk. After skimming through it again I guess that I can only say that it was hard for me to relate to her talk because I haven’t been in a project that involved all planning steps that she talked about. While it wasn’t for me, it might be useful to you, so give it a try!</p>
+</div>
+</div>
+<div id="wrapping-up" class="section level3">
+<h3>Wrapping up</h3>
+<p>Thanks for getting this far. We are curious to hear what where your own impressions in these and other talks from the <a href="https://www.thisismetis.com/demystifying-data-science">Demystifying Data Sience 2018</a>: they have <a href="https://www.youtube.com/channel/UCpbU53RP134D9qy9GzKBAXA/videos">28 recorded talks</a> in total! We also hope that you enjoyed reading about our different perspectives.</p>
+</div>
+<div id="acknowledgements" class="section level3">
+<h3>Acknowledgements</h3>
+<p>We are grateful to everyone that tweeted about the conference and shared their materials online! We are also happy that <em>Metis</em> got interested in our summary blog post:</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We would love to see a copy of the blog upon completion. Send me a note at grace@thisismetis.com - thanks!</p>&mdash; Metis (@thisismetis) <a href="https://twitter.com/thisismetis/status/1022196313499295745?ref_src=twsrc%5Etfw">July 25, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>This blog post was made possible thanks to:</p>
+<ul>
+<li><em><a href="https://CRAN.R-project.org/package=blogdown">blogdown</a></em> <a id='cite-Xie_2017'></a>(<a href='https://github.com/rstudio/blogdown'>Xie, Hill, and Thomas, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=knitcitations">knitcitations</a></em> <a id='cite-Boettiger_2017'></a>(<a href='https://CRAN.R-project.org/package=knitcitations'>Boettiger, 2017</a>)</li>
+<li><em><a href="https://CRAN.R-project.org/package=sessioninfo">sessioninfo</a></em> <a id='cite-Csardi_2018'></a>(<a href='https://github.com/r-lib/sessioninfo#readme'>Csárdi, core, Wickham, Chang, et al., 2018</a>)</li>
+</ul>
+</div>
+<div id="references" class="section level3">
+<h3>References</h3>
+<p>
+<a id='bib-Boettiger_2017'></a><a href="#cite-Boettiger_2017">[1]</a><cite> C. Boettiger. <em>knitcitations: Citations for ‘Knitr’ Markdown Files</em>. R package version 1.0.8. 2017. URL: <a href="https://CRAN.R-project.org/package=knitcitations">https://CRAN.R-project.org/package=knitcitations</a>.</cite>
+</p>
+<p>
+<a id='bib-Csardi_2018'></a><a href="#cite-Csardi_2018">[2]</a><cite> G. Csárdi, R. core, H. Wickham, W. Chang, et al. <em>sessioninfo: R Session Information</em>. R package version 1.1.0.9000. 2018. URL: <a href="https://github.com/r-lib/sessioninfo#readme">https://github.com/r-lib/sessioninfo#readme</a>.</cite>
+</p>
+<p>
+<a id='bib-Xie_2017'></a><a href="#cite-Xie_2017">[3]</a><cite> Y. Xie, A. P. Hill and A. Thomas. <em>blogdown: Creating Websites with R Markdown</em>. ISBN 978-0815363729. Boca Raton, Florida: Chapman and Hall/CRC, 2017. URL: <a href="https://github.com/rstudio/blogdown">https://github.com/rstudio/blogdown</a>.</cite>
+</p>
+</div>
+<div id="reproducibility" class="section level3">
+<h3>Reproducibility</h3>
+<pre><code>## ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+##  setting  value                                      
+##  version  R version 3.5.1 Patched (2018-10-14 r75439)
+##  os       macOS High Sierra 10.13.6                  
+##  system   x86_64, darwin15.6.0                       
+##  ui       X11                                        
+##  language (EN)                                       
+##  collate  en_US.UTF-8                                
+##  ctype    en_US.UTF-8                                
+##  tz       America/New_York                           
+##  date     2018-10-24                                 
+## 
+## ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+##  package       * version    date       lib source                            
+##  assertthat      0.2.0      2017-04-11 [1] CRAN (R 3.5.0)                    
+##  backports       1.1.2      2017-12-13 [1] CRAN (R 3.5.0)                    
+##  bibtex          0.4.2      2017-06-30 [1] CRAN (R 3.5.0)                    
+##  BiocStyle     * 2.8.2      2018-05-30 [1] Bioconductor                      
+##  blogdown        0.8        2018-07-15 [1] CRAN (R 3.5.0)                    
+##  bookdown        0.7        2018-02-18 [1] CRAN (R 3.5.0)                    
+##  cli             1.0.1      2018-09-25 [1] CRAN (R 3.5.0)                    
+##  colorout      * 1.2-0      2018-05-03 [1] Github (jalvesaq/colorout@c42088d)
+##  crayon          1.3.4      2017-09-16 [1] CRAN (R 3.5.0)                    
+##  digest          0.6.18     2018-10-10 [1] CRAN (R 3.5.0)                    
+##  evaluate        0.12       2018-10-09 [1] CRAN (R 3.5.0)                    
+##  htmltools       0.3.6      2017-04-28 [1] CRAN (R 3.5.0)                    
+##  httr            1.3.1      2017-08-20 [1] CRAN (R 3.5.0)                    
+##  jsonlite        1.5        2017-06-01 [1] CRAN (R 3.5.0)                    
+##  knitcitations * 1.0.8      2017-07-04 [1] CRAN (R 3.5.0)                    
+##  knitr           1.20       2018-02-20 [1] CRAN (R 3.5.0)                    
+##  lubridate       1.7.4      2018-04-11 [1] CRAN (R 3.5.0)                    
+##  magrittr        1.5        2014-11-22 [1] CRAN (R 3.5.0)                    
+##  plyr            1.8.4      2016-06-08 [1] CRAN (R 3.5.0)                    
+##  R6              2.3.0      2018-10-04 [1] CRAN (R 3.5.0)                    
+##  Rcpp            0.12.19    2018-10-01 [1] CRAN (R 3.5.1)                    
+##  RefManageR      1.2.0      2018-04-25 [1] CRAN (R 3.5.0)                    
+##  rmarkdown       1.10       2018-06-11 [1] CRAN (R 3.5.0)                    
+##  rprojroot       1.3-2      2018-01-03 [1] CRAN (R 3.5.0)                    
+##  sessioninfo   * 1.1.0.9000 2018-10-02 [1] Github (r-lib/sessioninfo@4f91fad)
+##  stringi         1.2.4      2018-07-20 [1] CRAN (R 3.5.0)                    
+##  stringr         1.3.1      2018-05-10 [1] CRAN (R 3.5.0)                    
+##  withr           2.1.2      2018-03-15 [1] CRAN (R 3.5.0)                    
+##  xfun            0.3        2018-07-06 [1] CRAN (R 3.5.0)                    
+##  xml2            1.2.0      2018-01-24 [1] CRAN (R 3.5.0)                    
+##  yaml            2.2.0      2018-07-25 [1] CRAN (R 3.5.0)                    
+## 
+## [1] /Library/Frameworks/R.framework/Versions/3.5/Resources/library</code></pre>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>This conference covered a large spectrum of data science topics, hence the picture for the post!<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/conference/">conference</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hue3d688a4e74633c5efe0e3936ac23c1e_53872_250x250_fill_lanczos_center_2.png" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/"></a></h5>
+      <h6 class="card-subtitle">Continuous rstats learning</h6>
+      <p class="card-text">We are researchers at the @LieberInstitute, blogging about R packages, how-to guides &amp; occasionally our own open-source software (opinions r our own) #rstats</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a href="mailto:lcolladotor@gmail.com" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="http://LieberInstitute.github.io/rstatsclub/" target="_blank" rel="noopener">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://twitter.com/LIBDrstats" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a href="https://github.com/LieberInstitute" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+      <div class="article-widget">
+        <div class="hr-light"></div>
+        <h3>Related</h3>
+        <ul>
+          
+          <li><a href="/postocs/libd-rstats-club-remote-user-2018-notes/">LIBD rstats club remote useR!2018 notes</a></li>
+          
+        </ul>
+      </div>
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.0bf1e3db85cbb232372ed31d6f10dc70.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+  </p>
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
