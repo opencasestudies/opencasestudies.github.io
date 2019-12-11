@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vizualization | OCS</title>
+    <link>http://opencasestudies.github.io/tags/vizualization/</link>
+      <atom:link href="http://opencasestudies.github.io/tags/vizualization/index.xml" rel="self" type="application/rss+xml" />
+    <description>Vizualization</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://opencasestudies.github.io/img/logo.jpg</url>
+      <title>Vizualization</title>
+      <link>http://opencasestudies.github.io/tags/vizualization/</link>
+    </image>
+    
+    <item>
+      <title>Rural and Urban Obesity</title>
+      <link>http://opencasestudies.github.io/notusing_content_project/ruralandurbanobesity/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>http://opencasestudies.github.io/notusing_content_project/ruralandurbanobesity/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
