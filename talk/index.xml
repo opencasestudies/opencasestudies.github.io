@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks | OCS</title>
-    <link>http://opencasestudies.github.io/talk/</link>
-      <atom:link href="http://opencasestudies.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
+    <link>/talk/</link>
+      <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
-      <url>http://opencasestudies.github.io/img/icon.png</url>
+      <url>/img/icon.png</url>
       <title>Recent &amp; Upcoming Talks</title>
-      <link>http://opencasestudies.github.io/talk/</link>
+      <link>/talk/</link>
     </image>
     
   </channel>
