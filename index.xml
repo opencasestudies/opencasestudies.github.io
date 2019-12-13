@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OCS</title>
-    <link>http://opencasestudies.github.io/</link>
-      <atom:link href="http://opencasestudies.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <link>/</link>
+      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>OCS</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 14 Feb 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://opencasestudies.github.io/img/icon-32.png</url>
+      <url>/img/icon.png</url>
       <title>OCS</title>
-      <link>http://opencasestudies.github.io/</link>
+      <link>/</link>
     </image>
     
     <item>
       <title>OCS</title>
-      <link>http://opencasestudies.github.io/notusing_content_home/dttable/</link>
+      <link>/notusing_content_home/dttable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_home/dttable/</guid>
+      <guid>/notusing_content_home/dttable/</guid>
       <description>
-&lt;script src=&#34;http://opencasestudies.github.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://opencasestudies.github.io/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://opencasestudies.github.io/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;iframe src=&#34;https://liuyanguu.shinyapps.io/bcl_app/&#34; width=&#34;10000&#34; height=&#34;800&amp;quot;&#34;&gt;
@@ -33,13 +33,13 @@
     
     <item>
       <title>ocs</title>
-      <link>http://opencasestudies.github.io/notusing_content_home/shiny_search/</link>
+      <link>/notusing_content_home/shiny_search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_home/shiny_search/</guid>
+      <guid>/notusing_content_home/shiny_search/</guid>
       <description>
-&lt;script src=&#34;http://opencasestudies.github.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://opencasestudies.github.io/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://opencasestudies.github.io/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;&amp;lt;iframe src=“&lt;a href=&#34;https://liuyanguu.shinyapps.io/bcl_app/&#34; class=&#34;uri&#34;&gt;https://liuyanguu.shinyapps.io/bcl_app/&lt;/a&gt;” scrolling = “no” frameboarder = “no” out.width = “100%” width=10000 height=800&amp;quot;&amp;gt;&lt;/iframe&gt;&lt;/p&gt;
@@ -51,9 +51,9 @@
     
     <item>
       <title>Open Case Studies Search</title>
-      <link>http://opencasestudies.github.io/dt/</link>
+      <link>/dt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/dt/</guid>
+      <guid>/dt/</guid>
       <description>&lt;pre&gt;&lt;code class=&#34;language-r,&#34;&gt;#remotes::install_github(&#39;rstudio/DT&#39;)
 library(DT)
 datatable(iris)
@@ -64,17 +64,17 @@ datatable(head(iris), class = &#39;cell-border stripe&#39;)
     
     <item>
       <title>Data Science Search</title>
-      <link>http://opencasestudies.github.io/notusing_content_project_searches/projects/</link>
+      <link>/notusing_content_project_searches/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_project_searches/projects/</guid>
+      <guid>/notusing_content_project_searches/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Statistical Methods Search</title>
-      <link>http://opencasestudies.github.io/notusing_content_project_searches/statsprojects/</link>
+      <link>/notusing_content_project_searches/statsprojects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_project_searches/statsprojects/</guid>
+      <guid>/notusing_content_project_searches/statsprojects/</guid>
       <description>&lt;p&gt;&lt;script&gt;
   (function() {
     var cx = &amp;lsquo;006346710622437628329:tdbwt2rsqrs&amp;rsquo;;
@@ -86,15 +86,15 @@ datatable(head(iris), class = &#39;cell-border stripe&#39;)
     s.parentNode.insertBefore(gcse, s);
   })();
 &lt;/script&gt;
-&lt;a href=&#34;gcse:search&#34; target=&#34;_blank&#34;&gt;gcse:search&lt;/a&gt;&lt;a href=&#34;http://opencasestudies.github.io/gcse:search&#34;&gt;/gcse:search&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;gcse:search&#34; target=&#34;_blank&#34;&gt;gcse:search&lt;/a&gt;&lt;a href=&#34;/gcse:search&#34;&gt;/gcse:search&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>http://opencasestudies.github.io/modcontact/</link>
+      <link>/modcontact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/modcontact/</guid>
+      <guid>/modcontact/</guid>
       <description>
 
 &lt;h2 id=&#34;please-connect&#34;&gt;Please connect!&lt;/h2&gt;
@@ -116,9 +116,9 @@ please contact us!
     
     <item>
       <title>Open Case Studies now have DOIs for citations!</title>
-      <link>http://opencasestudies.github.io/post/case-studies-now-have-doi/</link>
+      <link>/post/case-studies-now-have-doi/</link>
       <pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/post/case-studies-now-have-doi/</guid>
+      <guid>/post/case-studies-now-have-doi/</guid>
       <description>&lt;p&gt;The Open Case Studies team is excited to announce
 that case studies now have digital object identifier
 (DOIs) associated with each case study that can be used
@@ -133,81 +133,81 @@ classroom, we ask that you use the DOI to reference it.&lt;/p&gt;
     
     <item>
       <title>Firearm Legislation</title>
-      <link>http://opencasestudies.github.io/project/firearmlegislation/</link>
+      <link>/project/firearmlegislation/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/project/firearmlegislation/</guid>
+      <guid>/project/firearmlegislation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Firearm Legislation copy</title>
-      <link>http://opencasestudies.github.io/notusing_content_project/firearmlegislation-copy/</link>
+      <link>/notusing_content_project/firearmlegislation-copy/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_project/firearmlegislation-copy/</guid>
+      <guid>/notusing_content_project/firearmlegislation-copy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Firearm Legislation copy 2</title>
-      <link>http://opencasestudies.github.io/notusing_content_project/firearmlegislation-copy-2/</link>
+      <link>/notusing_content_project/firearmlegislation-copy-2/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_project/firearmlegislation-copy-2/</guid>
+      <guid>/notusing_content_project/firearmlegislation-copy-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Firearm Legislation copy3</title>
-      <link>http://opencasestudies.github.io/notusing_content_project/firearmlegislation-copy-3/</link>
+      <link>/notusing_content_project/firearmlegislation-copy-3/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_project/firearmlegislation-copy-3/</guid>
+      <guid>/notusing_content_project/firearmlegislation-copy-3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Health Expenditure</title>
-      <link>http://opencasestudies.github.io/project/healthexpenditures/</link>
+      <link>/project/healthexpenditures/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/project/healthexpenditures/</guid>
+      <guid>/project/healthexpenditures/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Health Expenditure copy</title>
-      <link>http://opencasestudies.github.io/notusing_content_project/healthexpenditures-copy/</link>
+      <link>/notusing_content_project/healthexpenditures-copy/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_project/healthexpenditures-copy/</guid>
+      <guid>/notusing_content_project/healthexpenditures-copy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Health Expenditure copy 2</title>
-      <link>http://opencasestudies.github.io/notusing_content_project/healthexpenditures-copy-2/</link>
+      <link>/notusing_content_project/healthexpenditures-copy-2/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_project/healthexpenditures-copy-2/</guid>
+      <guid>/notusing_content_project/healthexpenditures-copy-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Health Expenditure copy 3</title>
-      <link>http://opencasestudies.github.io/notusing_content_project/healthexpenditures-copy-3/</link>
+      <link>/notusing_content_project/healthexpenditures-copy-3/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_project/healthexpenditures-copy-3/</guid>
+      <guid>/notusing_content_project/healthexpenditures-copy-3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hypertension Diet</title>
-      <link>http://opencasestudies.github.io/notusing_content_project/hypertensiondiet/</link>
+      <link>/notusing_content_project/hypertensiondiet/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_project/hypertensiondiet/</guid>
+      <guid>/notusing_content_project/hypertensiondiet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rural and Urban Obesity</title>
-      <link>http://opencasestudies.github.io/notusing_content_project/ruralandurbanobesity/</link>
+      <link>/notusing_content_project/ruralandurbanobesity/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_project/ruralandurbanobesity/</guid>
+      <guid>/notusing_content_project/ruralandurbanobesity/</guid>
       <description></description>
     </item>
     
