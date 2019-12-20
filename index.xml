@@ -5,7 +5,7 @@
     <link>http://opencasestudies.github.io/</link>
       <atom:link href="http://opencasestudies.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>OCS</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 14 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://opencasestudies.github.io/img/icon.png</url>
       <title>OCS</title>
@@ -54,12 +54,11 @@
       <link>http://opencasestudies.github.io/dt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://opencasestudies.github.io/dt/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-r,&#34;&gt;#remotes::install_github(&#39;rstudio/DT&#39;)
+      <description>&lt;pre&gt;&lt;code class=&#34;language-{r,&#34; data-lang=&#34;{r,&#34;&gt;#remotes::install_github(&#39;rstudio/DT&#39;)
 library(DT)
 datatable(iris)
 datatable(head(iris), class = &#39;cell-border stripe&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-</description>
+&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     
     <item>
@@ -75,18 +74,9 @@ datatable(head(iris), class = &#39;cell-border stripe&#39;)
       <link>http://opencasestudies.github.io/notusing_content_project_searches/statsprojects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://opencasestudies.github.io/notusing_content_project_searches/statsprojects/</guid>
-      <description>&lt;p&gt;&lt;script&gt;
-  (function() {
-    var cx = &amp;lsquo;006346710622437628329:tdbwt2rsqrs&amp;rsquo;;
-    var gcse = document.createElement(&amp;lsquo;script&amp;rsquo;);
-    gcse.type = &amp;lsquo;text/javascript&amp;rsquo;;
-    gcse.async = true;
-    gcse.src = &amp;lsquo;&lt;a href=&#34;https://cse.google.com/cse.js?cx=&#39;&#34; target=&#34;_blank&#34;&gt;https://cse.google.com/cse.js?cx=&#39;&lt;/a&gt; + cx;
-    var s = document.getElementsByTagName(&amp;lsquo;script&amp;rsquo;)[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-&lt;/script&gt;
-&lt;a href=&#34;gcse:search&#34; target=&#34;_blank&#34;&gt;gcse:search&lt;/a&gt;&lt;a href=&#34;http://opencasestudies.github.io/gcse:search&#34;&gt;/gcse:search&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;a href=&#34;gcse:search&#34;&gt;gcse:search&lt;/a&gt;&amp;lt;/gcse:search&amp;gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -95,22 +85,25 @@ datatable(head(iris), class = &#39;cell-border stripe&#39;)
       <link>http://opencasestudies.github.io/modcontact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://opencasestudies.github.io/modcontact/</guid>
-      <description>
-
-&lt;h2 id=&#34;please-connect&#34;&gt;Please connect!&lt;/h2&gt;
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    If you would like to contribute a case study to the repository,
-or have suggestions on data sets to use to build a case study around,
-please contact us!
-  &lt;/div&gt;
-&lt;/div&gt;
-
+      <description>&lt;h2 id=&#34;please-connect&#34;&gt;Please connect!&lt;/h2&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;[[social]]
-  icon = &amp;ldquo;envelope&amp;rdquo;
-  icon_pack = &amp;ldquo;fas&amp;rdquo;
-  link = &amp;ldquo;mailto:shicks19@jhu.edu&amp;rdquo;  # For a direct email link, use &amp;ldquo;mailto:test@example.org&amp;rdquo;&lt;/p&gt;
+icon = &amp;ldquo;envelope&amp;rdquo;
+icon_pack = &amp;ldquo;fas&amp;rdquo;
+link = &amp;ldquo;mailto:shicks19@jhu.edu&amp;rdquo;  # For a direct email link, use &amp;ldquo;mailto:test@example.org&amp;rdquo;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Welcome Carrie Wright to OCS Team!</title>
+      <link>http://opencasestudies.github.io/post/welcome-carrie-wright/</link>
+      <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>http://opencasestudies.github.io/post/welcome-carrie-wright/</guid>
+      <description>&lt;p&gt;In September 2019, we welcomed &lt;a href=&#34;https://opencasestudies.github.io/authors/cwright/&#34;&gt;Carrie Wright&lt;/a&gt; to the OCS Team as a Research Associate faculty in the &lt;a href=&#34;https://jhudatascience.org&#34;&gt;Johns Hopkins Data Science Lab&lt;/a&gt; working on building Open Case Studies.
+She completed her postdoctoral fellowship at the Lieber Institute for Brain Development where she was a co-founder of the &lt;a href=&#34;http://research.libd.org/rstatsclub/&#34;&gt;LIBD rstats club&lt;/a&gt;.
+We are all very excited to have her join the team and leverage her expertise in data analysis to building open case studies.&lt;/p&gt;
+&lt;p&gt;In just the last few months, she has revamped the website and is taking the lead on building 10 case studies focused on public health challenges funded by &lt;a href=&#34;https://www.bloomberg.org&#34;&gt;Bloomberg Philanthropies&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Stay tuned over the next few months as we add new case studies!&lt;/p&gt;
 </description>
     </item>
     
@@ -124,9 +117,7 @@ that case studies now have digital object identifier
 (DOIs) associated with each case study that can be used
 as a citation. If you use one of the case studies in your
 classroom, we ask that you use the DOI to reference it.&lt;/p&gt;
-
 &lt;p&gt;Thanks!&lt;/p&gt;
-
 &lt;p&gt;The OCS Team&lt;/p&gt;
 </description>
     </item>
