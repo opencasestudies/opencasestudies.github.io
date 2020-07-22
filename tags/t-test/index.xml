@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>t test | OCS</title>
-    <link>http://opencasestudies.github.io/tags/t-test/</link>
-      <atom:link href="http://opencasestudies.github.io/tags/t-test/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/t-test/</link>
+      <atom:link href="/tags/t-test/index.xml" rel="self" type="application/rss+xml" />
     <description>t test</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://opencasestudies.github.io/img/icon.png</url>
+      <url>/img/icon.png</url>
       <title>t test</title>
-      <link>http://opencasestudies.github.io/tags/t-test/</link>
+      <link>/tags/t-test/</link>
     </image>
     
     <item>
       <title>Rural and Urban Obesity</title>
-      <link>http://opencasestudies.github.io/notusing_content_project/ruralandurbanobesity/</link>
+      <link>/notusing_content_project/ruralandurbanobesity/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_project/ruralandurbanobesity/</guid>
+      <guid>/notusing_content_project/ruralandurbanobesity/</guid>
       <description></description>
     </item>
     

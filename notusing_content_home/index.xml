@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notusing_content_homes | OCS</title>
-    <link>http://opencasestudies.github.io/notusing_content_home/</link>
-      <atom:link href="http://opencasestudies.github.io/notusing_content_home/index.xml" rel="self" type="application/rss+xml" />
+    <link>/notusing_content_home/</link>
+      <atom:link href="/notusing_content_home/index.xml" rel="self" type="application/rss+xml" />
     <description>Notusing_content_homes</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
-      <url>http://opencasestudies.github.io/img/icon.png</url>
+      <url>/img/icon.png</url>
       <title>Notusing_content_homes</title>
-      <link>http://opencasestudies.github.io/notusing_content_home/</link>
+      <link>/notusing_content_home/</link>
     </image>
     
     <item>
       <title>OCS</title>
-      <link>http://opencasestudies.github.io/notusing_content_home/dttable/</link>
+      <link>/notusing_content_home/dttable/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_home/dttable/</guid>
+      <guid>/notusing_content_home/dttable/</guid>
       <description>
-&lt;script src=&#34;http://opencasestudies.github.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://opencasestudies.github.io/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://opencasestudies.github.io/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;iframe src=&#34;https://liuyanguu.shinyapps.io/bcl_app/&#34; width=&#34;10000&#34; height=&#34;800&amp;quot;&#34;&gt;
@@ -33,13 +33,13 @@
     
     <item>
       <title>ocs</title>
-      <link>http://opencasestudies.github.io/notusing_content_home/shiny_search/</link>
+      <link>/notusing_content_home/shiny_search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_home/shiny_search/</guid>
+      <guid>/notusing_content_home/shiny_search/</guid>
       <description>
-&lt;script src=&#34;http://opencasestudies.github.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://opencasestudies.github.io/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;http://opencasestudies.github.io/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/pymjs/pym.v1.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/widgetframe-binding/widgetframe.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;&amp;lt;iframe src=“&lt;a href=&#34;https://liuyanguu.shinyapps.io/bcl_app/&#34; class=&#34;uri&#34;&gt;https://liuyanguu.shinyapps.io/bcl_app/&lt;/a&gt;” scrolling = “no” frameboarder = “no” out.width = “100%” width=10000 height=800&amp;quot;&amp;gt;&lt;/iframe&gt;&lt;/p&gt;
