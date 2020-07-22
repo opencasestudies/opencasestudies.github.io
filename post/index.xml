@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts | OCS</title>
-    <link>/post/</link>
-      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://opencasestudies.github.io/post/</link>
+      <atom:link href="http://opencasestudies.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon.png</url>
+      <url>http://opencasestudies.github.io/img/icon.png</url>
       <title>Posts</title>
-      <link>/post/</link>
+      <link>http://opencasestudies.github.io/post/</link>
     </image>
     
     <item>
       <title>Welcome Carrie Wright to OCS Team!</title>
-      <link>/post/welcome-carrie-wright/</link>
+      <link>http://opencasestudies.github.io/post/welcome-carrie-wright/</link>
       <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/post/welcome-carrie-wright/</guid>
+      <guid>http://opencasestudies.github.io/post/welcome-carrie-wright/</guid>
       <description>&lt;p&gt;In September 2019, we welcomed &lt;a href=&#34;https://opencasestudies.github.io/authors/cwright/&#34; target=&#34;_blank&#34;&gt;Carrie Wright&lt;/a&gt; to the OCS Team as a Research Associate faculty in the &lt;a href=&#34;https://jhudatascience.org&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Data Science Lab&lt;/a&gt; working on building Open Case Studies.
 She completed her postdoctoral fellowship at the Lieber Institute for Brain Development where she was a co-founder of the &lt;a href=&#34;http://research.libd.org/rstatsclub/&#34; target=&#34;_blank&#34;&gt;LIBD rstats club&lt;/a&gt;.
 We are all very excited to have her join the team and leverage her expertise in data analysis to building open case studies.&lt;/p&gt;
@@ -29,9 +29,9 @@ We are all very excited to have her join the team and leverage her expertise in 
     
     <item>
       <title>Open Case Studies now have DOIs for citations!</title>
-      <link>/post/case-studies-now-have-doi/</link>
+      <link>http://opencasestudies.github.io/post/case-studies-now-have-doi/</link>
       <pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/post/case-studies-now-have-doi/</guid>
+      <guid>http://opencasestudies.github.io/post/case-studies-now-have-doi/</guid>
       <description>&lt;p&gt;The Open Case Studies team is excited to announce
 that case studies now have digital object identifier
 (DOIs) associated with each case study that can be used

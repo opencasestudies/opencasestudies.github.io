@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories | OCS</title>
-    <link>/categories/</link>
-      <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://opencasestudies.github.io/categories/</link>
+      <atom:link href="http://opencasestudies.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Dec 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon.png</url>
+      <url>http://opencasestudies.github.io/img/icon.png</url>
       <title>Categories</title>
-      <link>/categories/</link>
+      <link>http://opencasestudies.github.io/categories/</link>
     </image>
     
     <item>
       <title>blog</title>
-      <link>/categories/blog/</link>
+      <link>http://opencasestudies.github.io/categories/blog/</link>
       <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/categories/blog/</guid>
+      <guid>http://opencasestudies.github.io/categories/blog/</guid>
       <description></description>
     </item>
     

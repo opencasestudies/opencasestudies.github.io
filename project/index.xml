@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects | OCS</title>
-    <link>/project/</link>
-      <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://opencasestudies.github.io/project/</link>
+      <atom:link href="http://opencasestudies.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon.png</url>
+      <url>http://opencasestudies.github.io/img/icon.png</url>
       <title>Projects</title>
-      <link>/project/</link>
+      <link>http://opencasestudies.github.io/project/</link>
     </image>
     
     <item>
       <title>Firearm Legislation</title>
-      <link>/project/firearmlegislation/</link>
+      <link>http://opencasestudies.github.io/project/firearmlegislation/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/firearmlegislation/</guid>
+      <guid>http://opencasestudies.github.io/project/firearmlegislation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Health Expenditure</title>
-      <link>/project/healthexpenditures/</link>
+      <link>http://opencasestudies.github.io/project/healthexpenditures/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/healthexpenditures/</guid>
+      <guid>http://opencasestudies.github.io/project/healthexpenditures/</guid>
       <description></description>
     </item>
     

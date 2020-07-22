@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OCS</title>
-    <link>/authors/admin/</link>
-      <atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://opencasestudies.github.io/authors/admin/</link>
+      <atom:link href="http://opencasestudies.github.io/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>OCS</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
-      <url>/img/icon.png</url>
+      <url>http://opencasestudies.github.io/img/icon.png</url>
       <title>OCS</title>
-      <link>/authors/admin/</link>
+      <link>http://opencasestudies.github.io/authors/admin/</link>
     </image>
     
   </channel>
