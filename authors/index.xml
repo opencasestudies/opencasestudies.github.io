@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors | OCS</title>
-    <link>/authors/</link>
-      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://opencasestudies.github.io/authors/</link>
+      <atom:link href="http://opencasestudies.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
-      <url>/img/icon.png</url>
+      <url>http://opencasestudies.github.io/img/icon.png</url>
       <title>Authors</title>
-      <link>/authors/</link>
+      <link>http://opencasestudies.github.io/authors/</link>
     </image>
     
     <item>
       <title></title>
-      <link>/authors/shicks/</link>
+      <link>http://opencasestudies.github.io/authors/shicks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/shicks/</guid>
+      <guid>http://opencasestudies.github.io/authors/shicks/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.stephaniehicks.com/&#34; target=&#34;_blank&#34;&gt;Stephanie&lt;/a&gt; is an Assistant Professor in the &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/index.html&#34; target=&#34;_blank&#34;&gt;Biostatistics Department&lt;/a&gt;
 at the &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;. She is also a faculty member in the
 &lt;a href=&#34;https://jhudatascience.org&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Data Science Lab&lt;/a&gt; and
@@ -27,9 +27,9 @@ She is also a co-host of &lt;a href=&#34;https://twitter.com/CorrespondAuth&#34;
     
     <item>
       <title></title>
-      <link>/authors/ljager/</link>
+      <link>http://opencasestudies.github.io/authors/ljager/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/ljager/</guid>
+      <guid>http://opencasestudies.github.io/authors/ljager/</guid>
       <description>&lt;p&gt;Leah is an Assistant Scientist in the &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/index.html&#34; target=&#34;_blank&#34;&gt;Biostatistics Department&lt;/a&gt;
 at &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;
 where she teaches biostatistics to undergraduate and masters students
@@ -41,9 +41,9 @@ of being able to teach them more effectively.&lt;/p&gt;
     
     <item>
       <title></title>
-      <link>/authors/mtaub/</link>
+      <link>http://opencasestudies.github.io/authors/mtaub/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/mtaub/</guid>
+      <guid>http://opencasestudies.github.io/authors/mtaub/</guid>
       <description>&lt;p&gt;Margaret is an Assistant Scientist in the &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/index.html&#34; target=&#34;_blank&#34;&gt;Biostatistics Department&lt;/a&gt;
 at &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -51,9 +51,9 @@ at &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns H
     
     <item>
       <title></title>
-      <link>/authors/admin/</link>
+      <link>http://opencasestudies.github.io/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/admin/</guid>
+      <guid>http://opencasestudies.github.io/authors/admin/</guid>
       <description>
 
 &lt;h2 id=&#34;the-ocs-project&#34;&gt;The OCS project&lt;/h2&gt;
@@ -82,18 +82,18 @@ at &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns H
     
     <item>
       <title></title>
-      <link>/authors/astephens/</link>
+      <link>http://opencasestudies.github.io/authors/astephens/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/astephens/</guid>
+      <guid>http://opencasestudies.github.io/authors/astephens/</guid>
       <description>&lt;p&gt;Mathematician/Programmer at &lt;a href=&#34;https://www.jhuapl.edu/&#34; target=&#34;_blank&#34;&gt;The Johns Hopkins University Applied Physics Laboratory&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title></title>
-      <link>/authors/cwright/</link>
+      <link>http://opencasestudies.github.io/authors/cwright/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/cwright/</guid>
+      <guid>http://opencasestudies.github.io/authors/cwright/</guid>
       <description>&lt;p&gt;Carrie is a Research Associate in the &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/index.html&#34; target=&#34;_blank&#34;&gt;Biostatistics Department&lt;/a&gt;
 at the &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;
 where she creates data science education material for the open case study project and for the &lt;a href=&#34;https://jhudatascience.org/&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Data Science Lab&lt;/a&gt;.She is also a co-founder of the &lt;a href=&#34;http://research.libd.org/rstatsclub/#.XKVLJetKi50&#34; target=&#34;_blank&#34;&gt;LIBD rstats club&lt;/a&gt;.&lt;/p&gt;
@@ -102,18 +102,18 @@ where she creates data science education material for the open case study projec
     
     <item>
       <title></title>
-      <link>/authors/hzhang/</link>
+      <link>http://opencasestudies.github.io/authors/hzhang/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/hzhang/</guid>
+      <guid>http://opencasestudies.github.io/authors/hzhang/</guid>
       <description>&lt;p&gt;Graduate student at &lt;a href=&#34;https://med.nyu.edu&#34; target=&#34;_blank&#34;&gt;NYU Grossman School of Medicine, Sackler Institute of Graduate Biomedical Sciences&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title></title>
-      <link>/authors/jmuschelli/</link>
+      <link>http://opencasestudies.github.io/authors/jmuschelli/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/jmuschelli/</guid>
+      <guid>http://opencasestudies.github.io/authors/jmuschelli/</guid>
       <description>&lt;p&gt;John is an Assistant Scientist in the &lt;a href=&#34;https://www.jhsph.edu/departments/biostatistics/index.html&#34; target=&#34;_blank&#34;&gt;Biostatistics Department&lt;/a&gt;
 at the &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;. He is also a faculty member in the
 &lt;a href=&#34;https://jhudatascience.org&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Data Science Lab&lt;/a&gt;. He writes a blog called &lt;a href=&#34;https://hopstat.wordpress.com/&#34; target=&#34;_blank&#34;&gt;A HopStat and Jump Away&lt;/a&gt;.&lt;/p&gt;
@@ -122,27 +122,27 @@ at the &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Joh
     
     <item>
       <title></title>
-      <link>/authors/kwang/</link>
+      <link>http://opencasestudies.github.io/authors/kwang/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/kwang/</guid>
+      <guid>http://opencasestudies.github.io/authors/kwang/</guid>
       <description>&lt;p&gt;Kexin (Sheena) Wang. Sheena obtained her Master of Science in Engineering degree in &lt;a href=&#34;https://engineering.jhu.edu/ams/&#34; target=&#34;_blank&#34;&gt;Applied Mathematics and Statistics&lt;/a&gt; at &lt;a href=&#34;https://www.jhu.edu/&#34; target=&#34;_blank&#34;&gt;Johns Hopkins University&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title></title>
-      <link>/authors/mbreshock/</link>
+      <link>http://opencasestudies.github.io/authors/mbreshock/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/mbreshock/</guid>
+      <guid>http://opencasestudies.github.io/authors/mbreshock/</guid>
       <description>&lt;p&gt;Michael is working towards an MSE degree in Biomedical Engineering with a focus in Neuroengineering at the &lt;a href=&#34;https://engineering.jhu.edu/&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Whiting School of Engineering&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title></title>
-      <link>/authors/montiveros/</link>
+      <link>http://opencasestudies.github.io/authors/montiveros/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/montiveros/</guid>
+      <guid>http://opencasestudies.github.io/authors/montiveros/</guid>
       <description>&lt;p&gt;Michael obtained a master&amp;rsquo;s degree in &lt;a href=&#34;https://www.jhsph.edu/departments/epidemiology/index.html&#34; target=&#34;_blank&#34;&gt;Epidemiology&lt;/a&gt; at the &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;.
 He is interested in spatial science and its applications in public health.&lt;/p&gt;
 
@@ -152,17 +152,17 @@ He is interested in spatial science and its applications in public health.&lt;/p
     
     <item>
       <title></title>
-      <link>/authors/pkuo/</link>
+      <link>http://opencasestudies.github.io/authors/pkuo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/pkuo/</guid>
+      <guid>http://opencasestudies.github.io/authors/pkuo/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>/authors/qmeng/</link>
+      <link>http://opencasestudies.github.io/authors/qmeng/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/authors/qmeng/</guid>
+      <guid>http://opencasestudies.github.io/authors/qmeng/</guid>
       <description>&lt;p&gt;Qier Meng is working towards an ScM degree in Biostatistics at the &lt;a href=&#34;https://www.jhsph.edu&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Bloomberg School of Public Health&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>

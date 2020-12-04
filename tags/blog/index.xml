@@ -2,21 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blog | OCS</title>
-    <link>/tags/blog/</link>
-      <atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://opencasestudies.github.io/tags/blog/</link>
+      <atom:link href="http://opencasestudies.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>blog</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 16 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/img/icon.png</url>
+      <url>http://opencasestudies.github.io/img/icon.png</url>
       <title>blog</title>
-      <link>/tags/blog/</link>
+      <link>http://opencasestudies.github.io/tags/blog/</link>
     </image>
     
     <item>
+      <title>OCS to be featured at the Bloomberg American Health Summit 2020!</title>
+      <link>http://opencasestudies.github.io/post/ocs-featured-at-bloomberg-american-health-summit/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://opencasestudies.github.io/post/ocs-featured-at-bloomberg-american-health-summit/</guid>
+      <description>&lt;p&gt;We are very excited to announce that a series of our case studies funded by &lt;a href=&#34;https://www.bloomberg.org/&#34; target=&#34;_blank&#34;&gt;Bloomberg Philanthropies&lt;/a&gt; will be showcased at the Bloomberg American Health Summit 2020 (December 9th 2020)!&lt;/p&gt;
+
+&lt;p&gt;This project was selected as a High-Impact Project in 2019-2020 by the Bloomberg American Health Initiative.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Welcome Qier Meng and Michael Breshock to OCS Team!</title>
-      <link>/post/welcome-qier-meng-and-michael-breshock/</link>
+      <link>http://opencasestudies.github.io/post/welcome-qier-meng-and-michael-breshock/</link>
       <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>/post/welcome-qier-meng-and-michael-breshock/</guid>
+      <guid>http://opencasestudies.github.io/post/welcome-qier-meng-and-michael-breshock/</guid>
       <description>&lt;p&gt;Welcome &lt;a href=&#34;https://opencasestudies.github.io/authors/qmeng/&#34; target=&#34;_blank&#34;&gt;Qier Meng&lt;/a&gt; and &lt;a href=&#34;https://opencasestudies.github.io/authors/mbreshock/&#34; target=&#34;_blank&#34;&gt;Michael Breshock&lt;/a&gt; to the OCS Team!&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://opencasestudies.github.io/authors/qmeng/&#34; target=&#34;_blank&#34;&gt;Qier&lt;/a&gt; and &lt;a href=&#34;https://opencasestudies.github.io/authors/mbreshock/&#34; target=&#34;_blank&#34;&gt;Michael&lt;/a&gt; have recently joined our team as Research Assistants to assist with making our case studies interactive and more accessible!&lt;/p&gt;
@@ -29,18 +40,18 @@
     
     <item>
       <title>Looking for a Student to Join the OCS Team!</title>
-      <link>/post/recruiting-student/</link>
+      <link>http://opencasestudies.github.io/post/recruiting-student/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/post/recruiting-student/</guid>
+      <guid>http://opencasestudies.github.io/post/recruiting-student/</guid>
       <description>&lt;p&gt;The Johns Hopkins Data Science Lab is seeking a Master’s student to assist with a project to create interactive elements for existing data science/public health/statistics education material as part of the open case studies project (&lt;a href=&#34;https://opencasestudies.github.io/&#34; target=&#34;_blank&#34;&gt;https://opencasestudies.github.io/&lt;/a&gt;). This role would also involve creating websites and packages in R to make our materials more accessible to others, as well as some research to assess the utility of our materials in the classroom. We have budgeted for financial support for this student, and this work could potentially be used as a thesis project. Please contact Carrie Wright (cwrigh60@jh.edu) if you are interested in learning more!&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Welcome Carrie Wright to OCS Team!</title>
-      <link>/post/welcome-carrie-wright/</link>
+      <link>http://opencasestudies.github.io/post/welcome-carrie-wright/</link>
       <pubDate>Wed, 18 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/post/welcome-carrie-wright/</guid>
+      <guid>http://opencasestudies.github.io/post/welcome-carrie-wright/</guid>
       <description>&lt;p&gt;In September 2019, we welcomed &lt;a href=&#34;https://opencasestudies.github.io/authors/cwright/&#34; target=&#34;_blank&#34;&gt;Carrie Wright&lt;/a&gt; to the OCS Team as a Research Associate faculty in the &lt;a href=&#34;https://jhudatascience.org&#34; target=&#34;_blank&#34;&gt;Johns Hopkins Data Science Lab&lt;/a&gt; working on building Open Case Studies.
 She completed her postdoctoral fellowship at the Lieber Institute for Brain Development where she was a co-founder of the &lt;a href=&#34;http://research.libd.org/rstatsclub/&#34; target=&#34;_blank&#34;&gt;LIBD rstats club&lt;/a&gt;.
 We are all very excited to have her join the team and leverage her expertise in data analysis to building open case studies.&lt;/p&gt;
@@ -53,9 +64,9 @@ We are all very excited to have her join the team and leverage her expertise in 
     
     <item>
       <title>Open Case Studies now have DOIs for citations!</title>
-      <link>/post/case-studies-now-have-doi/</link>
+      <link>http://opencasestudies.github.io/post/case-studies-now-have-doi/</link>
       <pubDate>Thu, 14 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/post/case-studies-now-have-doi/</guid>
+      <guid>http://opencasestudies.github.io/post/case-studies-now-have-doi/</guid>
       <description>&lt;p&gt;The Open Case Studies team is excited to announce
 that case studies now have digital object identifier
 (DOIs) associated with each case study that can be used
