@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Logistic Regression | OCS</title>
-    <link>http://opencasestudies.github.io/tags/logistic-regression/</link>
-      <atom:link href="http://opencasestudies.github.io/tags/logistic-regression/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/logistic-regression/</link>
+      <atom:link href="/tags/logistic-regression/index.xml" rel="self" type="application/rss+xml" />
     <description>Logistic Regression</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://opencasestudies.github.io/img/icon.png</url>
+      <url>/img/icon.png</url>
       <title>Logistic Regression</title>
-      <link>http://opencasestudies.github.io/tags/logistic-regression/</link>
+      <link>/tags/logistic-regression/</link>
     </image>
     
     <item>
       <title>Hypertension Diet</title>
-      <link>http://opencasestudies.github.io/notusing_content_project/hypertensiondiet/</link>
+      <link>/notusing_content_project/hypertensiondiet/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/notusing_content_project/hypertensiondiet/</guid>
+      <guid>/notusing_content_project/hypertensiondiet/</guid>
       <description></description>
     </item>
     
