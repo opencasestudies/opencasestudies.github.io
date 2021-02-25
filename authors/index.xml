@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors | OCS</title>
+    <title>Authors | Open Case Studies</title>
     <link>http://opencasestudies.github.io/authors/</link>
       <atom:link href="http://opencasestudies.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
