@@ -15,23 +15,7 @@
   </url>
   
   <url>
-    <loc>http://opencasestudies.github.io/notusing_content_home/dttable/</loc>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/notusing_content_home/shiny_search/</loc>
-  </url>
-  
-  <url>
     <loc>http://opencasestudies.github.io/dt/</loc>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/notusing_content_project_searches/projects/</loc>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/notusing_content_project_searches/statsprojects/</loc>
   </url>
   
   <url>
@@ -109,21 +93,6 @@
   </url>
   
   <url>
-    <loc>http://opencasestudies.github.io/notusing_content_project/firearmlegislation-copy/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/notusing_content_project/firearmlegislation-copy-2/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/notusing_content_project/firearmlegislation-copy-3/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://opencasestudies.github.io/tags/glm/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
@@ -134,42 +103,12 @@
   </url>
   
   <url>
-    <loc>http://opencasestudies.github.io/notusing_content_project/healthexpenditures-copy/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/notusing_content_project/healthexpenditures-copy-2/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/notusing_content_project/healthexpenditures-copy-3/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/notusing_content_project/hypertensiondiet/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://opencasestudies.github.io/tags/import/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://opencasestudies.github.io/tags/logistic-regression/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://opencasestudies.github.io/tags/negative-binomial/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/notusing_content_project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -184,27 +123,12 @@
   </url>
   
   <url>
-    <loc>http://opencasestudies.github.io/notusing_content_project/ruralandurbanobesity/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/tags/t-test/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://opencasestudies.github.io/tags/tidyverse-introduction/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://opencasestudies.github.io/tags/visualization/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/tags/vizualization/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -262,23 +186,11 @@
   </url>
   
   <url>
-    <loc>http://opencasestudies.github.io/notusing_content_home/</loc>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/notusing_content_project_searches/</loc>
-  </url>
-  
-  <url>
     <loc>http://opencasestudies.github.io/publication_types/</loc>
   </url>
   
   <url>
     <loc>http://opencasestudies.github.io/publication/</loc>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/talk/</loc>
   </url>
   
 </urlset>
