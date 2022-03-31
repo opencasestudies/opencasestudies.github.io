@@ -13,43 +13,6 @@
     </image>
     
     <item>
-      <title>Open Case Studies Search</title>
-      <link>http://opencasestudies.github.io/dt/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/dt/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-r,&#34;&gt;#remotes::install_github(&#39;rstudio/DT&#39;)
-library(DT)
-datatable(iris)
-datatable(head(iris), class = &#39;cell-border stripe&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>http://opencasestudies.github.io/modcontact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://opencasestudies.github.io/modcontact/</guid>
-      <description>
-
-&lt;h2 id=&#34;please-connect&#34;&gt;Please connect!&lt;/h2&gt;
-
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    If you would like to contribute a case study to the repository,
-or have suggestions on data sets to use to build a case study around,
-please contact us!
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;p&gt;[[social]]
-  icon = &amp;ldquo;envelope&amp;rdquo;
-  icon_pack = &amp;ldquo;fas&amp;rdquo;
-  link = &amp;ldquo;mailto:shicks19@jhu.edu&amp;rdquo;  # For a direct email link, use &amp;ldquo;mailto:test@example.org&amp;rdquo;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>OCS to be featured at the Bloomberg American Health Summit 2020</title>
       <link>http://opencasestudies.github.io/post/ocs-featured-at-bloomberg-american-health-summit/</link>
       <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
