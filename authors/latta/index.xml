@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open Case Studies</title>
+    <link>http://opencasestudies.github.io/authors/latta/</link>
+      <atom:link href="http://opencasestudies.github.io/authors/latta/index.xml" rel="self" type="application/rss+xml" />
+    <description>Open Case Studies</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>http://opencasestudies.github.io/img/icon.png</url>
+      <title>Open Case Studies</title>
+      <link>http://opencasestudies.github.io/authors/latta/</link>
+    </image>
+    
+  </channel>
+</rss>
