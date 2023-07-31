@@ -1,188 +1,108 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>http://opencasestudies.github.io/authors/shicks/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/ljager/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/mtaub/</loc>
-  </url>
-  
-  <url>
-    <loc>http://opencasestudies.github.io/categories/blog/</loc>
-    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/tags/blog/</loc>
     <lastmod>2020-12-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>http://opencasestudies.github.io/categories/blog/</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://opencasestudies.github.io/categories/</loc>
     <lastmod>2020-12-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/post/ocs-featured-at-bloomberg-american-health-summit/</loc>
     <lastmod>2020-12-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/</loc>
     <lastmod>2020-12-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/post/</loc>
     <lastmod>2020-12-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/tags/</loc>
     <lastmod>2020-12-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/post/welcome-qier-meng-and-michael-breshock/</loc>
     <lastmod>2020-11-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/post/hub/</loc>
     <lastmod>2020-10-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/post/recruiting-student/</loc>
     <lastmod>2020-09-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/post/delta-award/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/post/welcome-carrie-wright/</loc>
     <lastmod>2019-12-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/post/case-studies-now-have-doi/</loc>
     <lastmod>2019-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/project/firearmlegislation/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/tags/glm/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/project/healthexpenditures/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/tags/import/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/tags/negative-binomial/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/tags/poisson/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/tags/tidyverse-introduction/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/tags/visualization/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/tags/wrangling/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/admin/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/astephens/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/cwright/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/hzhang/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/jmuschelli/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/kwang/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/latta/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/mbreshock/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/montiveros/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/pkuo/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/qmeng/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/authors/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/publication_types/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://opencasestudies.github.io/publication/</loc>
   </url>
-  
 </urlset>
