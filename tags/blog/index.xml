@@ -5,12 +5,34 @@
     <link>http://opencasestudies.github.io/tags/blog/</link>
       <atom:link href="http://opencasestudies.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <description>blog</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://opencasestudies.github.io/img/icon.png</url>
       <title>blog</title>
       <link>http://opencasestudies.github.io/tags/blog/</link>
     </image>
+    
+    <item>
+      <title>Welcome Kate Isaac to the OCS team!</title>
+      <link>http://opencasestudies.github.io/post/hub/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://opencasestudies.github.io/post/hub/</guid>
+      <description>&lt;p&gt;Welcome &lt;a href=&#34;https://opencasestudies.github.io/authors/kisaac/&#34;&gt;Kate Issac&lt;/a&gt; to the OCS Team!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://opencasestudies.github.io/authors/kisaac/&#34;&gt;Kate&lt;/a&gt; has recently joined our team as Research Assistants to assist in making a new case study and to help analysis our usage stats!&lt;/p&gt;
+&lt;p&gt;This case study is being created as part of a collaboration with the RIPPLES project at the Fred Hutchinson Cancer Center led by &lt;a href=&#34;https://www.fredhutch.org/en/education-training/teachers/science-education-partnership/contacts.html&#34;&gt;Jeanne Chowning&lt;/a&gt; and &lt;a href=&#34;https://www.fredhutch.org/en/education-training/teachers/science-education-partnership/contacts.html&#34;&gt;Hanako Osuga&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://opencasestudies.github.io/authors/kisaac/&#34;&gt;Kate&lt;/a&gt; is a Postdoctoral Fellow in the  &lt;a href=&#34;https://hutchdatascience.org/&#34;&gt;Fred Hutchinson Cancer Center Data Science Lab&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We are very excited to have Kate help us create a new case study!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OCS Publishes a New Paper</title>
+      <link>http://opencasestudies.github.io/post/hub/</link>
+      <pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://opencasestudies.github.io/post/hub/</guid>
+      <description>&lt;p&gt;Our team recently published an &lt;a href=&#34;https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394541&#34;&gt;article&lt;/a&gt; about OCS in the &lt;a href=&#34;https://doi.org/10.1080/26939169.2024.2394541&#34;&gt;Journal of Statistics and Data Science Education&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>OCS to be featured at the Bloomberg American Health Summit 2020</title>
