@@ -1,0 +1,61 @@
+---
+title: "Site Search"
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    css: styles.css
+    includes:
+      in_header: resources/header.html
+---
+
+```{=html}
+<!-- Google Custom Search Engine -->
+<script async src="https://cse.google.com/cse.js?cx=815456853205e4214"></script>
+
+<style>
+.search-wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+.gsc-control-cse {
+  font-family: inherit !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+.gsc-input-box {
+  border-radius: 6px !important;
+}
+.gsc-search-button-v2 {
+  border-radius: 6px !important;
+  background-color: #238A8D !important;
+  border-color: #238A8D !important;
+}
+</style>
+
+<div class="search-wrapper">
+  <div class="gcse-search"></div>
+</div>
+
+<script>
+// If ?q= is in the URL, wait for GCSE to render then auto-submit the search
+(function () {
+  var q = new URLSearchParams(window.location.search).get('q');
+  if (!q) return;
+
+  var attempts = 0;
+  var iv = setInterval(function () {
+    var input = document.querySelector('input.gsc-input');
+    var btn   = document.querySelector('button.gsc-search-button');
+    if (input && btn) {
+      input.value = q;
+      btn.click();
+      clearInterval(iv);
+    }
+    if (++attempts > 50) clearInterval(iv); // give up after 5s
+  }, 100);
+})();
+</script>
+```

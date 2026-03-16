@@ -13,7 +13,7 @@
 
 <title>Contact Us</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -87,8 +87,37 @@
 </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<style>
+/* Inline navbar search form */
+#ocs-inline-search {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#ocs-inline-search .input-group {
+  width: 220px;
+}
+#ocs-inline-search .form-control {
+  border-radius: 20px 0 0 20px !important;
+  height: 32px;
+  font-size: 13px;
+}
+#ocs-inline-search .btn {
+  background-color: #238A8D;
+  color: white;
+  border-color: #238A8D;
+  border-radius: 0 20px 20px 0 !important;
+  height: 32px;
+  padding: 0 10px;
+}
+#ocs-inline-search .btn:hover {
+  background-color: #1a6e70;
+  border-color: #1a6e70;
+}
+</style>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    /* ── Floating toolbar (translate) ── */
     var toolbar = document.createElement('div');
     toolbar.id = 'ocs-toolbar';
 
@@ -97,6 +126,55 @@
     toolbar.appendChild(translateSlot);
 
     document.body.appendChild(toolbar);
+
+    /* ── Inline navbar search ── */
+    var searchLink = document.querySelector('.navbar-nav a[href="site-search.html"]');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+    if (!searchLink || !navbarCollapse) return;
+
+    // Replace placeholder text with the FA icon
+    searchLink.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+    searchLink.setAttribute('title', 'Search');
+
+    // Build Bootstrap 3 navbar-form and append to navbar
+    var form = document.createElement('form');
+    form.id = 'ocs-inline-search';
+    form.className = 'navbar-form navbar-right';
+    form.setAttribute('role', 'search');
+    form.style.display = 'none';
+    form.innerHTML =
+      '<div class="input-group">' +
+        '<input id="ocs-search-q" type="text" class="form-control"' +
+        '  placeholder="Search site\u2026" autocomplete="off">' +
+        '<span class="input-group-btn">' +
+          '<button class="btn" type="submit">' +
+            '<i class="fa fa-search"></i>' +
+          '</button>' +
+        '</span>' +
+      '</div>';
+    navbarCollapse.appendChild(form);
+
+    // Toggle form on search icon click
+    searchLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      var isOpen = form.style.display !== 'none';
+      form.style.display = isOpen ? 'none' : 'block';
+      if (!isOpen) document.getElementById('ocs-search-q').focus();
+    });
+
+    // Submit → redirect to site-search.html with GCSE hash
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var q = document.getElementById('ocs-search-q').value.trim();
+      if (q) window.location.href = 'site-search.html?q=' + encodeURIComponent(q);
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!form.contains(e.target) && !searchLink.contains(e.target)) {
+        form.style.display = 'none';
+      }
+    });
   });
 </script>
 
@@ -345,6 +423,9 @@ $(document).ready(function () {
 </li>
 <li>
   <a href="search.html">Open Case Study Search</a>
+</li>
+<li>
+  <a href="site-search.html">[search]</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
