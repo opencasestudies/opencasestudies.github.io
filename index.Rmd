@@ -101,7 +101,7 @@ The Open Case Studies project is an educational resource of experiential guides 
 
 ```{=html}
 <p>
-  <a class="btn-primary" href="https://opencasestudies.github.io/" target="_blank" rel="noopener">
+  <a class="btn-primary" href="https://www.opencasestudies.org/search.html" target="_blank" rel="noopener">
     Browse case studies
   </a>
 </p>
