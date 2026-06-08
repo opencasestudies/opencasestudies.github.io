@@ -1,8 +1,10 @@
 name: Open Case Studies
 output_dir: 'docs'
 navbar:
-  title: Open Case Studies
+  title: "<img id=\"logo\" style=\"width: 30px;\" src=\"resources/logo.png\" />"
   left:
+  - text: Home
+    href: index.html
   - text: Survey
     href: survey.html
   - text: Projects
