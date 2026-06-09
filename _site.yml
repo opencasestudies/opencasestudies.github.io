@@ -3,28 +3,32 @@ output_dir: 'docs'
 navbar:
   title: "<img id=\"logo\" style=\"width: 30px;\" src=\"resources/logo.png\" />"
   left:
-  - text: Home
-    href: index.html
-  - text: Survey
-    href: survey.html
+  - text: About
+    menu:
+    - text: Background
+      href: index.html
+    - text: Team
+      href: team.html 
   - text: Projects
     menu:
     - text: Bloomberg Case Studies
       href: bloomberg.html
     - text: BioOCS
       href: bioocs.html
-  - text: Blog
-    href: blog.html
-  - text: Team
-    href: team.html
-  - text: Events
-    href: events.html
-  - text: Talks
-    href: talks.html
+  - text: News
+    menu: 
+    - text: Blog
+      href: blog.html
+    - text: Talks
+      href: talks.html
+    - text: Events
+      href: events.html
   - text: Contact
     href: contact.html
+  - text: Survey
+    href: survey.html
   - text: Open Case Study Search
-    href: search.html
+    href: search_new.html
 
 output:
   html_document:
