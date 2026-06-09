@@ -1,0 +1,361 @@
+---
+title: New index
+---
+
+
+## Case Studies Index
+
+<p class="case-index-intro">Browse Open Case Studies by topic, skill, public health problem, and R package.</p>
+
+<!-- read OCS info table & convert to JSON --> 
+
+```{r case-study-data-json, echo=FALSE, results='asis', message=FALSE}
+case_study_data <- read.csv("OCS_info_co2int_only.csv", stringsAsFactors = FALSE)
+case_study_json <- jsonlite::toJSON(case_study_data, dataframe = "rows", auto_unbox = TRUE, na = "null")
+case_study_json <- gsub("</script", "<\\\\/script", case_study_json, fixed = TRUE)
+cat('<script id="case-study-data" type="application/json">')
+cat(case_study_json)
+cat('</script>')
+```
+
+
+```{=html}
+<div class="case-library-toolbar" aria-label="Case study filters">
+
+  <div class="case-search-row">
+    <label class="sr-only" for="case-study-search">Search case studies</label>
+    <input id="case-study-search" class="case-search" type="search" placeholder="Search case studies, packages, problems, or objectives">
+    <label class="sr-only" for="case-package-filter">Filter by package</label>
+    <select id="case-package-filter" class="case-package-select" aria-label="Filter by package">
+      <option value="all">All packages</option>
+    </select>
+    <div id="case-count" class="case-count" aria-live="polite"></div>
+  </div>
+  
+  <div class="case-filter-groups">
+    <div class="case-filter-group">
+      <div class="case-filter-label">Topicx</div>
+      <div class="case-filter-options" aria-label="Public health problem filters">
+        <button type="button" class="case-filter-button" data-filter-type="problem" data-filter-value="all" aria-pressed="true">All</button>
+        <button type="button" class="case-filter-button" data-filter-type="problem" data-filter-value="nutrition-obesity" aria-pressed="false">Nutrition &amp; obesity</button>
+        <button type="button" class="case-filter-button" data-filter-type="problem" data-filter-value="environmental-health" aria-pressed="false">Environmental health</button>
+        <button type="button" class="case-filter-button" data-filter-type="problem" data-filter-value="substance-use" aria-pressed="false">Substance use</button>
+        <button type="button" class="case-filter-button" data-filter-type="problem" data-filter-value="violence-policy" aria-pressed="false">Violence &amp; policy</button>
+        <button type="button" class="case-filter-button" data-filter-type="problem" data-filter-value="youth-wellbeing" aria-pressed="false">Youth wellbeing</button>
+        <button type="button" class="case-filter-button" data-filter-type="problem" data-filter-value="health-systems" aria-pressed="false">Health systems</button>
+      </div>
+    </div>
+    
+    <div class="case-filter-group">
+      <div class="case-filter-label">Skill</div>
+      <div class="case-filter-options" aria-label="Skill filters">
+        <button type="button" class="case-filter-button" data-filter-type="skill" data-filter-value="all" aria-pressed="true">All</button>
+        <button type="button" class="case-filter-button" data-filter-type="skill" data-filter-value="data-visualization" aria-pressed="false">Data visualization</button>
+        <button type="button" class="case-filter-button" data-filter-type="skill" data-filter-value="interactive-dashboards" aria-pressed="false">Interactive visualization &amp; dashboards</button>
+        <button type="button" class="case-filter-button" data-filter-type="skill" data-filter-value="statistical-inference" aria-pressed="false">Statistical inference</button>
+        <button type="button" class="case-filter-button" data-filter-type="skill" data-filter-value="regression-multivariate" aria-pressed="false">Regression &amp; multivariate analysis</button>
+        <button type="button" class="case-filter-button" data-filter-type="skill" data-filter-value="machine-learning" aria-pressed="false">Machine learning</button>
+        <button type="button" class="case-filter-button" data-filter-type="skill" data-filter-value="research-design-literacy" aria-pressed="false">Research design &amp; data literacy</button>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+</div>
+
+
+
+<!-- create carousel shell -->
+<div class="case-carousel-shell">
+  <div class="case-carousel-controls" aria-label="Carousel controls">
+    <button type="button" class="case-carousel-button" data-carousel-direction="-1" aria-label="Previous case studies">&lsaquo;</button>
+    <button type="button" class="case-carousel-button" data-carousel-direction="1" aria-label="Next case studies">&rsaquo;</button>
+  </div>
+  <div id="case-carousel" class="case-carousel" tabindex="0" aria-label="Case study cards">
+    <div class="case-no-results">Loading case studies...</div>
+  </div>
+</div>
+
+<div id="case-no-results" class="case-no-results" hidden>No case studies match those filters. Try a broader search or reset one of the filter groups.</div>
+
+<p>
+  <a class="btn-primary" href="search.html">View full searchable table</a>
+</p>
+
+<script>
+(function () {
+  var section = document.getElementById("case-studies-index");
+  if (!section) return;
+
+  var searchInput = section.querySelector("#case-study-search");
+  var packageSelect = section.querySelector("#case-package-filter");
+  var count = section.querySelector("#case-count");
+  var noResults = section.querySelector("#case-no-results");
+  var carousel = section.querySelector("#case-carousel");
+  var filterButtons = Array.prototype.slice.call(section.querySelectorAll(".case-filter-button"));
+  var cards = [];
+  
+  var filters = {
+    topic: "all",
+    skill: "all",
+    problem: "all",
+    package: "all"
+  };
+  
+  var problemTypes = [
+    {label: "Nutrition & obesity", value: "nutrition-obesity", color: "#E07B39", pattern: /obesity|diet|dietary|bmi/i},
+    {label: "Environmental health", value: "environmental-health", color: "#3A8C5C", pattern: /co2|pollution|emission|air pollution|environment/i},
+    {label: "Substance use", value: "substance-use", color: "#8E44AD", pattern: /opioid|vaping|tobacco|e-cigarette/i},
+    {label: "Violence & policy", value: "violence-policy", color: "#C0392B", pattern: /shooting|gun|right-to-carry|violence|law/i},
+    {label: "Youth wellbeing", value: "youth-wellbeing", color: "#2471A3", pattern: /youth|mental|depression|disconnection/i},
+    {label: "Health systems", value: "health-systems", color: "#003366", pattern: /expenditure|healthcare|coverage|spending/i}
+  ];
+
+  var skillTypes = [
+    {label: "Data visualization", value: "data-visualization", pattern: /ggplot2|ggplot|ggrepel|directlabels|ggthemes|viridis|scales|cowplot|patchwork|latex2exp|bar plot|bar chart|line plot|scatter|facet|label|aesthetic|theme|geospatial|geo layer|jitter|animated gif|visuali[sz]ation|plot/i},
+    {label: "Interactive visualization & dashboards", value: "interactive-dashboards", pattern: /ggiraph|plotly|ggforce|dt|formattable|leaflet|ggmap|sf|shiny|flexdashboard|knitr|interactive|dashboard|r markdown|formatted table|geocod|map/i},
+    {label: "Statistical inference", value: "statistical-inference", pattern: /chi-?squared|wilcoxon|mann[- ]?whitney|mann[- ]?kendall|kendall|paired t-?test|q-?q|normality|parametric|nonparametric|multiple testing|p-?value|alpha|significance|hypothesis|contingency|survey weighting|logistic regression|survey|srvyr/i},
+    {label: "Regression & multivariate analysis", value: "regression-multivariate", pattern: /linear regression|mixed effect|lmerTest|panel regression|plm|variance inflation|vif|multicollinearity|correlation|coefficient|scatterplot|heatmap|GGally|ggcorrplot|corrplot|causation|normalization|group definition|residual|assumption/i},
+    {label: "Machine learning", value: "machine-learning", pattern: /machine learning|tidymodels|rsample|recipes|parsnip|workflow|random ?forest|randomforest|training|train\/test|test set|cross[- ]validation|prediction|classification|rmse/i},
+    {label: "Research design & data literacy", value: "research-design-literacy", pattern: /longitudinal|code ?book|self-?reporting bias|survey response|contingency table|survey weighting|correlation as a summary|correlation from causation|group definitions?|data literacy|research design/i}
+  ];
+
+  function slug(value) {
+    return String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+
+  function plainText(value) {
+    return String(value || "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+  }
+
+  function titleCase(value) {
+    var smallWords = /^(a|an|and|as|at|but|by|for|from|in|into|nor|of|on|or|the|to|with)$/i;
+    return String(value || "").split(/\s+/).filter(Boolean).map(function (word, index) {
+      if (/^[A-Z0-9]{2,}$/.test(word)) return word;
+      if (index > 0 && smallWords.test(word)) return word.toLowerCase();
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    }).join(" ");
+  }
+
+  function sentenceCase(value) {
+    var text = plainText(value);
+    return text ? text.charAt(0).toUpperCase() + text.slice(1) : text;
+  }
+
+  function getProblem(caseStudy) {
+    var text = [caseStudy.Title, caseStudy.Questions, caseStudy.Objectives].join(" ");
+    return problemTypes.find(function (problem) {
+      return problem.pattern.test(text);
+    }) || {label: "General public health", value: "general-public-health", color: "#238A8D"};
+  }
+
+  function getTopics(caseStudy, problem) {
+    var text = [caseStudy.Title, caseStudy.Questions, caseStudy.Objectives].join(" ").toLowerCase();
+    var topics = ["public-health"];
+    if (/co2|pollution|emission|air|environment/.test(text)) topics.push("environment");
+    if (/law|policy|right-to-carry|shooting|gun|violence/.test(text)) topics.push("policy");
+    if (problem.value === "health-systems") topics.push("health-systems");
+    return Array.from(new Set(topics));
+  }
+
+  function getSkills(caseStudy) {
+    var text = [caseStudy.Packages, caseStudy.Objectives].join(" ").toLowerCase();
+    var skills = skillTypes.filter(function (skill) {
+      return skill.pattern.test(text);
+    }).map(function (skill) {
+      return skill.value;
+    });
+    return skills.length ? skills : ["research-design-literacy"];
+  }
+
+  function skillLabel(value) {
+    var skill = skillTypes.find(function (item) {
+      return item.value === value;
+    });
+    return skill ? skill.label : titleCase(value.replace(/-/g, " "));
+  }
+
+  function packagesFor(caseStudy) {
+    return plainText(caseStudy.Packages).split(",").map(function (item) {
+      return item.trim();
+    }).filter(Boolean);
+  }
+
+  function cleanObjectives(text) {
+    var starters = "How|Importing|Understanding|Ability|Create|Creating|Data|Implementation|Interpretation|Familiarity|Load|View|Reshape|Apply|Working|Define|Be able|Awareness|Difference|Relationship|Methods|Make|Combining|Basic|Subsetting|Scrape|Usage";
+    var parts = plainText(text).split(new RegExp(",\\s+(?=(?:" + starters + ")\\b)", "g"))
+      .map(function (part) {
+        return sentenceCase(part
+          .replace(/^How to\s+/i, "")
+          .replace(/^Understanding of\s+/i, "Understand ")
+          .replace(/^Ability to\s+/i, "")
+          .replace(/^Familiarity with\s+/i, "Use ")
+          .replace(/^Implementation of\s+/i, "Implement ")
+          .replace(/\s*\([^)]{1,35}\)/g, "")
+          .trim());
+      })
+      .filter(function (part) { return part.length > 10; });
+
+    return parts.length ? parts : [sentenceCase(text)];
+  }
+
+  function addTextElement(parent, tagName, className, text) {
+    var element = document.createElement(tagName);
+    if (className) element.className = className;
+    element.textContent = text;
+    parent.appendChild(element);
+    return element;
+  }
+
+  function renderCards(data) {
+    var packages = new Set();
+    carousel.innerHTML = "";
+
+    data.forEach(function (caseStudy) {
+      var title = plainText(caseStudy.Title);
+      var problem = getProblem(caseStudy);
+      var topics = getTopics(caseStudy, problem);
+      var skills = getSkills(caseStudy);
+      var skillNames = skills.map(skillLabel);
+      var packageList = packagesFor(caseStudy);
+      var packageSlugs = packageList.map(slug);
+      var repoUrl = String(caseStudy.repo_url || "").replace("github.com//", "github.com/");
+      var searchText = plainText([title, caseStudy.Questions, caseStudy.Objectives, caseStudy.Packages, problem.label, topics.join(" "), skillNames.join(" "), skills.join(" ")].join(" "));
+
+      packageList.forEach(function (item) { packages.add(item); });
+
+      var card = document.createElement("article");
+      card.className = "case-card";
+      card.style.setProperty("--case-color", problem.color);
+      card.setAttribute("data-topic", topics.join(" "));
+      card.setAttribute("data-skill", skills.join(" "));
+      card.setAttribute("data-problem", problem.value);
+      card.setAttribute("data-package", packageSlugs.join(" "));
+      card.setAttribute("data-search", searchText);
+
+      addTextElement(card, "div", "case-card-topic", problem.label);
+      addTextElement(card, "h3", "", titleCase(title));
+
+      var objectiveList = document.createElement("ul");
+      objectiveList.className = "case-objectives";
+      var objectives = cleanObjectives(caseStudy.Objectives);
+      objectives.forEach(function (objective, index) {
+        var item = addTextElement(objectiveList, "li", "", objective);
+        if (index > 2) {
+          item.className = "case-objective-extra";
+          item.hidden = true;
+        }
+      });
+      card.appendChild(objectiveList);
+
+      if (objectives.length > 3) {
+        var viewMore = addTextElement(card, "button", "case-view-more", "View more");
+        viewMore.type = "button";
+        viewMore.addEventListener("click", function () {
+          var expanded = viewMore.getAttribute("aria-expanded") === "true";
+          Array.prototype.slice.call(objectiveList.querySelectorAll(".case-objective-extra")).forEach(function (item) {
+            item.hidden = expanded;
+          });
+          viewMore.setAttribute("aria-expanded", expanded ? "false" : "true");
+          viewMore.textContent = expanded ? "View more" : "View less";
+        });
+      }
+
+      var actions = document.createElement("div");
+      actions.className = "case-card-actions";
+      var caseLink = addTextElement(actions, "a", "case-card-link", "Open case study");
+      caseLink.href = caseStudy.case_study_url;
+      caseLink.target = "_blank";
+      caseLink.rel = "noopener";
+      var repoLink = addTextElement(actions, "a", "case-card-link secondary", "GitHub");
+      repoLink.href = repoUrl;
+      repoLink.target = "_blank";
+      repoLink.rel = "noopener";
+      card.appendChild(actions);
+
+      carousel.appendChild(card);
+    });
+
+    Array.from(packages).sort(function (a, b) {
+      return a.localeCompare(b);
+    }).forEach(function (packageName) {
+      var option = document.createElement("option");
+      option.value = slug(packageName);
+      option.textContent = packageName;
+      packageSelect.appendChild(option);
+    });
+
+    cards = Array.prototype.slice.call(section.querySelectorAll(".case-card"));
+    applyFilters();
+  }
+
+  function matchesToken(card, type, value) {
+    if (value === "all") return true;
+    return (" " + (card.getAttribute("data-" + type) || "") + " ").indexOf(" " + value + " ") !== -1;
+  }
+
+  function applyFilters() {
+    var query = (searchInput.value || "").toLowerCase().trim();
+    var visible = 0;
+
+    cards.forEach(function (card) {
+      var searchText = (card.getAttribute("data-search") || "").toLowerCase();
+      var matches = (!query || searchText.indexOf(query) !== -1) &&
+        matchesToken(card, "topic", filters.topic) &&
+        matchesToken(card, "skill", filters.skill) &&
+        matchesToken(card, "problem", filters.problem) &&
+        matchesToken(card, "package", filters.package);
+
+      card.hidden = !matches;
+      if (matches) visible += 1;
+    });
+
+    count.textContent = visible + (visible === 1 ? " case study" : " case studies");
+    noResults.hidden = visible !== 0;
+  }
+
+  filterButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var type = button.getAttribute("data-filter-type");
+      filters[type] = button.getAttribute("data-filter-value");
+
+      filterButtons
+        .filter(function (item) { return item.getAttribute("data-filter-type") === type; })
+        .forEach(function (item) {
+          item.setAttribute("aria-pressed", item === button ? "true" : "false");
+        });
+
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener("input", applyFilters);
+  packageSelect.addEventListener("change", function () {
+    filters.package = packageSelect.value;
+    applyFilters();
+  });
+
+  Array.prototype.slice.call(section.querySelectorAll(".case-carousel-button")).forEach(function (button) {
+    button.addEventListener("click", function () {
+      var direction = Number(button.getAttribute("data-carousel-direction"));
+      carousel.scrollBy({
+        left: direction * carousel.clientWidth * 0.85,
+        behavior: "smooth"
+      });
+    });
+  });
+
+  try {
+    var dataElement = section.querySelector("#case-study-data");
+    var embeddedData = JSON.parse(dataElement.textContent || "[]");
+    renderCards(embeddedData);
+  } catch (error) {
+    carousel.innerHTML = "";
+    noResults.hidden = false;
+    noResults.textContent = "Case studies could not be loaded.";
+    count.textContent = "0 case studies";
+  }
+})();
+</script>
+```

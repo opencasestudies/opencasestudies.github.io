@@ -80,6 +80,7 @@ html {
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+
 ```
 
 
@@ -87,10 +88,9 @@ html {
 <img src="resources/header.png" alt="Open Case Studies" style="max-width: 100%; height: auto;">
 <div>
 <a href="#about" class="cta-button">Learn More</a>
-<a href="#blog" class="cta-button">Latest Updates</a>
+<a href="blog.html" class="cta-button">Latest Updates</a>
 </div>
 </div>
-
 
 <div id="about" class="section section-about">
 <div class="section-content">
@@ -101,13 +101,14 @@ The Open Case Studies project is an educational resource of experiential guides 
 
 ```{=html}
 <p>
-  <a class="btn-primary" href="https://www.opencasestudies.org/search.html" target="_blank" rel="noopener">
+  <a class="btn-primary" href="https://www.opencasestudies.org/search_new.html" target="_blank" rel="noopener">
     Browse case studies
   </a>
 </p>
 ```
 
-<img src="resources/logo.png" alt="Open Case Studies Logo" style="max-width: 100%; height: 300px; display: block; margin-left: auto; margin-right: auto;">
+<!-- <img src="resources/logo.png" alt="Open Case Studies Logo" style="max-width: 100%; height: 300px; display: block; margin-left: auto; margin-right: auto;"> -->
+
 Our case studies can be used:
 
 * by educators to help them teach
@@ -131,6 +132,8 @@ Our case studies cover many concepts!<br>
 <strong>Statistical topics:</strong> from correlation to the influence of multicollinearity on linear regression<br>
 <strong>Data science topics:</strong> from making simple plots to building dashboards and performing machine learning (ML), a type of artificial intelligence (AI)!
 </div>
+
+
 
 ## What problem are we addressing?
 
@@ -220,18 +223,10 @@ Open Case Studies: Statistics and Data Science Education through Real-World Appl
 <div id="survey" class="section section-survey">
 <div class="section-content">
 
-## Survey
 
-Help us improve Open Case Studies by sharing your feedback.
+```{r, child='search_new.Rmd'}
+```
 
-<a href="survey.html" class="btn-primary">Take Survey →</a>
-
-</div>
-</div>
-
-
-<div id="blog" class="section section-blog">
-<div class="section-content">
 
 ## Latest from Our Blog
 ```{r latest-posts, echo=FALSE, results='asis'}
@@ -295,3 +290,4 @@ cat('</div>\n')
 
 </div>
 </div>
+
