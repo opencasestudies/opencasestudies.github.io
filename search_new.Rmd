@@ -34,7 +34,7 @@ cat('</script>')
   
   <div class="case-filter-groups">
     <div class="case-filter-group">
-      <div class="case-filter-label">Topicx</div>
+      <div class="case-filter-label">Topics</div>
       <div class="case-filter-options" aria-label="Public health problem filters">
         <button type="button" class="case-filter-button" data-filter-type="problem" data-filter-value="all" aria-pressed="true">All</button>
         <button type="button" class="case-filter-button" data-filter-type="problem" data-filter-value="nutrition-obesity" aria-pressed="false">Nutrition &amp; obesity</button>
