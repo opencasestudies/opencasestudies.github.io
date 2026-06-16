@@ -5,7 +5,7 @@ title: ""
 
 ## Case Studies Index
 
-<p class="case-index-intro">Browse Open Case Studies by topic, skill, public health problem, and R package.</p>
+<p class="case-index-intro">Browse Open Case Studies by topic, skill, public health problem, programming language, project, and package.</p>
 
 <!-- read OCS info table & convert to JSON --> 
 
@@ -58,6 +58,24 @@ cat('</script>')
         <button type="button" class="case-filter-button" data-filter-type="skill" data-filter-value="research-design-literacy" aria-pressed="false">Research design &amp; data literacy</button>
       </div>
     </div>
+
+    <div class="case-filter-group">
+      <div class="case-filter-label">Language</div>
+      <div class="case-filter-options" aria-label="Programming language filters">
+        <button type="button" class="case-filter-button" data-filter-type="language" data-filter-value="all" aria-pressed="true">All</button>
+        <button type="button" class="case-filter-button" data-filter-type="language" data-filter-value="r" aria-pressed="false">R</button>
+        <button type="button" class="case-filter-button" data-filter-type="language" data-filter-value="python" aria-pressed="false">Python</button>
+      </div>
+    </div>
+
+    <div class="case-filter-group">
+      <div class="case-filter-label">Project</div>
+      <div class="case-filter-options" aria-label="Project filters">
+        <button type="button" class="case-filter-button" data-filter-type="project" data-filter-value="all" aria-pressed="true">All</button>
+        <button type="button" class="case-filter-button" data-filter-type="project" data-filter-value="bloomberg" aria-pressed="false">Bloomberg</button>
+        <button type="button" class="case-filter-button" data-filter-type="project" data-filter-value="bioocs" aria-pressed="false">BioOCS</button>
+      </div>
+    </div>
     
     
   </div>
@@ -96,12 +114,14 @@ cat('</script>')
   var filterButtons = Array.prototype.slice.call(section.querySelectorAll(".case-filter-button"));
   var cards = [];
   
-  var filters = {
-    topic: "all",
-    skill: "all",
-    problem: "all",
-    package: "all"
-  };
+	  var filters = {
+	    topic: "all",
+	    skill: "all",
+	    problem: "all",
+	    language: "all",
+	    project: "all",
+	    package: "all"
+	  };
   
   var problemTypes = [
     {label: "Nutrition & obesity", value: "nutrition-obesity", color: "#E07B39", pattern: /obesity|diet|dietary|bmi/i},
@@ -112,14 +132,24 @@ cat('</script>')
     {label: "Health systems", value: "health-systems", color: "#003366", pattern: /expenditure|healthcare|coverage|spending/i}
   ];
 
-  var skillTypes = [
-    {label: "Data visualization", value: "data-visualization", pattern: /ggplot2|ggplot|ggrepel|directlabels|ggthemes|viridis|scales|cowplot|patchwork|latex2exp|bar plot|bar chart|line plot|scatter|facet|label|aesthetic|theme|geospatial|geo layer|jitter|animated gif|visuali[sz]ation|plot/i},
+	  var skillTypes = [
+	    {label: "Data visualization", value: "data-visualization", pattern: /ggplot2|ggplot|ggrepel|directlabels|ggthemes|viridis|scales|cowplot|patchwork|latex2exp|bar plot|bar chart|line plot|scatter|facet|label|aesthetic|theme|geospatial|geo layer|jitter|animated gif|visuali[sz]ation|plot/i},
     {label: "Interactive visualization & dashboards", value: "interactive-dashboards", pattern: /ggiraph|plotly|ggforce|dt|formattable|leaflet|ggmap|sf|shiny|flexdashboard|knitr|interactive|dashboard|r markdown|formatted table|geocod|map/i},
     {label: "Statistical inference", value: "statistical-inference", pattern: /chi-?squared|wilcoxon|mann[- ]?whitney|mann[- ]?kendall|kendall|paired t-?test|q-?q|normality|parametric|nonparametric|multiple testing|p-?value|alpha|significance|hypothesis|contingency|survey weighting|logistic regression|survey|srvyr/i},
     {label: "Regression & multivariate analysis", value: "regression-multivariate", pattern: /linear regression|mixed effect|lmerTest|panel regression|plm|variance inflation|vif|multicollinearity|correlation|coefficient|scatterplot|heatmap|GGally|ggcorrplot|corrplot|causation|normalization|group definition|residual|assumption/i},
     {label: "Machine learning", value: "machine-learning", pattern: /machine learning|tidymodels|rsample|recipes|parsnip|workflow|random ?forest|randomforest|training|train\/test|test set|cross[- ]validation|prediction|classification|rmse/i},
-    {label: "Research design & data literacy", value: "research-design-literacy", pattern: /longitudinal|code ?book|self-?reporting bias|survey response|contingency table|survey weighting|correlation as a summary|correlation from causation|group definitions?|data literacy|research design/i}
-  ];
+	    {label: "Research design & data literacy", value: "research-design-literacy", pattern: /longitudinal|code ?book|self-?reporting bias|survey response|contingency table|survey weighting|correlation as a summary|correlation from causation|group definitions?|data literacy|research design/i}
+	  ];
+
+	  var languageTypes = [
+	    {label: "Python", value: "python", pattern: /python|pandas|numpy|scipy|scikit|sklearn|matplotlib|seaborn|jupyter|ipynb/i},
+	    {label: "R", value: "r", pattern: /(^|,|\s)(r|dplyr|tidyr|stringr|ggplot2|shiny|r markdown|knitr|readr|readxl|lubridate|purrr|tibble|leaflet|tidymodels)(,|\s|$)/i}
+	  ];
+
+	  var projectTypes = [
+	    {label: "BioOCS", value: "bioocs", pattern: /bioocs|bio-?ocs|bioconductor|biomedical|genomic|transcriptomic|single cell|ocs-bio/i},
+	    {label: "Bloomberg", value: "bloomberg", pattern: /bloomberg|american health|bahi|ocs-bp-|public health/i}
+	  ];
 
   function slug(value) {
     return String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -169,12 +199,26 @@ cat('</script>')
     return skills.length ? skills : ["research-design-literacy"];
   }
 
-  function skillLabel(value) {
-    var skill = skillTypes.find(function (item) {
-      return item.value === value;
-    });
-    return skill ? skill.label : titleCase(value.replace(/-/g, " "));
-  }
+	  function skillLabel(value) {
+	    var skill = skillTypes.find(function (item) {
+	      return item.value === value;
+	    });
+	    return skill ? skill.label : titleCase(value.replace(/-/g, " "));
+	  }
+
+	  function getLanguage(caseStudy) {
+	    var text = [caseStudy.Packages, caseStudy.Title, caseStudy.repo_name, caseStudy.case_study_url].join(" ");
+	    return languageTypes.find(function (language) {
+	      return language.pattern.test(text);
+	    }) || {label: "R", value: "r"};
+	  }
+
+	  function getProject(caseStudy) {
+	    var text = [caseStudy.Category, caseStudy.repo_name, caseStudy.case_study_name, caseStudy.repo_url, caseStudy.case_study_url, caseStudy.Title].join(" ");
+	    return projectTypes.find(function (project) {
+	      return project.pattern.test(text);
+	    }) || {label: "Bloomberg", value: "bloomberg"};
+	  }
 
   function packagesFor(caseStudy) {
     return plainText(caseStudy.Packages).split(",").map(function (item) {
@@ -214,14 +258,16 @@ cat('</script>')
 
     data.forEach(function (caseStudy) {
       var title = plainText(caseStudy.Title);
-      var problem = getProblem(caseStudy);
-      var topics = getTopics(caseStudy, problem);
-      var skills = getSkills(caseStudy);
-      var skillNames = skills.map(skillLabel);
-      var packageList = packagesFor(caseStudy);
-      var packageSlugs = packageList.map(slug);
-      var repoUrl = String(caseStudy.repo_url || "").replace("github.com//", "github.com/");
-      var searchText = plainText([title, caseStudy.Questions, caseStudy.Objectives, caseStudy.Packages, problem.label, topics.join(" "), skillNames.join(" "), skills.join(" ")].join(" "));
+	      var problem = getProblem(caseStudy);
+	      var topics = getTopics(caseStudy, problem);
+	      var skills = getSkills(caseStudy);
+	      var skillNames = skills.map(skillLabel);
+	      var language = getLanguage(caseStudy);
+	      var project = getProject(caseStudy);
+	      var packageList = packagesFor(caseStudy);
+	      var packageSlugs = packageList.map(slug);
+	      var repoUrl = String(caseStudy.repo_url || "").replace("github.com//", "github.com/");
+	      var searchText = plainText([title, caseStudy.Questions, caseStudy.Objectives, caseStudy.Packages, problem.label, topics.join(" "), skillNames.join(" "), skills.join(" "), language.label, project.label].join(" "));
 
       packageList.forEach(function (item) { packages.add(item); });
 
@@ -229,10 +275,12 @@ cat('</script>')
       card.className = "case-card";
       card.style.setProperty("--case-color", problem.color);
       card.setAttribute("data-topic", topics.join(" "));
-      card.setAttribute("data-skill", skills.join(" "));
-      card.setAttribute("data-problem", problem.value);
-      card.setAttribute("data-package", packageSlugs.join(" "));
-      card.setAttribute("data-search", searchText);
+	      card.setAttribute("data-skill", skills.join(" "));
+	      card.setAttribute("data-problem", problem.value);
+	      card.setAttribute("data-language", language.value);
+	      card.setAttribute("data-project", project.value);
+	      card.setAttribute("data-package", packageSlugs.join(" "));
+	      card.setAttribute("data-search", searchText);
 
       addTextElement(card, "div", "case-card-topic", problem.label);
       addTextElement(card, "h3", "", titleCase(title));
@@ -302,10 +350,12 @@ cat('</script>')
     cards.forEach(function (card) {
       var searchText = (card.getAttribute("data-search") || "").toLowerCase();
       var matches = (!query || searchText.indexOf(query) !== -1) &&
-        matchesToken(card, "topic", filters.topic) &&
-        matchesToken(card, "skill", filters.skill) &&
-        matchesToken(card, "problem", filters.problem) &&
-        matchesToken(card, "package", filters.package);
+	        matchesToken(card, "topic", filters.topic) &&
+	        matchesToken(card, "skill", filters.skill) &&
+	        matchesToken(card, "problem", filters.problem) &&
+	        matchesToken(card, "language", filters.language) &&
+	        matchesToken(card, "project", filters.project) &&
+	        matchesToken(card, "package", filters.package);
 
       card.hidden = !matches;
       if (matches) visible += 1;
