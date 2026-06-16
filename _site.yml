@@ -23,6 +23,14 @@ navbar:
       href: talks.html
     - text: Events
       href: events.html
+  - text: Resources
+    menu:
+    - text: Educator/User Guide
+      href: https://www.opencasestudies.org/OCS_Guide
+    - text: Publication
+      href: https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394541
+    - text: Thesis Study
+      href: https://jscholarship.library.jhu.edu/items/69ae8990-a78b-4d53-916e-d2a279afd69b
   - text: Contact
     href: contact.html
   - text: Survey
