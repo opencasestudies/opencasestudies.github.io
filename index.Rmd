@@ -121,10 +121,24 @@ Find out more about how others are using case studies and what they think of the
 </div>
 </div>
 
-<div style="background-color: #fbb731; color: black; padding: 15px 20px; border-radius: 6px; margin: 10px 20px; border: 1.5px solid #8ab58a; text-align: center;">
-<strong>Want to use Open Case Studies for teaching? <br> Learn how to use our case studies and more about the OCS project using our guide:</strong><br>
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 10px 20px; text-align: center;">
+
+<div style="background-color: #fee1b9; olor: black; padding: 15px 20px; border-radius: 6px; border: 1.5px solid #8ab58a;">
+<strong>Learn how to use our case studies in our guide:</strong><br>
 <a href="https://www.opencasestudies.org/OCS_Guide" style="color: black;" target="_blank">Website version</a> &nbsp;|&nbsp;
 <a href="https://leanpub.com/opencasestudies_guide" style="color: black;" target="_blank">PDF version and more</a>
+</div>
+
+<div style="background-color: #fbb731; color: black; padding: 15px 20px; border-radius: 6px; border: 1.5px solid #8ab58a;">
+<strong>Read our publication about the OCS project:</strong><br>
+<a href="https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394541" style="color: black; text-decoration: underline;" target="_blank" rel="noopener">Open Case Studies: Statistics and Data Science Education through Real-World Applications</a>
+</div>
+
+<div style="background-color: #fdd398; color: black; padding: 15px 20px; border-radius: 6px; border: 1.5px solid #8ab58a;">
+<strong>Learn more about the OCS project:</strong><br>
+<a href="https://jscholarship.library.jhu.edu/items/69ae8990-a78b-4d53-916e-d2a279afd69b" style="color: black; text-decoration: underline;" target="_blank" rel="noopener">Find out more about how others are using case studies and what they think of them.</a>
+</div>
+
 </div>
 
 <div style="background-color: #F9F9ED; color: black; padding: 15px 20px; border-radius: 6px; margin: 10px 20px; border: 1.5px solid black; text-align: left;">
@@ -290,4 +304,3 @@ cat('</div>\n')
 
 </div>
 </div>
-
