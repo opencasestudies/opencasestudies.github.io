@@ -72,7 +72,7 @@ cat('</script>')
       <div class="case-filter-label">Project</div>
       <div class="case-filter-options" aria-label="Project filters">
         <button type="button" class="case-filter-button" data-filter-type="project" data-filter-value="all" aria-pressed="true">All</button>
-        <button type="button" class="case-filter-button" data-filter-type="project" data-filter-value="bloomberg" aria-pressed="false">Bloomberg</button>
+        <button type="button" class="case-filter-button" data-filter-type="project" data-filter-value="bloomberg" aria-pressed="false">Bloomberg/Public Health</button>
         <button type="button" class="case-filter-button" data-filter-type="project" data-filter-value="bioocs" aria-pressed="false">BioOCS</button>
       </div>
     </div>
@@ -148,7 +148,7 @@ cat('</script>')
 
 	  var projectTypes = [
 	    {label: "BioOCS", value: "bioocs", pattern: /bioocs|bio-?ocs|bioconductor|biomedical|genomic|transcriptomic|single cell|ocs-bio/i},
-	    {label: "Bloomberg", value: "bloomberg", pattern: /bloomberg|american health|bahi|ocs-bp-|public health/i}
+	    {label: "Bloomberg/Public Health", value: "bloomberg", pattern: /bloomberg|american health|bahi|ocs-bp-|public health/i}
 	  ];
 
   function slug(value) {
@@ -217,7 +217,7 @@ cat('</script>')
 	    var text = [caseStudy.Category, caseStudy.repo_name, caseStudy.case_study_name, caseStudy.repo_url, caseStudy.case_study_url, caseStudy.Title].join(" ");
 	    return projectTypes.find(function (project) {
 	      return project.pattern.test(text);
-	    }) || {label: "Bloomberg", value: "bloomberg"};
+	    }) || {label: "Bloomberg/Public Health", value: "bloomberg"};
 	  }
 
   function packagesFor(caseStudy) {
