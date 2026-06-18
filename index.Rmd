@@ -87,8 +87,7 @@ html {
 <div class="hero">
 <img src="resources/header.png" alt="Open Case Studies" style="max-width: 100%; height: auto;">
 <div>
-<a href="#about" class="cta-button">Learn More</a>
-<a href="blog.html" class="cta-button">Latest Updates</a>
+<a href="search_new.html" class="cta-button">Browse case studies</a>
 </div>
 </div>
 
@@ -99,21 +98,28 @@ html {
 
 The Open Case Studies project is an educational resource of experiential guides that demonstrate how to effectively derive knowledge from data in real-world challenges.
 
-```{=html}
-<p>
-  <a class="btn-primary" href="https://www.opencasestudies.org/search_new.html" target="_blank" rel="noopener">
-    Browse case studies
-  </a>
-</p>
-```
-
 <!-- <img src="resources/logo.png" alt="Open Case Studies Logo" style="max-width: 100%; height: 300px; display: block; margin-left: auto; margin-right: auto;"> -->
 
-Our case studies can be used:
+Our case studies can be used by:
 
-* by educators to help them teach
-* by students to help them with their classes
-* by independent learners to help them learn
+:::: {style="display: flex; justify-content: space-between;"}
+
+::: {style="width: 30%;"}
+`r fontawesome::fa("chalkboard-user", fill = "#238A8D", height = "1.4em", width = "1.4em", margin_right = "0.35em", title = "Instructor", a11y = "sem")` **Educators** to help them teach  
+:::
+
+::: {style="width: 30%;"}
+`r fontawesome::fa("graduation-cap", fill = "#238A8D", height = "1.4em", width = "1.4em", margin_right = "0.35em", title = "Cap and gown", a11y = "sem")` **Students** to help them with their classes 
+:::
+
+::: {style="width: 30%;"}
+ 
+`r fontawesome::fa("brain", fill = "#238A8D", height = "1.4em", width = "1.4em", margin_right = "0.35em", title = "Someone thinking", a11y = "sem")` **Independent learners** to help them learn
+:::
+
+::::
+
+
 
 Find out more about how others are using case studies and what they think of them in this
 [study](http://jhir.library.jhu.edu/handle/1774.2/66820).
@@ -184,32 +190,6 @@ Despite unprecedented and growing interest in data science on campuses, there ar
 <div id="publications" class="section" style="background: #fff;">
 <div class="section-content">
 
-## Highlighted Publication
-
-<div style="border-left: 6px solid #fbb731; padding: 16px 20px; margin: 16px 0; background: #fbb731; border-radius: 0 6px 6px 0;">
-
-<div style="font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; color: #000;">
-Carrie Wright, Qier Meng, Michael R. Breshock, Lyla Atta, Margaret A. Taub, Leah R. Jager, John Muschelli &amp; Stephanie C. Hicks
-</div>
-
-<div style="margin-bottom: 6px; font-size: 2rem;">
-<a href="https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394541" target="_blank" rel="noopener" style="color: #000; text-decoration: none; font-weight: 700;">
-Open Case Studies: Statistics and Data Science Education through Real-World Applications
-</a>
-
-<a href="https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394541" target="_blank" rel="noopener" style="color: #000; text-decoration: none; font-weight: 300; font-size: 1.3rem;"> https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394541
-</a>
-</div>
-
-<div style="font-size: 1rem; color: #000;"><em>Journal of Statistics and Data Science Education</em>, Pages 331–344. Published online: 24 Sep 2024.</div>
-</div>
-
-</div>
-</div>
-
-
-<div id="projects" class="section" style="background: #fff;">
-<div class="section-content">
 
 ## Our Projects
 
@@ -241,6 +221,32 @@ Open Case Studies: Statistics and Data Science Education through Real-World Appl
 ```{r, child='search_new.Rmd'}
 ```
 
+## Highlighted Publication
+
+<div style="border-left: 6px solid #fbb731; padding: 16px 20px; margin: 16px 0; background: #fbb731; border-radius: 0 6px 6px 0;">
+
+<div style="font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; color: #000;">
+Carrie Wright, Qier Meng, Michael R. Breshock, Lyla Atta, Margaret A. Taub, Leah R. Jager, John Muschelli &amp; Stephanie C. Hicks
+</div>
+
+<div style="margin-bottom: 6px; font-size: 2rem;">
+<a href="https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394541" target="_blank" rel="noopener" style="color: #000; text-decoration: none; font-weight: 700;">
+Open Case Studies: Statistics and Data Science Education through Real-World Applications
+</a>
+
+<a href="https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394541" target="_blank" rel="noopener" style="color: #000; text-decoration: none; font-weight: 300; font-size: 1.3rem;"> https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394541
+</a>
+</div>
+
+<div style="font-size: 1rem; color: #000;"><em>Journal of Statistics and Data Science Education</em>, Pages 331–344. Published online: 24 Sep 2024.</div>
+</div>
+
+</div>
+</div>
+
+
+<div id="projects" class="section" style="background: #fff;">
+<div class="section-content">
 
 ## Latest from Our Blog
 ```{r latest-posts, echo=FALSE, results='asis'}
