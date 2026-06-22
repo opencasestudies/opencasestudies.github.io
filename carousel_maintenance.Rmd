@@ -1,0 +1,202 @@
+---
+title: "Carousel Maintenance"
+---
+
+This file documents how to update the case studies carousel that appears on the home page through `search_new.Rmd`.
+
+## Source files
+
+-   `search_new.Rmd` contains the carousel markup, filters, JavaScript grouping logic, and embedded case-study data block.
+-   `OCS_info_co2int_only.csv` is the data source read by `search_new.Rmd`.
+-   `index.Rmd` includes the carousel with `child='search_new.Rmd'`.
+-   `styles.css` contains the card, carousel, and filter styling.
+
+## Adding or updating case studies
+
+1.  Add or update rows in `OCS_info_co2int_only.csv`.
+2.  Keep these columns populated when possible:
+    -   `repo_name`
+
+    -   `case_study_name`
+
+    -   `repo_url`
+
+    -   `case_study_url`
+
+    -   `Packages`
+
+    -   `Title`
+
+    -   `Questions`
+
+    -   `Objectives`
+
+    -   `Category`
+
+The R chunk in `search_new.Rmd` reads the CSV and writes it into a `<script id="case-study-data" type="application/json">` block during rendering.
+
+## Filter groups
+
+The carousel currently supports these filter dimensions:
+
+-   Topic/public health problem: inferred by `problemTypes`.
+-   Skill: inferred by `skillTypes`.
+-   Programming language: inferred by `languageTypes`.
+-   Project: inferred by `projectTypes`.
+-   Package: populated dynamically from the `Packages` column.
+-   Search: matches title, questions, objectives, packages, inferred labels, and internal filter values.
+
+## Where filter groupings live
+
+The filter grouping rules live in `search_new.Rmd`, inside the JavaScript `<script>` block near the bottom of the file.
+
+Look for these arrays:
+
+``` js
+var problemTypes = [
+  ...
+];
+
+var skillTypes = [
+  ...
+];
+
+var languageTypes = [
+  ...
+];
+
+var projectTypes = [
+  ...
+];
+```
+
+Each array item usually has this shape:
+
+``` js
+{
+  label: "Machine learning",
+  value: "machine-learning",
+  pattern: /machine learning|tidymodels|random ?forest/i
+}
+```
+
+-   `label` is the readable text users see on filters, search terms, or card tags.
+-   `value` is the internal slug used by the filter logic. Use lowercase words separated by hyphens.
+-   `pattern` is the regular expression used to classify a case study from metadata such as `Packages`, `Objectives`, `Category`, repo names, or URLs.
+
+The visible filter buttons live earlier in `search_new.Rmd`, inside:
+
+``` html
+<div class="case-filter-groups">
+```
+
+## Updating a filter button list
+
+For example, the skill buttons are in this section:
+
+``` html
+<div class="case-filter-group">
+  <div class="case-filter-label">Skill</div>
+  <div class="case-filter-options" aria-label="Skill filters">
+    ...
+  </div>
+</div>
+```
+
+To add a new skill filter called `Data ethics`, add a button to that list:
+
+``` html
+<button
+  type="button"
+  class="case-filter-button"
+  data-filter-type="skill"
+  data-filter-value="data-ethics"
+  aria-pressed="false">
+  Data ethics
+</button>
+```
+
+Then add the matching item to `skillTypes`:
+
+``` js
+{
+  label: "Data ethics",
+  value: "data-ethics",
+  pattern: /ethics|privacy|bias|fairness|responsible data/i
+}
+```
+
+The button's `data-filter-value` must exactly match the array item's `value`.
+
+For a different filter group, change `data-filter-type` to match the group:
+
+-   Topic/public health problem buttons use `data-filter-type="problem"` and match `problemTypes`.
+-   Skill buttons use `data-filter-type="skill"` and match `skillTypes`.
+-   Language buttons use `data-filter-type="language"` and match `languageTypes`.
+-   Project buttons use `data-filter-type="project"` and match `projectTypes`.
+
+When adding a completely new filter group, update all three places in `search_new.Rmd`:
+
+1.  Add the button in the filter markup with `data-filter-type` and `data-filter-value`.
+2.  Add the same filter key to the `filters` object.
+3.  Add the same filter key to `applyFilters()`.
+
+Existing filter groups already have their filter keys wired into the JavaScript, so adding a new option to an existing group usually only requires adding the button and updating the matching grouping array.
+
+## Skill groupings
+
+Skills are inferred in `skillTypes`. Each skill group has:
+
+-   `label`: visible text shown in filters/search/tags.
+-   `value`: stable slug used in `data-skill`.
+-   `pattern`: regex used against `Packages` and `Objectives`.
+
+Current skill groups:
+
+-   Data visualization
+-   Interactive visualization & dashboards
+-   Statistical inference
+-   Regression & multivariate analysis
+-   Machine learning
+-   Research design & data literacy
+
+To add or revise a skill grouping:
+
+1.  Update the skill filter button list.
+2.  Update `skillTypes` with the same `label` and `value`.
+3.  Add package names, methods, and objective phrases to the regex pattern.
+4.  Check that `getSkills()` still returns at least one skill for each card.
+
+Case studies can match multiple skill groups. The order in `skillTypes` determines the order used for skill labels.
+
+## Language grouping
+
+Language is inferred by `languageTypes`.
+
+-   `R` is the current default because all existing carousel case studies are R-based.
+-   `Python` is available as a future filter and matches terms such as `python`, `pandas`, `numpy`, `scikit`, `sklearn`, `matplotlib`, `seaborn`, `jupyter`, and `ipynb`.
+
+For future Python case studies, include clear Python indicators in `Packages`, `repo_name`, or the case study URL so the classifier can detect them.
+
+## Project grouping
+
+Project is inferred by `projectTypes`.
+
+-   `Bloomberg` is the current default and matches Bloomberg/American Health/Public Health case-study metadata.
+-   `BioOCS` is available as a future filter and matches BioOCS, biomedical, genomic, transcriptomic, single-cell, and `ocs-bio` metadata.
+
+For future BioOCS case studies, include `BioOCS` in `Category`.
+
+## Rendering checklist
+
+After changing the carousel:
+
+1.  Confirm the home page carousel loads cards.
+
+2.  Test each filter group.
+
+3.  Test search with a skill label, project label, language label, and package name.
+
+4.  Confirm the package dropdown is populated.
+
+5.  Confirm cards still open the case study and GitHub links.

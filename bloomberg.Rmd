@@ -314,5 +314,5 @@ for (s in sections) {
 }
 ```
 
-<a href="search.html" class="bloomberg-btn" style="background:#003366; color:white; font-size:14px; display:block; text-align:center; margin-top:20px;">Browse All Case Studies →</a>
+<a href="search_new.html" class="bloomberg-btn" style="background:#003366; color:white; font-size:14px; display:block; text-align:center; margin-top:20px;">Browse All Case Studies →</a>
 
