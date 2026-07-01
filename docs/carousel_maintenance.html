@@ -11,7 +11,7 @@
 
 
 
-<title>Recent Posts</title>
+<title>Carousel Maintenance</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -397,175 +397,230 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Recent Posts</h1>
+<h1 class="title toc-ignore">Carousel Maintenance</h1>
 
 </div>
 
 
-<style type="text/css">
-.posts-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin: 20px 0;
-  max-width: 900px;
-}
+<p>This file documents how to update the case studies carousel that
+appears on the home page through <code>search_new.Rmd</code>.</p>
+<div id="source-files" class="section level2">
+<h2>Source files</h2>
+<ul>
+<li><code>search_new.Rmd</code> contains the carousel markup, filters,
+JavaScript grouping logic, and embedded case-study data block.</li>
+<li><code>OCS_info_co2int_only.csv</code> is the data source read by
+<code>search_new.Rmd</code>.</li>
+<li><code>index.Rmd</code> includes the carousel with
+<code>child='search_new.Rmd'</code>.</li>
+<li><code>styles.css</code> contains the card, carousel, and filter
+styling.</li>
+</ul>
+</div>
+<div id="adding-or-updating-case-studies" class="section level2">
+<h2>Adding or updating case studies</h2>
+<ol style="list-style-type: decimal">
+<li>Add or update rows in <code>OCS_info_co2int_only.csv</code>.</li>
+<li>Keep these columns populated when possible:
+<ul>
+<li><p><code>repo_name</code></p></li>
+<li><p><code>case_study_name</code></p></li>
+<li><p><code>repo_url</code></p></li>
+<li><p><code>case_study_url</code></p></li>
+<li><p><code>Packages</code></p></li>
+<li><p><code>Title</code></p></li>
+<li><p><code>Questions</code></p></li>
+<li><p><code>Objectives</code></p></li>
+<li><p><code>Category</code></p></li>
+</ul></li>
+</ol>
+<p>The R chunk in <code>search_new.Rmd</code> reads the CSV and writes
+it into a
+<code>&lt;script id="case-study-data" type="application/json"&gt;</code>
+block during rendering.</p>
+</div>
+<div id="filter-groups" class="section level2">
+<h2>Filter groups</h2>
+<p>The carousel currently supports these filter dimensions:</p>
+<ul>
+<li>Topic/public health problem: inferred by
+<code>problemTypes</code>.</li>
+<li>Skill: inferred by <code>skillTypes</code>.</li>
+<li>Programming language: inferred by <code>languageTypes</code>.</li>
+<li>Project: inferred by <code>projectTypes</code>.</li>
+<li>Package: populated dynamically from the <code>Packages</code>
+column.</li>
+<li>Search: matches title, questions, objectives, packages, inferred
+labels, and internal filter values.</li>
+</ul>
+</div>
+<div id="where-filter-groupings-live" class="section level2">
+<h2>Where filter groupings live</h2>
+<p>The filter grouping rules live in <code>search_new.Rmd</code>, inside
+the JavaScript <code>&lt;script&gt;</code> block near the bottom of the
+file.</p>
+<p>Look for these arrays:</p>
+<pre class="js"><code>var problemTypes = [
+  ...
+];
 
-.post-card {
-  border: 1px solid rgba(0,0,0,0.08);
-  padding: 10px;
-  border-radius: 12px;
-  background: rgba(35, 138, 141, 0.06);
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: flex;
-  flex-direction: column;
-}
+var skillTypes = [
+  ...
+];
 
-.post-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(35, 138, 141, 0.2);
-}
+var languageTypes = [
+  ...
+];
 
-.post-card h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
-  font-size: 3rem;
-  line-height: 1.3;
-  font-weight: 600;
-  color: #111;
-}
-
-.post-card h3 a {
-  color: #238A8D;
-  text-decoration: none;
-}
-
-.post-card h3 a:hover {
-  text-decoration: underline;
-}
-
-.post-date {
-  color: #666;
-  font-size: 0.85em;
-  margin-bottom: 8px;
-  margin-top: 0;
-  font-weight: 500;
-}
-
-.post-excerpt {
-  color: #444;
-  line-height: 1.5;
-  font-size: 0.95em;
-  margin-top: auto;
-  padding-top: 10px;
-}
-
-@media (max-width: 768px) {
-  .posts-grid {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-<div class="posts-grid">
-<div id="welcome-kate-isaac-to-the-ocs-team"
-class="section level3 post-card">
-<h3><a href="post/2025-2-2-OCS-welcome-kate.html">Welcome Kate Isaac to
-the OCS team!</a></h3>
-<div class="post-date">
-2025-02-01
+var projectTypes = [
+  ...
+];</code></pre>
+<p>Each array item usually has this shape:</p>
+<pre class="js"><code>{
+  label: &quot;Machine learning&quot;,
+  value: &quot;machine-learning&quot;,
+  pattern: /machine learning|tidymodels|random ?forest/i
+}</code></pre>
+<ul>
+<li><code>label</code> is the readable text users see on filters, search
+terms, or card tags.</li>
+<li><code>value</code> is the internal slug used by the filter logic.
+Use lowercase words separated by hyphens.</li>
+<li><code>pattern</code> is the regular expression used to classify a
+case study from metadata such as <code>Packages</code>,
+<code>Objectives</code>, <code>Category</code>, repo names, or
+URLs.</li>
+</ul>
+<p>The visible filter buttons live earlier in
+<code>search_new.Rmd</code>, inside:</p>
+<pre class="html"><code>&lt;div class=&quot;case-filter-groups&quot;&gt;</code></pre>
 </div>
-<div class="post-excerpt">
-Carrie Wright
+<div id="updating-a-filter-button-list" class="section level2">
+<h2>Updating a filter button list</h2>
+<p>For example, the skill buttons are in this section:</p>
+<pre class="html"><code>&lt;div class=&quot;case-filter-group&quot;&gt;
+  &lt;div class=&quot;case-filter-label&quot;&gt;Skill&lt;/div&gt;
+  &lt;div class=&quot;case-filter-options&quot; aria-label=&quot;Skill filters&quot;&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>To add a new skill filter called <code>Data ethics</code>, add a
+button to that list:</p>
+<pre class="html"><code>&lt;button
+  type=&quot;button&quot;
+  class=&quot;case-filter-button&quot;
+  data-filter-type=&quot;skill&quot;
+  data-filter-value=&quot;data-ethics&quot;
+  aria-pressed=&quot;false&quot;&gt;
+  Data ethics
+&lt;/button&gt;</code></pre>
+<p>Then add the matching item to <code>skillTypes</code>:</p>
+<pre class="js"><code>{
+  label: &quot;Data ethics&quot;,
+  value: &quot;data-ethics&quot;,
+  pattern: /ethics|privacy|bias|fairness|responsible data/i
+}</code></pre>
+<p>The button’s <code>data-filter-value</code> must exactly match the
+array item’s <code>value</code>.</p>
+<p>For a different filter group, change <code>data-filter-type</code> to
+match the group:</p>
+<ul>
+<li>Topic/public health problem buttons use
+<code>data-filter-type="problem"</code> and match
+<code>problemTypes</code>.</li>
+<li>Skill buttons use <code>data-filter-type="skill"</code> and match
+<code>skillTypes</code>.</li>
+<li>Language buttons use <code>data-filter-type="language"</code> and
+match <code>languageTypes</code>.</li>
+<li>Project buttons use <code>data-filter-type="project"</code> and
+match <code>projectTypes</code>.</li>
+</ul>
+<p>When adding a completely new filter group, update all three places in
+<code>search_new.Rmd</code>:</p>
+<ol style="list-style-type: decimal">
+<li>Add the button in the filter markup with
+<code>data-filter-type</code> and <code>data-filter-value</code>.</li>
+<li>Add the same filter key to the <code>filters</code> object.</li>
+<li>Add the same filter key to <code>applyFilters()</code>.</li>
+</ol>
+<p>Existing filter groups already have their filter keys wired into the
+JavaScript, so adding a new option to an existing group usually only
+requires adding the button and updating the matching grouping array.</p>
 </div>
+<div id="skill-groupings" class="section level2">
+<h2>Skill groupings</h2>
+<p>Skills are inferred in <code>skillTypes</code>. Each skill group
+has:</p>
+<ul>
+<li><code>label</code>: visible text shown in filters/search/tags.</li>
+<li><code>value</code>: stable slug used in
+<code>data-skill</code>.</li>
+<li><code>pattern</code>: regex used against <code>Packages</code> and
+<code>Objectives</code>.</li>
+</ul>
+<p>Current skill groups:</p>
+<ul>
+<li>Data visualization</li>
+<li>Interactive visualization &amp; dashboards</li>
+<li>Statistical inference</li>
+<li>Regression &amp; multivariate analysis</li>
+<li>Machine learning</li>
+<li>Research design &amp; data literacy</li>
+</ul>
+<p>To add or revise a skill grouping:</p>
+<ol style="list-style-type: decimal">
+<li>Update the skill filter button list.</li>
+<li>Update <code>skillTypes</code> with the same <code>label</code> and
+<code>value</code>.</li>
+<li>Add package names, methods, and objective phrases to the regex
+pattern.</li>
+<li>Check that <code>getSkills()</code> still returns at least one skill
+for each card.</li>
+</ol>
+<p>Case studies can match multiple skill groups. The order in
+<code>skillTypes</code> determines the order used for skill labels.</p>
 </div>
-<div id="ocs-publishes-a-new-paper" class="section level3 post-card">
-<h3><a href="post/2024-9-25-OCS-paper.html">OCS Publishes a New
-Paper</a></h3>
-<div class="post-date">
-2024-09-24
+<div id="language-grouping" class="section level2">
+<h2>Language grouping</h2>
+<p>Language is inferred by <code>languageTypes</code>.</p>
+<ul>
+<li><code>R</code> is the current default because all existing carousel
+case studies are R-based.</li>
+<li><code>Python</code> is available as a future filter and matches
+terms such as <code>python</code>, <code>pandas</code>,
+<code>numpy</code>, <code>scikit</code>, <code>sklearn</code>,
+<code>matplotlib</code>, <code>seaborn</code>, <code>jupyter</code>, and
+<code>ipynb</code>.</li>
+</ul>
+<p>For future Python case studies, include clear Python indicators in
+<code>Packages</code>, <code>repo_name</code>, or the case study URL so
+the classifier can detect them.</p>
 </div>
-<div class="post-excerpt">
-Carrie Wright
+<div id="project-grouping" class="section level2">
+<h2>Project grouping</h2>
+<p>Project is inferred by <code>projectTypes</code>.</p>
+<ul>
+<li><code>Bloomberg</code> is the current default and matches
+Bloomberg/American Health/Public Health case-study metadata.</li>
+<li><code>BioOCS</code> is available as a future filter and matches
+BioOCS, biomedical, genomic, transcriptomic, single-cell, and
+<code>ocs-bio</code> metadata.</li>
+</ul>
+<p>For future BioOCS case studies, include <code>BioOCS</code> in
+<code>Category</code>.</p>
 </div>
-</div>
-<div
-id="ocs-to-be-featured-at-the-bloomberg-american-health-summit-2020"
-class="section level3 post-card">
-<h3><a
-href="post/2020-12-04-Bloomberg-American-Health-Summit-2020.html">OCS to
-be featured at the Bloomberg American Health Summit 2020</a></h3>
-<div class="post-date">
-2020-12-04
-</div>
-<div class="post-excerpt">
-Carrie Wright
-</div>
-</div>
-<div id="welcome-qier-meng-and-michael-breshock-to-ocs-team"
-class="section level3 post-card">
-<h3><a
-href="post/2020-11-16-welcome-Qier-Meng-and-Michael-Breshock.html">Welcome
-Qier Meng and Michael Breshock to OCS Team!</a></h3>
-<div class="post-date">
-2020-11-16
-</div>
-<div class="post-excerpt">
-Carrie Wright
-</div>
-</div>
-<div id="ocs-work-featured-in-jhu-hub" class="section level3 post-card">
-<h3><a href="post/2020-10-08-OCS-work-featured-in-JHU-hub.html">OCS work
-featured in JHU Hub</a></h3>
-<div class="post-date">
-2020-10-08
-</div>
-<div class="post-excerpt">
-Carrie Wright
-</div>
-</div>
-<div id="looking-for-a-student-to-join-the-ocs-team"
-class="section level3 post-card">
-<h3><a href="post/2020-09-23-recruiting-student.html">Looking for a
-Student to Join the OCS Team</a></h3>
-<div class="post-date">
-2020-09-23
-</div>
-<div class="post-excerpt">
-Carrie Wright
-</div>
-</div>
-<div id="ocs-team-awarded-delta-award" class="section level3 post-card">
-<h3><a href="post/2020-07-15-OCS-team-awarded-DELTA-award.html">OCS team
-awarded DELTA award!</a></h3>
-<div class="post-date">
-2020-07-15
-</div>
-<div class="post-excerpt">
-Carrie Wright
-</div>
-</div>
-<div id="welcome-carrie-wright-to-ocs-team"
-class="section level3 post-card">
-<h3><a href="post/2019-12-19-welcome-carrie-wright.html">Welcome Carrie
-Wright to OCS Team!</a></h3>
-<div class="post-date">
-2019-12-18
-</div>
-<div class="post-excerpt">
-Stephanie Hicks
-</div>
-</div>
-<div id="open-case-studies-now-have-dois-for-citations"
-class="section level3 post-card">
-<h3><a href="post/2019-02-14-case-studies-now-have-doi.html">Open Case
-Studies now have DOIs for citations</a></h3>
-<div class="post-date">
-2019-02-14
-</div>
-<div class="post-excerpt">
-Stephanie Hicks
-</div>
-</div>
+<div id="rendering-checklist" class="section level2">
+<h2>Rendering checklist</h2>
+<p>After changing the carousel:</p>
+<ol style="list-style-type: decimal">
+<li><p>Confirm the home page carousel loads cards.</p></li>
+<li><p>Test each filter group.</p></li>
+<li><p>Test search with a skill label, project label, language label,
+and package name.</p></li>
+<li><p>Confirm the package dropdown is populated.</p></li>
+<li><p>Confirm cards still open the case study and GitHub
+links.</p></li>
+</ol>
 </div>
 
 
