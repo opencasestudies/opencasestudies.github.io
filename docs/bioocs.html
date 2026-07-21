@@ -13,7 +13,7 @@
 
 <title>BioOCS</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -36,6 +36,7 @@
 <script src="site_libs/react-18.2.0/react.min.js"></script>
 <script src="site_libs/react-18.2.0/react-dom.min.js"></script>
 <script src="site_libs/reactwidget-2.0.0/react-tools.js"></script>
+<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
 <script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <link href="site_libs/reactable-0.4.5/reactable.css" rel="stylesheet" />
 <script src="site_libs/reactable-binding-0.4.5/reactable.js"></script>
@@ -94,8 +95,37 @@
 </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<style>
+/* Inline navbar search form */
+#ocs-inline-search {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#ocs-inline-search .input-group {
+  width: 220px;
+}
+#ocs-inline-search .form-control {
+  border-radius: 20px 0 0 20px !important;
+  height: 32px;
+  font-size: 13px;
+}
+#ocs-inline-search .btn {
+  background-color: #238A8D;
+  color: white;
+  border-color: #238A8D;
+  border-radius: 0 20px 20px 0 !important;
+  height: 32px;
+  padding: 0 10px;
+}
+#ocs-inline-search .btn:hover {
+  background-color: #1a6e70;
+  border-color: #1a6e70;
+}
+</style>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    /* ── Floating toolbar (translate) ── */
     var toolbar = document.createElement('div');
     toolbar.id = 'ocs-toolbar';
 
@@ -104,6 +134,55 @@
     toolbar.appendChild(translateSlot);
 
     document.body.appendChild(toolbar);
+
+    /* ── Inline navbar search ── */
+    var searchLink = document.querySelector('.navbar-nav a[href="site-search.html"]');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+    if (!searchLink || !navbarCollapse) return;
+
+    // Replace placeholder text with the FA icon
+    searchLink.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+    searchLink.setAttribute('title', 'Search');
+
+    // Build Bootstrap 3 navbar-form and append to navbar
+    var form = document.createElement('form');
+    form.id = 'ocs-inline-search';
+    form.className = 'navbar-form navbar-right';
+    form.setAttribute('role', 'search');
+    form.style.display = 'none';
+    form.innerHTML =
+      '<div class="input-group">' +
+        '<input id="ocs-search-q" type="text" class="form-control"' +
+        '  placeholder="Search site\u2026" autocomplete="off">' +
+        '<span class="input-group-btn">' +
+          '<button class="btn" type="submit">' +
+            '<i class="fa fa-search"></i>' +
+          '</button>' +
+        '</span>' +
+      '</div>';
+    navbarCollapse.appendChild(form);
+
+    // Toggle form on search icon click
+    searchLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      var isOpen = form.style.display !== 'none';
+      form.style.display = isOpen ? 'none' : 'block';
+      if (!isOpen) document.getElementById('ocs-search-q').focus();
+    });
+
+    // Submit → redirect to site-search.html with GCSE hash
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var q = document.getElementById('ocs-search-q').value.trim();
+      if (q) window.location.href = 'site-search.html?q=' + encodeURIComponent(q);
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!form.contains(e.target) && !searchLink.contains(e.target)) {
+        form.style.display = 'none';
+      }
+    });
   });
 </script>
 
@@ -392,6 +471,9 @@ $(document).ready(function () {
 <li>
   <a href="search_new.html">Open Case Study Search</a>
 </li>
+<li>
+  <a href="site-search.html">[search]</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -483,8 +565,8 @@ biology, biomedical research, and quantitative biology.</p>
 </div>
 <div id="case-studies" class="section level2">
 <h2>Incoming Case Studies</h2>
-<div class="reactable html-widget html-fill-item" id="htmlwidget-8009de481872bf234b14" style="width:auto;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-8009de481872bf234b14">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Title":["Analyzing Single-Nucleus RNA Sequencing Data from Control and Sleep-Deprived Mice","Predicting age based on epigenetic markers (epigenetic clock) using Neural Networks in R with scorcher","Analyzing Spatially-Informed Gene Expression to Compare Schizophrenia and Neurotypical Cases Using an Image-Based Approach","Revealing Hidden Patterns of Interferon Responses in Individual Cells Using CoGAPS","Discovering Temporal Gene Expression Patterns with CoGAPS in Single-Cell Influenza Infection Data","Using containers for reproducible analyses","Using GitHub for version controlled reproducible analyses: Exploring Maternal and Infant Microbiome Metadata"],"Bioinformatics Topics":["Single-nucleus RNA sequencing analysis, Normalization","Deep Learning, AI, Neural Networks","Image-based Spatial Transcriptomics, Gene Expression Analysis","Latent variable analysis, Dimension reduction techniques","Temporal Analysis, Latent variable analysis, Dimension reduction techniques","Docker, Containers","GitHub, Metadata"],"Biological Topics":["Sleep Deprivation","Epigenetic Clocks, Aging","Schizophrenia","Interferon responses","Influenza infection","Metabolomics","Maternal and infant microbiome"],"Data Types":["snRNA-seq (single-nucleus RNA-seq)","Methylation Data","Xenium spatial transcriptomics data","scRNA-seq (single-cell RNA-seq)","scRNA-seq (single-cell RNA-seq)","Study Information","Metadata"]},"columns":[{"id":"Title","name":"Title","type":"character","minWidth":220,"style":{"fontWeight":"500"}},{"id":"Bioinformatics Topics","name":"Bioinformatics Topics","type":"character","minWidth":180},{"id":"Biological Topics","name":"Biological Topics","type":"character","minWidth":140},{"id":"Data Types","name":"Data Types","type":"character","minWidth":160}],"searchable":true,"pagination":false,"highlight":true,"bordered":true,"striped":true,"theme":{"borderColor":"#dde","stripedColor":"#f0f7f4","highlightColor":"#d6ede5","style":{"fontSize":"1.4rem"},"headerStyle":{"background":"#1a7a4a","color":"#fff","fontWeight":"500"}},"dataKey":"c390973ef74a498de3ad52578d1bdeaf"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-7d7485fbb1d740683e2c" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-7d7485fbb1d740683e2c">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Title":["Analyzing Single-Nucleus RNA Sequencing Data from Control and Sleep-Deprived Mice","Predicting age based on epigenetic markers (epigenetic clock) using Neural Networks in R with scorcher","Analyzing Spatially-Informed Gene Expression to Compare Schizophrenia and Neurotypical Cases Using an Image-Based Approach","Revealing Hidden Patterns of Interferon Responses in Individual Cells Using CoGAPS","Discovering Temporal Gene Expression Patterns with CoGAPS in Single-Cell Influenza Infection Data","Using containers for reproducible analyses","Using GitHub for version controlled reproducible analyses: Exploring Maternal and Infant Microbiome Metadata"],"Bioinformatics Topics":["Single-nucleus RNA sequencing analysis, Normalization","Deep Learning, AI, Neural Networks","Image-based Spatial Transcriptomics, Gene Expression Analysis","Latent variable analysis, Dimension reduction techniques","Temporal Analysis, Latent variable analysis, Dimension reduction techniques","Docker, Containers","GitHub, Metadata"],"Biological Topics":["Sleep Deprivation","Epigenetic Clocks, Aging","Schizophrenia","Interferon responses","Influenza infection","Metabolomics","Maternal and infant microbiome"],"Data Types":["snRNA-seq (single-nucleus RNA-seq)","Methylation Data","Xenium spatial transcriptomics data","scRNA-seq (single-cell RNA-seq)","scRNA-seq (single-cell RNA-seq)","Study Information","Metadata"]},"columns":[{"id":"Title","name":"Title","type":"character","minWidth":220,"style":{"fontWeight":"500"}},{"id":"Bioinformatics Topics","name":"Bioinformatics Topics","type":"character","minWidth":180},{"id":"Biological Topics","name":"Biological Topics","type":"character","minWidth":140},{"id":"Data Types","name":"Data Types","type":"character","minWidth":160}],"searchable":true,"pagination":false,"highlight":true,"bordered":true,"striped":true,"theme":{"borderColor":"#dde","stripedColor":"#f0f7f4","highlightColor":"#d6ede5","style":{"fontSize":"1.4rem"},"headerStyle":{"background":"#1a7a4a","color":"#fff","fontWeight":"500"}},"dataKey":"c390973ef74a498de3ad52578d1bdeaf"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
 <div class="coming-soon-box">
 <h3>
 Coming Soon

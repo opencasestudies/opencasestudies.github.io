@@ -11,9 +11,9 @@
 
 
 
-<title>setup.knit</title>
+<title>Site Search</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -87,8 +87,37 @@
 </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<style>
+/* Inline navbar search form */
+#ocs-inline-search {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#ocs-inline-search .input-group {
+  width: 220px;
+}
+#ocs-inline-search .form-control {
+  border-radius: 20px 0 0 20px !important;
+  height: 32px;
+  font-size: 13px;
+}
+#ocs-inline-search .btn {
+  background-color: #238A8D;
+  color: white;
+  border-color: #238A8D;
+  border-radius: 0 20px 20px 0 !important;
+  height: 32px;
+  padding: 0 10px;
+}
+#ocs-inline-search .btn:hover {
+  background-color: #1a6e70;
+  border-color: #1a6e70;
+}
+</style>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    /* ── Floating toolbar (translate) ── */
     var toolbar = document.createElement('div');
     toolbar.id = 'ocs-toolbar';
 
@@ -97,6 +126,55 @@
     toolbar.appendChild(translateSlot);
 
     document.body.appendChild(toolbar);
+
+    /* ── Inline navbar search ── */
+    var searchLink = document.querySelector('.navbar-nav a[href="site-search.html"]');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+    if (!searchLink || !navbarCollapse) return;
+
+    // Replace placeholder text with the FA icon
+    searchLink.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
+    searchLink.setAttribute('title', 'Search');
+
+    // Build Bootstrap 3 navbar-form and append to navbar
+    var form = document.createElement('form');
+    form.id = 'ocs-inline-search';
+    form.className = 'navbar-form navbar-right';
+    form.setAttribute('role', 'search');
+    form.style.display = 'none';
+    form.innerHTML =
+      '<div class="input-group">' +
+        '<input id="ocs-search-q" type="text" class="form-control"' +
+        '  placeholder="Search site\u2026" autocomplete="off">' +
+        '<span class="input-group-btn">' +
+          '<button class="btn" type="submit">' +
+            '<i class="fa fa-search"></i>' +
+          '</button>' +
+        '</span>' +
+      '</div>';
+    navbarCollapse.appendChild(form);
+
+    // Toggle form on search icon click
+    searchLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      var isOpen = form.style.display !== 'none';
+      form.style.display = isOpen ? 'none' : 'block';
+      if (!isOpen) document.getElementById('ocs-search-q').focus();
+    });
+
+    // Submit → redirect to site-search.html with GCSE hash
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var q = document.getElementById('ocs-search-q').value.trim();
+      if (q) window.location.href = 'site-search.html?q=' + encodeURIComponent(q);
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function (e) {
+      if (!form.contains(e.target) && !searchLink.contains(e.target)) {
+        form.style.display = 'none';
+      }
+    });
   });
 </script>
 
@@ -346,6 +424,9 @@ $(document).ready(function () {
 <li>
   <a href="search.html">Open Case Study Search</a>
 </li>
+<li>
+  <a href="site-search.html">[search]</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -358,93 +439,59 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore">Site Search</h1>
 
 </div>
 
 
-<div class="section-hero">
-  <div class="hero-inner">
-    <h1 class="hero-title">Open Case Studies</h1>
-    <p class="hero-subtitle"></p>
-  </div>
+<!-- Google Custom Search Engine -->
+<script async src="https://cse.google.com/cse.js?cx=815456853205e4214"></script>
+
+<style>
+.search-wrapper {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+.gsc-control-cse {
+  font-family: inherit !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+}
+.gsc-input-box {
+  border-radius: 6px !important;
+}
+.gsc-search-button-v2 {
+  border-radius: 6px !important;
+  background-color: #238A8D !important;
+  border-color: #238A8D !important;
+}
+</style>
+
+<div class="search-wrapper">
+  <div class="gcse-search"></div>
 </div>
-<div id="what-is-the-open-case-studies-ocs-project"
-class="section level2">
-<h2>What is the Open Case Studies (OCS) project?</h2>
-<p>The Open Case Studies project is an educational resource of
-experiential guides that demonstrate how to effectively derive knowledge
-from data in real-world challenges.</p>
-<p>
-  <a class="btn-primary" href="https://opencasestudies.org/" target="_blank" rel="noopener">
-    Browse case studies
-  </a>
-</p>
-<img class="img-center" src="img/icon.png" alt="Open Case Studies icon">
-<p>Our case studies can be used:</p>
-<ul>
-<li>by educators to help them teach</li>
-<li>by students to help them with their classes</li>
-<li>by independent learners to help them learn</li>
-</ul>
-<p>Find out more about how others are using case studies and what they
-think of them in this <a
-href="http://jhir.library.jhu.edu/handle/1774.2/66820">study</a>.</p>
-</div>
-<div id="what-problem-are-we-addressing" class="section level2">
-<h2>What problem are we addressing?</h2>
-<p>Despite unprecedented and growing interest in data science on
-campuses, there are few courses and course materials that provide
-meaningful opportunity for students to learn about real-world
-challenges. Most courses frequently fail to frame the lectures around a
-real-world application and provide unrealistically clean datasets that
-fit the assumptions of the methods in an unrealistic way. The result is
-that students are left unable to effectively analyze data and solve
-real-world challenges outside of the classroom.</p>
-</div>
-<div id="problems-with-previously-suggested-solutions"
-class="section level2">
-<h2>Problems with previously suggested solutions</h2>
-<p>In 1999, <a
-href="https://www.stat.berkeley.edu/users/statlabs/">Nolan and Speed</a>
-argued the solution was to teach courses through in-depth case studies
-derived from interesting problems, with nontrivial solutions that leave
-room for different analyses. This innovative framework teaches the
-student to make important connections between the scientific question,
-data and statistical concepts that only come from hands-on experience
-analyzing data. However, these case studies based on realistic
-challenges, not toy examples, are scarce.</p>
-</div>
-<div id="what-are-we-proposing-as-a-solution" class="section level2">
-<h2>What are we proposing as a solution?</h2>
-<p>To address this, we are developing the <strong>Open Case
-Studies</strong> educational resource of case studies, which demonstrate
-illustrative data analyses that can be used in the classroom to teach
-students how to effectively derive knowledge from data. This approach
-has successfully been used to <a
-href="https://amstat.tandfonline.com/doi/abs/10.1080/00031305.2017.1356747#.XDZCzS3MxTY">teach
-data science</a> courses at many universities, including:</p>
-<ul>
-<li><a href="https://jhu-advdatasci.github.io/2018/">Johns Hopkins
-Bloomberg School of Public Health</a></li>
-<li><a href="http://cs109.github.io/2014/">Harvard University</a></li>
-<li><a href="http://datasciencelabs.github.io/2016/">Harvard T.H. Chan
-School of Public Health</a></li>
-<li><a href="http://rdatasciencecases.org">University of California at
-Berkeley</a></li>
-<li><a
-href="https://www.tandfonline.com/doi/pdf/10.1080/00031305.2015.1081105">Smith
-College</a></li>
-</ul>
-<div class="video-wrap">
-  <iframe
-    src="https://www.youtube.com/embed/DgzBSOY5Yc8"
-    title="Open Case Studies video"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen>
-  </iframe>
-</div>
-</div>
+
+<script>
+// If ?q= is in the URL, wait for GCSE to render then auto-submit the search
+(function () {
+  var q = new URLSearchParams(window.location.search).get('q');
+  if (!q) return;
+
+  var attempts = 0;
+  var iv = setInterval(function () {
+    var input = document.querySelector('input.gsc-input');
+    var btn   = document.querySelector('button.gsc-search-button');
+    if (input && btn) {
+      input.value = q;
+      btn.click();
+      clearInterval(iv);
+    }
+    if (++attempts > 50) clearInterval(iv); // give up after 5s
+  }, 100);
+})();
+</script>
 
 
 
