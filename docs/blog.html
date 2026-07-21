@@ -384,12 +384,24 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Open Case Studies</a>
+      <a class="navbar-brand" href="index.html"><img id="logo" style="width: 30px;" src="resources/logo.png" /></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li>
-  <a href="survey.html">Survey</a>
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    About
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="index.html">Background</a>
+    </li>
+    <li>
+      <a href="team.html">Team</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -406,23 +418,50 @@ $(document).ready(function () {
     </li>
   </ul>
 </li>
-<li>
-  <a href="blog.html">Blog</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    News
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="blog.html">Blog</a>
+    </li>
+    <li>
+      <a href="talks.html">Talks</a>
+    </li>
+    <li>
+      <a href="events.html">Events</a>
+    </li>
+  </ul>
 </li>
-<li>
-  <a href="team.html">Team</a>
-</li>
-<li>
-  <a href="events.html">Events</a>
-</li>
-<li>
-  <a href="talks.html">Talks</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Resources
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://www.opencasestudies.org/OCS_Guide">Educator/User Guide</a>
+    </li>
+    <li>
+      <a href="https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394541">Publication</a>
+    </li>
+    <li>
+      <a href="https://jscholarship.library.jhu.edu/items/69ae8990-a78b-4d53-916e-d2a279afd69b">Thesis Study</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="contact.html">Contact</a>
 </li>
 <li>
-  <a href="search.html">Open Case Study Search</a>
+  <a href="survey.html">Survey</a>
+</li>
+<li>
+  <a href="search_new.html">Open Case Study Search</a>
 </li>
 <li>
   <a href="site-search.html">[search]</a>

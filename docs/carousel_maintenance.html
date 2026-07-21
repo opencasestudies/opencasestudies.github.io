@@ -11,9 +11,9 @@
 
 
 
-<title>Team</title>
+<title>Carousel Maintenance</title>
 
-<script src="site_libs/header-attrs-2.30/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
@@ -87,37 +87,8 @@
 </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<style>
-/* Inline navbar search form */
-#ocs-inline-search {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-#ocs-inline-search .input-group {
-  width: 220px;
-}
-#ocs-inline-search .form-control {
-  border-radius: 20px 0 0 20px !important;
-  height: 32px;
-  font-size: 13px;
-}
-#ocs-inline-search .btn {
-  background-color: #238A8D;
-  color: white;
-  border-color: #238A8D;
-  border-radius: 0 20px 20px 0 !important;
-  height: 32px;
-  padding: 0 10px;
-}
-#ocs-inline-search .btn:hover {
-  background-color: #1a6e70;
-  border-color: #1a6e70;
-}
-</style>
-
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    /* ── Floating toolbar (translate) ── */
     var toolbar = document.createElement('div');
     toolbar.id = 'ocs-toolbar';
 
@@ -126,55 +97,6 @@
     toolbar.appendChild(translateSlot);
 
     document.body.appendChild(toolbar);
-
-    /* ── Inline navbar search ── */
-    var searchLink = document.querySelector('.navbar-nav a[href="site-search.html"]');
-    var navbarCollapse = document.querySelector('.navbar-collapse');
-    if (!searchLink || !navbarCollapse) return;
-
-    // Replace placeholder text with the FA icon
-    searchLink.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i>';
-    searchLink.setAttribute('title', 'Search');
-
-    // Build Bootstrap 3 navbar-form and append to navbar
-    var form = document.createElement('form');
-    form.id = 'ocs-inline-search';
-    form.className = 'navbar-form navbar-right';
-    form.setAttribute('role', 'search');
-    form.style.display = 'none';
-    form.innerHTML =
-      '<div class="input-group">' +
-        '<input id="ocs-search-q" type="text" class="form-control"' +
-        '  placeholder="Search site\u2026" autocomplete="off">' +
-        '<span class="input-group-btn">' +
-          '<button class="btn" type="submit">' +
-            '<i class="fa fa-search"></i>' +
-          '</button>' +
-        '</span>' +
-      '</div>';
-    navbarCollapse.appendChild(form);
-
-    // Toggle form on search icon click
-    searchLink.addEventListener('click', function (e) {
-      e.preventDefault();
-      var isOpen = form.style.display !== 'none';
-      form.style.display = isOpen ? 'none' : 'block';
-      if (!isOpen) document.getElementById('ocs-search-q').focus();
-    });
-
-    // Submit → redirect to site-search.html with GCSE hash
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var q = document.getElementById('ocs-search-q').value.trim();
-      if (q) window.location.href = 'site-search.html?q=' + encodeURIComponent(q);
-    });
-
-    // Close when clicking outside
-    document.addEventListener('click', function (e) {
-      if (!form.contains(e.target) && !searchLink.contains(e.target)) {
-        form.style.display = 'none';
-      }
-    });
   });
 </script>
 
@@ -463,9 +385,6 @@ $(document).ready(function () {
 <li>
   <a href="search_new.html">Open Case Study Search</a>
 </li>
-<li>
-  <a href="site-search.html">[search]</a>
-</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         
@@ -478,360 +397,230 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Team</h1>
+<h1 class="title toc-ignore">Carousel Maintenance</h1>
 
 </div>
 
 
-<style>
-body {
-  background: #f5f5f5;
-  max-width: 100% !important;
-  padding: 0 !important;
-  text-align: center !important;
-}
-/* Override rmarkdown's default content width */
-.main-container {
-  max-width: 1600px !important;
-  margin: 0 auto !important;
-  padding: 0 40px !important;
-  text-align: center !important;
-}
-/* rmarkdown injects this row div which breaks centering */
-.row {
-  margin: 0 !important;
-  text-align: center !important;
-}
-p, h1, h2, h3, h4 {
-  text-align: center !important;
-}
-.page-header {
-  text-align: center !important;
-  font-size: 4.5rem;
-  font-weight: 300;
-  color: #333;
-  margin: 60px 0 20px 0;
-  width: 100%;
-  display: block;
-}
-.group-header {
-  text-align: center !important;
-  font-size: 2.5rem;
-  font-weight: 300;
-  color: #333;
-  margin: 60px 0 40px 0;
-  width: 100%;
-  display: block;
-}
-.team-grid {
-  display: block;
-  width: 100%;
-  text-align: center;
-  margin: 40px 0;
-  padding: 0;
-}
-.team-card-link {
-  text-decoration: none;
-  display: inline-block;
-  margin: 20px 30px;
-  vertical-align: top;
-}
-.team-card {
-  text-align: center !important;
-  width: 220px;
-  transition: transform 0.2s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.team-card:hover {
-  transform: translateY(-5px);
-}
-.team-avatar {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 20px auto !important;
-  display: block !important;
-}
-.team-name {
-  font-size: 2rem;
-  font-weight: 400;
-  color: #1e90ff;
-  margin: 0 0 8px 0;
-  line-height: 1.3;
-  text-align: center;
-}
-.team-role {
-  color: #666;
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin: 0;
-  line-height: 1.4;
-  text-align: center;
-}
-</style>
-<h1 class="page-header">
-Team
-</h1>
-<div style="width:100%;text-align:center;">
-<h2 class="group-header">
-Principal Investigators
-</h2>
-<div class="team-grid">
-<a href="team/shicks/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/shicks/avatar.jpg" alt="Stephanie Hicks, PhD" class="team-avatar">
-<h3 class="team-name">
-Stephanie Hicks, PhD
-</h3>
-<div class="team-role">
-Assistant Professor
+<p>This file documents how to update the case studies carousel that
+appears on the home page through <code>search_new.Rmd</code>.</p>
+<div id="source-files" class="section level2">
+<h2>Source files</h2>
+<ul>
+<li><code>search_new.Rmd</code> contains the carousel markup, filters,
+JavaScript grouping logic, and embedded case-study data block.</li>
+<li><code>OCS_info_co2int_only.csv</code> is the data source read by
+<code>search_new.Rmd</code>.</li>
+<li><code>index.Rmd</code> includes the carousel with
+<code>child='search_new.Rmd'</code>.</li>
+<li><code>styles.css</code> contains the card, carousel, and filter
+styling.</li>
+</ul>
 </div>
+<div id="adding-or-updating-case-studies" class="section level2">
+<h2>Adding or updating case studies</h2>
+<ol style="list-style-type: decimal">
+<li>Add or update rows in <code>OCS_info_co2int_only.csv</code>.</li>
+<li>Keep these columns populated when possible:
+<ul>
+<li><p><code>repo_name</code></p></li>
+<li><p><code>case_study_name</code></p></li>
+<li><p><code>repo_url</code></p></li>
+<li><p><code>case_study_url</code></p></li>
+<li><p><code>Packages</code></p></li>
+<li><p><code>Title</code></p></li>
+<li><p><code>Questions</code></p></li>
+<li><p><code>Objectives</code></p></li>
+<li><p><code>Category</code></p></li>
+</ul></li>
+</ol>
+<p>The R chunk in <code>search_new.Rmd</code> reads the CSV and writes
+it into a
+<code>&lt;script id="case-study-data" type="application/json"&gt;</code>
+block during rendering.</p>
 </div>
-</a><a href="team/cwright/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/cwright/avatar.jpg" alt="Carrie Wright, PhD " class="team-avatar">
-<h3 class="team-name">
-Carrie Wright, PhD
-</h3>
-<div class="team-role">
-Senior Staff Scientist
+<div id="filter-groups" class="section level2">
+<h2>Filter groups</h2>
+<p>The carousel currently supports these filter dimensions:</p>
+<ul>
+<li>Topic/public health problem: inferred by
+<code>problemTypes</code>.</li>
+<li>Skill: inferred by <code>skillTypes</code>.</li>
+<li>Programming language: inferred by <code>languageTypes</code>.</li>
+<li>Project: inferred by <code>projectTypes</code>.</li>
+<li>Package: populated dynamically from the <code>Packages</code>
+column.</li>
+<li>Search: matches title, questions, objectives, packages, inferred
+labels, and internal filter values.</li>
+</ul>
 </div>
-</div>
-</a><a href="team/ahoffman/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/ahoffman/avatar.png" alt="Ava Hoffman, PhD" class="team-avatar">
-<h3 class="team-name">
-Ava Hoffman, PhD
-</h3>
-<div class="team-role">
-Senior Scientist
-</div>
-</div>
-</a>
-</div>
-</div>
-<div style="width:100%;text-align:center;">
-<h2 class="group-header">
-Faculty
-</h2>
-<div class="team-grid">
-<a href="team/jmuschelli/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/jmuschelli/avatar.png" alt="John Muschelli, PhD" class="team-avatar">
-<h3 class="team-name">
-John Muschelli, PhD
-</h3>
-<div class="team-role">
-Associate Scientist
-</div>
-</div>
-</a><a href="team/ljager/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/ljager/avatar.png" alt="Leah Jager, PhD" class="team-avatar">
-<h3 class="team-name">
-Leah Jager, PhD
-</h3>
-<div class="team-role">
-Assistant Scientist
-</div>
-</div>
-</a><a href="team/mtaub/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/mtaub/avatar.png" alt="Margaret Taub, PhD" class="team-avatar">
-<h3 class="team-name">
-Margaret Taub, PhD
-</h3>
-<div class="team-role">
-Associate Scientist
-</div>
-</div>
-</a>
-</div>
-</div>
-<div style="width:100%;text-align:center;">
-<h2 class="group-header">
-Research Assistants
-</h2>
-<div class="team-grid">
-<a href="team/kisaac/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/kisaac/avatar.jpg" alt="Kate Isaac, PhD " class="team-avatar">
-<h3 class="team-name">
-Kate Isaac, PhD
-</h3>
-<div class="team-role">
-Postdoctoral Fellow
-</div>
-</div>
-</a><a href="team/othomas/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/othomas/avatar.png" alt="Oshane Thomas, PhD" class="team-avatar">
-<h3 class="team-name">
-Oshane Thomas, PhD
-</h3>
-<div class="team-role">
-Postdoctoral Fellow
-</div>
-</div>
-</a><a href="team/ssalerno/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/ssalerno/avatar.png" alt="Stephen Salerno, PhD" class="team-avatar">
-<h3 class="team-name">
-Stephen Salerno, PhD
-</h3>
-<div class="team-role">
-Postdoctoral Fellow
-</div>
-</div>
-</a><a href="team/steichman/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/steichman/avatar.png" alt="Sarah Teichman, PhD" class="team-avatar">
-<h3 class="team-name">
-Sarah Teichman, PhD
-</h3>
-<div class="team-role">
-Postdoctoral Fellow
-</div>
-</div>
-</a>
-</div>
-</div>
-<div style="width:100%;text-align:center;">
-<h2 class="group-header">
-OCS Alumni
-</h2>
-<div class="team-grid">
-<a href="team/astephens/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/astephens/avatar.jpeg" alt="Alexandra Stephens, MSE" class="team-avatar">
-<h3 class="team-name">
-Alexandra Stephens, MSE
-</h3>
-<div class="team-role">
+<div id="where-filter-groupings-live" class="section level2">
+<h2>Where filter groupings live</h2>
+<p>The filter grouping rules live in <code>search_new.Rmd</code>, inside
+the JavaScript <code>&lt;script&gt;</code> block near the bottom of the
+file.</p>
+<p>Look for these arrays:</p>
+<pre class="js"><code>var problemTypes = [
+  ...
+];
 
-</div>
-</div>
-</a><a href="team/hzhang/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/hzhang/avatar.jpeg" alt="Hanchao (Ted) Zhang, MS" class="team-avatar">
-<h3 class="team-name">
-Hanchao (Ted) Zhang, MS
-</h3>
-<div class="team-role">
+var skillTypes = [
+  ...
+];
 
-</div>
-</div>
-</a><a href="team/kwang/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/kwang/avatar.jpeg" alt="Kexin (Sheena) Wang, MSE" class="team-avatar">
-<h3 class="team-name">
-Kexin (Sheena) Wang, MSE
-</h3>
-<div class="team-role">
+var languageTypes = [
+  ...
+];
 
+var projectTypes = [
+  ...
+];</code></pre>
+<p>Each array item usually has this shape:</p>
+<pre class="js"><code>{
+  label: &quot;Machine learning&quot;,
+  value: &quot;machine-learning&quot;,
+  pattern: /machine learning|tidymodels|random ?forest/i
+}</code></pre>
+<ul>
+<li><code>label</code> is the readable text users see on filters, search
+terms, or card tags.</li>
+<li><code>value</code> is the internal slug used by the filter logic.
+Use lowercase words separated by hyphens.</li>
+<li><code>pattern</code> is the regular expression used to classify a
+case study from metadata such as <code>Packages</code>,
+<code>Objectives</code>, <code>Category</code>, repo names, or
+URLs.</li>
+</ul>
+<p>The visible filter buttons live earlier in
+<code>search_new.Rmd</code>, inside:</p>
+<pre class="html"><code>&lt;div class=&quot;case-filter-groups&quot;&gt;</code></pre>
 </div>
+<div id="updating-a-filter-button-list" class="section level2">
+<h2>Updating a filter button list</h2>
+<p>For example, the skill buttons are in this section:</p>
+<pre class="html"><code>&lt;div class=&quot;case-filter-group&quot;&gt;
+  &lt;div class=&quot;case-filter-label&quot;&gt;Skill&lt;/div&gt;
+  &lt;div class=&quot;case-filter-options&quot; aria-label=&quot;Skill filters&quot;&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>To add a new skill filter called <code>Data ethics</code>, add a
+button to that list:</p>
+<pre class="html"><code>&lt;button
+  type=&quot;button&quot;
+  class=&quot;case-filter-button&quot;
+  data-filter-type=&quot;skill&quot;
+  data-filter-value=&quot;data-ethics&quot;
+  aria-pressed=&quot;false&quot;&gt;
+  Data ethics
+&lt;/button&gt;</code></pre>
+<p>Then add the matching item to <code>skillTypes</code>:</p>
+<pre class="js"><code>{
+  label: &quot;Data ethics&quot;,
+  value: &quot;data-ethics&quot;,
+  pattern: /ethics|privacy|bias|fairness|responsible data/i
+}</code></pre>
+<p>The button’s <code>data-filter-value</code> must exactly match the
+array item’s <code>value</code>.</p>
+<p>For a different filter group, change <code>data-filter-type</code> to
+match the group:</p>
+<ul>
+<li>Topic/public health problem buttons use
+<code>data-filter-type="problem"</code> and match
+<code>problemTypes</code>.</li>
+<li>Skill buttons use <code>data-filter-type="skill"</code> and match
+<code>skillTypes</code>.</li>
+<li>Language buttons use <code>data-filter-type="language"</code> and
+match <code>languageTypes</code>.</li>
+<li>Project buttons use <code>data-filter-type="project"</code> and
+match <code>projectTypes</code>.</li>
+</ul>
+<p>When adding a completely new filter group, update all three places in
+<code>search_new.Rmd</code>:</p>
+<ol style="list-style-type: decimal">
+<li>Add the button in the filter markup with
+<code>data-filter-type</code> and <code>data-filter-value</code>.</li>
+<li>Add the same filter key to the <code>filters</code> object.</li>
+<li>Add the same filter key to <code>applyFilters()</code>.</li>
+</ol>
+<p>Existing filter groups already have their filter keys wired into the
+JavaScript, so adding a new option to an existing group usually only
+requires adding the button and updating the matching grouping array.</p>
 </div>
-</a><a href="team/latta/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/latta/avatar.jpg" alt="Lyla Atta, BS " class="team-avatar">
-<h3 class="team-name">
-Lyla Atta, BS
-</h3>
-<div class="team-role">
-
+<div id="skill-groupings" class="section level2">
+<h2>Skill groupings</h2>
+<p>Skills are inferred in <code>skillTypes</code>. Each skill group
+has:</p>
+<ul>
+<li><code>label</code>: visible text shown in filters/search/tags.</li>
+<li><code>value</code>: stable slug used in
+<code>data-skill</code>.</li>
+<li><code>pattern</code>: regex used against <code>Packages</code> and
+<code>Objectives</code>.</li>
+</ul>
+<p>Current skill groups:</p>
+<ul>
+<li>Data visualization</li>
+<li>Interactive visualization &amp; dashboards</li>
+<li>Statistical inference</li>
+<li>Regression &amp; multivariate analysis</li>
+<li>Machine learning</li>
+<li>Research design &amp; data literacy</li>
+</ul>
+<p>To add or revise a skill grouping:</p>
+<ol style="list-style-type: decimal">
+<li>Update the skill filter button list.</li>
+<li>Update <code>skillTypes</code> with the same <code>label</code> and
+<code>value</code>.</li>
+<li>Add package names, methods, and objective phrases to the regex
+pattern.</li>
+<li>Check that <code>getSkills()</code> still returns at least one skill
+for each card.</li>
+</ol>
+<p>Case studies can match multiple skill groups. The order in
+<code>skillTypes</code> determines the order used for skill labels.</p>
 </div>
+<div id="language-grouping" class="section level2">
+<h2>Language grouping</h2>
+<p>Language is inferred by <code>languageTypes</code>.</p>
+<ul>
+<li><code>R</code> is the current default because all existing carousel
+case studies are R-based.</li>
+<li><code>Python</code> is available as a future filter and matches
+terms such as <code>python</code>, <code>pandas</code>,
+<code>numpy</code>, <code>scikit</code>, <code>sklearn</code>,
+<code>matplotlib</code>, <code>seaborn</code>, <code>jupyter</code>, and
+<code>ipynb</code>.</li>
+</ul>
+<p>For future Python case studies, include clear Python indicators in
+<code>Packages</code>, <code>repo_name</code>, or the case study URL so
+the classifier can detect them.</p>
 </div>
-</a><a href="team/mbreshock/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/mbreshock/avatar.jpg" alt="Michael Breshock, MSE" class="team-avatar">
-<h3 class="team-name">
-Michael Breshock, MSE
-</h3>
-<div class="team-role">
-
+<div id="project-grouping" class="section level2">
+<h2>Project grouping</h2>
+<p>Project is inferred by <code>projectTypes</code>.</p>
+<ul>
+<li><code>Bloomberg</code> is the current default and matches
+Bloomberg/American Health/Public Health case-study metadata.</li>
+<li><code>BioOCS</code> is available as a future filter and matches
+BioOCS, biomedical, genomic, transcriptomic, single-cell, and
+<code>ocs-bio</code> metadata.</li>
+</ul>
+<p>For future BioOCS case studies, include <code>BioOCS</code> in
+<code>Category</code>.</p>
 </div>
-</div>
-</a><a href="team/montiveros/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/montiveros/avatar.png" alt="Michael Ontiveros, MHS" class="team-avatar">
-<h3 class="team-name">
-Michael Ontiveros, MHS
-</h3>
-<div class="team-role">
-
-</div>
-</div>
-</a><a href="team/pkuo/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/pkuo/avatar.jpeg" alt="Pei-Lun (Perry) Kuo, MD, MPH" class="team-avatar">
-<h3 class="team-name">
-Pei-Lun (Perry) Kuo, MD, MPH
-</h3>
-<div class="team-role">
-
-</div>
-</div>
-</a><a href="team/qmeng/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/qmeng/avatar.jpg" alt="Qier Meng, ScM" class="team-avatar">
-<h3 class="team-name">
-Qier Meng, ScM
-</h3>
-<div class="team-role">
-
-</div>
-</div>
-</a>
-</div>
-</div>
-<div style="width:100%;text-align:center;">
-<h2 class="group-header">
-Administration
-</h2>
-<div class="team-grid">
-<a href="team/apeters/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/apeters/avatar.png" alt="Allison Peters, MPA" class="team-avatar">
-<h3 class="team-name">
-Allison Peters, MPA
-</h3>
-<div class="team-role">
-Research Project Manager
-</div>
-</div>
-</a>
-</div>
-</div>
-<div style="width:100%;text-align:center;">
-<h2 class="group-header">
-Consultants
-</h2>
-<div class="team-grid">
-<a href="team/psaravanan/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/psaravanan/avatar.png" alt="Padmashri Saravanan, MHS" class="team-avatar">
-<h3 class="team-name">
-Padmashri Saravanan, MHS
-</h3>
-<div class="team-role">
-
-</div>
-</div>
-</a><a href="team/adillman/index.html" class="team-card-link">
-<div class="team-card">
-<img src="team/adillman/avatar.png" alt="Allissa Dillman, PhD" class="team-avatar">
-<h3 class="team-name">
-Allissa Dillman, PhD
-</h3>
-<div class="team-role">
-
-</div>
-</div>
-</a>
-</div>
+<div id="rendering-checklist" class="section level2">
+<h2>Rendering checklist</h2>
+<p>After changing the carousel:</p>
+<ol style="list-style-type: decimal">
+<li><p>Confirm the home page carousel loads cards.</p></li>
+<li><p>Test each filter group.</p></li>
+<li><p>Test search with a skill label, project label, language label,
+and package name.</p></li>
+<li><p>Confirm the package dropdown is populated.</p></li>
+<li><p>Confirm cards still open the case study and GitHub
+links.</p></li>
+</ol>
 </div>
 
 
