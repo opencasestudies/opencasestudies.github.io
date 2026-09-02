@@ -82,6 +82,16 @@ if (!requireNamespace("reactable", quietly = TRUE)) {
 
 BioOCS is an extension of the [Open Case Studies](https://opencasestudies.org/) project focused on the biomedical sciences. BioOCS is designed for learners in biology, biomedical research, and quantitative biology.
 
+## BioOCS Case Studies
+
+**Making Version Controlled Reproducible Analyses**
+
+<img src="https://www.opencasestudies.org/ocs-bio-version-control/index_files/figure-html//1TEi1D35oiiC21mYR0cKjWuOOpuxm3fTGyCXSqFmjL3I_g3f9c5fef626_0_3.png" alt="BioOCS logo" style="max-width: 320px; margin-bottom: 24px; display: block;">
+
+HTML: https://www.opencasestudies.org/ocs-bio-version-control/
+<br>
+GitHub: https://github.com/opencasestudies/ocs-bio-version-control
+
 ## Incoming Case Studies {#case-studies}
 
 ```{r incoming-table, echo=FALSE, message=FALSE, warning=FALSE}
@@ -144,8 +154,10 @@ reactable(
 )
 ```
 
+
+
 <div class="coming-soon-box">
-<h3>Coming Soon</h3>
+<h3>Additional Case Studies Coming Soon</h3>
 <p>BioOCS case studies are currently in development. Check back for updates as new case studies are released.</p>
 </div>
 
