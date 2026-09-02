@@ -10,6 +10,7 @@ if (!requireNamespace("reactable", quietly = TRUE)) {
 ```
 
 
+
 ```{css, echo=FALSE}
 .bioocs-btn {
   display: inline-block;
