@@ -144,6 +144,11 @@ jobs:
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
+    
+    # Custom for OCS: Copy over events dir
+    - name: Copy events
+      id: events
+      run: cp -r events docs
 
     - name: Run render
       uses: ottrproject/ottr-preview@main
