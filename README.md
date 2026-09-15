@@ -43,6 +43,13 @@ date: '2026-02-24'
 
 4.  Knit the file — it will appear automatically on `blog.html`
 
+## Adding an Event
+
+1.  Create a new `.Rmd` file in the `events/` directory
+2.  Name it with the format `YYYY-MM-DD-your-event-title.Rmd`
+3.  Edit the file `events.Rmd` accordingly to link to your event page
+4.  Knit the file and commit the HTML - HTML from `events/` is not automatically rendered
+
 ## Adding or Updating a Team Member
 
 -   Each team member has a directory under `team/` named with first initial followed by last name (e.g. `cwright` for Carrie Wright)
