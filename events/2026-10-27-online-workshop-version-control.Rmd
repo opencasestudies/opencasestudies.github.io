@@ -1,4 +1,6 @@
 
+<!-- NOTE: Event pages must be rendered as HTML manually and committed directly, they are not automatically rendered! -->
+
 ```{css, echo=FALSE}
 .section h2 {
   color: #238A8D;
