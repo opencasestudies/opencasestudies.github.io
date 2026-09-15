@@ -45,6 +45,11 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_PAT }}
+      
+      # Custom for OCS: Copy over events dir
+      - name: Copy events
+        id: events
+        run: cp -r events docs
     
       - name: Run render
         id: render
