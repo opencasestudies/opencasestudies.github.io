@@ -56,6 +56,18 @@
 
 This workshop will get you started with the [_Making Version Controlled Reproducible Analysis_](https://www.opencasestudies.org/ocs-bio-version-control/) case study, from the Open Case Studies Project. This case study uses infant gut microbiome data to explore version control for transparent, reproducible science, and using Git and GitHub for research collaboration. Rather than a step by step walkthrough, this workshop will orient you to the case study's motivation, questions, core goals, and initial setup tasks. We hope this will leave you with the benefits of independent learning and problem solving, while keeping you from getting truly stuck!
 
+## Who this workshop is intended for
+
+This workshop is intended for biomedical researchers who wish to expand their data science skillset and plan to work through at least the _Making Version Controlled Reproducible Analysis_ BioOCS case study (perhaps others) to learn reproducibility skills such as version control, which are critical for modern, data-driven biomedical research.
+
+## In prepration for this workshop
+
+* Please [create a GitHub account](https://github.com/signup) (if you don't already have one)
+* Please install the following (if you don't already have them installed):
+  * R (install [here](https://www.r-project.org/))
+  * RStudio (install [here](https://posit.co/download/rstudio-desktop)) or Positron (install [here](https://positron.posit.co/install.html)) or another IDE compatible with R
+  * GitHub Desktop (install [here](https://desktop.github.com/download/) or Git (install [with these instructions](https://www.opencasestudies.org/ocs-bio-version-control/#installing-git) if you are unable to install GitHub Desktop or would prefere not to and instead interact with GitHub through a command line interface)
+
 ## What this workshop covers
 
 * The problem version control solves: why chaotic file-naming and email-based collaboration break down on real scientific projects, and how version control (Git) and remote hosting (GitHub) address this challenge
