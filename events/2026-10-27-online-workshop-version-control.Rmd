@@ -58,7 +58,7 @@ This workshop will get you started with the [_Making Version Controlled Reproduc
 
 ## Intended audience
 
-This workshop is intended for biomedical researchers who wish to expand their data science skillset and plan to work through the [_Making Version Controlled Reproducible Analysis_](https://www.opencasestudies.org/ocs-bio-version-control/) case study.
+This workshop is intended for biomedical researchers who wish to expand their data science skillset to Git and GitHub and plan to work through the [_Making Version Controlled Reproducible Analysis_](https://www.opencasestudies.org/ocs-bio-version-control/) case study.
 
 ## In preparation for this workshop
 
