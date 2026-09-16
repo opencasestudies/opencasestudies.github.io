@@ -66,10 +66,11 @@ Please ensure you have done the following:
 
 * [Created a GitHub account](https://github.com/signup)
 * Installed:
+  * GitHub Desktop (install [here](https://desktop.github.com/download/)) OR
+  * Git (install [with these instructions](https://www.opencasestudies.org/ocs-bio-version-control/#installing-git)) \*
+* Optionally installed: 
   * R (install [here](https://www.r-project.org/))
   * RStudio (install [here](https://posit.co/download/rstudio-desktop)) or Positron (install [here](https://positron.posit.co/install.html)) or another IDE compatible with R
-  * Git (install [with these instructions](https://www.opencasestudies.org/ocs-bio-version-control/#installing-git))
-  * GitHub Desktop (install [here](https://desktop.github.com/download/))\*
   
 \*_Git may be used via command line if you are unable to install GitHub Desktop or would prefer to interact with GitHub through a command line interface._
 
