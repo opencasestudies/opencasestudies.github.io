@@ -54,7 +54,7 @@
 
 ## Overview
 
-This workshop will get you started with the [_Making Version Controlled Reproducible Analysis_](https://www.opencasestudies.org/ocs-bio-version-control/) case study, from the Open Case Studies Project. This case study uses infant gut microbiome data to explore version control for transparent, reproducible science, and using Git and GitHub for research collaboration. Rather than a step by step walkthrough, this workshop will orient you to the case study's motivation, questions, core goals, and initial setup tasks. We hope this will leave you with the benefits of independent learning and problem solving, while keeping you from getting truly stuck!
+This workshop will get you started with the [_Making Version Controlled Reproducible Analysis_](https://www.opencasestudies.org/ocs-bio-version-control/) case study, from the Open Case Studies Project. This case study uses maternal and infant gut microbiome data to explore version control for transparent, reproducible science, and using Git and GitHub for research collaboration. Rather than a step by step walkthrough, this workshop will orient you to the case study's motivation, questions, core goals, and initial setup tasks. We hope this will leave you with the benefits of independent learning and problem solving, while keeping you from getting truly stuck!
 
 ## Intended audience
 
