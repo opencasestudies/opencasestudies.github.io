@@ -76,7 +76,7 @@ Please ensure you have done the following:
 ## What this workshop covers
 
 * The problem version control solves: why chaotic file-naming and email-based collaboration break down on real scientific projects, and how version control (Git) and remote hosting (GitHub) address this challenge
-* Core vocabulary: repositories, commits, staging, push/pull, branches .. we'll discuss the case study's terminology so you can focus on the big picture
+* Core vocabulary: repositories, commits, clone, stage, push/pull .. we'll discuss the case study's terminology so you can focus on the big picture
 * The scientific context: we'll take a brief look at the case study's driving question so you can understand a typical use case
 * Getting set up: you'll make sure your GitHub account is set up correctly, install Git/GitHub Desktop, and initialize your first local + remote repository so we can address any technical blockers
 
