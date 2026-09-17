@@ -6,10 +6,12 @@ The site is built with **R Markdown** using `rmarkdown::render_site()`. The outp
 
 ## Contributing
 
-1.  Edit the `.Rmd` files in the main directory (or in `post/` / `team/` subdirectories)
-2.  Knit individual files in RStudio, or run `rmarkdown::render_site()` in the R console to build the entire site
-3.  Preview the output in `docs/`
-4.  Commit and push your changes — GitHub Pages will serve from `docs/`
+1.  Edit the `.Rmd` files in the main directory (or in `post/`, `event/`, or `team/` subdirectories).
+2.  `.Rmd` files in the main directory will be automatically re-rendered by the GitHub actions in this repository.<br>
+    However, `.Rmd` files in the `post/`, `event/`, or `team/` subdirectories will need to be knit (Knit individual files in RStudio, or run `rmarkdown::render_site()` in the R console) and the corresponding HTML files added.
+3.  Open a pull request with your changes
+4.  Preview the output from the pull request comments -- specifically the pages that will be displayed are in `docs/`
+5.  Once reviewed and merged to main — GitHub Pages will serve from `docs/`
 
 ## Site Structure
 
