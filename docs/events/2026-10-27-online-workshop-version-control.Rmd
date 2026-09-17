@@ -1,0 +1,93 @@
+
+<!-- NOTE: Event pages must be rendered as HTML manually and committed directly, they are not automatically rendered! -->
+
+```{css, echo=FALSE}
+.section h2 {
+  color: #238A8D;
+  font-size: 3rem;
+  margin-bottom: 10px;
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 0px;
+  opacity: 0.95;
+}
+```
+
+<style>
+.back-button {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  z-index: 999;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+.back-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+</style>
+
+<a href="../events.html" class="back-button">← Back to Events</a>
+
+<img src="../resources/bio_ocs_logo.png" alt="BioOCS logo" style="max-width: 320px; margin-bottom: 24px; display: block;">
+
+# Online Workshop: Version Control
+
+* **October 27, 2026**
+* **4 - 5:30 pm ET (1 - 2:30 pm PT)**
+* **Online (Zoom) [Registration Link Coming Soon]**
+
+## Overview
+
+This workshop will get you started with the [_Making Version Controlled Reproducible Analysis_](https://www.opencasestudies.org/ocs-bio-version-control/) case study, from the Open Case Studies Project. This case study uses maternal and infant gut microbiome data to explore version control for transparent, reproducible science, and using Git and GitHub for research collaboration. Rather than a step by step walkthrough, this workshop will orient you to the case study's motivation, questions, core goals, and initial setup tasks. We hope this will leave you with the benefits of independent learning and problem solving, while keeping you from getting truly stuck!
+
+## Intended audience
+
+This workshop is intended for biomedical researchers who wish to expand their data science skillset to Git and GitHub and plan to work through the [_Making Version Controlled Reproducible Analysis_](https://www.opencasestudies.org/ocs-bio-version-control/) case study.
+
+## In preparation for this workshop
+
+Please ensure you have done the following:
+
+* [Created a GitHub account](https://github.com/signup)
+* Installed:
+  * GitHub Desktop (install [here](https://desktop.github.com/download/)) OR
+  * Git (install [with these instructions](https://www.opencasestudies.org/ocs-bio-version-control/#installing-git)) \*
+* Optionally installed: 
+  * R (install [here](https://www.r-project.org/))
+  * RStudio (install [here](https://posit.co/download/rstudio-desktop)) or Positron (install [here](https://positron.posit.co/install.html)) or another IDE compatible with R
+  
+\*_Git may be used via command line if you are unable to install GitHub Desktop or would prefer to interact with GitHub through a command line interface._
+
+## What this workshop covers
+
+* The problem version control solves: why chaotic file-naming and email-based collaboration break down on real scientific projects, and how version control (Git) and remote hosting (GitHub) address this challenge
+* Core vocabulary: repositories, commits, clone, stage, push/pull .. we'll discuss the case study's terminology so you can focus on the big picture
+* Getting set up: you'll make sure your GitHub account is set up correctly, confirm that GitHub Desktop or Git are successfully installed, and initialize your first local + remote repository so we can address any technical blockers
+* Using version control: you'll follow the stage, commit, push workflow to track local changes and update the remote repository, and pull remote changes into your local repository 
+
+## What this workshop _does not_ cover
+
+Data wrangling, visualization, or pull request workflows. You'll complete the majority of the content independently using the case study materials. This workshop deliberately focuses on orientation and setup and is not a full walkthrough. Don't worry though! You'll have access to office hours and the OCS community after the workshop.
+
+## By the end of this workshop, you will:
+
+* Understand what problem version control solves and why it matters for reproducibility
+* Have a working GitHub account and Git installation
+* Have created and cloned your first version-controlled repository
+* Know where to pick up independently in the case study

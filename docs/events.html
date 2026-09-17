@@ -402,16 +402,152 @@ $(document).ready(function () {
 </div>
 
 
-<div style="text-align: center; padding: 80px 20px; color: #555;">
-<div style="font-size: 3rem; margin-bottom: 16px;">
-📅
+<style>
+.talks-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 120px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 117px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #238A8D, #BFD7B5);
+}
+
+.timeline-year {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.year-label {
+  position: absolute;
+  left: -160px;
+  width: 146px;
+  text-align: right;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #238A8D;
+  line-height: 1;
+  padding-top: 4px;
+}
+
+
+.year-label::after {
+  content: '';
+  position: absolute;
+  right: -21px;
+  top: 7px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #238A8D;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #238A8D;
+}
+
+.year-talks {
+  padding: 0 0 30px 24px;
+  margin: 0;
+  list-style: none;
+}
+
+.year-talks li {
+  position: relative;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-left: 3px solid #BFD7B5;
+  background: #f9f9f9;
+  border-radius: 0 6px 6px 0;
+  font-size: 2rem;
+  line-height: 1.7;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.year-talks li:hover {
+  border-left-color: #238A8D;
+  background: #f0f7f7;
+}
+
+.video-container {
+  margin: 10px 0 16px 24px;
+  padding: 10px 14px;
+  background: #f9f9f9;
+  border-left: 3px solid #BFD7B5;
+  border-radius: 0 6px 6px 0;
+}
+
+.video-container iframe {
+  display: block;
+  max-width: 100%;
+}
+
+.section h2 {
+  color: #238A8D;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+</style>
+<div class="talks-page">
+<div id="upcoming-events" class="section level2">
+<h2>Upcoming Events</h2>
+<p><br></p>
+<div class="timeline">
+<div class="timeline-year">
+<div class="year-label">
+Oct 27, 2026
 </div>
-<h1 style="font-size: 2.5rem; font-weight: 300; color: #238A8D; margin-bottom: 12px;">
-Coming Soon!
-</h1>
-<p style="font-size: 1.2rem;">
-Check back for upcoming events.
-</p>
+<ul class="year-talks">
+<li>
+Online Workshop: Version Control
+[<a href="https://www.opencasestudies.org/events/2026-10-27-online-workshop-version-control.html">Learn
+more and register</a>]
+</li>
+</ul>
+</div>
+<div class="timeline-year">
+<div class="year-label">
+Feb 3-5, 2027
+</div>
+<ul class="year-talks">
+<li>
+Bio-OCS Case-a-thon, Moffitt Cancer Center &amp; Research Institute,
+Tampa, Florida [<a href="">Learn more and register details coming
+soon!</a>]
+</li>
+</ul>
+</div>
+</ul>
+</div>
+<p><br></p>
+</div>
+<div id="past-events" class="section level2">
+<h2>Past Events</h2>
+<p><br></p>
+<div class="timeline">
+<div class="timeline-year">
+<div class="year-label">
+Jul 14, 2025
+</div>
+<ul class="year-talks">
+<li>
+Bio-OCS Kickoff!
+</li>
+</ul>
+</div>
+</ul>
+</div>
+</div>
+</div>
 </div>
 
 
