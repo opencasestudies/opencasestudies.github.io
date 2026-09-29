@@ -10,6 +10,6 @@ If you have specific questions, please reach out to <BioOCS@fredhutch.org>.
 
 <div id="ocssurvey">
   
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-8RhlCuaY-8lqUx4mwQEq34u5FNvhPTl_MsnBLg8tWP7lRw/viewform?embedded=true" width="1200" height="700" frameborder="0" marginheight="0" marginwidth="0" align="middle">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-8RhlCuaY-8lqUx4mwQEq34u5FNvhPTl_MsnBLg8tWP7lRw/viewform?embedded=true" style="width: 100%;" height="700" align="middle" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
 
