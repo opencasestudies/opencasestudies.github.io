@@ -1,0 +1,61 @@
+
+<!-- NOTE: Event pages must be rendered as HTML manually and committed directly, they are not automatically rendered! -->
+
+```{css, echo=FALSE}
+.section h2 {
+  color: #238A8D;
+  font-size: 3rem;
+  margin-bottom: 10px;
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 0px;
+  opacity: 0.95;
+}
+```
+
+<style>
+.back-button {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  z-index: 999;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #333;
+  border: 2px solid #333;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+.back-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+</style>
+
+<a href="../events.html" class="back-button">← Back to Events</a>
+
+<img src="../resources/bio_ocs_logo.png" alt="BioOCS logo" style="max-width: 320px; margin-bottom: 24px; display: block;">
+
+# Online Workshop: Latent Variables
+
+* **December 8, 2026**
+* **4 - 5:30 pm ET (1 - 2:30 pm PT)**
+* **Online (Zoom) [Registration Link Coming Soon]**
+
+## Overview
+
+This workshop will get you started with the [_Using containers for reproducible analyses_](https://www.opencasestudies.org/) case study, from the Open Case Studies Project. More details coming soon!
+
+## Intended audience
+
+This workshop is intended for biomedical researchers who wish to expand their data science skillset to using containers and plan to work through the [_Using containers for reproducible analyses_](https://www.opencasestudies.org/) case study.
