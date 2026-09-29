@@ -6,6 +6,15 @@ name: Pull Request
 on:
   pull_request:
     branches: [ main, staging ]
+    paths:
+      - '*.qmd'
+      - '*.Rmd'
+      - team/*
+      - post/*
+      - img/*
+      - events/*
+      - assets/*
+      - quizzes/*
 
 jobs:
 

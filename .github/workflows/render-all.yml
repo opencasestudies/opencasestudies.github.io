@@ -15,6 +15,7 @@ on:
       - img/*
       - assets/*
       - quizzes/*
+      - events/*
 
 jobs:
 
