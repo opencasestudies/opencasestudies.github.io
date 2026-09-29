@@ -113,7 +113,7 @@ incoming <- tibble::tribble(
     "Image-based Spatial Transcriptomics, Gene Expression Analysis",
     "Schizophrenia",
     "Xenium spatial transcriptomics data",
-  "Revealing Hidden Patterns of Interferon Responses in Individual Cells Using CoGAPS",
+  "Finding latent immune-response programs in single-cell RNA-seq with CoGAPS",
     "Latent variable analysis, Dimension reduction techniques",
     "Interferon responses",
     "scRNA-seq (single-cell RNA-seq)",

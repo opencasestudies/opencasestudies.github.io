@@ -1,6 +1,3 @@
----
-pagetitle: "Online Workshop: Latent Variables"
----
 
 <!-- NOTE: Event pages must be rendered as HTML manually and committed directly, they are not automatically rendered! -->
 
