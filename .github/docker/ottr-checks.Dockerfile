@@ -11,6 +11,7 @@ RUN Rscript -e '\
     dir.create(fixture); \
     dir.create(file.path(fixture, ".github")); \
     dir.create(file.path(fixture, "resources")); \
+    writeLines("# URL-check fixture", file.path(fixture, "README.md")); \
     writeLines("../events.html", file.path(fixture, "resources", "ignore-urls.txt")); \
     writeLines("<a href=\"../events.html\">Events</a>", file.path(fixture, "example.Rmd")); \
     stopifnot(ottrpal::check_urls(fixture) == 0); \
