@@ -9,6 +9,8 @@ navbar:
       href: index.html
     - text: Team
       href: team.html 
+    - text: Contact Us
+      href: contact.html
   - text: Projects
     menu:
     - text: Bloomberg Case Studies
@@ -31,7 +33,7 @@ navbar:
       href: https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394541
     - text: Thesis Study
       href: https://jscholarship.library.jhu.edu/items/69ae8990-a78b-4d53-916e-d2a279afd69b
-  - text: Contact
+  - text: Sign Up
     href: contact.html
   - text: Survey
     href: survey.html
