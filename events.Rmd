@@ -121,6 +121,8 @@ title: "Events"
 <h3>Get announcements about live training! Check out our <a href="https://www.opencasestudies.org/contact.html">Sign Up Page</a> for more details.</h3>
 </div>
 
+<br>
+
 ## Upcoming Events
 
 <br>
