@@ -96,11 +96,22 @@ title: "Events"
   font-size: 3rem;
   margin-bottom: 10px;
 }
+
+.coming-soon-box h3 {
+  color: #1a7a4a;
+  font-size: 1.4rem;
+  margin: 10px 0 10px 0 !important;
+  padding-top: 0 !important;
+}
 </style>
 
 <div class="talks-page">
 
 ## Upcoming Events
+
+<div class="coming-soon-box">
+<h3>We now host live training! Check out our <a href="https://www.opencasestudies.org/events.html">Events Page</a> for more details.</h3>
+</div>
 
 <br>
 
