@@ -46,7 +46,7 @@
 
 <img src="../resources/bio_ocs_logo.png" alt="BioOCS logo" style="max-width: 320px; margin-bottom: 24px; display: block;">
 
-# Online Workshop: Latent Variables
+# Online Workshop: Containers
 
 * **December 8, 2026**
 * **4 - 5:30 pm ET (1 - 2:30 pm PT)**

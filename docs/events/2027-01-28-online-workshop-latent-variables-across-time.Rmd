@@ -46,7 +46,7 @@
 
 <img src="../resources/bio_ocs_logo.png" alt="BioOCS logo" style="max-width: 320px; margin-bottom: 24px; display: block;">
 
-# Online Workshop: Version Control
+# Online Workshop: Latent Variables Across Time
 
 * **January 28, 2027**
 * **2 - 3:30 pm ET (11 am - 12:30 pm PT)**
