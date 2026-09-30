@@ -1,13 +1,11 @@
 username.github.io/repository_name
 https://username.github.io/repository_name/
 search.html
-search_new.html
 bloomberg.html
 bioocs.html
 survey.html
 %s
 blog.html
 ../blog.html
-../events.html
 ../../team.html
 mailto:cwrigh60@jh.edu

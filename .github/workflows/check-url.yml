@@ -34,12 +34,6 @@ jobs:
 
     steps:
 
-    - name: Checkout
-      uses: actions/checkout@v4
-
-    - name: Build OTTR checker with URL exclusion fix
-      run: docker build --tag jhudsl/ottrpal:dev --file .github/docker/ottr-checks.Dockerfile .github/docker
-
     - name: Run the check
       uses: ottrproject/ottr-reports@main
       id: check_results
