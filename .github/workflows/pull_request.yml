@@ -72,6 +72,9 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Build OTTR checker with URL exclusion fix
+      run: docker build --tag jhudsl/ottrpal:dev --file .github/docker/ottr-checks.Dockerfile .github/docker
+
     - name: Run Reports
       id: run-reports
       uses: ottrproject/ottr-reports@main
