@@ -6,6 +6,7 @@
   color: #238A8D;
   font-size: 3rem;
   margin-bottom: 10px;
+}
 
 .hero h1 {
   font-size: 3.5rem;
@@ -54,8 +55,40 @@
 
 ## Overview
 
-This workshop will get you started with the [_Revealing Hidden Patterns of Interferon Responses in Individual Cells Using CoGAPS_](https://www.opencasestudies.org/) case study, from the Open Case Studies Project. More details coming soon!
+This workshop will get you started with the [_Finding latent immune-response programs in single-cell RNA-seq with CoGAPS_](https://www.opencasestudies.org/ocs-bio-latent-variable/) case study, from the Open Case Studies Project. The case study uses single-cell gene-expression data from blood immune cells with and without interferon-beta stimulation to explore how CoGAPS identifies patterns of genes that vary together across cells. These patterns are latent variables: features inferred from the data that can help us investigate biological responses.
+
+In this 90-minute workshop, we will introduce the biological question, explain the core modeling concepts, and help you get set up to work through the case study independently. We will use the case study's prepared data and saved model outputs so you can begin exploring the results without waiting for a model to run.
 
 ## Intended audience
 
-This workshop is intended for biomedical researchers who wish to expand their data science skillset to latent variables analysis and plan to work through the [_Revealing Hidden Patterns of Interferon Responses in Individual Cells Using CoGAPS_](https://www.opencasestudies.org/) case study.
+This workshop is intended for biomedical researchers who wish to expand their data science skillset to latent-variable analysis and plan to work through the [_Finding latent immune-response programs in single-cell RNA-seq with CoGAPS_](https://www.opencasestudies.org/ocs-bio-latent-variable/) case study. Basic familiarity with R or Python, data tables, and file paths will be helpful. No previous experience with CoGAPS, latent-variable models, or single-cell RNA sequencing is required.
+
+## In preparation for this workshop
+
+Please ensure you have done the following:
+
+* Reviewed the case study's [Motivation](https://www.opencasestudies.org/ocs-bio-latent-variable/#motivation) and [Prerequisites](https://www.opencasestudies.org/ocs-bio-latent-variable/#prerequisites) sections, including the computer and storage guidance.
+* Installed and started Docker Desktop using the operating-system-specific links in the [Prerequisites](https://www.opencasestudies.org/ocs-bio-latent-variable/#prerequisites) section.
+* Followed the [Main learner setup](https://www.opencasestudies.org/ocs-bio-latent-variable/#main-learner-setup) instructions to download the case-study repository and Docker image. The image is a large download, so please allow time to complete this before the workshop.
+* Tried opening [RStudio Server](https://www.opencasestudies.org/ocs-bio-latent-variable/#open-rstudio-server) in your browser and noted any setup problems to bring to the workshop.
+
+The Docker image includes R, Python, and the packages used in the case study; separate local installations are not needed for this setup. We will use R during the workshop. Parallel Python examples are available in the case study for independent learning. You do not need to fit CoGAPS models or download the optional large reproduction files in advance. If you cannot run Docker on your computer, you can still follow the explanations and inspect the results in the published case study.
+
+## What this workshop covers
+
+* The biological question: how blood immune cells respond to interferon-beta stimulation, and why a shared response may appear across several cell types.
+* Core vocabulary: latent variables, matrix factorization, and CoGAPS patterns, including how gene weights and cell activities describe different parts of a pattern.
+* Getting set up: finding the prepared data and saved outputs, opening the provided software environment, and identifying setup problems.
+* Reading an example result: connecting an interferon-associated pattern to its associated genes and the cells where it is most active, and discussing the limits of that interpretation.
+* Continuing independently: finding the import, visualization, and analysis sections and understanding how the saved-result workflow fits together.
+
+## What this workshop _does not_ cover
+
+A complete walkthrough of data wrangling, visualization, and analysis; fitting CoGAPS from scratch; or running the full model-selection sweep. You will complete most of the analysis independently using the case study materials. The optional [Full Reproduction Guide](https://www.opencasestudies.org/ocs-bio-latent-variable/#full-reproduction-guide) provides a later route for readers who want to regenerate the results.
+
+## By the end of this workshop, you will:
+
+* Describe what a latent expression pattern represents and why it can be useful for studying immune responses.
+* Know how to access the case-study environment, prepared data, and saved CoGAPS outputs.
+* Distinguish gene weights from cell activities when reading a CoGAPS result.
+* Know where to continue independently in the case study.
