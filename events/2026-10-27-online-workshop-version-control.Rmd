@@ -1,46 +1,10 @@
+---
+output:
+  html_document:
+    css: event_styles.css
+---
 
 <!-- NOTE: Event pages must be rendered as HTML manually and committed directly, they are not automatically rendered! -->
-
-```{css, echo=FALSE}
-.section h2 {
-  color: #238A8D;
-  font-size: 3rem;
-  margin-bottom: 10px;
-
-.hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 0px;
-}
-
-.hero p {
-  font-size: 1.3rem;
-  margin-bottom: 0px;
-  opacity: 0.95;
-}
-```
-
-<style>
-.back-button {
-  position: fixed;
-  top: 80px;
-  right: 24px;
-  z-index: 999;
-  padding: 10px 20px;
-  background-color: transparent;
-  color: #333;
-  border: 2px solid #333;
-  border-radius: 4px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.2s, color 0.2s;
-}
-.back-button:hover {
-  background-color: #333;
-  color: white;
-}
-
-</style>
 
 <a href="../events.html" class="back-button">← Back to Events</a>
 
@@ -91,3 +55,13 @@ Data wrangling, visualization, or pull request workflows. You'll complete the ma
 * Have a working GitHub account and Git installation
 * Have created and cloned your first version-controlled repository
 * Know where to pick up independently in the case study
+
+<br>
+<div class="coming-soon-box">
+  <div class="ai-attr-container">
+    <a href="https://aiattribution.github.io/statements/AIA-Ph-Se-Hin-R-?model=Claude%20Sonnet%205.5-v1.0">
+      <img src="2026-10-27-online-workshop-version-control.svg" alt="AI Attribution statement" style="max-width: 420px; display: block;">
+    </a>
+  </div>
+</div>
+
