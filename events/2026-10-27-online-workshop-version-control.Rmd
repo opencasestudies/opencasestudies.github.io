@@ -56,12 +56,13 @@ Data wrangling, visualization, or pull request workflows. You'll complete the ma
 * Have created and cloned your first version-controlled repository
 * Know where to pick up independently in the case study
 
+
 <br>
 <div class="coming-soon-box">
   <div class="ai-attr-container">
-    <a href="https://aiattribution.github.io/statements/AIA-Ph-Se-Hin-R-?model=Claude%20Sonnet%205.5-v1.0">
-      <img src="2026-10-27-online-workshop-version-control.svg" alt="AI Attribution statement" style="max-width: 420px; display: block;">
-    </a>
+  <a href="https://aiattribution.github.io/statements/AIA-Ph-Se-Hin-R-?model=Claude%20Sonnet%205.5-v1.0">
+    <img src="2026-10-27-online-workshop-version-control.svg" alt="AI Attribution statement" style="max-width: 450px; display: block;">
+  </a>
   </div>
 </div>
 
