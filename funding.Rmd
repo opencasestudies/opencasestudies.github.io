@@ -3,12 +3,12 @@ title: "previous_funding"
 output: html_document
 ---
 
-The Open Case Studies project has been funded by the following grants:
+The Open Case Studies project was previously funded by the following grants:
 
-1) The [Bloomberg American Health Initiative](https://americanhealth.jhu.edu/) funded the initial public health focused case studies.
+1) The [Bloomberg American Health Initiative](https://americanhealth.jhu.edu/) funded the initial public health focused case studies with one of the [High-Impact Project Awards](https://americanhealth.jhu.edu/high-impact-project). PI: Stephanie Hicks, awarded 2019
 
-2) The Digital Education Learning Technology Acceleration (DELTA) grant form the Johns Hopkins University Office of the Provost for our proposal entitled [Accessible experiential lesson guide delivery platform] (https://provost.jhu.edu/about/digital-initiatives/delta/2020-delta-awards/).
+2) The Digital Education Learning Technology Acceleration (DELTA) grant form the Johns Hopkins University Office of the Provost for our proposal entitled [Accessible experiential lesson guide delivery platform](https://provost.jhu.edu/about/digital-initiatives/delta/2020-delta-awards/). PI: Carrie Wright, awarded 2020
 
 
-
-Open Case Studies is currently funded by the National Institute of General Medical Sciences: Grant Number [1R25GM160622](https://reporter.nih.gov/search/6Yy21_RclU2CB6Pq1F1ciQ/project-details/11216870)
+**Current Funding**: 
+Open Case Studies is currently funded by the National Institute of General Medical Sciences: Grant Number [1R25GM160622](https://reporter.nih.gov/search/6Yy21_RclU2CB6Pq1F1ciQ/project-details/11216870) PIs: Carrie Wright and Ava Hoffman, awarded 2025
