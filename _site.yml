@@ -7,6 +7,8 @@ navbar:
     menu:
     - text: Background
       href: index.html
+    - text: Funding
+      href: funding.html
     - text: Team
       href: team.html 
     - text: Contact Us
