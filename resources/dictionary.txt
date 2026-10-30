@@ -36,6 +36,7 @@ Farber
 fas
 favicon
 fredhutch
+GDSCN
 GH
 Github
 GitHub
@@ -89,6 +90,8 @@ mtaub
 Muschelli
 netlify
 Neuroengineering
+NHGRI
+NIGMS
 nyu
 OCS
 Ontiveros
@@ -97,6 +100,7 @@ Oshane
 Osuga
 OTTR
 Padmashri
+PIs
 Ph
 Phd
 pkuo
