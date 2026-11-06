@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "<img id=\"logo\" style=\"width: 30px;\" src=\"resources/logo.png\" />"
+  favicon: resources/images/favicon.ico
+  navbar:
+    left:
+      - text: About
+        menu:
+          - text: Background
+            href: index.qmd
+          - text: Funding
+            href: funding.qmd
+          - text: Team
+            href: team.qmd
+          - text: "Contact Us"
+            href: contact.qmd
+      - text: Projects
+        menu:
+          - text: "Bloomberg Case Studies"
+            href: bloomberg.qmd
+          - text: BioOCS
+            href: bioocs.qmd
+      - text: News
+        menu:
+          - text: Blog
+            href: blog.qmd
+          - text: Talks
+            href: talks.qmd
+          - text: Events
+            href: events.html
+      - text: Resources
+        menu:
+          - text: "Educator/User Guide"
+            href: https://www.opencasestudies.org/OCS_Guide
+          - text: Publication
+            href: https://www.tandfonline.com/doi/full/10.1080/26939169.2024.2394541
+          - text: "Thesis Study"
+            href: https://jscholarship.library.jhu.edu/items/69ae8990-a78b-4d53-916e-d2a279afd69b
+      - text: "Sign Up"
+        href: contact.qmd
+      - text: Survey
+        href: survey.qmd
+      - text: "Open Case Study Search"
+        href: search_new.qmd
+  
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    embed-resources: false
+    syntax-highlighting: textmate
+    include-in-header: resources/header.html
+    include-after-body: footer.html
