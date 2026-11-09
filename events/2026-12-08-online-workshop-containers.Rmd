@@ -14,12 +14,41 @@ output:
 
 * **December 8, 2026**
 * **4 - 5:30 pm ET (1 - 2:30 pm PT)**
-* **Online (Zoom) [Registration Link Coming Soon]**
+* **Online (Zoom) [Registration Link](https://zoom.us/meeting/register/OeTsrSPCSSWos1HTybxWrQ)**
 
 ## Overview
 
-This workshop will get you started with the [_Using containers for reproducible analyses_](https://www.opencasestudies.org/) case study, from the Open Case Studies Project. More details coming soon!
+This workshop will get you started with the [_Using containers for collaborative, reproducible research_](https://www.opencasestudies.org/ocs-bio-containers/) case study, from the Open Case Studies Project. This case study uses microbiome and metabolome metadata to explore containerization and Docker usage for collaborative, reproducible science. Rather than a step-by-step walkthrough of the case study, this workshop will orient you to the case study's motivation, questions, core goals, and initial setup tasks. We hope this will leave you with the benefits of independent learning and problem solving, while empowering you to get started.
 
 ## Intended audience
 
-This workshop is intended for biomedical researchers who wish to expand their data science skillset to using containers and plan to work through the [_Using containers for reproducible analyses_](https://www.opencasestudies.org/) case study.
+This workshop is intended for biomedical researchers who wish to expand their data science skillset to using containers to support scientific analyses and plan to work through the [_Using containers for collaborative, reproducible research_](https://www.opencasestudies.org/ocs-bio-containers/) case study.
+
+## In preparation for this workshop
+
+Please ensure you have done the following:
+
+* Installed Docker Desktop
+  * [For Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
+  * [For Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
+  * [For Linux](https://docs.docker.com/desktop/setup/install/linux/)
+
+Workshop System: The workshop instructor will be using Docker Desktop for Mac though Windows and Linux users should be able to follow along.
+
+## What this workshop covers
+
+* The problem containerization solves: Collaborative, reproducible science can be hampered by issues installing software. We'll discuss how containerization addresses this challenge, and when it's not necessarily worth the hassle. 
+* Core vocabulary: We'll discuss the case study's terminology, especially terms related to containers so you can focus on the big picture.
+* Getting set up: You'll make sure that Docker Desktop is installed and you can use Docker successfully.
+* Using containers: You'll practice a few containerization steps related to getting started and maintenance best practices. 
+
+## What this workshop _does not_ cover
+
+* Data wrangling, visualization, and building Docker images. You'll complete the majority of the case study content independently using the case study materials. This workshop deliberately focuses on orientation and setup rather than providing a full walkthrough of the case study. Don't worry though because you'll have access to office hours, a community Zulip discussion forum, and the OCS community after the workshop.
+
+## By the end of this workshop, you will:
+
+* Understand what problem containerization solves and why it matters for reproducibility. 
+* Have a working Docker Desktop.
+* Have practiced steps in the containerization process.
+* Know where to pick up independently in the case study.
