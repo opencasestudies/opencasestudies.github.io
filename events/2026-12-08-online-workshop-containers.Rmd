@@ -18,7 +18,7 @@ output:
 
 ## Overview
 
-This workshop will get you started with the [_Using containers for collaborative, reproducible research_](https://www.opencasestudies.org/ocs-bio-containers/) case study, from the Open Case Studies Project. This case study uses metadata from a curated data resource for paired microbiome and metabolome datasets to explore containerization for collaborative, reproducible science, and using Docker to support scientific analyses. Rather than a step-by-step walkthrough of the case study, this workshop will orient you to the case study's motivation, questions, core goals, and initial setup tasks. We hope this will leave you with the benefits of independent learning and problem solving, while empowering you to get started.
+This workshop will get you started with the [_Using containers for collaborative, reproducible research_](https://www.opencasestudies.org/ocs-bio-containers/) case study, from the Open Case Studies Project. This case study uses microbiome and metabolome metadata to explore containerization and Docker usage for collaborative, reproducible science. Rather than a step-by-step walkthrough of the case study, this workshop will orient you to the case study's motivation, questions, core goals, and initial setup tasks. We hope this will leave you with the benefits of independent learning and problem solving, while empowering you to get started.
 
 ## Intended audience
 
