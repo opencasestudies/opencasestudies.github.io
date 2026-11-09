@@ -34,6 +34,7 @@ Please ensure you have done the following:
   * [For Linux](https://docs.docker.com/desktop/setup/install/linux/)
 
 Workshop System: The workshop instructor will be using Docker Desktop for Mac though Windows and Linux users should be able to follow along.
+
 ## What this workshop covers
 
 * The problem containerization solves: Collaborative, reproducible science can be hampered by issues installing software. We'll discuss how containerization addresses this challenge, and when it's not necessarily worth the hassle. 
